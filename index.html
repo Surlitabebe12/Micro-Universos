@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MicroUniversos - Tienda de electrónica</title>
-    <link rel="icon" type="image/webp" href="micro.webp">
+    <link rel="icon" type="image/png" href="micro.webp">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap">
     <style>
         body {
             font-family: 'Source Code Pro', monospace;
             margin: 0;
             padding: 0;
-            padding-right: 300px; /* Leave space for the cart */
             background-color: #f0f0f0;
         }
         header {
@@ -42,7 +41,7 @@
             padding: 5px;
             border-radius: 15px;
             width: 220px;
-            height: 320px;
+            height: 350px;
             box-sizing: border-box;
             overflow: hidden;
             transition: color 0.2s;
@@ -91,6 +90,27 @@
             -webkit-box-orient: vertical;
             white-space: normal;
         }
+        .quantity-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .quantity-container input {
+            width: 40px;
+            text-align: center;
+            font-size: 1em;
+        }
+        .quantity-container button {
+            width: 30px;
+            height: 30px;
+            font-size: 1em;
+            background-color: #000080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
         .product-quantity {
             font-size: 1em;
             font-weight: bold;
@@ -108,111 +128,32 @@
         .product:hover .product-quantity {
             color: #000080;
         }
-        #cart-container {
+        #cart-icon {
             position: fixed;
-            right: 0;
-            top: 0;
-            width: 300px;
-            height: 100%;
-            border-left: 1px solid #ccc;
-            background-color: white;
-            overflow-y: auto;
-            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        #cart {
-            width: 100%;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-        }
-        #cart h2 {
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
             text-align: center;
         }
-        #cart ul {
-            list-style: none;
-            padding: 0;
+        #cart-icon img {
+            width: 50px;
+            height: 50px;
         }
-        #cart li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-            position: relative;
-        }
-        #cart img {
-            width: 70px; /* Increase the size of the images */
-            height: 70px; /* Increase the size of the images */
-            object-fit: cover;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #cart .item-controls {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        #cart .tooltip {
-            visibility: hidden;
-            width: 120px;
-            background-color: #000080;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%; /* Position the tooltip above the image */
-            left: 50%;
-            margin-left: -60px; /* Use half of the width to center the tooltip */
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        #cart img:hover + .tooltip {
-            visibility: visible;
-            opacity: 1;
-        }
-        #total {
-            text-align: right;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        #form-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 15px;
-        }
-        #form-container input {
-            margin-bottom: 5px;
-            padding: 5px;
-            font-size: 14px;
-        }
-        #form-container button {
-            padding: 5px;
-            font-size: 14px;
-            cursor: pointer;
-        }
-        .add-to-cart-btn {
-            padding: 5px 10px;
-            margin-top: 10px;
-            font-size: 14px;
-            cursor: pointer;
-            background-color: #000080;
+        #cart-counter {
+            font-size: 1em;
             color: white;
-            border: none;
-            border-radius: 5px;
+            background-color: red;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
         }
-        h1 {
-            text-align: center;
-            margin: 0;
-        }
-        /* Estilos para el modal */
         .modal {
             display: none;
             position: fixed;
@@ -268,12 +209,141 @@
         .modal-arrow-right {
             right: 0;
         }
+        #cart-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #cart-modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 15px;
+        }
+        #cart-modal .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        #cart-modal .close:hover,
+        #cart-modal .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #cart-modal h2 {
+            text-align: center;
+        }
+        #cart-modal ul {
+            list-style: none;
+            padding: 0;
+        }
+        #cart-modal li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        #cart-modal img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #cart-modal .item-controls {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        #cart-modal .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: #000080;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        #cart-modal img:hover + .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        #total {
+            text-align: right;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        #form-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        #form-container input {
+            margin-bottom: 5px;
+            padding: 5px;
+            font-size: 14px;
+        }
+        #form-container button {
+            padding: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .add-to-cart-btn {
+            padding: 5px 10px;
+            margin-top: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #000080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .add-to-cart-btn .cart-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 128, 0, 0.2);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.5s;
+            pointer-events: none;
+        }
+        .add-to-cart-btn.active .cart-animation {
+            transform: scale(4);
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>MicroUniversos - Tienda de electrónica</h1>
-        <p class="instructions">Luego de armado el carrito podes pagarlo directamente con el QR y ponerte en contacto conmigo (llenar forma) o no usar el QR y comunicarte conmigo (llenando forma) para acordar el pago. ¡Gracias!</p>
+        <p class="instructions">Luego de armado el carrito, envíe sus datos para completar la compra.</p>
     </header>
     <div class="products-container">
         <div class="product-qr">
@@ -282,20 +352,28 @@
         <!-- Aquí se agregarán los productos dinámicamente -->
     </div>
 
-    <div id="cart-container">
-        <div id="cart">
+    <!-- Icono del carrito -->
+    <div id="cart-icon">
+        <img src="carrito_electronico.png" alt="Carrito de Compras" onclick="openCartModal()">
+        <div id="cart-counter">0</div>
+    </div>
+
+    <!-- Modal para el carrito -->
+    <div id="cart-modal" class="modal">
+        <div id="cart-modal-content">
+            <span class="close" onclick="closeCartModal()">&times;</span>
             <h2>Carrito de Compras</h2>
             <ul>
                 <!-- Aquí se agregarán los productos del carrito dinámicamente -->
             </ul>
             <p id="empty-cart-message">No hay productos en el carrito.</p>
             <p id="total" style="display: none;">Total: $0</p>
-        </div>
-        <div id="form-container">
-            <h2>Datos del Cliente</h2>
-            <input type="text" id="name" placeholder="Nombre">
-            <input type="text" id="phone" placeholder="Teléfono">
-            <button onclick="submitCart()">Enviar Carrito</button>
+            <div id="form-container">
+                <h2>Datos del Cliente</h2>
+                <input type="text" id="name" placeholder="Nombre">
+                <input type="text" id="phone" placeholder="Teléfono">
+                <button onclick="submitCart()">Enviar Carrito</button>
+            </div>
         </div>
     </div>
 
@@ -312,103 +390,42 @@
             { id: 1, name: 'Bornera Pcb 2 Pines (x10)', price: 110, quantity: 3, images: ['Imagenes/1/1_1.png'] },
             { id: 2, name: 'Display Led 8 Bit Max7219', price: 300, quantity: 10, images: ['Imagenes/2/2_1.png', 'Imagenes/2/2_2.png', 'Imagenes/2/2_3.png'] },
             { id: 3, name: 'Pantalla Tft De 1,8 Pulgadas', price: 430, quantity: 10, images: ['Imagenes/3/3_1.png', 'Imagenes/3/3_2.png'] },
-            { id: 4, name: 'Placa Expansión I2c 8 Canales', price: 180, quantity: 2, images: ['Imagenes/4/4_1.png', 'Imagenes/4/4_2.png', 'Imagenes/4/4_3.png', 'Imagenes/4/4_4.png', 'Imagenes/4/4_5.png'] },
-            { id: 5, name: 'Módulo Inalámbrico Nodemcu V3 (esp8266) Usb Ch340', price: 320, quantity: 7, images: ['Imagenes/5/5_1.png', 'Imagenes/5/5_2.png' ,'Imagenes/5/5_3.png'] },
-            { id: 6, name: 'Optoacoplador Pc817c (pack X 10)', price: 160, quantity: 10, images: ['Imagenes/6/6_1.png'] },
-            { id: 7, name: 'Diodo Rectificador Schottky Sr5100 (pack X 10)', price: 180, quantity: 2, images: ['Imagenes/7/7_1.png'] },
-            { id: 8, name: 'Diodo Rectificador 10a 1000v (pack X10)', price: 180, quantity: 7, images: ['Imagenes/8/8_1.png', 'Imagenes/8/8_2.png'] },
-            { id: 9, name: 'Diodo Puente Rectificador Kbpc5010 50a 1000v', price: 190, quantity: 1, images: ['Imagenes/9/9_1.png', 'Imagenes/9/9_2.png', 'Imagenes/9/9_3.png'] },
-            { id: 10, name: 'Triac Bta41-600b', price: 150, quantity: 40, images: ['Imagenes/10/10_1.png', 'Imagenes/10/10_2.png'] },
-            { id: 11, name: 'Chip Attiny85-20pu', price: 300, quantity: 10, images: ['Imagenes/11/11_1.png', 'Imagenes/11/11_2.png', 'Imagenes/11/11_3.png'] },
-            { id: 12, name: 'Programador Universal Usb Avr Isp (con Adaptador)', price: 300, quantity: 10, images: ['Imagenes/12/12_1.png', 'Imagenes/12/12_2.png'] },
-            { id: 13, name: 'Malla Desoldadora Para Desoldar Estaño 2.0 Mm De Ancho', price: 180, quantity: 1, images: ['Imagenes/13/13_1.png'] },
-            { id: 14, name: 'Disipador De Calor De Aluminio, 25x24x16mm (4 Unidades)', price: 200, quantity: 3, images: ['Imagenes/14/14_1.png'] },
-            { id: 15, name: 'Conector De Alimentación De Cc, Macho-hembra (5 Juegos)', price: 400, quantity: 1, images: ['Imagenes/15/15_1.png'] },
-            { id: 16, name: 'Diodo Db3 Disparador 20 Piezas', price: 280, quantity: 7, images: ['Imagenes/16/16_1.png', 'Imagenes/16/16_2.png'] },
-            { id: 17, name: 'Kit De 5 Puntas De Hierro Para Soldador', price: 400, quantity: 2, images: ['Imagenes/17/17_1.png', 'Imagenes/17/17_2.png'] },
-            { id: 18, name: 'Kit Micro Pulsadores Con Tapa De 5 Colores, 25 Pcs', price: 650, quantity: 2, images: ['Imagenes/18/18_1.png'] },
-            { id: 19, name: 'Placa Expansión  Esp32. Nuevo Modelo.', price: 380, quantity: 10, images: ['Imagenes/19/19_1.png'] },
-            { id: 20, name: 'Módulo De Pantalla Led Tm1637 Para Arduino, 7 Segmentos, 4 B', price: 120, quantity: 4, images: ['Imagenes/20/20_1.png'] },
-            { id: 21, name: 'Interruptor Mosfet (x2) De Alta Potencia (400w)', price: 400, quantity: 1, images: ['Imagenes/21/21_1.png'] },
-            { id: 22, name: 'Módulo Usb A Ttl Cp2102 Con Cables Dupont', price: 380, quantity: 5, images: ['Imagenes/22/22_1.png', 'Imagenes/22/22_2.png'] },
-            { id: 23, name: 'Prensacable Pg11 (5 Unidades)', price: 200, quantity: 1, images: ['Imagenes/23/23_1.png'] },
-            { id: 24, name: 'Conversor Serie--bluetooth Jdy-30', price: 380, quantity: 3, images: ['Imagenes/24/24_1.png'] },
-            { id: 25, name: 'Diodo Rectificador M7 1n4007 Smd 1a 100 V. (20 Unidades)', price: 210, quantity: 3, images: ['Imagenes/25/25_1.png'] },
-            { id: 26, name: 'Lámpara Led Indoor 200w Reales. Dimerizable. Luz Combinada!(USD)', price: 1, quantity: 130, images: ['Imagenes/26/26_1.png'] },
-            { id: 27, name: 'Caja De Separadores De Nailon Hexagonal, M3 (300 Piezas)', price: 820, quantity: 1, images: ['Imagenes/27/27_1.png'] },
-            { id: 28, name: 'Sensor De Hall 49e (bici Eléctrica) 5 Unidades', price: 180, quantity: 22, images: ['Imagenes/28/28_1.png'] },
-            { id: 29, name: 'Led Cob YXO 50w, Dual Spectrum', price: 380, quantity: 20, images: ['Imagenes/29/29_1.png'] },
-            { id: 30, name: 'Esp32 Wifi Con Placa De Expansión Último Modelo', price: 1000, quantity: 5, images: ['Imagenes/30/30_1.png'] },
-            { id: 31, name: 'Cable Usb A Micro, Alta Calidad, Tipo A. 0.3m', price: 100, quantity: 6, images: ['Imagenes/31/31_1.png'] },
-            { id: 32, name: 'Módulo De Fuente De Alimentación Usb', price: 270, quantity: 10, images: ['Imagenes/32/32_1.png'] },
-            { id: 33, name: 'Sensor De Distancia Ultrasónico X2 (compatible Arduino)', price: 280, quantity: 4, images: ['Imagenes/33/33_1.png'] },
-            { id: 34, name: 'Caja De Plástico Para Proyecto De Electrónica', price: 230, quantity: 6, images: ['Imagenes/34/34_1.png'] },
-            { id: 35, name: 'Sensor Capacitivo De Humedad Del Suelo', price: 170, quantity: 2, images: ['Imagenes/35/35_1.png'] },
-            { id: 36, name: 'Módulo Relé 5v 1 Canal', price: 100, quantity: 7, images: ['Imagenes/36/36_1.png'] },
-            { id: 37, name: 'Sensor De Luz Lm393 Arduino', price: 130, quantity: 9, images: ['Imagenes/37/37_1.png'] },
-            { id: 38, name: 'Sensor De Humedad Tierra (alta Precisión)', price: 400, quantity: 20, images: ['Imagenes/38/38_1.png','Imagenes/38/38_2.png','Imagenes/38/38_3.png'] },
-            { id: 39, name: 'Mini Humidificador Usb-c (placa Electrónica)', price: 380, quantity: 1, images: ['Imagenes/39/39_1.png'] },
-            { id: 40, name: 'Pcb Prototipo Pack De 4', price: 350, quantity: 3, images: ['Imagenes/40/40_1.png'] },
-            { id: 41, name: 'Kit Surtido De Transistores, Regulador De Voltaje (16 Pcs)', price: 500, quantity: 2, images: ['Imagenes/41/41_1.png'] },
-            { id: 42, name: 'Sensor De Temperatura Y Humedad', price: 300, quantity: 5, images: ['Imagenes/42/42_1.png'] },
-            { id: 43, name: 'Dip-switch 4 Posiciones (pack De 5)', price: 200, quantity: 2, images: ['Imagenes/43/43_1.png'] },
-            { id: 44, name: 'Led Cob YXO 50w FRIO', price: 290, quantity: 11, images: ['Imagenes/44/44_1.png'] },
-            { id: 45, name: 'Maceta Red Para Hidroponia.', price: 180, quantity: 11, images: ['Imagenes/45/45_1.png'] },
-            { id: 46, name: 'Placa De Desarrollo Esp-wroom-32 Wifi', price: 650, quantity: 4, images: ['Imagenes/46/46_1.png'] },
-            { id: 47, name: 'Diodos De Recuperación Rápida 10 Piezas Fr607 6a 1000v', price: 180, quantity: 5, images: ['Imagenes/47/47_1.png'] },
-            { id: 48, name: 'Diodo De Recuperación Rápida Fr207 (20 Unidades)', price: 180, quantity: 15, images: ['Imagenes/48/48_1.png'] },
-            { id: 49, name: 'Potenciómetro Lineal De 3 Pines, 1k', price: 80, quantity: 10, images: ['Imagenes/49/49_1.png'] },
-            { id: 50, name: 'Potenciómetro Lineal De 3 Pines, 2k', price: 80, quantity: 10, images: ['Imagenes/50/50_1.png'] },
-            { id: 51, name: 'Potenciómetro Lineal De 3 Pines, 100k', price: 80, quantity: 10, images: ['Imagenes/51/51_1.png'] },
-            { id: 52, name: 'Wemos D1 Mini Pro V3.0 Wifi', price: 330, quantity: 10, images: ['Imagenes/52/52_1.png'] },
-            { id: 53, name: 'Ne555 Circuito Integrado (10 Unidades)', price: 180, quantity: 9, images: ['Imagenes/53/53_1.png'] },
-            { id: 54, name: 'Puente Rectificador Kbu1510 15a, 1000v', price: 150, quantity: 15, images: ['Imagenes/54/54_1.png'] },
-            { id: 55, name: 'Potenciómetro Lineal De 3 Pines, 1m', price: 80, quantity: 10, images: ['Imagenes/55/55_1.png'] },
-            { id: 56, name: 'Potenciómetro Lineal De 3 Pines, 50k', price: 80, quantity: 10, images: ['Imagenes/56/56_1.png'] },
-            { id: 57, name: 'Potenciómetro Lineal De 3 Pines, 20k', price: 80, quantity: 10, images: ['Imagenes/57/57_1.png'] },
-            { id: 58, name: 'Transistor 2n2222 (100 Unidades)', price: 350, quantity: 4, images: ['Imagenes/58/58_1.png'] },
-            { id: 59, name: 'Potenciómetro Lineal De 3 Pines, 250k', price: 80, quantity: 10, images: ['Imagenes/59/59_1.png'] },
-            { id: 60, name: 'Triac Bta10-600b (x5 Unidades)', price: 500, quantity: 3, images: ['Imagenes/60/60_1.png'] },
-            { id: 61, name: 'Triac Bta16-600b X 4 Unidades', price: 450, quantity: 4, images: ['Imagenes/61/61_1.png'] },
-            { id: 62, name: 'Módulo De Interruptor Mosfet 4 Canales', price: 380, quantity: 2, images: ['Imagenes/62/62_1.png'] },
-            { id: 63, name: 'Led Bridgelux (muy Buenos) 50w, Dimerizable, Blanco Frío', price: 380, quantity: 20, images: ['Imagenes/63/63_1.png'] },
-            { id: 64, name: 'Placa Mosfet Superior Irf520 Mos (x2)', price: 300, quantity: 1, images: ['Imagenes/64/64_1.png'] },
-            { id: 65, name: 'Portafusibles De Tubo De Vidrio, 5x20mm (pack X5)', price: 250, quantity: 3, images: ['Imagenes/65/65_1.png'] },
-            { id: 66, name: 'Teclado Membrana 4x5 (arduino U Otros Micros)', price: 150, quantity: 3, images: ['Imagenes/66/66_1.png'] },
-            { id: 67, name: 'Sensor De Corriente De Precisión (arduino)', price: 280, quantity: 2, images: ['Imagenes/67/67_1.png'] },
-            { id: 68, name: 'Módulo De Pantalla Lcd Tft De 1,8 (ej Arduino)', price: 500, quantity: 8, images: ['Imagenes/68/68_1.png'] },
-            { id: 69, name: 'Caja De Fusibles De Tubo De Vidrio, Soplado Rápido (100uds)', price: 800, quantity: 9, images: ['Imagenes/69/69_1.png'] },
-            { id: 70, name: 'Chip Led. 10w. Blanco Cálido', price: 100, quantity: 4, images: ['Imagenes/70/70_1.png'] },
-            { id: 71, name: 'Microcontrolador W806 (placa De Desarrollo)', price: 450, quantity: 2, images: ['Imagenes/71/71_1.png'] },
-            { id: 72, name: 'Sensor De Temperatura Y Humedad De Alta Precisión Aht21', price: 300, quantity: 2, images: ['Imagenes/72/72_1.png'] },
-            { id: 73, name: 'Conversor Dc-dc De Intensidad Y Voltaje Regulables', price: 260, quantity: 11, images: ['Imagenes/73/73_1.png'] }
+            { id: 4, name: 'Placa Expansión I2c 8 Canales', price: 180, quantity: 2, images: ['Imagenes/4/4_1.png', 'Imagenes/4/4_2.png', 'Imagenes/4/4_3.png', 'Imagenes/4/4_4.png', 'Imagenes/4/4_5.png'] },  
+            { id: 5, name: 'Conversor Dc-dc De Intensidad Y Voltaje Regulables', price: 260, quantity: 11, images: ['Imagenes/73/73_1.png'] }
         ];
         const cart = [];
         let currentModalIndex = 0;
         let currentModalProductId = null;
 
-        function addToCart(productId) {
+        function addToCart(productId, quantity) {
             const product = products.find(p => p.id === productId);
             if (product) {
                 const existingProduct = cart.find(item => item.id === productId);
                 if (existingProduct) {
-                    if (existingProduct.quantity < product.quantity) {
-                        existingProduct.quantity++;
+                    if (existingProduct.quantity + quantity <= product.quantity) {
+                        existingProduct.quantity += quantity;
                     } else {
                         alert(`No hay más unidades disponibles para ${product.name}`);
                     }
                 } else {
-                    cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1, image: product.images[0] });
+                    if (quantity <= product.quantity) {
+                        cart.push({ id: product.id, name: product.name, price: product.price, quantity: quantity, image: product.images[0] });
+                    } else {
+                        alert(`No hay más unidades disponibles para ${product.name}`);
+                    }
                 }
                 updateCart();
+                animateCartButton(productId);
             }
         }
 
         function updateCart() {
-            const cartList = document.querySelector('#cart ul');
+            const cartList = document.querySelector('#cart-modal ul');
             const totalElement = document.getElementById('total');
             const emptyCartMessage = document.getElementById('empty-cart-message');
+            const cartCounter = document.getElementById('cart-counter');
             let total = 0;
+            let itemCount = 0;
 
             cartList.innerHTML = '';
 
@@ -419,6 +436,7 @@
                 emptyCartMessage.style.display = 'none';
                 cart.forEach(item => {
                     total += item.price * item.quantity;
+                    itemCount += item.quantity;
                     cartList.innerHTML += `
                         <li>
                             <img src="${item.image}" alt="${item.name}" data-tooltip="${item.name}">
@@ -426,7 +444,7 @@
                             <div class="item-controls">
                                 <button onclick="removeFromCart(${item.id})">-</button>
                                 <span>Cantidad: ${item.quantity}</span>
-                                <button onclick="addToCart(${item.id})">+</button>
+                                <button onclick="addToCart(${item.id}, 1)">+</button>
                             </div>
                         </li>
                     `;
@@ -434,6 +452,8 @@
                 totalElement.style.display = 'block';
                 totalElement.textContent = `Total: $${total.toFixed(2)}`;
             }
+
+            cartCounter.textContent = itemCount;
         }
 
         function removeFromCart(productId) {
@@ -511,9 +531,34 @@
                     name.className = 'product-name';
                     name.textContent = product.name;
 
-                    const quantity = document.createElement('p');
-                    quantity.className = 'product-quantity';
-                    quantity.textContent = `Cant: ${product.quantity}`;
+                    const quantityContainer = document.createElement('div');
+                    quantityContainer.className = 'quantity-container';
+
+                    const quantityInput = document.createElement('input');
+                    quantityInput.type = 'number';
+                    quantityInput.min = 1;
+                    quantityInput.max = product.quantity;
+                    quantityInput.value = 1;
+
+                    const incrementButton = document.createElement('button');
+                    incrementButton.textContent = '+';
+                    incrementButton.onclick = () => {
+                        if (quantityInput.value < product.quantity) {
+                            quantityInput.value = parseInt(quantityInput.value) + 1;
+                        }
+                    };
+
+                    const decrementButton = document.createElement('button');
+                    decrementButton.textContent = '-';
+                    decrementButton.onclick = () => {
+                        if (quantityInput.value > 1) {
+                            quantityInput.value = parseInt(quantityInput.value) - 1;
+                        }
+                    };
+
+                    quantityContainer.appendChild(decrementButton);
+                    quantityContainer.appendChild(quantityInput);
+                    quantityContainer.appendChild(incrementButton);
 
                     const price = document.createElement('p');
                     price.className = 'product-price';
@@ -521,12 +566,12 @@
 
                     const addToCartBtn = document.createElement('button');
                     addToCartBtn.className = 'add-to-cart-btn';
-                    addToCartBtn.textContent = 'Al carrito';
-                    addToCartBtn.onclick = () => addToCart(product.id);
+                    addToCartBtn.innerHTML = 'Al carrito<span class="cart-animation"></span>';
+                    addToCartBtn.onclick = () => addToCart(product.id, parseInt(quantityInput.value));
 
                     productElement.appendChild(imageContainer);
                     productElement.appendChild(name);
-                    productElement.appendChild(quantity);
+                    productElement.appendChild(quantityContainer);
                     productElement.appendChild(price);
                     productElement.appendChild(addToCartBtn);
 
@@ -581,9 +626,29 @@
             modalImage.src = product.images[currentModalIndex];
         }
 
-        // Mostrar mensaje de carrito vacío al cargar la página
-        document.addEventListener('DOMContentLoaded', () => {
+        function openCartModal() {
+            const cartModal = document.getElementById('cart-modal');
+            cartModal.style.display = 'block';
             updateCart();
+        }
+
+        function closeCartModal() {
+            const cartModal = document.getElementById('cart-modal');
+            cartModal.style.display = 'none';
+        }
+
+        function animateCartButton(productId) {
+            const productElement = document.querySelector(`.product img[src='Imagenes/${productId}/${productId}_1.png']`).closest('.product');
+            const addToCartBtn = productElement.querySelector('.add-to-cart-btn');
+            const cartAnimation = addToCartBtn.querySelector('.cart-animation');
+
+            addToCartBtn.classList.add('active');
+            cartAnimation.addEventListener('transitionend', () => {
+                addToCartBtn.classList.remove('active');
+            }, { once: true });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
             renderProducts();
         });
     </script>
