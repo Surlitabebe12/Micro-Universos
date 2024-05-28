@@ -19,9 +19,9 @@
             color: white;
             text-align: center;
         }
-        .instructions {
+        header .sub-header {
             font-size: 0.9em;
-            margin-top: 10px;
+            margin-top: 5px;
         }
         .products-container {
             display: flex;
@@ -30,7 +30,7 @@
             margin-top: 20px;
             padding: 0 10px;
         }
-        .product, .product-qr {
+        .product {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -47,10 +47,6 @@
             transition: color 0.2s;
             position: relative;
             background-color: white;
-        }
-        .product-qr img {
-            max-width: 100%;
-            height: 100%;
         }
         .image-container {
             position: relative;
@@ -102,9 +98,9 @@
             font-size: 1em;
         }
         .quantity-container button {
-            width: 30px;
-            height: 30px;
-            font-size: 1em;
+            width: 20px;
+            height: 20px;
+            font-size: 0.8em;
             background-color: #000080;
             color: white;
             border: none;
@@ -134,10 +130,12 @@
             top: 20px;
             cursor: pointer;
             text-align: center;
+            transition: transform 0.3s ease;
         }
         #cart-icon img {
-            width: 50px;
-            height: 50px;
+            width: 40px; /* Más pequeño */
+            height: 40px; /* Más pequeño */
+            border-radius: 50%;
         }
         #cart-counter {
             font-size: 1em;
@@ -153,6 +151,7 @@
             top: 0;
             right: 0;
             transform: translate(50%, -50%);
+            transition: transform 0.3s ease;
         }
         .modal {
             display: none;
@@ -222,12 +221,13 @@
         }
         #cart-modal-content {
             background-color: white;
-            margin: 15% auto;
+            margin: 5% auto; /* Menor margen superior */
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
+            width: 25%; /* Ancho reducido a la mitad */
+            max-width: 350px; /* Asegura que no sea demasiado grande */
             border-radius: 15px;
+            border: 1px solid #ccc;
         }
         #cart-modal .close {
             color: #aaa;
@@ -243,6 +243,8 @@
         }
         #cart-modal h2 {
             text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
         }
         #cart-modal ul {
             list-style: none;
@@ -256,60 +258,54 @@
             position: relative;
         }
         #cart-modal img {
-            width: 70px;
-            height: 70px;
+            width: 90px;
+            height: 90px;
             object-fit: cover;
             border-radius: 5px;
             cursor: pointer;
         }
+        #cart-modal .item-details {
+            flex-grow: 1;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start; /* Alinear a la izquierda */
+            font-size: 0.8em; /* Tamaño de letra más pequeño */
+        }
         #cart-modal .item-controls {
             display: flex;
             align-items: center;
+            justify-content: flex-end; /* Alinear a la derecha */
             gap: 5px;
-        }
-        #cart-modal .tooltip {
-            visibility: hidden;
-            width: 120px;
-            background-color: #000080;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -60px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        #cart-modal img:hover + .tooltip {
-            visibility: visible;
-            opacity: 1;
+            width: 50px; /* Espacio fijo para los controles */
         }
         #total {
             text-align: right;
             font-size: 1.2em;
             font-weight: bold;
             margin-top: 10px;
+            display: block; /* Asegura que el total se muestre */
         }
-        #form-container {
-            width: 100%;
+        .share-cart-btn {
             display: flex;
-            flex-direction: column;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 15px;
-        }
-        #form-container input {
-            margin-bottom: 5px;
-            padding: 5px;
-            font-size: 14px;
-        }
-        #form-container button {
-            padding: 5px;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 10px; /* Reducir el padding */
             font-size: 14px;
             cursor: pointer;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Source Code Pro', monospace;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .share-cart-btn img {
+            margin-right: 5px; /* Reducir el margen derecho */
+            width: 16px; /* Reducir el tamaño del logotipo */
+            height: 16px; /* Reducir el tamaño del logotipo */
         }
         .add-to-cart-btn {
             padding: 5px 10px;
@@ -338,17 +334,30 @@
         .add-to-cart-btn.active .cart-animation {
             transform: scale(4);
         }
+        footer {
+            background-color: #000080;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+        footer img {
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>MicroUniversos - Tienda de electrónica</h1>
-        <p class="instructions">Luego de armado el carrito, envíe sus datos para completar la compra.</p>
+        <p class="sub-header">Completa tu carrito y compártemelo para terminal la compra.</p>
     </header>
     <div class="products-container">
-        <div class="product-qr">
-            <img src="qr.png" alt="Escaneá y pagá">
-        </div>
         <!-- Aquí se agregarán los productos dinámicamente -->
     </div>
 
@@ -362,18 +371,16 @@
     <div id="cart-modal" class="modal">
         <div id="cart-modal-content">
             <span class="close" onclick="closeCartModal()">&times;</span>
-            <h2>Carrito de Compras</h2>
+            <h2>Lista de compras</h2>
             <ul>
                 <!-- Aquí se agregarán los productos del carrito dinámicamente -->
             </ul>
             <p id="empty-cart-message">No hay productos en el carrito.</p>
-            <p id="total" style="display: none;">Total: $0</p>
-            <div id="form-container">
-                <h2>Datos del Cliente</h2>
-                <input type="text" id="name" placeholder="Nombre">
-                <input type="text" id="phone" placeholder="Teléfono">
-                <button onclick="submitCart()">Enviar Carrito</button>
-            </div>
+            <div id="total">Total: $0</div>
+            <button class="share-cart-btn" onclick="shareCart()">
+                <img src="WhatsApp_similar_logo.png" alt="WhatsApp">
+                Compartir carrito
+            </button>
         </div>
     </div>
 
@@ -385,12 +392,16 @@
         <a class="modal-arrow modal-arrow-right" onclick="changeModalImage(1)">&#10095;</a>
     </div>
 
+    <footer>
+        <p>Presiona en el logo para abrir una conversación. <img src="WhatsApp_similar_logo.png" alt="WhatsApp" onclick="openWhatsApp()"></p>
+    </footer>
+
     <script>
         const products = [
             { id: 1, name: 'Bornera Pcb 2 Pines (x10)', price: 110, quantity: 3, images: ['Imagenes/1/1_1.png'] },
             { id: 2, name: 'Display Led 8 Bit Max7219', price: 300, quantity: 10, images: ['Imagenes/2/2_1.png', 'Imagenes/2/2_2.png', 'Imagenes/2/2_3.png'] },
             { id: 3, name: 'Pantalla Tft De 1,8 Pulgadas', price: 430, quantity: 10, images: ['Imagenes/3/3_1.png', 'Imagenes/3/3_2.png'] },
-            { id: 4, name: 'Placa Expansión I2c 8 Canales', price: 180, quantity: 2, images: ['Imagenes/4/4_1.png', 'Imagenes/4/4_2.png', 'Imagenes/4/4_3.png', 'Imagenes/4/4_4.png', 'Imagenes/4/4_5.png'] },  
+            { id: 4, name: 'Placa Expansión I2c 8 Canales', price: 180, quantity: 2, images: ['Imagenes/4/4_1.png', 'Imagenes/4/4_2.png', 'Imagenes/4/4_3.png', 'Imagenes/4/4_4.png', 'Imagenes/4/4_5.png'] },
             { id: 5, name: 'Conversor Dc-dc De Intensidad Y Voltaje Regulables', price: 260, quantity: 11, images: ['Imagenes/73/73_1.png'] }
         ];
         const cart = [];
@@ -416,6 +427,7 @@
                 }
                 updateCart();
                 animateCartButton(productId);
+                animateCartIcon();
             }
         }
 
@@ -439,11 +451,10 @@
                     itemCount += item.quantity;
                     cartList.innerHTML += `
                         <li>
-                            <img src="${item.image}" alt="${item.name}" data-tooltip="${item.name}">
-                            <div class="tooltip">${item.name}</div>
+                            <img src="${item.image}" alt="${item.name}">
                             <div class="item-controls">
                                 <button onclick="removeFromCart(${item.id})">-</button>
-                                <span>Cantidad: ${item.quantity}</span>
+                                <span>${item.quantity}</span>
                                 <button onclick="addToCart(${item.id}, 1)">+</button>
                             </div>
                         </li>
@@ -454,6 +465,7 @@
             }
 
             cartCounter.textContent = itemCount;
+            animateCartIcon();
         }
 
         function removeFromCart(productId) {
@@ -468,22 +480,12 @@
             }
         }
 
-        function submitCart() {
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-
-            if (name === '' || phone === '') {
-                alert('Por favor, ingrese su nombre y teléfono.');
-                return;
-            }
-
-            alert(`Carrito enviado!\nNombre: ${name}\nTeléfono: ${phone}\nProductos: ${cart.map(item => `${item.name} (Cantidad: ${item.quantity})`).join(', ')}`);
-            
-            // Limpiar el formulario y el carrito
-            document.getElementById('name').value = '';
-            document.getElementById('phone').value = '';
-            cart.length = 0;
-            updateCart();
+        function shareCart() {
+            const cartItems = cart.map(item => `${item.name} (Cantidad: ${item.quantity})`).join(', ');
+            const message = `Productos: ${cartItems}`;
+            const phoneNumber = '+59897535096';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
         }
 
         function renderProducts() {
@@ -571,8 +573,8 @@
 
                     productElement.appendChild(imageContainer);
                     productElement.appendChild(name);
-                    productElement.appendChild(quantityContainer);
                     productElement.appendChild(price);
+                    productElement.appendChild(quantityContainer);
                     productElement.appendChild(addToCartBtn);
 
                     productsContainer.appendChild(productElement);
@@ -638,7 +640,7 @@
         }
 
         function animateCartButton(productId) {
-            const productElement = document.querySelector(`.product img[src='Imagenes/${productId}/${productId}_1.png']`).closest('.product');
+            const productElement = document.querySelector(`.product img[src*='${products.find(p => p.id === productId).images[0]}']`).closest('.product');
             const addToCartBtn = productElement.querySelector('.add-to-cart-btn');
             const cartAnimation = addToCartBtn.querySelector('.cart-animation');
 
@@ -647,6 +649,28 @@
                 addToCartBtn.classList.remove('active');
             }, { once: true });
         }
+
+        function animateCartIcon() {
+            const cartIcon = document.getElementById('cart-icon');
+            cartIcon.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                cartIcon.style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        function openWhatsApp() {
+            const phoneNumber = '+59897535096';
+            const url = `https://wa.me/${phoneNumber}`;
+            window.open(url, '_blank');
+        }
+
+        // Añadir evento para cerrar el carrito con la tecla Escape
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeCartModal();
+                closeModal();
+            }
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             renderProducts();
