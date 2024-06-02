@@ -1,0 +1,14 @@
+
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /scripts/
+
+# Permitir el acceso a los archivos CSS y JS en wp-includes
+Allow: /wp-includes/*.css
+Allow: /wp-includes/*.js
+
+# Sitemap
+Sitemap: https://www.microuniversos.com/sitemap.xml
