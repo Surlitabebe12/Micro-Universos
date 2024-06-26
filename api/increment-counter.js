@@ -9,6 +9,7 @@ export default async (req, res) => {
 
         // Si el archivo no existe, crearlo con un valor inicial de 0
         if (!fs.existsSync(counterPath)) {
+            console.log('File does not exist, creating file with initial value 0');
             fs.writeFileSync(counterPath, '0', 'utf-8');
         }
 
@@ -26,7 +27,7 @@ export default async (req, res) => {
         fs.writeFileSync(counterPath, counter.toString(), 'utf-8');
         console.log('New counter value:', counter);
 
-        res.status(200).json({ counter });
+        res.status(200).end(); // Responder con un estado 200 sin contenido
     } catch (error) {
         console.error('Error incrementing counter:', error);
         res.status(500).json({ error: 'Error incrementing counter' });
