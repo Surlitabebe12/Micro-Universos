@@ -6,8 +6,22 @@ export default async (req, res) => {
 
     try {
         console.log('Reading counter from:', counterPath);
+        
+        // Verificar si el archivo existe antes de leer
+        if (!fs.existsSync(counterPath)) {
+            console.error('File does not exist:', counterPath);
+            res.status(500).json({ error: 'Counter file not found' });
+            return;
+        }
+
         let counter = parseInt(fs.readFileSync(counterPath, 'utf-8'), 10);
         console.log('Current counter value:', counter);
+
+        if (isNaN(counter)) {
+            console.error('Counter is not a number:', counter);
+            res.status(500).json({ error: 'Counter value is not a number' });
+            return;
+        }
 
         counter += 1;
 
