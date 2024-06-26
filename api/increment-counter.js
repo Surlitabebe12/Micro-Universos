@@ -27,7 +27,7 @@ export default async (req, res) => {
         fs.writeFileSync(counterPath, counter.toString(), 'utf-8');
         console.log('New counter value:', counter);
 
-        res.status(200).end(); // Responder con un estado 200 sin contenido
+        res.status(200).json({ counter });
     } catch (error) {
         console.error('Error incrementing counter:', error);
         res.status(500).json({ error: 'Error incrementing counter' });
