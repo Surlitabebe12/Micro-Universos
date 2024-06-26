@@ -2,16 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 export default async (req, res) => {
-    const counterPath = path.join(process.cwd(), 'counter.txt');
+    const counterPath = path.join('/tmp', 'counter.txt');
 
     try {
         console.log('Reading counter from:', counterPath);
-        
-        // Verificar si el archivo existe antes de leer
+
+        // Si el archivo no existe, crearlo con un valor inicial de 0
         if (!fs.existsSync(counterPath)) {
-            console.error('File does not exist:', counterPath);
-            res.status(500).json({ error: 'Counter file not found' });
-            return;
+            fs.writeFileSync(counterPath, '0', 'utf-8');
         }
 
         let counter = parseInt(fs.readFileSync(counterPath, 'utf-8'), 10);
