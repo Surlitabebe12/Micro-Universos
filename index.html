@@ -706,14 +706,6 @@
     <script>
         // Llamada para incrementar el contador cuando la página se carga
         fetch('/api/increment-counter')
-            .then(response => response.json())
-            .then(data => {
-                if (data.counter !== undefined) {
-                    console.log(`Counter incremented to: ${data.counter}`);
-                } else {
-                    console.error('Error incrementing counter:', data.error);
-                }
-            })
             .catch(error => console.error('Error incrementing counter:', error));
     </script>
 </body>
