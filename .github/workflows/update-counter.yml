@@ -1,1 +1,32 @@
+name: Update Counter
+
+on:
+  push:
+    paths:
+      - index.html
+
+jobs:
+  update-counter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v2
+      
+      - name: Increment Counter
+        id: increment
+        run: |
+          COUNTER=$(cat counter.txt)
+          NEW_COUNTER=$((COUNTER + 1))
+          echo $NEW_COUNTER > counter.txt
+          echo "New counter value: $NEW_COUNTER"
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add counter.txt
+          git commit -m "Increment counter to $NEW_COUNTER"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
