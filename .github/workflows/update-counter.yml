@@ -1,8 +1,8 @@
 name: Update Counter
 
 on:
-  repository_dispatch:
-    types: [increment-counter]
+  schedule:
+    - cron: '*/5 * * * *' # Esto ejecutará el workflow cada 5 minutos
 
 jobs:
   update-counter:
