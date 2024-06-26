@@ -1,9 +1,8 @@
 name: Update Counter
 
 on:
-  workflow_dispatch: # Esto permite que el workflow se dispare manualmente
-  schedule:
-    - cron: '0 * * * *' # Puedes ajustar esto para que se ejecute en un intervalo regular
+  repository_dispatch:
+    types: [increment-counter]
 
 jobs:
   update-counter:
@@ -28,4 +27,4 @@ jobs:
           git commit -m "Increment counter to $NEW_COUNTER"
           git push
         env:
-          MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
