@@ -119,10 +119,12 @@
     </div>
 
     <script>
+        // Verificación de acceso
         if (!localStorage.getItem('accessGranted')) {
             window.location.href = '/verify.html';
         }
 
+        // Productos iniciales
         let products = [
             { id: 1, name: 'Bornera Pcb 2 Pines (x10)', price: 110, quantity: 3, images: ['Imagenes/1/1_1.png'], description: 'Bornera para conexión fácil.', code: '' },
             { id: 2, name: 'Display Led 8 Bit Max7219', price: 300, quantity: 10, images: ['Imagenes/2/2_1.png', 'Imagenes/2/2_2.png', 'Imagenes/2/2_3.png'], description: 'Display LED de 8 bits.', code: 'int main() { return 0; }' },
@@ -130,6 +132,7 @@
         ];
         let editingProductId = null;
 
+        // Renderizar productos
         function renderProducts() {
             const productList = document.getElementById('product-list');
             productList.innerHTML = '';
@@ -150,6 +153,7 @@
             });
         }
 
+        // Agregar producto
         function addProduct(event) {
             event.preventDefault();
 
@@ -170,6 +174,7 @@
                 product.code = code;
 
                 editingProductId = null;
+                document.querySelector('button[type="submit"]').textContent = 'Agregar Producto';
             } else {
                 const newProduct = {
                     id: products.length + 1,
@@ -188,6 +193,7 @@
             updateProductsFile();
         }
 
+        // Editar producto
         function editProduct(id) {
             const product = products.find(p => p.id === id);
 
@@ -199,14 +205,17 @@
             document.getElementById('product-code').value = product.code;
 
             editingProductId = id;
+            document.querySelector('button[type="submit"]').textContent = 'Guardar Producto';
         }
 
+        // Eliminar producto
         function deleteProduct(id) {
             products = products.filter(p => p.id !== id);
             renderProducts();
             updateProductsFile();
         }
 
+        // Actualizar archivo de productos
         function updateProductsFile() {
             fetch('/api/update-products', {
                 method: 'POST',
@@ -224,10 +233,19 @@
             });
         }
 
+        // Inicializar eventos
         document.getElementById('product-form').addEventListener('submit', addProduct);
 
         document.addEventListener('DOMContentLoaded', () => {
-            renderProducts();
+            fetch('/api/get-products')
+                .then(response => response.json())
+                .then(data => {
+                    products = data;
+                    renderProducts();
+                })
+                .catch(error => {
+                    console.error('Error al obtener los productos:', error);
+                });
         });
     </script>
 </body>
