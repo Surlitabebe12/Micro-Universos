@@ -1,5 +1,5 @@
 {
-  "name": "micro-universos",
+  "name": "tu-proyecto",
   "version": "1.0.0",
   "description": "MicroUniversos - Tienda de electrónica",
   "main": "api/api.js",
@@ -7,13 +7,9 @@
     "start": "node api/api.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "simple-git": "^2.24.0"
+    "express": "^4.17.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Surlitabebe12/micro-universos.git"
-  },
-  "author": "Rodrigo",
+  "devDependencies": {},
+  "author": "Tu Nombre",
   "license": "MIT"
 }
