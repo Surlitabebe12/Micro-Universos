@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Productos - MicroUniversos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap">
+    <style>
+        /* Estilos omitidos para brevedad */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Administrar Productos</h1>
+        <form id="product-form">
+            <div>
+                <label for="product-name">Nombre del Producto:</label>
+                <input type="text" id="product-name" required>
+            </div>
+            <div>
+                <label for="product-price">Precio:</label>
+                <input type="number" id="product-price" required>
+            </div>
+            <div>
+                <label for="product-quantity">Cantidad:</label>
+                <input type="number" id="product-quantity" required>
+            </div>
+            <div>
+                <label for="product-images">Imágenes (URLs, separadas por comas):</label>
+                <input type="text" id="product-images" required>
+            </div>
+            <div>
+                <label for="product-description">Descripción:</label>
+                <textarea id="product-description"></textarea>
+            </div>
+            <div>
+                <label for="product-code">Código de Ejemplo:</label>
+                <textarea id="product-code"></textarea>
+            </div>
+            <button type="submit">Agregar Producto</button>
+        </form>
+        <ul id="product-list" class="product-list"></ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/api/get-products')
+                .then(response => response.json())
+                .then(data => {
+                    products = data;
+                    renderProducts();
+                })
+                .catch(error => {
+                    console.error('Error al obtener los productos:', error);
+                });
+        });
+
+        // Resto del código omitido para brevedad
+    </script>
+</body>
+</html>
