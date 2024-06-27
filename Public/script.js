@@ -1,4 +1,3 @@
-
 const cart = [];
 
 function addToCart(productId, quantity) {
@@ -94,7 +93,7 @@ function renderProducts(products) {
 
             const imageContainer = document.createElement('div');
             imageContainer.className = 'image-container';
-            imageContainer.onclick = () => openProductModal(product.id);  // Mover el evento onclick aquí
+            imageContainer.onclick = () => openProductModal(product.id);
 
             const imgElement = document.createElement('img');
             imgElement.src = product.images[0];
@@ -166,7 +165,7 @@ function renderProducts(products) {
                 addToCart(product.id, parseInt(quantityInput.value));
             };
 
-            productElement.appendChild(imageContainer);  // Aquí se anexa el contenedor de la imagen con el evento onclick
+            productElement.appendChild(imageContainer);
             productElement.appendChild(name);
             productElement.appendChild(price);
             productElement.appendChild(quantityContainer);
@@ -272,6 +271,13 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+// Fetch products from products.json and render them
 document.addEventListener('DOMContentLoaded', () => {
-    renderProducts();
+    fetch('products.json')
+        .then(response => response.json())
+        .then(data => {
+            window.products = data; // Save products globally
+            renderProducts(data);
+        })
+        .catch(error => console.error('Error al cargar los productos:', error));
 });
