@@ -1,0 +1,19 @@
+{
+  "name": "micro-universos",
+  "version": "1.0.0",
+  "description": "MicroUniversos - Tienda de electrónica",
+  "main": "api/api.js",
+  "scripts": {
+    "start": "node api/api.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "simple-git": "^2.24.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu-usuario/tu-repositorio.git"
+  },
+  "author": "Tu Nombre",
+  "license": "MIT"
+}
