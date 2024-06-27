@@ -610,10 +610,10 @@
                 img.onload = () => {
                     const productElement = document.createElement('div');
                     productElement.className = 'product';
-                    productElement.onclick = () => openProductModal(product.id);
 
                     const imageContainer = document.createElement('div');
                     imageContainer.className = 'image-container';
+                    imageContainer.onclick = () => openProductModal(product.id);  // Mover el evento onclick aquí
 
                     const imgElement = document.createElement('img');
                     imgElement.src = product.images[0];
@@ -685,7 +685,7 @@
                         addToCart(product.id, parseInt(quantityInput.value));
                     };
 
-                    productElement.appendChild(imageContainer);
+                    productElement.appendChild(imageContainer);  // Aquí se anexa el contenedor de la imagen con el evento onclick
                     productElement.appendChild(name);
                     productElement.appendChild(price);
                     productElement.appendChild(quantityContainer);
@@ -699,6 +699,7 @@
                 };
             });
         }
+
 
 
         function showPreviousImage(productId, imgElement) {
