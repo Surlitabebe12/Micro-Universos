@@ -29,7 +29,7 @@
             justify-content: center;
             margin-top: 20px;
             padding: 0 10px;
-            margin-bottom: 80px; /* Agrega margen inferior */
+            margin-bottom: 80px;
         }
         .product {
             display: flex;
@@ -48,15 +48,15 @@
             transition: color 0.2s;
             position: relative;
             background-color: white;
+            cursor: pointer;
         }
         .image-container {
             position: relative;
             width: 100%;
             height: 150px;
-            cursor: pointer;
         }
         .image-container img {
-            width: 85%; /* Ajustar al 85% */
+            width: 85%;
             height: 100%;
             object-fit: cover;
         }
@@ -67,9 +67,9 @@
             background-color: rgba(255, 255, 255, 0.7);
             border: none;
             cursor: pointer;
-            padding: 10px; /* Más visibles */
+            padding: 10px;
             border-radius: 50%;
-            font-size: 1.5em; /* Más visibles */
+            font-size: 1.5em;
         }
         .arrow-left {
             left: 10px;
@@ -95,7 +95,7 @@
             margin-top: 10px;
         }
         .quantity-container input {
-            width: 35px; /* Ajustar ancho */
+            width: 35px;
             text-align: center;
             font-size: 1em;
         }
@@ -142,8 +142,8 @@
             justify-content: center;
         }
         #cart-icon img {
-            width: 70px; /* Aumentar tamaño */
-            height: 70px; /* Aumentar tamaño */
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
         }
         #cart-counter {
@@ -174,11 +174,11 @@
         }
         #cart-modal-content {
             background-color: white;
-            margin: 5% auto; /* Menor margen superior */
+            margin: 5% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 75%; /* Ancho reducido */
-            max-width: 320px; /* Asegura que no sea demasiado grande */
+            width: 75%;
+            max-width: 320px;
             border-radius: 15px;
             border: 1px solid #ccc;
         }
@@ -192,7 +192,7 @@
         #cart-modal .close:focus {
             color: black;
             text-decoration: none;
-            cursor: pointer.
+            cursor: pointer;
         }
         #cart-modal h2 {
             text-align: center;
@@ -223,22 +223,22 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            align-items: flex-start; /* Alinear a la izquierda */
-            font-size: 0.8em; /* Tamaño de letra más pequeño */
+            align-items: flex-start;
+            font-size: 0.8em;
         }
         #cart-modal .item-controls {
             display: flex;
             align-items: center;
-            justify-content: flex-end; /* Alinear a la derecha */
+            justify-content: flex-end;
             gap: 5px;
-            width: 50px; /* Espacio fijo para los controles */
+            width: 50px;
         }
         #total {
             text-align: right;
             font-size: 1.2em;
             font-weight: bold;
             margin-top: 20px;
-            display: block; /* Asegura que el total se muestre */
+            display: block;
         }
         .share-cart-btn {
             display: flex;
@@ -258,13 +258,13 @@
             margin-right: auto;
         }
         .share-cart-btn img {
-            margin-right: 5px; /* Reducir el margen derecho */
-            width: 10px; /* Reducir el tamaño del logotipo */
-            height: 10px; /* Reducir el tamaño del logotipo */
+            margin-right: 5px;
+            width: 10px;
+            height: 10px;
         }
         .add-to-cart-btn {
             padding: 5px 10px;
-            margin-top: 14px; /* Ajustar margen superior */
+            margin-top: 14px;
             font-size: 14px;
             cursor: pointer;
             background-color: #000080;
@@ -298,13 +298,13 @@
             bottom: 0;
             width: 100%;
             font-size: 0.9em;
-            margin-top: 20px; /* Agregar margen superior */
+            margin-top: 20px;
         }
         footer img {
             vertical-align: middle;
-            width: 20px; /* Más pequeño */
-            height: 20px; /* Más pequeño */
-            cursor: pointer.
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
         }
 
         /* Media queries para responsividad */
@@ -326,23 +326,74 @@
             }
             #cart-modal img {
                 width: 91px;
-                height: 63px.
+                height: 63px;
             }
             .product-name, .product-price {
                 font-size: 0.8em;
             }
             .share-cart-btn {
                 font-size: 13px;
-                padding: 2px 5px; /* Reducir el padding */
-                width: 70%; /* Ajustar el ancho */
-                margin-left: auto; /* Centrar horizontalmente */
-                margin-right: auto; /* Centrar horizontalmente */
+                padding: 2px 5px;
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
             }
             .share-cart-btn img {
-                width: 8px; /* Reducir el tamaño del logotipo */
-                height: 8px; /* Reducir el tamaño del logotipo */
+                width: 8px;
+                height: 8px;
             }
         }
+        /* Modal específico para el producto */
+        #product-modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #product-modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 75%;
+            max-width: 600px;
+            border-radius: 15px;
+        }
+        #product-modal .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        #product-modal .close:hover,
+        #product-modal .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #product-modal img {
+            width: 50%; /* Cambia el ancho al 50% */
+            height: auto;
+            object-fit: contain;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
+        .code-example {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            overflow-x: auto;
+            display: none; /* Oculto por defecto */
+        }
+
     </style>
 </head>
 <body>
@@ -377,6 +428,16 @@
         </div>
     </div>
 
+    <!-- Modal para el producto -->
+    <div id="product-modal">
+        <div id="product-modal-content">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <img id="product-modal-image" src="" alt="Imagen del producto">
+            <p id="product-modal-description"></p>
+            <pre id="product-modal-code" class="code-example"></pre>
+        </div>
+    </div>
+
     <footer>
         <p>Presiona en el logo para abrir una conversación. <img src="WhatsApp_similar_logo.png" alt="WhatsApp" onclick="openWhatsApp()"></p>
     </footer>
@@ -390,29 +451,29 @@
             { id: 5, name: 'Módulo Inalámbrico Nodemcu V3 (esp8266) Usb Ch340', price: 320, quantity: 7, images: ['Imagenes/5/5_1.png', 'Imagenes/5/5_2.png' ,'Imagenes/5/5_3.png'] },
             { id: 6, name: 'Optoacoplador Pc817c (pack X 10)', price: 160, quantity: 10, images: ['Imagenes/6/6_1.png'] },
             { id: 7, name: 'Diodo Rectificador Schottky Sr5100 (pack X 10)', price: 180, quantity: 2, images: ['Imagenes/7/7_1.png'] },
-            { id: 8, name: 'Diodo Rectificador 10a 1000v (pack X10)', price: 180, quantity: 6, images: ['Imagenes/8/8_1.png', 'Imagenes/8/8_2.png'] },
-            //{ id: 9, name: 'Diodo Puente Rectificador Kbpc5010 50a 1000v', price: 190, quantity: 1, images: ['Imagenes/9/9_1.png', 'Imagenes/9/9_2.png', 'Imagenes/9/9_3.png'] },
+            { id: 8, name: 'Diodo Rectificador 10a 1000v (pack X10)', price: 180, quantity: 7, images: ['Imagenes/8/8_1.png', 'Imagenes/8/8_2.png'] },
+            { id: 9, name: 'Diodo Puente Rectificador Kbpc5010 50a 1000v', price: 190, quantity: 1, images: ['Imagenes/9/9_1.png', 'Imagenes/9/9_2.png', 'Imagenes/9/9_3.png'] },
             { id: 10, name: 'Triac Bta41-600b', price: 150, quantity: 40, images: ['Imagenes/10/10_1.png', 'Imagenes/10/10_2.png'] },
-            { id: 11, name: 'Chip Attiny85-20pu', price: 300, quantity: 5, images: ['Imagenes/11/11_1.png', 'Imagenes/11/11_2.png', 'Imagenes/11/11_3.png'] },
+            { id: 11, name: 'Chip Attiny85-20pu', price: 300, quantity: 10, images: ['Imagenes/11/11_1.png', 'Imagenes/11/11_2.png', 'Imagenes/11/11_3.png'] },
             { id: 12, name: 'Programador Universal Usb Avr Isp (con Adaptador)', price: 300, quantity: 10, images: ['Imagenes/12/12_1.png', 'Imagenes/12/12_2.png'] },
             { id: 13, name: 'Malla Desoldadora Para Desoldar Estaño 2.0 Mm De Ancho', price: 180, quantity: 1, images: ['Imagenes/13/13_1.png'] },
-            { id: 14, name: 'Disipador De Calor De Aluminio, 25x24x16mm (4 Unidades)', price: 200, quantity: 3, images: ['Imagenes/14/14_1.png', 'Imagenes/14/14_2.png', 'Imagenes/14/14_3.png'] },
+            { id: 14, name: 'Disipador De Calor De Aluminio, 25x24x16mm (4 Unidades)', price: 200, quantity: 3, images: ['Imagenes/14/14_1.png'] },
             { id: 15, name: 'Conector De Alimentación De Cc, Macho-hembra (5 Juegos)', price: 400, quantity: 1, images: ['Imagenes/15/15_1.png'] },
             { id: 16, name: 'Diodo Db3 Disparador 20 Piezas', price: 280, quantity: 7, images: ['Imagenes/16/16_1.png', 'Imagenes/16/16_2.png'] },
-            { id: 17, name: 'Kit De 5 Puntas De Hierro Para Soldador', price: 400, quantity: 1, images: ['Imagenes/17/17_1.png', 'Imagenes/17/17_2.png'] },
-            { id: 18, name: 'Kit Micro Pulsadores Con Tapa De 5 Colores, 25 Pcs', price: 650, quantity: 2, images: ['Imagenes/18/18_1.png', 'Imagenes/18/18_2.png', 'Imagenes/18/18_3.png'] },
+            { id: 17, name: 'Kit De 5 Puntas De Hierro Para Soldador', price: 400, quantity: 2, images: ['Imagenes/17/17_1.png', 'Imagenes/17/17_2.png'] },
+            { id: 18, name: 'Kit Micro Pulsadores Con Tapa De 5 Colores, 25 Pcs', price: 650, quantity: 2, images: ['Imagenes/18/18_1.png'] },
             { id: 19, name: 'Placa Expansión  Esp32. Nuevo Modelo.', price: 380, quantity: 10, images: ['Imagenes/19/19_1.png'] },
             { id: 20, name: 'Módulo De Pantalla Led Tm1637 Para Arduino, 7 Segmentos, 4 B', price: 120, quantity: 4, images: ['Imagenes/20/20_1.png'] },
             { id: 21, name: 'Interruptor Mosfet (x2) De Alta Potencia (400w)', price: 400, quantity: 1, images: ['Imagenes/21/21_1.png'] },
-            { id: 22, name: 'Módulo Usb A Ttl Cp2102 Con Cables Dupont', price: 380, quantity: 4, images: ['Imagenes/22/22_1.png', 'Imagenes/22/22_2.png'] },
+            { id: 22, name: 'Módulo Usb A Ttl Cp2102 Con Cables Dupont', price: 380, quantity: 5, images: ['Imagenes/22/22_1.png', 'Imagenes/22/22_2.png'] },
             { id: 23, name: 'Prensacable Pg11 (5 Unidades)', price: 200, quantity: 1, images: ['Imagenes/23/23_1.png'] },
             { id: 24, name: 'Conversor Serie--bluetooth Jdy-30', price: 380, quantity: 3, images: ['Imagenes/24/24_1.png'] },
             { id: 25, name: 'Diodo Rectificador M7 1n4007 Smd 1a 100 V. (20 Unidades)', price: 210, quantity: 3, images: ['Imagenes/25/25_1.png'] },
             { id: 26, name: 'Lámpara Led Indoor 200w Reales. Dimerizable. Luz Combinada!(USD)', price: 1, quantity: 130, images: ['Imagenes/26/26_1.png'] },
             { id: 27, name: 'Caja De Separadores De Nailon Hexagonal, M3 (300 Piezas)', price: 820, quantity: 1, images: ['Imagenes/27/27_1.png'] },
             { id: 28, name: 'Sensor De Hall 49e (bici Eléctrica) 5 Unidades', price: 180, quantity: 22, images: ['Imagenes/28/28_1.png'] },
-            { id: 29, name: 'Led Cob YXO 50w, Dual Spectrum', price: 380, quantity: 20, images: ['Imagenes/29/29_1.png', 'Imagenes/29/29_3.png', 'Imagenes/29/29_3.png', 'Imagenes/29/29_4.png', 'Imagenes/29/29_5.png'] },
-            { id: 30, name: 'Esp32 Wifi Con Placa De Expansión Último Modelo', price: 1000, quantity: 5, images: ['Imagenes/30/30_1.png', 'Imagenes/30/30_2  .png', 'Imagenes/30/30_3.png'] },
+            { id: 29, name: 'Led Cob YXO 50w, Dual Spectrum', price: 380, quantity: 20, images: ['Imagenes/29/29_1.png'] },
+            { id: 30, name: 'Esp32 Wifi Con Placa De Expansión Último Modelo', price: 1000, quantity: 5, images: ['Imagenes/30/30_1.png'] },
             { id: 31, name: 'Cable Usb A Micro, Alta Calidad, Tipo A. 0.3m', price: 100, quantity: 6, images: ['Imagenes/31/31_1.png'] },
             { id: 32, name: 'Módulo De Fuente De Alimentación Usb', price: 270, quantity: 10, images: ['Imagenes/32/32_1.png'] },
             { id: 33, name: 'Sensor De Distancia Ultrasónico X2 (compatible Arduino)', price: 280, quantity: 4, images: ['Imagenes/33/33_1.png'] },
@@ -456,7 +517,6 @@
             { id: 71, name: 'Microcontrolador W806 (placa De Desarrollo)', price: 450, quantity: 2, images: ['Imagenes/71/71_1.png'] },
             { id: 72, name: 'Sensor De Temperatura Y Humedad De Alta Precisión Aht21', price: 300, quantity: 2, images: ['Imagenes/72/72_1.png'] },
             { id: 73, name: 'Conversor Dc-dc De Intensidad Y Voltaje Regulables', price: 260, quantity: 11, images: ['Imagenes/73/73_1.png', 'Imagenes/73/73_2.png'] }
-            //{ id: 74, name: 'Módulo Rele Temporizado', price: 390, quantity: 10, images: ['Imagenes/74/74_1.PNG'] }
         ];
         const cart = [];
 
@@ -550,6 +610,7 @@
                 img.onload = () => {
                     const productElement = document.createElement('div');
                     productElement.className = 'product';
+                    productElement.onclick = () => openProductModal(product.id);
 
                     const imageContainer = document.createElement('div');
                     imageContainer.className = 'image-container';
@@ -619,7 +680,10 @@
                     const addToCartBtn = document.createElement('button');
                     addToCartBtn.className = 'add-to-cart-btn';
                     addToCartBtn.innerHTML = 'Al carrito<span class="cart-animation"></span>';
-                    addToCartBtn.onclick = () => addToCart(product.id, parseInt(quantityInput.value));
+                    addToCartBtn.onclick = (e) => {
+                        e.stopPropagation();
+                        addToCart(product.id, parseInt(quantityInput.value));
+                    };
 
                     productElement.appendChild(imageContainer);
                     productElement.appendChild(name);
@@ -635,6 +699,7 @@
                 };
             });
         }
+
 
         function showPreviousImage(productId, imgElement) {
             const product = products.find(p => p.id === productId);
@@ -692,10 +757,39 @@
             window.open(url, '_blank');
         }
 
+        function openProductModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                const productModal = document.getElementById('product-modal');
+                const productModalImage = document.getElementById('product-modal-image');
+                const productModalDescription = document.getElementById('product-modal-description');
+                const productModalCode = document.getElementById('product-modal-code');
+
+                productModalImage.src = product.images[0];
+                productModalDescription.textContent = product.description || '';
+
+                if (product.code) {
+                    productModalCode.textContent = product.code;
+                    productModalCode.style.display = 'block';
+                } else {
+                    productModalCode.style.display = 'none';
+                }
+
+                productModal.style.display = 'block';
+            }
+        }
+
+
+        function closeProductModal() {
+            const productModal = document.getElementById('product-modal');
+            productModal.style.display = 'none';
+        }
+
         // Añadir evento para cerrar el carrito con la tecla Escape
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape') {
                 closeCartModal();
+                closeProductModal();
             }
         });
 
