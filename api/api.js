@@ -2,9 +2,15 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const simpleGit = require('simple-git');
-
 const app = express();
 const git = simpleGit();
+
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;  // Utiliza la variable de entorno configurada en Vercel
+const GITHUB_REPO = 'https://github.com/Surlitabebe12/Micro-Universos.git';  // Reemplaza con tu repositorio
+
+git.addConfig('user.name', 'Surlitabebe12');  
+git.addConfig('user.email', 'rbrea7@hotmail.com');  
+git.addConfig('credential.helper', `!echo username=Surlitabebe12 && echo password=${GITHUB_TOKEN}`);  
 
 app.use(express.json());
 
@@ -28,6 +34,19 @@ app.post('/api/update-products', (req, res) => {
 
                 res.send('Productos actualizados correctamente');
             });
+    });
+});
+
+app.get('/api/get-products', (req, res) => {
+    const filePath = path.join(__dirname, '..', 'products.json');
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading products file:', err);
+            return res.status(500).send('Error al obtener los productos');
+        }
+
+        res.json(JSON.parse(data));
     });
 });
 
