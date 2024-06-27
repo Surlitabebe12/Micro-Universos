@@ -343,6 +343,16 @@ footer img {
     top: 0;
     width: 100%;
     height: 100%;
+    overflow```css
+/* Modal específico para el producto */
+#product-modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -384,4 +394,3 @@ footer img {
     overflow-x: auto;
     display: none; /* Oculto por defecto */
 }
-
