@@ -36,7 +36,7 @@
     },
     {
         "id": 4,
-        "name": "Placa Expansi\u00c3\u00b3n I2c 8 Canales",
+        "name": "Placa Expansión I2c 8 Canales",
         "price": 180,
         "quantity": 2,
         "images": [
@@ -51,7 +51,7 @@
     },
     {
         "id": 5,
-        "name": "M\u00c3\u00b3dulo Inal\u00c3\u00a1mbrico Nodemcu V3 (esp8266) Usb Ch340",
+        "name": "Módulo Inalámbrico Nodemcu V3 (esp8266) Usb Ch340",
         "price": 320,
         "quantity": 7,
         "images": [
@@ -148,7 +148,7 @@
     },
     {
         "id": 13,
-        "name": "Malla Desoldadora Para Desoldar Esta\u00c3\u00b1o 2.0 Mm De Ancho",
+        "name": "Malla Desoldadora Para Desoldar Estaño 2.0 Mm De Ancho",
         "price": 180,
         "quantity": 1,
         "images": [
@@ -170,7 +170,7 @@
     },
     {
         "id": 15,
-        "name": "Conector De Alimentaci\u00c3\u00b3n De Cc, Macho-hembra (5 Juegos)",
+        "name": "Conector De Alimentación De Cc, Macho-hembra (5 Juegos)",
         "price": 400,
         "quantity": 1,
         "images": [
@@ -216,7 +216,7 @@
     },
     {
         "id": 19,
-        "name": "Placa Expansi\u00c3\u00b3n  Esp32. Nuevo Modelo.",
+        "name": "Placa Expansión  Esp32. Nuevo Modelo.",
         "price": 380,
         "quantity": 10,
         "images": [
@@ -227,7 +227,7 @@
     },
     {
         "id": 20,
-        "name": "M\u00c3\u00b3dulo De Pantalla Led Tm1637 Para Arduino, 7 Segmentos, 4 B",
+        "name": "Módulo De Pantalla Led Tm1637 Para Arduino, 7 Segmentos, 4 B",
         "price": 120,
         "quantity": 4,
         "images": [
@@ -249,7 +249,7 @@
     },
     {
         "id": 22,
-        "name": "M\u00c3\u00b3dulo Usb A Ttl Cp2102 Con Cables Dupont",
+        "name": "Módulo Usb A Ttl Cp2102 Con Cables Dupont",
         "price": 380,
         "quantity": 5,
         "images": [
@@ -294,7 +294,7 @@
     },
     {
         "id": 26,
-        "name": "L\u00c3\u00a1mpara Led Indoor 200w Reales. Dimerizable. Luz Combinada!(USD)",
+        "name": "Lámpara Led Indoor 200w Reales. Dimerizable. Luz Combinada!(USD)",
         "price": 1,
         "quantity": 130,
         "images": [
@@ -316,7 +316,7 @@
     },
     {
         "id": 28,
-        "name": "Sensor De Hall 49e (bici El\u00c3\u00a9ctrica) 5 Unidades",
+        "name": "Sensor De Hall 49e (bici Eléctrica) 5 Unidades",
         "price": 180,
         "quantity": 22,
         "images": [
@@ -338,7 +338,7 @@
     },
     {
         "id": 30,
-        "name": "Esp32 Wifi Con Placa De Expansi\u00c3\u00b3n \u00c3\u0161ltimo Modelo",
+        "name": "Esp32 Wifi Con Placa De Expansión Útimo Modelo",
         "price": 1000,
         "quantity": 5,
         "images": [
@@ -360,7 +360,7 @@
     },
     {
         "id": 32,
-        "name": "M\u00c3\u00b3dulo De Fuente De Alimentaci\u00c3\u00b3n Usb",
+        "name": "Módulo De Fuente De Alimentación Usb",
         "price": 270,
         "quantity": 10,
         "images": [
@@ -371,7 +371,7 @@
     },
     {
         "id": 33,
-        "name": "Sensor De Distancia Ultras\u00c3\u00b3nico X2 (compatible Arduino)",
+        "name": "Sensor De Distancia Ultrasónico X2 (compatible Arduino)",
         "price": 280,
         "quantity": 4,
         "images": [
@@ -382,7 +382,7 @@
     },
     {
         "id": 34,
-        "name": "Caja De Pl\u00c3\u00a1stico Para Proyecto De Electr\u00c3\u00b3nica",
+        "name": "Caja De Plástico Para Proyecto De Electrónica",
         "price": 230,
         "quantity": 6,
         "images": [
@@ -404,7 +404,7 @@
     },
     {
         "id": 36,
-        "name": "M\u00c3\u00b3dulo Rel\u00c3\u00a9 5v 1 Canal",
+        "name": "Módulo Relé 5v 1 Canal",
         "price": 100,
         "quantity": 7,
         "images": [
@@ -426,7 +426,7 @@
     },
     {
         "id": 38,
-        "name": "Sensor De Humedad Tierra (alta Precisi\u00c3\u00b3n)",
+        "name": "Sensor De Humedad Tierra (alta Precisión)",
         "price": 400,
         "quantity": 20,
         "images": [
@@ -439,7 +439,7 @@
     },
     {
         "id": 39,
-        "name": "Mini Humidificador Usb-c (placa Electr\u00c3\u00b3nica)",
+        "name": "Mini Humidificador Usb-c (placa Electrónica)",
         "price": 380,
         "quantity": 1,
         "images": [
@@ -527,7 +527,7 @@
     },
     {
         "id": 47,
-        "name": "Diodos De Recuperaci\u00c3\u00b3n R\u00c3\u00a1pida 10 Piezas Fr607 6a 1000v",
+        "name": "Diodos De Recuperación Rápida 10 Piezas Fr607 6a 1000v",
         "price": 180,
         "quantity": 5,
         "images": [
@@ -538,7 +538,7 @@
     },
     {
         "id": 48,
-        "name": "Diodo De Recuperaci\u00c3\u00b3n R\u00c3\u00a1pida Fr207 (20 Unidades)",
+        "name": "Diodo De Recuperación Rápida Fr207 (20 Unidades)",
         "price": 180,
         "quantity": 15,
         "images": [
@@ -549,7 +549,7 @@
     },
     {
         "id": 49,
-        "name": "Potenci\u00c3\u00b3metro Lineal De 3 Pines, 1k",
+        "name": "Potenciómetro Lineal De 3 Pines, 1k",
         "price": 80,
         "quantity": 10,
         "images": [
@@ -560,7 +560,7 @@
     },
     {
         "id": 50,
-        "name": "Potenci\u00c3\u00b3metro Lineal De 3 Pines, 2k",
+        "name": "Potenciómetro Lineal De 3 Pines, 2k",
         "price": 80,
         "quantity": 10,
         "images": [
@@ -571,7 +571,7 @@
     },
     {
         "id": 51,
-        "name": "Potenci\u00c3\u00b3metro Lineal De 3 Pines, 100k",
+        "name": "Potenciómetro Lineal De 3 Pines, 100k",
         "price": 80,
         "quantity": 10,
         "images": [
@@ -615,7 +615,7 @@
     },
     {
         "id": 55,
-        "name": "Potenci\u00c3\u00b3metro Lineal De 3 Pines, 1m",
+        "name": "Potenciómetro Lineal De 3 Pines, 1m",
         "price": 80,
         "quantity": 10,
         "images": [
@@ -626,7 +626,7 @@
     },
     {
         "id": 56,
-        "name": "Potenci\u00c3\u00b3metro Lineal De 3 Pines, 50k",
+        "name": "Potenciómetro Lineal De 3 Pines, 50k",
         "price": 80,
         "quantity": 10,
         "images": [
@@ -637,7 +637,7 @@
     },
     {
         "id": 57,
-        "name": "Potenci\u00c3\u00b3metro Lineal De 3 Pines, 20k",
+        "name": "Potenciómetro Lineal De 3 Pines, 20k",
         "price": 80,
         "quantity": 10,
         "images": [
@@ -659,7 +659,7 @@
     },
     {
         "id": 59,
-        "name": "Potenci\u00c3\u00b3metro Lineal De 3 Pines, 250k",
+        "name": "Potenciómetro Lineal De 3 Pines, 250k",
         "price": 80,
         "quantity": 10,
         "images": [
@@ -692,7 +692,7 @@
     },
     {
         "id": 62,
-        "name": "M\u00c3\u00b3dulo De Interruptor Mosfet 4 Canales",
+        "name": "Módulo De Interruptor Mosfet 4 Canales",
         "price": 380,
         "quantity": 2,
         "images": [
@@ -704,7 +704,7 @@
     },
     {
         "id": 63,
-        "name": "Led Bridgelux (muy Buenos) 50w, Dimerizable, Blanco Fr\u00c3\u00ado",
+        "name": "Led Bridgelux (muy Buenos) 50w, Dimerizable, Blanco Frío",
         "price": 380,
         "quantity": 20,
         "images": [
@@ -750,7 +750,7 @@
     },
     {
         "id": 67,
-        "name": "Sensor De Corriente De Precisi\u00c3\u00b3n (arduino)",
+        "name": "Sensor De Corriente De Precisión (arduino)",
         "price": 280,
         "quantity": 2,
         "images": [
@@ -762,7 +762,7 @@
     },
     {
         "id": 68,
-        "name": "M\u00c3\u00b3dulo De Pantalla Lcd Tft De 1,8 (ej Arduino)",
+        "name": "Módulo De Pantalla Lcd Tft De 1,8 (ej Arduino)",
         "price": 500,
         "quantity": 8,
         "images": [
@@ -774,7 +774,7 @@
     },
     {
         "id": 69,
-        "name": "Caja De Fusibles De Tubo De Vidrio, Soplado R\u00c3\u00a1pido (100uds)",
+        "name": "Caja De Fusibles De Tubo De Vidrio, Soplado Rápido (100uds)",
         "price": 800,
         "quantity": 9,
         "images": [
@@ -785,7 +785,7 @@
     },
     {
         "id": 70,
-        "name": "Chip Led. 10w. Blanco C\u00c3\u00a1lido",
+        "name": "Chip Led. 10w. Blanco Cálido",
         "price": 100,
         "quantity": 4,
         "images": [
@@ -807,7 +807,7 @@
     },
     {
         "id": 72,
-        "name": "Sensor De Temperatura Y Humedad De Alta Precisi\u00c3\u00b3n Aht21",
+        "name": "Sensor De Temperatura Y Humedad De Alta Precisión Aht21",
         "price": 300,
         "quantity": 2,
         "images": [
