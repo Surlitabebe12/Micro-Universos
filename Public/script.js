@@ -248,11 +248,13 @@ function openProductModal(productId) {
 
         productModalImage.src = product.images[0];
 
-        // Utiliza innerHTML para mantener el formato del texto
-        productModalDescription.innerHTML = product.description ? product.description.replace(/\n/g, '<br>') : '';
+        // Utiliza innerHTML para mantener el formato del texto y aplica la clase de estilo .small-description
+        productModalDescription.innerHTML = product.description 
+            ? `<span class="small-description">${product.description.replace(/\n/g, '<br>')}</span>` 
+            : '';
 
         if (product.code) {
-            productModalCode.innerHTML = `<pre>${product.code.replace(/\n/g, '<br>')}</pre>`;
+            productModalCode.innerHTML = `<pre class="small-description">${product.code.replace(/\n/g, '<br>')}</pre>`;
             productModalCode.style.display = 'block';
         } else {
             productModalCode.style.display = 'none';
@@ -261,6 +263,7 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
+
 
 
 function closeProductModal() {
