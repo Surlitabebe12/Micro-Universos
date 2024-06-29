@@ -248,7 +248,7 @@ function openProductModal(productId) {
 
         productModalImage.src = product.images[0];
 
-        // Utiliza innerHTML para mantener el formato del texto y aplica la clase de estilo .small-description
+        // Use innerHTML to keep text formatting and apply .small-description style class
         productModalDescription.innerHTML = product.description 
             ? `<span class="small-description">${product.description.replace(/\n/g, '<br>')}</span>` 
             : '';
@@ -263,8 +263,6 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
-
-
 
 function closeProductModal() {
     const productModal = document.getElementById('product-modal');
