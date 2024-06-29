@@ -245,7 +245,8 @@ function openProductModal(productId) {
         const productModalImage = document.getElementById('product-modal-image');
         const productModalDescription = document.getElementById('product-modal-description');
         const productModalCode = document.getElementById('product-modal-code');
-
+        const modalTitle = document.getElementById('product-modal-title'); // Nuevo elemento para el título
+        
         productModalImage.src = product.images[0];
 
         // Use innerHTML to keep text formatting and apply .small-description style class
@@ -263,7 +264,7 @@ function openProductModal(productId) {
         } else {
             productModalCode.style.display = 'none';
         }
-
+        modalTitle.textContent = product.name; // Establecer el nombre del producto como título
         productModal.style.display = 'block';
     }
 }
