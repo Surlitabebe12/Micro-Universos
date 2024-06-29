@@ -38,21 +38,6 @@
         "datasheet": false
     },
     {
-        "id": 5,
-        "name": "M\u00f3dulo Inal\u00e1mbrico Nodemcu V3 (esp8266) Usb Ch340",
-        "price": 320.0,
-        "quantity": 10,
-        "images": [
-            "Imagenes\\5\\5_1.png",
-            "Imagenes\\5\\5_2.png",
-            "Imagenes\\5\\5_3.png",
-            "Imagenes\\5\\5_4.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 8,
         "name": "Diodo Rectificador 10a 1000v (pack X10)",
         "price": 180.0,
