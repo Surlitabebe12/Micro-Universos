@@ -703,18 +703,6 @@
         "datasheet": false
     },
     {
-        "id": 70,
-        "name": "Chip Led. 10w. Blanco C\u00e1lido",
-        "price": 100.0,
-        "quantity": 2,
-        "images": [
-            "Imagenes\\70\\70_1.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 71,
         "name": "Microcontrolador W806 (placa De Desarrollo)",
         "price": 450.0,
