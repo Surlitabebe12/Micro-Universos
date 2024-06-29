@@ -2,10 +2,10 @@
     {
         "id": 1,
         "name": "Bornera Pcb 2 Pines (x10)",
-        "price": "180.0",
-        "quantity": "4",
+        "price": 180.0,
+        "quantity": 4,
         "images": [
-            "Imagenes\\1\\1_1.png"
+            "Imagenes/1/1_1.png"
         ],
         "description": "Descripci\u00f3n T\u00e9cnica:\\n5.08-301-2P es un conector de bloque terminal de tornillo de 2 pines con un paso de 5mm, com\u00fanmente utilizado en proyectos de electr\u00f3nica para realizar conexiones seguras y desmontables entre componentes y placas de circuito impreso (PCB).\\n\\nEspecificaciones T\u00e9cnicas:\\nPaso (Pitch): 5mm\\nN\u00famero de Pines: 2\\nTipo de Conexi\u00f3n: Bloque terminal de tornillo\\nTensi\u00f3n M\u00e1xima: 300V\\nCorriente M\u00e1xima: 10A\\nMaterial del Cuerpo: Poliamida (PA)\\nMaterial del Contacto: Cobre con revestimiento de n\u00edquel\\nTemperatura de Operaci\u00f3n: -40\u00b0C a 105\u00b0C\\n\\nCaracter\u00edsticas:\\nF\u00e1cil Instalaci\u00f3n: Los tornillos permiten una conexi\u00f3n firme y f\u00e1cil de instalar.\\nDesmontable: Las conexiones se pueden desmontar y volver a montar f\u00e1cilmente, ideal para aplicaciones de prototipos y pruebas.\\nSeguro: Proporciona una conexi\u00f3n segura y confiable, reduciendo el riesgo de desconexiones accidentales.\\n\\nAplicaciones:\\nProyectos de Electr\u00f3nica DIY: Ideal para proyectos de hobby y prototipos.\\nAutomatizaci\u00f3n Industrial: Utilizado en conexiones de sensores y actuadores.\\nInstrumentaci\u00f3n: Conexiones en equipos de medida y control.\\nDom\u00f3tica: Conexiones en sistemas de control y automatizaci\u00f3n del hogar.",
         "code": "",
@@ -17,9 +17,9 @@
         "price": 300.0,
         "quantity": 9,
         "images": [
-            "Imagenes\\2\\2_1.png",
-            "Imagenes\\2\\2_2.png",
-            "Imagenes\\2\\2_3.png"
+            "Imagenes/2/2_1.png",
+            "Imagenes/2/2_2.png",
+            "Imagenes/2/2_3.png"
         ],
         "description": "Descripci\u00f3n T\u00e9cnica:\\n\\nTipo de Display: 7 segmentos\\nN\u00famero de D\u00edgitos: 4\\nControlador: TM1637\\nVoltaje de Operaci\u00f3n: 3.3V - 5V\\nConsumo de Corriente: 80mA\\nDimensiones: 12.8mm de altura del d\u00edgito\\nInterfaz de Comunicaci\u00f3n: 2 cables (CLK y DIO)\\nCompatibilidad: Compatible con microcontroladores como Arduino, ESP8266, ESP32, y otros.\\nCaracter\u00edsticas Adicionales:\\nF\u00e1cil de conectar y usar.\\nBajo consumo de energ\u00eda.\\nAlta luminosidad y claridad.\\nSoporte para mostrar n\u00fameros y algunos caracteres alfab\u00e9ticos.\\n\\nAplicaciones:\\n\\nIdeal para proyectos donde se necesita mostrar n\u00fameros, como relojes, cron\u00f3metros, medidores, y cualquier aplicaci\u00f3n que requiera visualizaci\u00f3n de datos num\u00e9ricos de manera clara y eficiente.\\n\\nEste ejemplo muestra c\u00f3mo conectar y controlar el display utilizando la biblioteca TM1637 para Arduino.\\n\\nConexiones:\\nCLK (Clock): Pin 2 de Arduino\\nDIO (Data In/Out): Pin 3 de Arduino\\nVCC: 5V de Arduino\\nGND: GND de Arduino",
         "code": "#include <TM1637Display.h>\\n\\n// Definir los pines de conexi\u00f3n\\n#define CLK 2\\n#define DIO 3\\n\\n// Crear una instancia del objeto display\\nTM1637Display display(CLK, DIO);\\n\\nvoid setup() {\\n  // Inicializar el display\\n  display.setBrightness(0x0f); // Configurar el brillo (0x0f es el m\u00e1s brillante)\\n}\\n\\nvoid loop() {\\n  // Mostrar un n\u00famero en el display\\n  display.showNumberDec(1234); // Mostrar el n\u00famero 1234\\n\\n  delay(2000); // Esperar 2 segundos\\n\\n  // Mostrar cada d\u00edgito individualmente\\n  display.showNumberDecEx(5678, 0b01000000, true); // Mostrar 5678 con un punto decimal en el segundo d\u00edgito\\n\\n  delay(2000); // Esperar 2 segundos\\n\\n  // Mostrar un contador\\n  for (int i = 0; i <= 9999; i++) {\\n    display.showNumberDec(i); // Mostrar el n\u00famero actual del contador\\n    delay(100); // Esperar 100 milisegundos\\n  }\\n\\n  delay(2000); // Esperar 2 segundos\\n}",
@@ -31,7 +31,7 @@
         "price": 430.0,
         "quantity": 6,
         "images": [
-            "Imagenes\\3\\3_1.png"
+            "Imagenes/3/3_1.png"
         ],
         "description": "La pantalla TFT LCD de 1.8 pulgadas con una resoluci\u00f3n de 128x160 p\u00edxeles es un m\u00f3dulo compacto y vers\u00e1til utilizado en diversos proyectos de electr\u00f3nica y microcontroladores, incluyendo ESP32. Este tipo de pantalla es ideal para mostrar gr\u00e1ficos, im\u00e1genes y textos en color.\\n\\nCaracter\u00edsticas:\\nTama\u00f1o de pantalla: 1.8 pulgadas\\nResoluci\u00f3n: 128x160 p\u00edxeles\\nTipo de pantalla: TFT LCD\\nInterfaz: SPI (Serial Peripheral Interface)\\nVoltaje de operaci\u00f3n: 3.3V\\nControlador IC: ST7735\\nColores: 65K (16-bit)\\n\u00c1ngulo de visi\u00f3n: Amplio\\nConexiones:\\nVCC: Alimentaci\u00f3n de 3.3V\\nGND: Tierra\\nCS: Chip Select\\nRESET: Reinicio\\nA0 (DC): Data/Command\\nSDA (MOSI): Master Out Slave In\\nSCK: Reloj Serial\\nLED: Luz de fondo\\nC\u00f3digo de Ejemplo para ESP32\\nPara utilizar esta pantalla con ESP32, puedes utilizar la biblioteca Adafruit ST7735 que facilita la programaci\u00f3n y control de la pantalla. A continuaci\u00f3n se presenta un ejemplo b\u00e1sico de c\u00f3mo inicializar la pantalla y mostrar texto y gr\u00e1ficos.\\n\\nConexiones ESP32:\\nVCC: 3.3V\\nGND: GND\\nCS: Pin 5\\nRESET: Pin 4\\nA0 (DC): Pin 2\\nSDA (MOSI): Pin 23\\nSCK: Pin 18\\nLED: 3.3V (opcional para controlar la luz de fondo)",
         "code": "#include <Adafruit_GFX.h>    // Biblioteca de gr\u00e1ficos de Adafruit\\n#include <Adafruit_ST7735.h> // Biblioteca para el controlador ST7735\\n#include <SPI.h>\\n\\n// Definir pines de conexi\u00f3n\\n#define TFT_CS     5\\n#define TFT_RST    4\\n#define TFT_DC     2\\n\\n// Crear una instancia del objeto ST7735\\nAdafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);\\n\\nvoid setup() {\\n  // Inicializar la pantalla\\n  tft.initR(INITR_BLACKTAB);\\n  tft.setRotation(1); // Opcional: cambiar la orientaci\u00f3n de la pantalla\\n\\n  // Configurar el color del fondo y borrar la pantalla\\n  tft.fillScreen(ST77XX_BLACK);\\n\\n  // Configurar el color del texto y tama\u00f1o de la fuente\\n  tft.setTextColor(ST77XX_WHITE);\\n  tft.setTextSize(2);\\n\\n  // Mostrar un mensaje de bienvenida\\n  tft.setCursor(10, 10);\\n  tft.println(\"Hola Mundo!\");\\n\\n  // Dibujar un rect\u00e1ngulo\\n  tft.drawRect(20, 40, 100, 60, ST77XX_RED);\\n}\\n\\nvoid loop() {\\n  // Ejemplo de animaci\u00f3n simple\\n  for (int i = 0; i < 128; i++) {\\n    tft.fillCircle(i, 80, 10, ST77XX_BLUE);\\n    delay(50);\\n    tft.fillCircle(i, 80, 10, ST77XX_BLACK);\\n  }\\n}",
@@ -40,13 +40,13 @@
     {
         "id": 5,
         "name": "ESP8266 en placa de desarrollo Micro USB",
-        "price": "330.0",
-        "quantity": "5",
+        "price": 330.0,
+        "quantity": 5,
         "images": [
-            "Imagenes\\5\\5_1.png",
-            "Imagenes\\5\\5_2.png",
-            "Imagenes\\5\\5_3.png",
-            "Imagenes\\5\\5_4.png"
+            "Imagenes/5/5_1.png",
+            "Imagenes/5/5_2.png",
+            "Imagenes/5/5_3.png",
+            "Imagenes/5/5_4.png"
         ],
         "description": "Resumen T\u00e9cnico: ESP8266 NodeMCU\\nEl ESP8266 NodeMCU es un m\u00f3dulo WiFi basado en el chip ESP8266 que permite agregar conectividad WiFi a proyectos de electr\u00f3nica. Es ideal para aplicaciones de IoT (Internet of Things) debido a su tama\u00f1o compacto, bajo costo y capacidad de procesamiento.\\n\\nCaracter\u00edsticas:\\nChip: ESP8266\\nProcesador: Tensilica L106 a 80MHz\\nMemoria: 32KB de memoria de instrucci\u00f3n, 80KB de memoria de usuario y 4MB de memoria flash\\nConectividad: WiFi 802.11 b/g/n\\nGPIOs: 11 pines GPIO (General Purpose Input/Output)\\nProtocolos soportados: TCP/IP, HTTP, MQTT, etc.\\nInterfaz: UART, SPI, I2C, PWM, ADC\\nVoltaje de operaci\u00f3n: 3.3V\\nConsumo de energ\u00eda: Modo normal: ~70mA, Modo de bajo consumo: <1mA\\nAplicaciones:\\nAutomatizaci\u00f3n del hogar\\nProyectos de dom\u00f3tica\\nDispositivos conectados a Internet\\nSensores y actuadores remotos\\nPrototipos de IoT\\nC\u00f3digo de Ejemplo para ESP8266 NodeMCU\\nA continuaci\u00f3n se presenta un ejemplo de c\u00f3digo para utilizar el ESP8266 NodeMCU para conectarse a una red WiFi y enviar datos a trav\u00e9s de HTTP. En este ejemplo, se env\u00edan datos simulados de temperatura y humedad a un servidor web cada 10 segundos.",
         "code": "#include <ESP8266WiFi.h>\\n#include <ESP8266HTTPClient.h>\\n\\n// Configura los datos de tu red WiFi\\nconst char* ssid = \"NOMBRE_DE_TU_RED\";\\nconst char* password = \"CONTRASENA_DE_TU_RED\";\\n\\n// Configura la URL del servidor al que se enviar\u00e1n los datos\\nconst char* serverUrl = \"http://example.com/api/data\";\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n  WiFi.begin(ssid, password);\\n\\n  Serial.print(\"Conectando a \");\\n  Serial.print(ssid);\\n\\n  // Espera hasta que el ESP8266 se conecte a la red WiFi\\n  while (WiFi.status() != WL_CONNECTED) {\\n    delay(500);\\n    Serial.print(\".\");\\n  }\\n\\n  Serial.println(\"\");\\n  Serial.println(\"WiFi conectado.\");\\n  Serial.print(\"Direcci\u00f3n IP: \");\\n  Serial.println(WiFi.localIP());\\n}\\n\\nvoid loop() {\\n  if (WiFi.status() == WL_CONNECTED) {\\n    HTTPClient http;\\n\\n    // Simula datos de temperatura y humedad\\n    float temperature = random(20, 30) + random(0, 99) / 100.0;\\n    float humidity = random(40, 60) + random(0, 99) / 100.0;\\n\\n    // Crea la URL completa con los datos\\n    String url = serverUrl;\\n    url += \"?temperature=\" + String(temperature) + \"&humidity=\" + String(humidity);\\n\\n    http.begin(url);\\n    int httpCode = http.GET();\\n\\n    if (httpCode > 0) {\\n      String payload = http.getString();\\n      Serial.println(\"Datos enviados correctamente\");\\n      Serial.println(\"Respuesta del servidor: \" + payload);\\n    } else {\\n      Serial.println(\"Error al enviar los datos: \" + http.errorToString(httpCode));\\n    }\\n\\n    http.end();\\n  } else {\\n    Serial.println(\"Error de conexi\u00f3n WiFi\");\\n  }\\n\\n  delay(10000); // Espera 10 segundos antes de enviar los datos nuevamente\\n}",
@@ -55,10 +55,10 @@
     {
         "id": 6,
         "name": "PC817 x 20",
-        "price": "200",
-        "quantity": "9",
+        "price": 200.0,
+        "quantity": 9,
         "images": [
-            "Imagenes\\6\\6_1.png"
+            "Imagenes/6/6_1.png"
         ],
         "description": "Resumen T\u00e9cnico: Optoacoplador PC817\\nEl PC817 es un optoacoplador de prop\u00f3sito general que consiste en un LED infrarrojo y un fototransistor en un encapsulado compacto. Es ampliamente utilizado en la separaci\u00f3n de circuitos el\u00e9ctricos para proporcionar aislamiento el\u00e9ctrico y evitar interferencias.\\n\\nCaracter\u00edsticas:\\nTipo: Optoacoplador\\nEncapsulado: DIP-4\\nTensi\u00f3n de aislamiento: 5000 Vrms\\nCorriente del LED: 50 mA (m\u00e1x.)\\nTensi\u00f3n de colector-emisor: 35V (m\u00e1x.)\\nCorriente de colector: 50 mA (m\u00e1x.)\\nTransferencia de corriente (CTR): 50% - 600%\\nRango de temperatura de operaci\u00f3n: -30\u00b0C a 100\u00b0C\\nAplicaciones:\\nAislamiento de se\u00f1ales entre circuitos de diferente potencial\\nProtecci\u00f3n de microcontroladores y circuitos l\u00f3gicos\\nInterfaces de control industrial\\nSistemas de alimentaci\u00f3n conmutada (SMPS)\\nInterrupci\u00f3n de ruidos y se\u00f1ales transitorias\\nC\u00f3digo de Ejemplo para ESP32 utilizando PC817\\nA continuaci\u00f3n, se presenta un ejemplo de c\u00f3mo utilizar el optoacoplador PC817 con un ESP32 para detectar una se\u00f1al de entrada aislada y encender un LED en respuesta.",
         "code": "#define SIGNAL_PIN 4    // Pin de entrada conectado al fototransistor del PC817\\n#define LED_PIN 2       // Pin de salida conectado a un LED\\n\\nvoid setup() {\\n  pinMode(SIGNAL_PIN, INPUT);\\n  pinMode(LED_PIN, OUTPUT);\\n  Serial.begin(115200);\\n}\\n\\nvoid loop() {\\n  int signal = digitalRead(SIGNAL_PIN);\\n  \\n  if (signal == HIGH) {\\n    digitalWrite(LED_PIN, HIGH);\\n    Serial.println(\"Se\u00f1al detectada: LED encendido\");\\n  } else {\\n    digitalWrite(LED_PIN, LOW);\\n    Serial.println(\"No hay se\u00f1al: LED apagado\");\\n  }\\n\\n  delay(500);\\n}",
@@ -67,10 +67,10 @@
     {
         "id": 7,
         "name": "Diodo SR5100",
-        "price": "190",
-        "quantity": "3",
+        "price": 190.0,
+        "quantity": 3,
         "images": [
-            "Imagenes\\7\\7_1.png"
+            "Imagenes/7/7_1.png"
         ],
         "description": "Resumen T\u00e9cnico: Diodo SR5100\\nEl diodo SR5100 es un diodo Schottky de recuperaci\u00f3n r\u00e1pida, dise\u00f1ado para aplicaciones de rectificaci\u00f3n de corriente continua en fuentes de alimentaci\u00f3n y circuitos de protecci\u00f3n. Este diodo es conocido por su baja ca\u00edda de tensi\u00f3n y alta eficiencia.\\n\\nCaracter\u00edsticas:\\nTipo: Diodo Schottky de recuperaci\u00f3n r\u00e1pida\\nTensi\u00f3n inversa m\u00e1xima (VR): 100V\\nCorriente directa m\u00e1xima (IF): 5A\\nCa\u00edda de tensi\u00f3n directa (VF): 0.85V @ 5A\\nTiempo de recuperaci\u00f3n inversa (trr): 35 ns\\nCapacitancia m\u00e1xima: 200pF\\nRango de temperatura de operaci\u00f3n: -55\u00b0C a 150\u00b0C\\nAplicaciones:\\nFuentes de alimentaci\u00f3n conmutadas\\nConvertidores DC-DC\\nRectificaci\u00f3n de alta frecuencia\\nProtecci\u00f3n contra inversi\u00f3n de polaridad\\nCircuitos de clamping y protecci\u00f3n\\nC\u00f3digo de Ejemplo para ESP32 utilizando Diodo SR5100\\nA continuaci\u00f3n, se presenta un ejemplo de c\u00f3mo utilizar el diodo SR5100 en un circuito de rectificaci\u00f3n con un ESP32 para monitorear el voltaje rectificado.",
         "code": "#define VOLTAGE_PIN 34  // Pin anal\u00f3gico para medir el voltaje rectificado\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n  pinMode(VOLTAGE_PIN, INPUT);\\n}\\n\\nvoid loop() {\\n  int sensorValue = analogRead(VOLTAGE_PIN);\\n  float voltage = sensorValue * (3.3 / 4095.0) * 2; // Ajuste para el divisor de voltaje\\n  Serial.print(\"Voltaje rectificado: \");\\n  Serial.print(voltage);\\n  Serial.println(\" V\");\\n  delay(1000);\\n}",
@@ -79,11 +79,11 @@
     {
         "id": 8,
         "name": "Diodo Rectificador 10a 1000v",
-        "price": "190",
-        "quantity": "3",
+        "price": 190.0,
+        "quantity": 3,
         "images": [
-            "Imagenes\\8\\8_1.png",
-            "Imagenes\\8\\8_2.png"
+            "Imagenes/8/8_1.png",
+            "Imagenes/8/8_2.png"
         ],
         "description": "Resumen T\u00e9cnico: Diodo Rectificador 10A 1000V\\nEl diodo rectificador de 10A 1000V es un componente semiconductor utilizado principalmente en aplicaciones de rectificaci\u00f3n de corriente alterna a corriente continua. Este tipo de diodo es adecuado para manejar altas corrientes y voltajes elevados, lo que lo hace ideal para fuentes de alimentaci\u00f3n y otros circuitos de potencia.\\n\\nCaracter\u00edsticas:\\nCorriente Directa M\u00e1xima (IF): 10A\\nVoltaje Inverso M\u00e1ximo (VR): 1000V\\nCa\u00edda de Tensi\u00f3n Directa (VF): Aproximadamente 1.1V a 10A\\nTiempo de Recuperaci\u00f3n Inversa (trr): 2\u03bcs\\nCapacitancia: 200pF\\nRango de Temperatura de Operaci\u00f3n: -55\u00b0C a 150\u00b0C\\nAplicaciones:\\nFuentes de alimentaci\u00f3n conmutadas\\nRectificaci\u00f3n en circuitos de alta corriente\\nInversores y convertidores de frecuencia\\nProtecci\u00f3n contra inversi\u00f3n de polaridad\\nAplicaciones industriales de alta potencia\\nC\u00f3digo de Ejemplo para ESP32 utilizando Diodo Rectificador 10A 1000V\\nA continuaci\u00f3n se presenta un ejemplo de c\u00f3mo utilizar el diodo rectificador de 10A 1000V en un circuito de rectificaci\u00f3n con un ESP32 para monitorear el voltaje rectificado.",
         "code": "#define VOLTAGE_PIN 34  // Pin anal\u00f3gico para medir el voltaje rectificado\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n  pinMode(VOLTAGE_PIN, INPUT);\\n}\\n\\nvoid loop() {\\n  int sensorValue = analogRead(VOLTAGE_PIN);\\n  float voltage = sensorValue * (3.3 / 4095.0) * 2; // Ajuste para el divisor de voltaje\\n  Serial.print(\"Voltaje rectificado: \");\\n  Serial.print(voltage);\\n  Serial.println(\" V\");\\n  delay(1000);\\n}",
@@ -92,12 +92,12 @@
     {
         "id": 9,
         "name": "KBPC5010",
-        "price": "170",
-        "quantity": "27",
+        "price": 170.0,
+        "quantity": 27,
         "images": [
-            "Imagenes\\9\\9_1.png",
-            "Imagenes\\9\\9_2.png",
-            "Imagenes\\9\\9_3.png"
+            "Imagenes/9/9_1.png",
+            "Imagenes/9/9_2.png",
+            "Imagenes/9/9_3.png"
         ],
         "description": "El puente rectificador KBPC5010 es un componente electr\u00f3nico utilizado para convertir corriente alterna (AC) en corriente directa (DC). Es com\u00fanmente utilizado en fuentes de alimentaci\u00f3n y circuitos de rectificaci\u00f3n de alta corriente.\\n\\nCaracter\u00edsticas:\\nModelo: KBPC5010\\nCorriente m\u00e1xima: 50A\\nVoltaje m\u00e1ximo inverso repetitivo (V_RRM): 1000V\\nTipo de montaje: A trav\u00e9s de orificio\\nConfiguraci\u00f3n: Monof\u00e1sico\\nTemperatura de operaci\u00f3n: -55\u00b0C a +150\u00b0C\\nAplicaciones:\\nFuentes de alimentaci\u00f3n\\nEquipos de telecomunicaciones\\nRectificaci\u00f3n de se\u00f1al\\nConvertidores de energ\u00eda\\nElectr\u00f3nica de potencia\\nC\u00f3digo de Ejemplo para ESP32\\nA continuaci\u00f3n se presenta un ejemplo de c\u00f3digo para utilizar un ESP32 en un circuito de rectificaci\u00f3n, controlando un puente rectificador como parte de una fuente de alimentaci\u00f3n. El c\u00f3digo incluye la medici\u00f3n de voltaje y la visualizaci\u00f3n de datos en una pantalla TFT.\\n\\nConexiones ESP32:\\nAIN: Pin GPIO34 (Lectura del voltaje rectificado)\\nPantalla TFT: Mismos pines que en el ejemplo anterior",
         "code": "#include <Adafruit_GFX.h>    // Biblioteca de gr\u00e1ficos de Adafruit\\n#include <Adafruit_ST7735.h> // Biblioteca para el controlador ST7735\\n#include <SPI.h>\\n\\n// Definir pines de conexi\u00f3n de la pantalla\\n#define TFT_CS     5\\n#define TFT_RST    4\\n#define TFT_DC     2\\n\\n// Crear una instancia del objeto ST7735\\nAdafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n\\n  // Inicializar la pantalla\\n  tft.initR(INITR_BLACKTAB);\\n  tft.setRotation(1); // Opcional: cambiar la orientaci\u00f3n de la pantalla\\n  tft.fillScreen(ST77XX_BLACK);\\n\\n  // Configurar el color del texto y tama\u00f1o de la fuente\\n  tft.setTextColor(ST77XX_WHITE);\\n  tft.setTextSize(2);\\n\\n  // Mostrar un mensaje de inicio\\n  tft.setCursor(10, 10);\\n  tft.println(\"Lectura de Voltaje\");\\n}\\n\\nvoid loop() {\\n  // Leer el voltaje del puente rectificador\\n  int analogValue = analogRead(34); // Leer el pin anal\u00f3gico GPIO34\\n  float voltage = analogValue * (3.3 / 4095.0) * (1000.0 / 100.0); // Ajustar seg\u00fan el divisor de voltaje\\n\\n  // Mostrar el voltaje en la pantalla TFT\\n  tft.fillRect(10, 40, 200, 30, ST77XX_BLACK); // Limpiar \u00e1rea\\n  tft.setCursor(10, 40);\\n  tft.print(\"V: \");\\n  tft.print(voltage);\\n  tft.println(\" V\");\\n\\n  // Enviar el voltaje a trav\u00e9s del puerto serie\\n  Serial.print(\"Voltaje: \");\\n  Serial.print(voltage);\\n  Serial.println(\" V\");\\n\\n  delay(1000); // Esperar 1 segundo antes de la pr\u00f3xima lectura\\n}",
@@ -106,13 +106,13 @@
     {
         "id": 10,
         "name": "Triac BTA41-600b",
-        "price": "150",
-        "quantity": "30",
+        "price": 150.0,
+        "quantity": 30,
         "images": [
-            "Imagenes\\10\\10_1.png",
-            "Imagenes\\10\\10_2.jpg",
-            "Imagenes\\10\\10_3.jpg",
-            "Imagenes\\10\\10_4.jpg"
+            "Imagenes/10/10_1.png",
+            "Imagenes/10/10_2.jpg",
+            "Imagenes/10/10_3.jpg",
+            "Imagenes/10/10_4.jpg"
         ],
         "description": "El BTA4-600B es un triac (Triodo para Corriente Alterna) utilizado en el control de potencia de corriente alterna (CA). Es un componente semiconductor que puede conmutar y controlar corrientes altas, lo que lo hace ideal para aplicaciones como dimmers de luz, controladores de velocidad de motores, y reguladores de calefacci\u00f3n.\\n\\nEspecificaciones T\u00e9cnicas:\\nVoltaje M\u00e1ximo de Repetici\u00f3n de Pico Inverso (VDRM): 600V\\nCorriente Media (IT(RMS)): 4A\\nCorriente de Puerta (IGT): 35mA\\nVoltaje de Encendido de Puerta (VGT): 1.3V\\nTemperatura de Operaci\u00f3n: -40\u00b0C a 125\u00b0C\\nEncapsulado: TO-220AB\\nTensi\u00f3n M\u00e1xima de Pico No Repetitiva (VDSM): 800V\\nCaracter\u00edsticas:\\nAlta Capacidad de Corriente: Puede manejar corrientes de hasta 4A.\\nControl de Puerta Sensible: Requiere una corriente de puerta relativamente baja para activarse.\\nEncapsulado TO-220AB: Ofrece buena disipaci\u00f3n de calor y facilidad de montaje.\\nDurabilidad: Operaci\u00f3n fiable en un rango amplio de temperaturas.\\nAplicaciones:\\nControl de Iluminaci\u00f3n: Dimmers para luces incandescentes o de hal\u00f3geno.\\nControl de Motores: Variadores de velocidad para peque\u00f1os motores de corriente alterna.\\nRegulaci\u00f3n de Temperatura: Controladores de calefacci\u00f3n en electrodom\u00e9sticos.\\nConmutaci\u00f3n de Carga: En aplicaciones industriales para conmutar cargas resistivas o inductivas.",
         "code": "",
@@ -121,12 +121,12 @@
     {
         "id": 11,
         "name": "Chip Attiny85-20pu",
-        "price": "300.0",
-        "quantity": "7",
+        "price": 300.0,
+        "quantity": 7,
         "images": [
-            "Imagenes\\11\\11_1.png",
-            "Imagenes\\11\\11_2.png",
-            "Imagenes\\11\\11_3.png"
+            "Imagenes/11/11_1.png",
+            "Imagenes/11/11_2.png",
+            "Imagenes/11/11_3.png"
         ],
         "description": "El ATtiny85-20PU es un microcontrolador de la serie ATtiny de Atmel, ahora parte de Microchip Technology. Es conocido por su peque\u00f1o tama\u00f1o y su capacidad para realizar tareas simples de automatizaci\u00f3n y control en proyectos de electr\u00f3nica. A continuaci\u00f3n se presenta un resumen t\u00e9cnico de sus caracter\u00edsticas y especificaciones:\\n\\nResumen T\u00e9cnico del ATtiny85-20PU\\nEspecificaciones Generales:\\nArquitectura: AVR de 8 bits\\nMemoria Flash: 8 KB para almacenamiento de programas\\nMemoria SRAM: 512 bytes\\nMemoria EEPROM: 512 bytes\\nVelocidad del Reloj: Hasta 20 MHz con un cristal externo\\nVoltaje de Operaci\u00f3n: 2.7V a 5.5V\\nEncapsulado: PDIP de 8 pines\\nCaracter\u00edsticas Principales:\\nPuertos de Entrada/Salida (I/O):\\n\\n6 pines de I/O programables\\nPines compatibles con funciones adicionales como PWM, ADC, y comunicaciones en serie\\nPerif\u00e9ricos Integrados:\\n\\n1 ADC de 10 bits con 4 canales\\n2 temporizadores de 8 bits\\n1 temporizador de 16 bits\\nComunicaci\u00f3n en serie (SPI, I2C, UART)\\nModos de Ahorro de Energ\u00eda:\\n\\nModo inactivo\\nModo de ahorro de energ\u00eda\\nModo de apagado\\nModo de reserva\\nCaracter\u00edsticas de Autoprogramaci\u00f3n:\\n\\nCapacidad de programar la memoria Flash internamente\\nSoporte para arranque r\u00e1pido y c\u00f3digo de arranque seguro\\nReloj Interno:\\n\\nOscilador interno calibrado de 8 MHz\\nAplicaciones T\u00edpicas:\\nAutomatizaci\u00f3n y control en sistemas embebidos\\nProyectos de bricolaje y electr\u00f3nica de hobby\\nSistemas de sensores y actuadores\\nElectr\u00f3nica port\u00e1til y dispositivos de bajo consumo\\nEjemplo de Circuito:\\nUn ejemplo de c\u00f3mo utilizar el ATtiny85-20PU en un circuito simple que enciende y apaga un LED utilizando un interruptor.\\n\\nMateriales Necesarios:\\nMicrocontrolador: ATtiny85-20PU\\nResistencias: 220 ohmios, 10k ohmios\\nLED\\nInterruptor (Push Button)\\nFuente de alimentaci\u00f3n: 5V\\nEsquema del Circuito:\\nConexi\u00f3n del LED:\\n\\nConectar el \u00e1nodo del LED a un pin de salida del ATtiny85 (por ejemplo, PB0).\\nConectar el c\u00e1todo del LED a una resistencia de 220 ohmios, y la otra terminal de la resistencia a GND.\\nConexi\u00f3n del Interruptor:\\n\\nConectar un terminal del interruptor a Vcc (5V).\\nConectar el otro terminal del interruptor a un pin de entrada del ATtiny85 (por ejemplo, PB1) y a una resistencia de 10k ohmios conectada a GND (pull-down resistor).",
         "code": "#lenguaje C\\n#include <avr/io.h>\\n#include <util/delay.h>\\n\\n#define LED_PIN PB0\\n#define BUTTON_PIN PB1\\n\\nvoid setup() {\\n  // Configurar LED_PIN como salida\\n  DDRB |= (1 << LED_PIN);\\n  \\n  // Configurar BUTTON_PIN como entrada\\n  DDRB &= ~(1 << BUTTON_PIN);\\n  // Activar resistencia pull-up interna para BUTTON_PIN\\n  PORTB |= (1 << BUTTON_PIN);\\n}\\n\\nvoid loop() {\\n  // Leer el estado del bot\u00f3n\\n  if (PINB & (1 << BUTTON_PIN)) {\\n    // Si el bot\u00f3n est\u00e1 presionado, encender el LED\\n    PORTB |= (1 << LED_PIN);\\n  } else {\\n    // Si el bot\u00f3n no est\u00e1 presionado, apagar el LED\\n    PORTB &= ~(1 << LED_PIN);\\n  }\\n  \\n  // Peque\u00f1o retardo para debounce\\n  _delay_ms(50);\\n}\\n\\nint main(void) {\\n  setup();\\n  while (1) {\\n    loop();\\n  }\\n}",
@@ -135,11 +135,11 @@
     {
         "id": 12,
         "name": "Programador Universal Usb Avr Isp (con Adaptador)",
-        "price": "300.0",
-        "quantity": "9",
+        "price": 300.0,
+        "quantity": 9,
         "images": [
-            "Imagenes\\12\\12_1.png",
-            "Imagenes\\12\\12_2.png"
+            "Imagenes/12/12_1.png",
+            "Imagenes/12/12_2.png"
         ],
         "description": "El Programador Universal USB AVR ISP es una herramienta esencial para programar microcontroladores AVR de Atmel, como el ATtiny y el ATmega, entre otros. Este dispositivo permite cargar programas en la memoria flash de los microcontroladores a trav\u00e9s del protocolo ISP (In-System Programming). A continuaci\u00f3n se presenta un resumen t\u00e9cnico y gu\u00eda de uso para este programador, especialmente con el adaptador.\\n\\nResumen T\u00e9cnico del Programador Universal USB AVR ISP\\nEspecificaciones Generales:\\nCompatibilidad:\\n\\nCompatible con la mayor\u00eda de los microcontroladores AVR, incluyendo ATmega y ATtiny.\\nSoporte para chips con interfaces ISP.\\nConexi\u00f3n:\\n\\nInterfaz USB para conexi\u00f3n con la computadora.\\nConector ISP de 6 pines y 10 pines para conexi\u00f3n con el microcontrolador.\\nProtocolos Soportados:\\n\\nISP (In-System Programming).\\nVelocidad de Programaci\u00f3n:\\n\\nConfigurable a diferentes velocidades para compatibilidad con diversos chips y configuraciones.\\nSoporte de Software:\\n\\nCompatible con herramientas de desarrollo como Atmel Studio y AVRDude.\\nDrivers disponibles para Windows, Mac y Linux.\\nAlimentaci\u00f3n:\\n\\nAlimentado a trav\u00e9s del puerto USB.\\nPuede alimentar el microcontrolador durante la programaci\u00f3n (5V).\\nComponentes Incluidos:\\nProgramador USB AVR ISP.\\nCables de conexi\u00f3n: Usualmente incluyen cables de 6 y 10 pines.\\nAdaptador: Permite la conexi\u00f3n a diferentes tipos de microcontroladores y placas de desarrollo.\\nGu\u00eda de Uso:\\nPaso 1: Instalaci\u00f3n de Drivers\\nDescargar Drivers:\\n\\nAseg\u00farate de descargar los drivers correctos para tu sistema operativo desde el sitio web del fabricante o la fuente del programador.\\nInstalar Drivers:\\n\\nSigue las instrucciones proporcionadas con los drivers para instalarlos correctamente en tu computadora.\\nPaso 2: Conexi\u00f3n del Programador\\nConectar a la Computadora:\\n\\nConecta el programador al puerto USB de tu computadora.\\nConectar al Microcontrolador:\\n\\nUtiliza el adaptador y los cables de conexi\u00f3n para conectar el programador a la interfaz ISP del microcontrolador.\\nAseg\u00farate de alinear correctamente los pines de VCC, GND, MISO, MOSI, SCK y RESET.\\nPaso 3: Programaci\u00f3n del Microcontrolador\\nSoftware de Programaci\u00f3n:\\n\\nAbre tu software de programaci\u00f3n preferido, como Atmel Studio o AVRDude.\\nConfiguraci\u00f3n del Software:\\n\\nConfigura el software para utilizar el programador USB AVR ISP.\\nSelecciona el modelo del microcontrolador que est\u00e1s programando.\\nAjusta la velocidad de programaci\u00f3n si es necesario.\\nCargar el Programa:\\n\\nCompila el c\u00f3digo que deseas cargar en el microcontrolador.\\nUtiliza el software de programaci\u00f3n para cargar el c\u00f3digo compilado en la memoria flash del microcontrolador.\\nVerificar la Programaci\u00f3n:\\n\\nDespu\u00e9s de la programaci\u00f3n, verifica que el c\u00f3digo haya sido cargado correctamente ejecutando alguna prueba o utilizando las herramientas de verificaci\u00f3n del software.\\nEjemplo de Uso con AVRDude:\\nSi est\u00e1s utilizando AVRDude como herramienta de programaci\u00f3n, aqu\u00ed hay un ejemplo de c\u00f3mo puedes programar un ATtiny85 con un archivo .hex:\\n\\nConectar el Programador y el Microcontrolador:\\n\\nConecta el programador USB AVR ISP a la computadora y al ATtiny85 usando el adaptador adecuado.\\nComando AVRDude:\\n\\nAbre una terminal o l\u00ednea de comandos en tu computadora.\\n\\nUtiliza el siguiente comando para programar el ATtiny85:\\n\\nsh\\nCopiar c\u00f3digo\\navrdude -c usbasp -p t85 -U flash:w:tu_archivo.hex:i\\nDonde:\\n\\n-c usbasp: Especifica el tipo de programador (en este caso, usbasp).\\n-p t85: Especifica el tipo de microcontrolador (en este caso, ATtiny85).\\n-U flash:w:tu_archivo.hex:i: Especifica la operaci\u00f3n de escritura en la memoria flash con el archivo .hex.",
         "code": "",
@@ -151,9 +151,9 @@
         "price": 200.0,
         "quantity": 3,
         "images": [
-            "Imagenes\\14\\14_1.png",
-            "Imagenes\\14\\14_2.png",
-            "Imagenes\\14\\14_3.png"
+            "Imagenes/14/14_1.png",
+            "Imagenes/14/14_2.png",
+            "Imagenes/14/14_3.png"
         ],
         "description": "",
         "code": "",
@@ -165,10 +165,10 @@
         "price": 180.0,
         "quantity": 2,
         "images": [
-            "Imagenes\\16\\16_1.jpg",
-            "Imagenes\\16\\16_2.jpg",
-            "Imagenes\\16\\16_3.jpg",
-            "Imagenes\\16\\16_4.jpg"
+            "Imagenes/16/16_1.jpg",
+            "Imagenes/16/16_2.jpg",
+            "Imagenes/16/16_3.jpg",
+            "Imagenes/16/16_4.jpg"
         ],
         "description": "Descripci\u00f3n General\nEl DB3 es un diodo de disparo bilateral, tambi\u00e9n conocido como diodo DIAC, utilizado principalmente en circuitos de control de corriente alterna (CA) y aplicaciones de disparo de triac. Es un componente semiconductor que permite el paso de la corriente en ambas direcciones cuando se alcanza un voltaje de disparo espec\u00edfico, facilitando el control de dispositivos de potencia.\n\nCaracter\u00edsticas T\u00e9cnicas\nTensi\u00f3n de Disparo: 28V a 36V.\nCorriente de Disparo: T\u00edpicamente alrededor de 50\u03bcA.\nCapacidad de Disparo: Permite un disparo fiable y repetible en ambos sentidos de la corriente.\nTemperatura de Funcionamiento: -40\u00b0C a +125\u00b0C.\nEncapsulado: Generalmente en TO-92 o DO-35.\nAplicaciones\nDisparo de Triacs: Usado en aplicaciones donde se requiere el control de fase de triacs, como en atenuadores de luz, controladores de velocidad de motores, y reguladores de calentadores.\nControl de CA: Empleado en circuitos de control de corriente alterna para aplicaciones industriales y dom\u00e9sticas.\nEncendido de Circuitos: Utilizado en circuitos que requieren encendido y apagado controlado de dispositivos de potencia.\nVentajas\nSimplicidad: Facilita el dise\u00f1o de circuitos de control de potencia con un n\u00famero reducido de componentes.\nConfiabilidad: Proporciona un disparo repetible y fiable, mejorando la eficiencia del circuito de control.\nBilateralidad: Capacidad de conducir corriente en ambas direcciones, lo que lo hace adecuado para aplicaciones de CA.\nEjemplo de Uso en un Circuito\nEn un atenuador de luz, el DB3 se utiliza para disparar un triac, controlando as\u00ed la cantidad de energ\u00eda que se suministra a una carga (por ejemplo, una l\u00e1mpara). El circuito t\u00edpico incluye un potenci\u00f3metro para ajustar el punto de disparo del triac y, por lo tanto, el brillo de la l\u00e1mpara.",
         "code": "",
@@ -177,25 +177,25 @@
     {
         "id": 17,
         "name": "Kit De 5 Puntas De Hierro Para Soldador",
-        "price": "400.0",
-        "quantity": "1",
+        "price": 400.0,
+        "quantity": 1,
         "images": [
-            "Imagenes\\17\\17_1.png",
-            "Imagenes\\17\\17_2.png"
+            "Imagenes/17/17_1.png",
+            "Imagenes/17/17_2.png"
         ],
-        "description": "nan",
-        "code": "nan",
+        "description": "",
+        "code": "",
         "datasheet": false
     },
     {
         "id": 18,
         "name": "Kit Micro Pulsadores Con Tapa De 5 Colores, 25 Pcs",
-        "price": "650.0",
-        "quantity": "2",
+        "price": 650.0,
+        "quantity": 2,
         "images": [
-            "Imagenes\\18\\18_1.png",
-            "Imagenes\\18\\18_2.png",
-            "Imagenes\\18\\18_3.png"
+            "Imagenes/18/18_1.png",
+            "Imagenes/18/18_2.png",
+            "Imagenes/18/18_3.png"
         ],
         "description": "Resumen T\u00e9cnico\\nMicrointerruptor de 5 colores, 12x12x7,3 MM, Tapa T\u00e1ctil, Pulsador Moment\u00e1neo (25 unidades)\\n\\nDescripci\u00f3n:\\nEste kit incluye 25 microinterruptores t\u00e1ctiles de colores variados, dise\u00f1ados para ser utilizados en una amplia gama de aplicaciones electr\u00f3nicas. Los interruptores son moment\u00e1neos, lo que significa que solo est\u00e1n activos mientras se presionan. Son ideales para proyectos de prototipos, dispositivos de control y cualquier aplicaci\u00f3n que requiera un pulsador de acci\u00f3n moment\u00e1nea.\\n\\nEspecificaciones T\u00e9cnicas:\\nDimensiones:\\n\\nTama\u00f1o: 12x12x7,3 mm\\nTapa: Incluye tapas de colores variados para f\u00e1cil identificaci\u00f3n.\\nColores Disponibles:\\n\\nRojo, Azul, Amarillo, Negro, Blanco.\\nCaracter\u00edsticas El\u00e9ctricas:\\n\\nTipo: Moment\u00e1neo (NO, normalmente abierto)\\nVoltaje M\u00e1ximo: 12V\\nCorriente M\u00e1xima: 50mA\\nMateriales:\\n\\nCarcasa: Pl\u00e1stico duradero\\nContactos: Metal de alta conductividad\\nUsos Comunes:\\nPrototipos: Creaci\u00f3n de interfaces de usuario para prototipos de dispositivos electr\u00f3nicos.\\nControl: Uso en paneles de control, cajas de proyectos y dispositivos de control remoto.\\nEducaci\u00f3n: Proyectos educativos y demostraciones en laboratorios de electr\u00f3nica.\\nVentajas:\\nVersatilidad: Adecuado para una amplia gama de aplicaciones y tipos de proyectos.\\nFacilidad de Uso: F\u00e1cil de instalar y utilizar, ideal para principiantes y profesionales.\\nVariedad: Incluye m\u00faltiples opciones de colores para satisfacer diversas necesidades.\\nC\u00f3digo de Ejemplo (ESP32):\\nPara demostrar la aplicaci\u00f3n de los microinterruptores en un proyecto de ESP32, aqu\u00ed hay un simple ejemplo de c\u00f3digo que utiliza un microinterruptor para encender y apagar un LED:",
         "code": "// Configuraci\u00f3n de pines\\nconst int ledPin = 2; // El pin GPIO donde est\u00e1 conectado el LED\\nconst int buttonPin = 4; // El pin GPIO donde est\u00e1 conectado el microinterruptor\\n\\nvoid setup() {\\n  // Inicializar el pin del LED como salida\\n  pinMode(ledPin, OUTPUT);\\n  // Inicializar el pin del microinterruptor como entrada\\n  pinMode(buttonPin, INPUT_PULLUP);\\n}\\n\\nvoid loop() {\\n  // Leer el estado del microinterruptor\\n  int buttonState = digitalRead(buttonPin);\\n\\n  // Si el microinterruptor est\u00e1 presionado, encender el LED\\n  if (buttonState == LOW) {\\n    digitalWrite(ledPin, HIGH);\\n  } else {\\n    // Si el microinterruptor no est\u00e1 presionado, apagar el LED\\n    digitalWrite(ledPin, LOW);\\n  }\\n}",
@@ -204,10 +204,10 @@
     {
         "id": 19,
         "name": "Placa Expansi\u00f3n  Esp32. Nuevo Modelo.",
-        "price": "380.0",
-        "quantity": "9",
+        "price": 380.0,
+        "quantity": 9,
         "images": [
-            "Imagenes\\19\\19_1.png"
+            "Imagenes/19/19_1.png"
         ],
         "description": "Resumen T\u00e9cnico\\nPlaca de Expansi\u00f3n ESP32\\n\\nDescripci\u00f3n:\\nLa Placa de Expansi\u00f3n ESP32 est\u00e1 dise\u00f1ada para facilitar el desarrollo de proyectos con el microcontrolador ESP32, proporcionando una interfaz amigable para conectar sensores, actuadores y otros perif\u00e9ricos.\\n\\nEspecificaciones T\u00e9cnicas:\\nCompatibilidad:\\n\\nCompatible con ESP32 (38 Pines).\\nConectividad:\\n\\nPines de entrada/salida digital: 38\\nPines de alimentaci\u00f3n: 5V, 3.3V y GND\\nCaracter\u00edsticas El\u00e9ctricas:\\n\\nVoltaje de operaci\u00f3n: 5V y 3.3V\\nConector de alimentaci\u00f3n: DC 6.5-16V\\nComponentes Integrados:\\n\\nRegulador de voltaje: 5V y 3.3V\\nConector micro USB para programaci\u00f3n y alimentaci\u00f3n\\nPines de expansi\u00f3n claramente etiquetados para facilitar el uso\\nDimensiones:\\n\\nLongitud: 100 mm\\nAncho: 70 mm\\nUsos Comunes:\\nDesarrollo de Prototipos: Ideal para proyectos que requieren m\u00faltiples conexiones y facilidad de acceso a todos los pines del ESP32.\\nProyectos de IoT: Adecuada para aplicaciones de Internet de las Cosas (IoT) debido a la capacidad del ESP32 para conectarse a Wi-Fi y Bluetooth.\\nEducaci\u00f3n: Herramienta \u00fatil para ense\u00f1anza y aprendizaje de electr\u00f3nica y programaci\u00f3n con microcontroladores.\\nVentajas:\\nFacilidad de Uso: Pines claramente etiquetados y organizados para un acceso r\u00e1pido y sencillo.\\nVersatilidad: Compatible con una amplia gama de sensores y m\u00f3dulos.\\nEstabilidad: Regulador de voltaje integrado para una alimentaci\u00f3n estable.\\n\\nC\u00f3digo de Ejemplo (ESP32):\\nPara demostrar la aplicaci\u00f3n de la Placa de Expansi\u00f3n ESP32, aqu\u00ed hay un simple ejemplo de c\u00f3digo que utiliza un sensor de temperatura DHT11:",
         "code": "#include \"DHT.h\"\\n\\n#define DHTPIN 4     // Pin donde se conecta el sensor DHT11\\n#define DHTTYPE DHT11   // Definir el tipo de sensor DHT11\\n\\nDHT dht(DHTPIN, DHTTYPE);\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n  dht.begin();\\n}\\n\\nvoid loop() {\\n  // Esperar entre lecturas\\n  delay(2000);\\n\\n  // Leer la humedad\\n  float h = dht.readHumidity();\\n  // Leer la temperatura como Celsius\\n  float t = dht.readTemperature();\\n\\n  // Comprobar si alguna lectura fall\u00f3 y salir de la funci\u00f3n early\\n  if (isnan(h) || isnan(t)) {\\n    Serial.println(\"Fallo en la lectura del sensor DHT11!\");\\n    return;\\n  }\\n\\n  // Mostrar las lecturas en el monitor serie\\n  Serial.print(\"Humedad: \");\\n  Serial.print(h);\\n  Serial.print(\" %\\t\");\\n  Serial.print(\"Temperatura: \");\\n  Serial.print(t);\\n  Serial.println(\" *C \");\\n}",
@@ -216,12 +216,12 @@
     {
         "id": 20,
         "name": "M\u00f3dulo De Pantalla Led Tm1637 Para Arduino, 7 Segmentos, 4 B",
-        "price": "170.0",
-        "quantity": "9",
+        "price": 170.0,
+        "quantity": 9,
         "images": [
-            "Imagenes\\20\\20_1.png",
-            "Imagenes\\20\\20_2.png",
-            "Imagenes\\20\\20_3.png"
+            "Imagenes/20/20_1.png",
+            "Imagenes/20/20_2.png",
+            "Imagenes/20/20_3.png"
         ],
         "description": "Resumen T\u00e9cnico:\\nModelo: TM1637\\nSegmentos: 7 segmentos, 4 d\u00edgitos\\nTensi\u00f3n de trabajo: 3.3V - 5V\\nInterfaz: 2 pines (CLK y DIO)\\nTama\u00f1o de la pantalla: 0.36 pulgadas\\nDimensiones: 42mm x 24mm\\nFunciones: Puede mostrar n\u00fameros del 0 al 9, algunas letras, y ciertos caracteres especiales.\\nAplicaciones: Relojes, temporizadores, contadores, visualizaci\u00f3n de datos en tiempo real.",
         "code": "#include <Arduino.h>\\n#include <TM1637Display.h>\\n\\n// Definimos los pines de conexi\u00f3n\\n#define CLK 22\\n#define DIO 21\\n\\n// Inicializamos el display\\nTM1637Display display(CLK, DIO);\\n\\nvoid setup() {\\n  // Configuramos el brillo del display (rango de 0 a 7)\\n  display.setBrightness(0x0f);\\n\\n  // Mostramos un n\u00famero de ejemplo (1234)\\n  display.showNumberDec(1234);\\n}\\n\\nvoid loop() {\\n  // Aqu\u00ed puedes a\u00f1adir el c\u00f3digo que desees para actualizar el display\\n  // Ejemplo de contador\\n  for (int i = 0; i < 10000; i++) {\\n    display.showNumberDec(i);\\n    delay(1000);  // Espera de 1 segundo entre cada incremento\\n  }\\n}",
@@ -230,12 +230,12 @@
     {
         "id": 21,
         "name": "Interruptor Mosfet (x2) De Alta Potencia (400w)",
-        "price": "400.0",
-        "quantity": "1",
+        "price": 400.0,
+        "quantity": 1,
         "images": [
-            "Imagenes\\21\\21_1.png",
-            "Imagenes\\21\\21_2.png",
-            "Imagenes\\21\\21_3.png"
+            "Imagenes/21/21_1.png",
+            "Imagenes/21/21_2.png",
+            "Imagenes/21/21_3.png"
         ],
         "description": "Caracter\u00edsticas Principales:\\nModelo: Interruptor Mosfet de Alta Potencia (Dual MOS driver)\\nCorriente: 15A\\nPotencia: 400W\\nVoltaje de Operaci\u00f3n: 5V a 36V\\nAplicaciones: Control de alta potencia, control de motores, control de l\u00e1mparas de alta potencia, control de dispositivos de calefacci\u00f3n, etc.\\nDescripci\u00f3n:\\nEl interruptor Mosfet de alta potencia utiliza dos MOSFET para proporcionar un control de alta corriente y alta potencia. Este m\u00f3dulo es ideal para aplicaciones que requieren un control eficiente y de alta potencia, como motores el\u00e9ctricos, l\u00e1mparas de alta potencia y dispositivos de calefacci\u00f3n. El dise\u00f1o del m\u00f3dulo permite una f\u00e1cil integraci\u00f3n en proyectos electr\u00f3nicos, proporcionando una soluci\u00f3n confiable para el control de dispositivos de alta corriente.\\n\\nC\u00f3digo de Ejemplo para ESP32:\\nEste c\u00f3digo de ejemplo muestra c\u00f3mo controlar el interruptor Mosfet utilizando un ESP32.",
         "code": "#define MOSFET_PIN 5  // Definir el pin conectado al interruptor Mosfet\\n\\nvoid setup() {\\n  pinMode(MOSFET_PIN, OUTPUT);  // Configurar el pin como salida\\n}\\n\\nvoid loop() {\\n  digitalWrite(MOSFET_PIN, HIGH);  // Encender el interruptor Mosfet\\n  delay(1000);                     // Esperar 1 segundo\\n  digitalWrite(MOSFET_PIN, LOW);   // Apagar el interruptor Mosfet\\n  delay(1000);                     // Esperar 1 segundo\\n}",
@@ -247,10 +247,10 @@
         "price": 380.0,
         "quantity": 19,
         "images": [
-            "Imagenes\\22\\22_1.jpg",
-            "Imagenes\\22\\22_2.png",
-            "Imagenes\\22\\22_3.jpg",
-            "Imagenes\\22\\22_4.png"
+            "Imagenes/22/22_1.jpg",
+            "Imagenes/22/22_2.png",
+            "Imagenes/22/22_3.jpg",
+            "Imagenes/22/22_4.png"
         ],
         "description": "Cables dupont H-H de 20cm\n\nCaracter\u00edsticas del CP2102\nInterfaz USB 2.0 Full-Speed: Compatible con cualquier puerto USB est\u00e1ndar.\n\nInterfaz UART: Proporciona se\u00f1ales de transmisi\u00f3n y recepci\u00f3n (TX y RX) para la comunicaci\u00f3n serial.\n\nBaud Rate: Soporta una amplia gama de velocidades de transmisi\u00f3n, desde 300 bps hasta 1 Mbps.\nAlimentaci\u00f3n: Puede ser alimentado directamente desde el puerto USB.\n\nControl de flujo: Soporta control de flujo por hardware (RTS/CTS) y por software (XON/XOFF).\n\nDrivers: Compatible con Windows, Mac y Linux, con controladores f\u00e1cilmente disponibles en el sitio web de Silicon Labs.\n\nUsos comunes\nProgramaci\u00f3n de microcontroladores: Muy utilizado para la programaci\u00f3n y depuraci\u00f3n de microcontroladores y otros dispositivos embebidos.\n\nInterfaz serial para dispositivos embebidos: Ideal para agregar una interfaz USB a dispositivos que solo tienen una interfaz serial.\nProyectos de electr\u00f3nica: Utilizado en una variedad de proyectos de electr\u00f3nica y desarrollo de prototipos donde se necesita una interfaz serial confiable.\n\nConexi\u00f3n y uso\nConexi\u00f3n: Conecta el adaptador CP2102 a tu computadora mediante un cable USB. Los pines TX y RX del adaptador se conectan a los pines RX y TX del dispositivo con el que deseas comunicarte, respectivamente. Tambi\u00e9n puedes conectar los pines de control de flujo si tu aplicaci\u00f3n lo requiere.\n\nConfiguraci\u00f3n: Una vez conectado, instala los controladores necesarios desde el sitio web de Silicon Labs. Despu\u00e9s de la instalaci\u00f3n, el adaptador aparecer\u00e1 como un puerto COM en tu sistema operativo, que puedes usar con cualquier software de terminal serial.",
         "code": "# Codigo .py para comunicarse \n#con dispositivo serie\nimport serial\nimport time\n\n# Configuraci\u00f3n del puerto serie\nport = '/dev/ttyUSB0'  # Cambia esto al puerto adecuado en tu sistema\nbaud_rate = 9600       # Configura la velocidad de transmisi\u00f3n\n\ntry:\n    # Abre la conexi\u00f3n serie\n    ser = serial.Serial(port, baud_rate, timeout=1)\n    print(f\"Conectado al puerto {port} a {baud_rate} baudios.\")\n\n    # Espera a que el dispositivo est\u00e9 listo\n    time.sleep(2)\n\n    # Env\u00eda un comando al dispositivo\n    command = 'AT\\r\\n'\n    ser.write(command.encode())\n    print(f\"Enviado: {command.strip()}\")\n\n    # Lee la respuesta del dispositivo\n    response = ser.read(ser.in_waiting or 1).decode()\n    print(f\"Respuesta: {response}\")\n\n    # Cierra la conexi\u00f3n\n    ser.close()\n    print(\"Conexi\u00f3n cerrada.\")\n\nexcept serial.SerialException as e:\n    print(f\"Error al abrir la conexi\u00f3n: {e}\")",
@@ -259,10 +259,10 @@
     {
         "id": 24,
         "name": "Conversor Serie--bluetooth Jdy-30",
-        "price": "380.0",
-        "quantity": "3",
+        "price": 380.0,
+        "quantity": 3,
         "images": [
-            "Imagenes\\24\\24_1.png"
+            "Imagenes/24/24_1.png"
         ],
         "description": "Caracter\u00edsticas Principales:\\nModelo: JDY-30\\nVoltaje de Operaci\u00f3n: 3.6V a 6V\\nInterfaz: UART (TXD, RXD)\\nCompatibilidad: Compatible con m\u00f3dulos Bluetooth 2.0/3.0/4.0\\nRango de Transmisi\u00f3n: Hasta 10 metros sin obst\u00e1culos\\nVelocidad de Transmisi\u00f3n: 4800 bps a 1382400 bps\\nAplicaciones: Comunicaci\u00f3n inal\u00e1mbrica en proyectos Arduino, ESP32, control remoto, transmisi\u00f3n de datos, etc.\\nDescripci\u00f3n:\\nEl m\u00f3dulo JDY-30 es un conversor serie a Bluetooth que permite la comunicaci\u00f3n inal\u00e1mbrica entre dispositivos. Este m\u00f3dulo es f\u00e1cil de integrar en proyectos electr\u00f3nicos y es compatible con una amplia gama de microcontroladores, incluyendo Arduino y ESP32. El JDY-30 soporta m\u00faltiples velocidades de transmisi\u00f3n y puede operar en un rango de voltaje amplio, lo que lo hace ideal para aplicaciones diversas, desde control remoto hasta transmisi\u00f3n de datos.\\n\\nC\u00f3digo de Ejemplo para ESP32:\\nEste c\u00f3digo de ejemplo muestra c\u00f3mo configurar el ESP32 para comunicarse con el m\u00f3dulo JDY-30 utilizando UART.",
         "code": "#include <HardwareSerial.h>\\n\\nHardwareSerial MySerial(1);  // Utiliza UART1 del ESP32\\n\\nvoid setup() {\\n  Serial.begin(115200);       // Inicializa la comunicaci\u00f3n serial con el monitor serial\\n  MySerial.begin(9600, SERIAL_8N1, 16, 17);  // Configura UART1 con TX en GPIO16 y RX en GPIO17\\n\\n  Serial.println(\"Iniciando comunicaci\u00f3n con JDY-30...\");\\n}\\n\\nvoid loop() {\\n  if (MySerial.available()) {        // Si hay datos disponibles en el JDY-30\\n    String data = MySerial.readString();  // Lee los datos recibidos\\n    Serial.print(\"Recibido: \");      // Imprime los datos en el monitor serial\\n    Serial.println(data);\\n  }\\n\\n  if (Serial.available()) {         // Si hay datos disponibles en el monitor serial\\n    String data = Serial.readString();  // Lee los datos recibidos\\n    MySerial.print(data);            // Env\u00eda los datos al JDY-30\\n  }\\n}",
@@ -271,10 +271,10 @@
     {
         "id": 25,
         "name": "Diodo Rectificador M7 1n4007 Smd 1a 100 V. (20 Unidades)",
-        "price": "210.0",
-        "quantity": "2",
+        "price": 210.0,
+        "quantity": 2,
         "images": [
-            "Imagenes\\25\\25_1.png"
+            "Imagenes/25/25_1.png"
         ],
         "description": "Caracter\u00edsticas Principales:\\nModelo: 1N4007 (SMD - M7)\\nCorriente M\u00e1xima: 1A\\nVoltaje Inverso M\u00e1ximo: 1000V\\nCa\u00edda de Voltaje Directo: 1.1V a 1A\\nTipo de Montaje: Superficie (SMD)\\nPaquete: DO-214AC (SMA)\\nTemperatura de Operaci\u00f3n: -65\u00b0C a +175\u00b0C\\nAplicaciones: Rectificaci\u00f3n de corriente, protecci\u00f3n contra sobretensiones, aplicaciones de potencia, etc.\\nDescripci\u00f3n:\\nEl diodo rectificador 1N4007 en encapsulado SMD (M7) es un componente clave en aplicaciones de rectificaci\u00f3n de corriente en fuentes de alimentaci\u00f3n y otros circuitos electr\u00f3nicos. Capaz de soportar voltajes inversos de hasta 1000V y corrientes de hasta 1A, este diodo es ideal para una amplia gama de aplicaciones. Su paquete SMD permite un montaje eficiente en placas de circuito impreso de alta densidad.",
         "code": "",
@@ -286,7 +286,7 @@
         "price": 790.0,
         "quantity": 1,
         "images": [
-            "Imagenes\\27\\27_1.png"
+            "Imagenes/27/27_1.png"
         ],
         "description": "",
         "code": "",
@@ -298,11 +298,11 @@
         "price": 180.0,
         "quantity": 17,
         "images": [
-            "Imagenes\\28\\28_1.jpg",
-            "Imagenes\\28\\28_2.jpg",
-            "Imagenes\\28\\28_3.jpg",
-            "Imagenes\\28\\28_4.jpg",
-            "Imagenes\\28\\28_5.jpg"
+            "Imagenes/28/28_1.jpg",
+            "Imagenes/28/28_2.jpg",
+            "Imagenes/28/28_3.jpg",
+            "Imagenes/28/28_4.jpg",
+            "Imagenes/28/28_5.jpg"
         ],
         "description": "Caracter\u00edsticas Principales:\n\nTipo de Sensor: Sensor de efecto Hall lineal.\nModelo: 49E.\nRango de Voltaje de Operaci\u00f3n: 3.0V a 6.5V.\nCorriente de Operaci\u00f3n: M\u00e1ximo 10 mA.\nRango de Sensibilidad: Proporcional al campo magn\u00e9tico aplicado.\nSalida: Se\u00f1al de voltaje anal\u00f3gica.\nEspecificaciones T\u00e9cnicas:\n\nSensibilidad: Aproximadamente 1.4 mV/G (milivoltios por Gauss).\nTemperatura de Operaci\u00f3n: -40\u00b0C a +125\u00b0C.\nBanda de Frecuencia: Hasta 23 kHz.\nLinealidad: Alta precisi\u00f3n y estabilidad.\nRespuesta T\u00e9rmica: Compensaci\u00f3n para variaciones de temperatura.",
         "code": "",
@@ -314,9 +314,9 @@
         "price": 990.0,
         "quantity": 3,
         "images": [
-            "Imagenes\\30\\30_1.jpg",
-            "Imagenes\\30\\30_2.jpg",
-            "Imagenes\\30\\30_3.jpg"
+            "Imagenes/30/30_1.jpg",
+            "Imagenes/30/30_2.jpg",
+            "Imagenes/30/30_3.jpg"
         ],
         "description": "Gran Oportunidad para los amantes de la electr\u00f3nica. Con la placa ESP32 de 38 pinos podr\u00e1s hacer cualquier proyecto de microprocesadores sum\u00e1ndole la capacidad integrada de comunicaci\u00f3n WIFI y/o bluetooth. Una joyita que cada vez est\u00e1 siendo m\u00e1s usada por grandes firmas. Junto con la placa viene su SHIELD para olvidarte del protoboard.",
         "code": "#include <WiFi.h>\n\n// Replace these with your WiFi network settings\nconst char* ssid = \"your_SSID\";\nconst char* password = \"your_PASSWORD\";\n\nvoid setup() {\n  // Start the Serial communication\n  Serial.begin(115200);\n  delay(10);\n\n  // Start connecting to the WiFi network\n  Serial.println();\n  Serial.println(\"Connecting to WiFi...\");\n  WiFi.begin(ssid, password);\n\n  // Wait until the ESP32 is connected to the WiFi network\n  while (WiFi.status() != WL_CONNECTED) {\n    delay(1000);\n    Serial.print(\".\");\n  }\n\n  // Print the ESP32's IP address\n  Serial.println();\n  Serial.println(\"Connected to WiFi network!\");\n  Serial.print(\"IP address: \");\n  Serial.println(WiFi.localIP());\n}\n\nvoid loop() {\n  // Nothing here\n}",
@@ -328,8 +328,8 @@
         "price": 100.0,
         "quantity": 6,
         "images": [
-            "Imagenes\\31\\31_1.png",
-            "Imagenes\\31\\31_2.png"
+            "Imagenes/31/31_1.png",
+            "Imagenes/31/31_2.png"
         ],
         "description": "",
         "code": "",
@@ -341,7 +341,7 @@
         "price": 270.0,
         "quantity": 9,
         "images": [
-            "Imagenes\\32\\32_1.png"
+            "Imagenes/32/32_1.png"
         ],
         "description": "",
         "code": "",
@@ -353,8 +353,8 @@
         "price": 280.0,
         "quantity": 2,
         "images": [
-            "Imagenes\\33\\33_1.png",
-            "Imagenes\\33\\33_2.png"
+            "Imagenes/33/33_1.png",
+            "Imagenes/33/33_2.png"
         ],
         "description": "",
         "code": "",
@@ -366,7 +366,7 @@
         "price": 230.0,
         "quantity": 6,
         "images": [
-            "Imagenes\\34\\34_1.png"
+            "Imagenes/34/34_1.png"
         ],
         "description": "",
         "code": "",
@@ -378,7 +378,7 @@
         "price": 170.0,
         "quantity": 2,
         "images": [
-            "Imagenes\\35\\35_1.png"
+            "Imagenes/35/35_1.png"
         ],
         "description": "",
         "code": "",
@@ -390,7 +390,7 @@
         "price": 250.0,
         "quantity": 1,
         "images": [
-            "Imagenes\\36\\36_1.png"
+            "Imagenes/36/36_1.png"
         ],
         "description": "",
         "code": "",
@@ -402,7 +402,7 @@
         "price": 130.0,
         "quantity": 9,
         "images": [
-            "Imagenes\\37\\37_1.png"
+            "Imagenes/37/37_1.png"
         ],
         "description": "",
         "code": "",
@@ -414,9 +414,9 @@
         "price": 390.0,
         "quantity": 20,
         "images": [
-            "Imagenes\\38\\38_1.png",
-            "Imagenes\\38\\38_2.png",
-            "Imagenes\\38\\38_3.png"
+            "Imagenes/38/38_1.png",
+            "Imagenes/38/38_2.png",
+            "Imagenes/38/38_3.png"
         ],
         "description": "",
         "code": "",
@@ -428,8 +428,8 @@
         "price": 380.0,
         "quantity": 1,
         "images": [
-            "Imagenes\\39\\39_1.png",
-            "Imagenes\\39\\39_2.png"
+            "Imagenes/39/39_1.png",
+            "Imagenes/39/39_2.png"
         ],
         "description": "",
         "code": "",
@@ -441,7 +441,7 @@
         "price": 350.0,
         "quantity": 2,
         "images": [
-            "Imagenes\\40\\40_1.png"
+            "Imagenes/40/40_1.png"
         ],
         "description": "",
         "code": "",
@@ -453,7 +453,7 @@
         "price": 500.0,
         "quantity": 1,
         "images": [
-            "Imagenes\\41\\41_1.png"
+            "Imagenes/41/41_1.png"
         ],
         "description": "",
         "code": "",
@@ -465,8 +465,8 @@
         "price": 300.0,
         "quantity": 5,
         "images": [
-            "Imagenes\\42\\42_1.png",
-            "Imagenes\\42\\42_2.png"
+            "Imagenes/42/42_1.png",
+            "Imagenes/42/42_2.png"
         ],
         "description": "",
         "code": "",
@@ -478,8 +478,8 @@
         "price": 200.0,
         "quantity": 2,
         "images": [
-            "Imagenes\\43\\43_1.png",
-            "Imagenes\\43\\43_2.png"
+            "Imagenes/43/43_1.png",
+            "Imagenes/43/43_2.png"
         ],
         "description": "",
         "code": "",
@@ -491,7 +491,7 @@
         "price": 360.0,
         "quantity": 19,
         "images": [
-            "Imagenes\\44\\44_1.png"
+            "Imagenes/44/44_1.png"
         ],
         "description": "Descripci\u00f3n General:\nBridgelux es una marca reconocida en la industria de la iluminaci\u00f3n LED, conocida por sus productos de alta calidad y eficiencia. Los LEDs Bridgelux son utilizados en una amplia gama de aplicaciones, desde iluminaci\u00f3n general hasta aplicaciones industriales y comerciales.\n\nChip Original de f\u00e1brica. De los mejores en el mercado, con bornera para no soldar.\n\nEspecificaci\u00f3n:\n\n1. Fuente de luz: DOB\n2 Color:Blanco fr\u00edo 6000K\n3Fosfuro: 660nm (otro proveedor utiliza 620nm, por lo que es barato)\n4 Chip:Bridgelux\n5 potencia: 50w\n6. Voltaje de entrada: 220-265V\n7Tama\u00f1o:75x40x1.6mm\n8. Material de la carcasa: Aluminio\n9. Vida \u00fatil de la fuente:> 50.000 horas\n10 \u00c1ngulo de iluminaci\u00f3n: 120\n\n 6 funciones para proteger el chip led de larga vida \u00fatil.\n\nA1:MOV para protecci\u00f3n contra sobretensiones> 4000V pasado\n\nA2: rectificador de puente de 1000V\n\nR3: control de corriente constante y potencia constante\n\nA4: sensor NTC para protecci\u00f3n contra sobrecalentamiento pcb\n\nA5: regulador de voltaje para la protecci\u00f3n ic vdd\n\nR6: Controlador IC, control de sobretensi\u00f3n y sobrecorriente\n\nA7: puede usar un atenuador led o un atenuador SCR para atenuarlo.\n\nNecesitan sistema de disipaci\u00f3n de calor (disipador por lo menos)",
         "code": "",
@@ -513,7 +513,7 @@
         "price": 630.0,
         "quantity": 3,
         "images": [
-            "Imagenes\\46\\46_1.png"
+            "Imagenes/46/46_1.png"
         ],
         "description": "El ESP-WROOM-32 es un m\u00f3dulo Wi-Fi potente que integra el chip ESP32, ofreciendo una soluci\u00f3n completa para aplicaciones de Wi-Fi y Bluetooth. Aqu\u00ed tienes un resumen t\u00e9cnico de sus caracter\u00edsticas clave:\n\n1. Caracter\u00edsticas Generales\nProcesador: Microprocesador Tensilica LX6 de doble n\u00facleo, capaz de funcionar a 240 MHz.\nMemoria:\n520 KB de SRAM.\n448 KB de ROM para arranque y funciones b\u00e1sicas.\nSoporte para memoria flash y SRAM externa.\nVoltaje de Operaci\u00f3n: 2.2V a 3.6V.\nConsumo de Energ\u00eda:\nModo activo: ~160 mA.\nModo de suspensi\u00f3n del m\u00f3dem: ~10 mA.\nModo de suspensi\u00f3n ligera: ~0.8 mA.\nModo de suspensi\u00f3n profunda: ~0.01 mA.\nRango de Temperatura de Operaci\u00f3n: -40\u00b0C a +85\u00b0C.\n2. Conectividad Inal\u00e1mbrica\nWi-Fi:\n802.11 b/g/n.\nSoporta Wi-Fi Direct (P2P), soft-AP y modo estaci\u00f3n.\nSeguridad: WPA/WPA2/WPA3 personal, WPA/WPA2 enterprise.\nRango de frecuencia: 2.4 GHz a 2.5 GHz.\nVelocidades de datos: Hasta 150 Mbps.\nBluetooth:\nBluetooth de doble modo (Cl\u00e1sico y BLE).\nCompatible con especificaciones Bluetooth v4.2 BR/EDR y BLE.\n3. Perif\u00e9ricos e Interfaces\nGPIO: 34 GPIOs programables.\nADC: 18 canales de ADC de 12 bits SAR.\nDAC: 2 canales de DAC de 8 bits.\nSensor T\u00e1ctil: 10 GPIOs de detecci\u00f3n capacitiva.\nSPI/I2S: 4 interfaces SPI y 2 interfaces I2S para audio.\nUART: 3 interfaces UART.\nI2C: 2 interfaces I2C.\nPWM: Hasta 16 canales PWM.\nSDIO: 2 interfaces SDIO (host y esclavo).\nEthernet: Interfaz MAC con DMA dedicado y soporte IEEE 1588.\nCAN: 1 interfaz CAN.\nIR: Control remoto IR y emisor IR.\n4. Caracter\u00edsticas Adicionales\nSeguridad: Aceleraci\u00f3n por hardware para cifrado (AES, SHA-2, RSA, ECC), arranque seguro y cifrado de flash.\nTemporizadores: Varios temporizadores de prop\u00f3sito general, temporizadores watchdog y RTC.\nSensor de Hall: Sensor de efecto Hall integrado.\nSensor de Temperatura: Sensor de temperatura incorporado.\nRTC: Reloj en tiempo real de bajo consumo con control de reloj.\n5. Aplicaciones\nEl ESP-WROOM-32 es adecuado para una amplia gama de aplicaciones, incluyendo:\n\nDom\u00f3tica y automatizaci\u00f3n del hogar.\nElectr\u00f3nica de consumo.\nRedes de sensores inal\u00e1mbricos.\nSistemas de control industrial.\nDispositivos m\u00e9dicos.\nProductos IoT (Internet de las Cosas).",
         "code": "#include <WiFi.h>\n\n// Replace these with your WiFi network settings\nconst char* ssid = \"your_SSID\";\nconst char* password = \"your_PASSWORD\";\n\nvoid setup() {\n  // Start the Serial communication\n  Serial.begin(115200);\n  delay(10);\n\n  // Start connecting to the WiFi network\n  Serial.println();\n  Serial.println(\"Connecting to WiFi...\");\n  WiFi.begin(ssid, password);\n\n  // Wait until the ESP32 is connected to the WiFi network\n  while (WiFi.status() != WL_CONNECTED) {\n    delay(1000);\n    Serial.print(\".\");\n  }\n\n  // Print the ESP32's IP address\n  Serial.println();\n  Serial.println(\"Connected to WiFi network!\");\n  Serial.print(\"IP address: \");\n  Serial.println(WiFi.localIP());\n}\n\nvoid loop() {\n  // Nothing here\n}",
@@ -525,7 +525,7 @@
         "price": 180.0,
         "quantity": 4,
         "images": [
-            "Imagenes\\47\\47_1.png"
+            "Imagenes/47/47_1.png"
         ],
         "description": "",
         "code": "",
@@ -537,7 +537,7 @@
         "price": 180.0,
         "quantity": 14,
         "images": [
-            "Imagenes\\48\\48_1.png"
+            "Imagenes/48/48_1.png"
         ],
         "description": "",
         "code": "",
@@ -549,7 +549,7 @@
         "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes\\49\\49_1.png"
+            "Imagenes/49/49_1.png"
         ],
         "description": "",
         "code": "",
@@ -561,7 +561,7 @@
         "price": 80.0,
         "quantity": 9,
         "images": [
-            "Imagenes\\50\\50_1.png"
+            "Imagenes/50/50_1.png"
         ],
         "description": "",
         "code": "",
@@ -573,7 +573,7 @@
         "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes\\51\\51_1.png"
+            "Imagenes/51/51_1.png"
         ],
         "description": "",
         "code": "",
@@ -585,7 +585,7 @@
         "price": 330.0,
         "quantity": 10,
         "images": [
-            "Imagenes\\52\\52_1.png"
+            "Imagenes/52/52_1.png"
         ],
         "description": "",
         "code": "",
@@ -597,7 +597,7 @@
         "price": 180.0,
         "quantity": 8,
         "images": [
-            "Imagenes\\53\\53_1.png"
+            "Imagenes/53/53_1.png"
         ],
         "description": "",
         "code": "",
@@ -609,8 +609,8 @@
         "price": 150.0,
         "quantity": 15,
         "images": [
-            "Imagenes\\54\\54_1.png",
-            "Imagenes\\54\\54_2.png"
+            "Imagenes/54/54_1.png",
+            "Imagenes/54/54_2.png"
         ],
         "description": "",
         "code": "",
@@ -622,7 +622,7 @@
         "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes\\55\\55_1.png"
+            "Imagenes/55/55_1.png"
         ],
         "description": "",
         "code": "",
@@ -634,7 +634,7 @@
         "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes\\56\\56_1.png"
+            "Imagenes/56/56_1.png"
         ],
         "description": "",
         "code": "",
@@ -646,7 +646,7 @@
         "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes\\57\\57_1.png"
+            "Imagenes/57/57_1.png"
         ],
         "description": "",
         "code": "",
@@ -658,7 +658,7 @@
         "price": 350.0,
         "quantity": 4,
         "images": [
-            "Imagenes\\58\\58_1.png"
+            "Imagenes/58/58_1.png"
         ],
         "description": "",
         "code": "",
@@ -670,7 +670,7 @@
         "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes\\59\\59_1.png"
+            "Imagenes/59/59_1.png"
         ],
         "description": "",
         "code": "",
@@ -682,7 +682,7 @@
         "price": 500.0,
         "quantity": 3,
         "images": [
-            "Imagenes\\60\\60_1.png"
+            "Imagenes/60/60_1.png"
         ],
         "description": "",
         "code": "",
@@ -694,7 +694,7 @@
         "price": 450.0,
         "quantity": 4,
         "images": [
-            "Imagenes\\61\\61_1.png"
+            "Imagenes/61/61_1.png"
         ],
         "description": "",
         "code": "",
@@ -706,8 +706,8 @@
         "price": 380.0,
         "quantity": 2,
         "images": [
-            "Imagenes\\62\\62_1.png",
-            "Imagenes\\62\\62_2.png"
+            "Imagenes/62/62_1.png",
+            "Imagenes/62/62_2.png"
         ],
         "description": "",
         "code": "",
@@ -719,8 +719,8 @@
         "price": 250.0,
         "quantity": 3,
         "images": [
-            "Imagenes\\65\\65_1.png",
-            "Imagenes\\65\\65_2.png"
+            "Imagenes/65/65_1.png",
+            "Imagenes/65/65_2.png"
         ],
         "description": "",
         "code": "",
@@ -732,7 +732,7 @@
         "price": 150.0,
         "quantity": 3,
         "images": [
-            "Imagenes\\66\\66_1.png"
+            "Imagenes/66/66_1.png"
         ],
         "description": "",
         "code": "",
@@ -744,8 +744,8 @@
         "price": 280.0,
         "quantity": 2,
         "images": [
-            "Imagenes\\67\\67_1.png",
-            "Imagenes\\67\\67_2.png"
+            "Imagenes/67/67_1.png",
+            "Imagenes/67/67_2.png"
         ],
         "description": "",
         "code": "",
@@ -757,8 +757,8 @@
         "price": 500.0,
         "quantity": 6,
         "images": [
-            "Imagenes\\68\\68_1.png",
-            "Imagenes\\68\\68_2.png"
+            "Imagenes/68/68_1.png",
+            "Imagenes/68/68_2.png"
         ],
         "description": "",
         "code": "",
@@ -770,7 +770,7 @@
         "price": 750.0,
         "quantity": 6,
         "images": [
-            "Imagenes\\69\\69_1.png"
+            "Imagenes/69/69_1.png"
         ],
         "description": "",
         "code": "",
@@ -782,7 +782,7 @@
         "price": 450.0,
         "quantity": 2,
         "images": [
-            "Imagenes\\71\\71_1.png"
+            "Imagenes/71/71_1.png"
         ],
         "description": "",
         "code": "",
@@ -794,7 +794,7 @@
         "price": 300.0,
         "quantity": 2,
         "images": [
-            "Imagenes\\72\\72_1.png"
+            "Imagenes/72/72_1.png"
         ],
         "description": "",
         "code": "",
@@ -806,8 +806,8 @@
         "price": 260.0,
         "quantity": 17,
         "images": [
-            "Imagenes\\73\\73_1.jpg",
-            "Imagenes\\73\\73_2.jpg"
+            "Imagenes/73/73_1.jpg",
+            "Imagenes/73/73_2.jpg"
         ],
         "description": "Es un regulador STEP DOWN\nCaracter\u00edsticas del m\u00f3dulo:\n \nVoltaje de entrada: 4-38V\n Voltaje de salida: 1,25-36V continuamente ajustable\n Corriente de salida: ajustable, m\u00e1ximo 5A\n Potencia de salida: 75W m\u00e1ximo\n Temperatura de trabajo: -40 a + 85 grados\n Frecuencia de funcionamiento: 180KHz\n Eficiencia de conversi\u00f3n: hasta un 96%\n Protecci\u00f3n contra cortocircuitos: S\u00ed (corriente l\u00edmite 8A)\n Protecci\u00f3n contra sobrecalentamiento: (apaga autom\u00e1ticamente la salida despu\u00e9s de la \n sobrecalentamiento)\n Protecci\u00f3n de polaridad inversa de entrada: ninguna, (si es necesario, introduce la cadena \n en el diodo de alta corriente).\n Instalaci\u00f3n: cuatro tornillos de 3mm\nConexi\u00f3n: terminales o terminales de soldadura, V-IN es la entrada, salida de V-OUT.\nPeso: 19g",
         "code": "",
@@ -819,8 +819,8 @@
         "price": 390.0,
         "quantity": 8,
         "images": [
-            "Imagenes\\74\\74_1.jpg",
-            "Imagenes\\74\\74_2.jpg"
+            "Imagenes/74/74_1.jpg",
+            "Imagenes/74/74_2.jpg"
         ],
         "description": "Descripci\u00f3n General\\nEste m\u00f3dulo de temporizador est\u00e1 dise\u00f1ado para aplicaciones de automatizaci\u00f3n y control, ofreciendo una interfaz f\u00e1cil de usar y m\u00faltiples opciones de configuraci\u00f3n de temporizaci\u00f3n. Cuenta con un rel\u00e9 de 5V, una pantalla LED para mostrar el estado y los tiempos configurados, y varios botones para ajustar los par\u00e1metros.\\n\\nEspecificaciones T\u00e9cnicas\\nTensi\u00f3n de funcionamiento: 6-30V (compatible con micro USB de 5V)\\nRel\u00e9: 5V\\nPantalla: LED de 3 d\u00edgitos para mostrar la configuraci\u00f3n y el estado del temporizador\\nBotones: M\u00faltiples botones para configurar y ajustar los tiempos de temporizaci\u00f3n y el modo de operaci\u00f3n\\n\\nModos de operaci\u00f3n: Varias opciones para diferentes aplicaciones de temporizaci\u00f3n, como retardo de encendido, retardo de apagado, y ciclos repetitivos\\nCapacidad del rel\u00e9: El rel\u00e9 puede manejar cargas de corriente y voltaje adecuados seg\u00fan la especificaci\u00f3n (t\u00edpicamente hasta 10A a 250V AC o 30V DC, pero verifique la hoja de datos espec\u00edfica del rel\u00e9)\\n\\nDimensiones: Compacto y f\u00e1cil de integrar en proyectos de electr\u00f3nica y control\\n\\nIndicadores: Indicadores LED para mostrar el estado del rel\u00e9 (encendido/apagado)\\n\\nFuncionalidades\\nConfiguraci\u00f3n de Temporizaci\u00f3n: Permite configurar los tiempos de retardo de encendido y apagado a trav\u00e9s de los botones integrados y visualizar los ajustes en la pantalla LED.\\nCiclo de Automatizaci\u00f3n: Soporta la configuraci\u00f3n de ciclos autom\u00e1ticos para aplicaciones que requieren repetici\u00f3n constante de encendido y apagado.\\nInterfaz de Usuario: La pantalla LED y los botones permiten una configuraci\u00f3n intuitiva y r\u00e1pida de los par\u00e1metros de temporizaci\u00f3n.\\nProtecci\u00f3n: Incorpora protecci\u00f3n contra sobretensi\u00f3n y sobrecorriente para garantizar un funcionamiento seguro y estable.\\n\\nAplicaciones\\nAutomatizaci\u00f3n del hogar: Control de luces, ventiladores, bombas y otros dispositivos el\u00e9ctricos.\\nProyectos DIY: Ideal para proyectos de bricolaje y prototipos que requieren control de temporizaci\u00f3n.\\nSistemas de riego: Control de temporizaci\u00f3n para sistemas de riego automatizados.\\nElectr\u00f3nica industrial: Aplicaciones en l\u00edneas de producci\u00f3n y control de procesos industriales.\\n\\nConexi\u00f3n y Uso\\nAlimentaci\u00f3n: Conectar la fuente de alimentaci\u00f3n de 6-30V o a trav\u00e9s del puerto micro USB de 5V.\\nCarga del Rel\u00e9: Conectar los dispositivos que se desea controlar al rel\u00e9, asegur\u00e1ndose de que la carga no supere la capacidad del rel\u00e9.\\nConfiguraci\u00f3n: Utilizar los botones para ajustar los tiempos de encendido y apagado deseados, y seleccionar el modo de operaci\u00f3n apropiado.\\nOperaci\u00f3n: Una vez configurado, el m\u00f3dulo controlar\u00e1 el encendido y apagado del rel\u00e9 de acuerdo con los par\u00e1metros establecidos.\\n\\nNotas\\nPrecauci\u00f3n: Asegurarse de que la carga conectada al rel\u00e9 sea adecuada para evitar da\u00f1os al m\u00f3dulo.\\nConfiguraci\u00f3n Avanzada: Consultar la hoja de datos y el manual del usuario para detalles sobre la configuraci\u00f3n avanzada y modos espec\u00edficos de operaci\u00f3n.",
         "code": "",
@@ -832,7 +832,7 @@
         "price": 200.0,
         "quantity": 9,
         "images": [
-            "Imagenes\\76\\76_1.jpg"
+            "Imagenes/76/76_1.jpg"
         ],
         "description": "Descripci\u00f3n General\\nEl PC817C es un optoacoplador compuesto por un LED emisor de infrarrojos y un fototransistor en una encapsulaci\u00f3n compacta DIP-4. Este dispositivo proporciona aislamiento el\u00e9ctrico entre la entrada y la salida, permitiendo la transmisi\u00f3n de se\u00f1ales el\u00e9ctricas sin contacto directo.\\n\\nEspecificaciones T\u00e9cnicas\\nEncapsulado: DIP-4\\nTipo de Entrada: LED de infrarrojos\\nTipo de Salida: Fototransistor\\nTensi\u00f3n de Entrada Directa (VF): 1.2V (t\u00edpico) @ 20mA\\nCorriente de Entrada Directa (IF): M\u00e1ximo 50mA\\nTensi\u00f3n de Aislamiento: 5000 Vrms\\nCorriente Colector-Emisor (IC): M\u00e1ximo 50mA\\nTensi\u00f3n Colector-Emisor (VCEO): M\u00e1ximo 80V\\nTemperatura de Operaci\u00f3n: -30\u00b0C a +100\u00b0C\\nGanancia de Transferencia de Corriente (CTR): 50% a 600% @ IF = 5mA, VCE = 5V\\n\\nCaracter\u00edsticas\\nAislamiento El\u00e9ctrico: Proporciona un aislamiento de alta tensi\u00f3n entre los circuitos de entrada y salida.\\nAlta Ganancia de Transferencia: Ofrece una alta relaci\u00f3n de transferencia de corriente, lo que permite la operaci\u00f3n con bajas corrientes de entrada.\\nRespuesta R\u00e1pida: Adecuado para aplicaciones que requieren tiempos de respuesta r\u00e1pidos.\\nEncapsulado Compacto: Facilita la integraci\u00f3n en dise\u00f1os de circuitos impresos (PCBs).\\nAlta Fiabilidad: Dise\u00f1ado para aplicaciones industriales y de consumo que requieren alta fiabilidad y estabilidad a largo plazo.\\n\\nAplicaciones\\nInterfaz de Microcontrolador: Utilizado para aislar microcontroladores de dispositivos de alta tensi\u00f3n.\\nAislamiento de Se\u00f1ales: Ideal para la transmisi\u00f3n de se\u00f1ales entre diferentes niveles de tensi\u00f3n.\\nControl de Rel\u00e9s y Solenoides: Para el control seguro de rel\u00e9s y solenoides en aplicaciones industriales.\\nAislamiento de Datos: En interfaces de comunicaci\u00f3n, especialmente en entornos ruidosos.\\nSistemas de Potencia: Utilizado en fuentes de alimentaci\u00f3n y sistemas de control de potencia.\\n\\nConexi\u00f3n y Uso\\nConexi\u00f3n del LED:\\n\\n\u00c1nodo a trav\u00e9s de una resistencia limitadora de corriente al voltaje de control.\\nC\u00e1todo a tierra.\\nConexi\u00f3n del Fototransistor:\\n\\nColector al voltaje positivo a trav\u00e9s de una resistencia de carga.\\nEmisor a tierra.\\nLa salida se toma a trav\u00e9s de la resistencia de carga.\\nOperaci\u00f3n:\\n\\nCuando se aplica una corriente al LED, el fototransistor se activa permitiendo la conducci\u00f3n entre el colector y el emisor.\\nCuando el LED est\u00e1 apagado, el fototransistor permanece en estado de corte, impidiendo la conducci\u00f3n.\\nNotas\\nPrecauci\u00f3n: Aseg\u00farese de no exceder los par\u00e1metros m\u00e1ximos especificados para evitar da\u00f1os al componente.\\nMontaje: Siga las recomendaciones de montaje para minimizar el ruido el\u00e9ctrico y asegurar el rendimiento \u00f3ptimo del componente.",
         "code": "",
@@ -844,7 +844,7 @@
         "price": 200.0,
         "quantity": 10,
         "images": [
-            "Imagenes\\77\\77_1.jpg"
+            "Imagenes/77/77_1.jpg"
         ],
         "description": "Descripci\u00f3n General\\nEl LED RGB 1210, tambi\u00e9n conocido como LED SMD 3528, es un diodo emisor de luz que contiene tres diodos (rojo, verde y azul) en un solo paquete. Este LED permite la mezcla de colores para crear una amplia gama de colores, lo que lo hace ideal para aplicaciones de iluminaci\u00f3n decorativa y de se\u00f1alizaci\u00f3n.\\n\\nEspecificaciones T\u00e9cnicas\\nEncapsulado: SMD 1210 (tambi\u00e9n conocido como SMD 3528)\\nDimensiones: 3.5 mm x 2.8 mm x 1.2 mm (Largo x Ancho x Alto)\\nTensi\u00f3n Directa (VF):\\nRojo: 2.0-2.4V\\nVerde: 3.0-3.4V\\nAzul: 3.0-3.4V\\nCorriente Directa (IF): M\u00e1ximo 20mA por color\\nLongitud de Onda (\u03bb):\\nRojo: 620-625 nm\\nVerde: 520-525 nm\\nAzul: 465-470 nm\\nIntensidad Luminosa:\\nRojo: 400-500 mcd\\nVerde: 1000-1500 mcd\\nAzul: 400-600 mcd\\n\u00c1ngulo de Visi\u00f3n: 120 grados\\nTemperatura de Operaci\u00f3n: -40\u00b0C a +85\u00b0C\\nTemperatura de Almacenamiento: -40\u00b0C a +100\u00b0C\\n\\nCaracter\u00edsticas\\nTriple Emisi\u00f3n de Color: Integra tres LEDs (rojo, verde y azul) en un solo encapsulado, permitiendo la creaci\u00f3n de m\u00faltiples colores.\\nAlto Brillo: Alta intensidad luminosa para aplicaciones que requieren visibilidad y atractivo visual.\\n\u00c1ngulo de Visi\u00f3n Amplio: \u00c1ngulo de visi\u00f3n de 120 grados, adecuado para aplicaciones que requieren una dispersi\u00f3n de luz amplia.\\nCompacto y Ligero: Tama\u00f1o peque\u00f1o y perfil bajo, ideal para aplicaciones con restricciones de espacio.\\nMontaje en Superficie: Dise\u00f1ado para montajes SMD, facilitando la integraci\u00f3n en circuitos impresos (PCBs) mediante t\u00e9cnicas de soldadura SMT.\\nAplicaciones\\nIluminaci\u00f3n Decorativa: Usado en tiras LED, paneles de iluminaci\u00f3n y decoraciones de interiores.\\nPantallas LED: Utilizado en pantallas y paneles LED para mostrar im\u00e1genes y videos en color.\\nIndicadores de Estado: Empleado como indicador de estado en dispositivos electr\u00f3nicos y equipos industriales.\\nRetroiluminaci\u00f3n: Usado en dispositivos electr\u00f3nicos como teclados, pantallas LCD y botones retroiluminados.\\nAutomatizaci\u00f3n y Rob\u00f3tica: Para se\u00f1alizaci\u00f3n visual y efectos de iluminaci\u00f3n en proyectos de rob\u00f3tica.\\n\\nConexi\u00f3n y Uso\\nConexi\u00f3n de Pines:\\n\\nEl LED RGB 1210 tiene cuatro pines: uno com\u00fan (\u00e1nodo o c\u00e1todo, seg\u00fan el tipo) y tres pines correspondientes a los colores rojo, verde y azul.\\nVerifique el tipo de conexi\u00f3n (\u00e1nodo com\u00fan o c\u00e1todo com\u00fan) antes de realizar la conexi\u00f3n.\\nControl de Color:\\n\\nPara controlar los colores, se aplica voltaje a los pines correspondientes al color deseado.\\nMediante la combinaci\u00f3n de los tres colores primarios (rojo, verde y azul), se pueden crear m\u00faltiples colores ajustando la intensidad de cada LED.\\nControl de Intensidad:\\n\\nPara variar la intensidad de cada color, se puede usar modulaci\u00f3n por ancho de pulso (PWM).\\nControladores de LED dedicados pueden ser utilizados para gestionar el PWM y facilitar la creaci\u00f3n de efectos de iluminaci\u00f3n.\\n\\nNotas\\nPrecauci\u00f3n: No exceder los valores m\u00e1ximos de corriente y voltaje para evitar da\u00f1os al LED.\\nDisipaci\u00f3n de Calor: Aseg\u00farese de proporcionar una adecuada disipaci\u00f3n de calor en aplicaciones de alta intensidad para mantener el rendimiento y la vida \u00fatil del LED.",
         "code": "",
@@ -856,7 +856,7 @@
         "price": 230.0,
         "quantity": 6,
         "images": [
-            "Imagenes\\78\\78_1.jpg"
+            "Imagenes/78/78_1.jpg"
         ],
         "description": "Descripci\u00f3n General\\nEl H11AA1 es un optoacoplador (optoisolador) que proporciona aislamiento el\u00e9ctrico entre sus entradas y salidas. Este componente es utilizado com\u00fanmente para transferir se\u00f1ales electr\u00f3nicas entre circuitos de diferentes potenciales de voltaje mientras se mantiene el aislamiento el\u00e9ctrico.\\n\\nEspecificaciones T\u00e9cnicas\\nConfiguraci\u00f3n del Encapsulado: DIP-6\\nTipo de Entrada: LED de infrarrojos\\nTipo de Salida: Fototransistor\\nAislamiento: Proporciona un alto grado de aislamiento el\u00e9ctrico entre entrada y salida.\\nTensi\u00f3n de Entrada Directa: Aproximadamente 1.2V\\nCorriente de Entrada Directa: 10mA (t\u00edpico), 50mA (m\u00e1ximo)\\nTensi\u00f3n Colector-Emisor (VCEO): 30V (m\u00e1ximo)\\nCorriente de Salida: 50mA (m\u00e1ximo)\\nGanancia de Corriente: Relaci\u00f3n de transferencia de corriente (CTR) t\u00edpica de 20-50%\\nVelocidad de Respuesta: Tiempos de subida y bajada en el rango de microsegundos\\n\\nCaracter\u00edsticas\\nAislamiento Galv\u00e1nico: Permite la transferencia de se\u00f1ales entre circuitos el\u00e9ctricos aislados, evitando la interferencia de ruidos y la diferencia de potencial.\\nAlta Inmunidad al Ruido: Ideal para aplicaciones que requieren una alta inmunidad al ruido el\u00e9ctrico.\\nCompacto: Encapsulado DIP-6 facilita su integraci\u00f3n en dise\u00f1os de circuitos impresos (PCBs).\\n\\nAplicaciones\\nAislamiento de Se\u00f1al: Separaci\u00f3n de circuitos de control y carga.\\nInterfaz de Comunicaciones: Aislamiento de l\u00edneas de comunicaci\u00f3n en sistemas industriales.\\nControl de Motores: Aislamiento de se\u00f1ales de control en sistemas de control de motores.\\nProtecci\u00f3n de Microcontroladores: Protecci\u00f3n de los microcontroladores contra altas tensiones y corrientes transitorias.\\n\\nConexi\u00f3n y Uso\\nConexi\u00f3n del LED:\\n\\nAnodo a trav\u00e9s de una resistencia limitadora de corriente al voltaje de control.\\nC\u00e1todo a tierra.\\nConexi\u00f3n del Fototransistor:\\n\\nColector al voltaje de operaci\u00f3n del circuito de salida.\\nEmisor a tierra del circuito de salida.\\nResistencia de carga entre el colector y el voltaje de operaci\u00f3n para detectar la se\u00f1al de salida.\\nOperaci\u00f3n:\\n\\nCuando la entrada de control activa el LED, el fototransistor se satura permitiendo la corriente en el circuito de salida.\\nCuando el LED est\u00e1 apagado, el fototransistor est\u00e1 en corte, impidiendo la corriente en el circuito de salida.\\n\\nNotas\\nPrecauci\u00f3n: Aseg\u00farese de no exceder los par\u00e1metros m\u00e1ximos especificados para evitar da\u00f1os al componente.\\nMontaje: Siga las recomendaciones de montaje para minimizar el ruido el\u00e9ctrico y asegurar el rendimiento \u00f3ptimo del componente.",
         "code": "",
@@ -868,7 +868,7 @@
         "price": 150.0,
         "quantity": 14,
         "images": [
-            "Imagenes\\79\\79_1.jpg"
+            "Imagenes/79/79_1.jpg"
         ],
         "description": "Descripci\u00f3n General\\nEl MOC3043 es un optoacoplador con salida de TRIAC dise\u00f1ado para aplicaciones de control de corriente alterna (AC). Este dispositivo proporciona aislamiento el\u00e9ctrico entre la entrada y la salida, lo que permite controlar dispositivos de alta tensi\u00f3n AC con se\u00f1ales de baja tensi\u00f3n DC.\\n\\nEspecificaciones T\u00e9cnicas\\nEncapsulado: DIP-6\\nTipo de Entrada: LED de infrarrojos\\nTipo de Salida: TRIAC\\nTensi\u00f3n de Entrada Directa: Aproximadamente 1.15V\\nCorriente de Entrada Directa: 10mA (t\u00edpico), 60mA (m\u00e1ximo)\\nTensi\u00f3n de Aislamiento: 7500 Vrms\\nCorriente M\u00e1xima de Pico de Entrada: 1A\\nTemperatura de Operaci\u00f3n: -40\u00b0C a +85\u00b0C\\n\\nCaracter\u00edsticas\\nAislamiento El\u00e9ctrico: Proporciona un aislamiento seguro entre los circuitos de control y los de potencia.\\nDetecci\u00f3n de Paso por Cero: Ideal para aplicaciones de control de fase y atenuaci\u00f3n.\\nAlta Inmunidad al Ruido: Excelente rendimiento en entornos con alta interferencia electromagn\u00e9tica (EMI).\\nControl de Cargas AC: Capaz de manejar cargas resistivas e inductivas.\\nEncapsulado Compacto: Facilita su integraci\u00f3n en dise\u00f1os de circuitos impresos (PCBs).\\n\\nAplicaciones\\nControl de Rel\u00e9s de Estado S\u00f3lido (SSR): Para el control eficiente de cargas AC.\\nControl de Luces: Ideal para sistemas de iluminaci\u00f3n controlados electr\u00f3nicamente.\\nControl de Motores: Utilizado en aplicaciones que requieren el control de motores AC.\\nAtenuadores de Luz: Para la regulaci\u00f3n de intensidad de iluminaci\u00f3n.\\nControl de Calentadores: En sistemas que requieren control preciso de temperatura.\\n\\nConexi\u00f3n y Uso\\nConexi\u00f3n del LED:\\n\\nAnodo a trav\u00e9s de una resistencia limitadora de corriente al voltaje de control.\\nC\u00e1todo a tierra.\\nConexi\u00f3n del TRIAC:\\n\\nTerminal MT2 del TRIAC a la l\u00ednea de AC.\\nTerminal MT1 del TRIAC a la carga y la otra l\u00ednea de AC.\\nLa puerta del TRIAC se activa mediante el optoacoplador para encender y apagar la carga.\\nOperaci\u00f3n:\\n\\nCuando la entrada de control activa el LED, el TRIAC en la salida se enciende permitiendo la conducci\u00f3n de corriente AC a trav\u00e9s de la carga.\\nCuando el LED est\u00e1 apagado, el TRIAC se mantiene en estado de corte, impidiendo la conducci\u00f3n de corriente AC.\\n\\nNotas\\nPrecauci\u00f3n: Aseg\u00farese de no exceder los par\u00e1metros m\u00e1ximos especificados para evitar da\u00f1os al componente.\\nMontaje: Siga las recomendaciones de montaje para minimizar el ruido el\u00e9ctrico y asegurar el rendimiento \u00f3ptimo del componente.",
         "code": "",
@@ -880,9 +880,9 @@
         "price": 250.0,
         "quantity": 15,
         "images": [
-            "Imagenes\\80\\80_1.jpg",
-            "Imagenes\\80\\80_2.jpg",
-            "Imagenes\\80\\80_3.jpg"
+            "Imagenes/80/80_1.jpg",
+            "Imagenes/80/80_2.jpg",
+            "Imagenes/80/80_3.jpg"
         ],
         "description": "Descripci\u00f3n General\\nEste dispositivo es un medidor digital que puede medir tanto voltaje como corriente continua (DC). Est\u00e1 dise\u00f1ado para monitorear y mostrar simult\u00e1neamente el voltaje y la corriente en sistemas el\u00e9ctricos y electr\u00f3nicos. Es ideal para aplicaciones en fuentes de alimentaci\u00f3n, paneles solares, sistemas de bater\u00edas y proyectos de bricolaje.\\n\\nEspecificaciones T\u00e9cnicas\\nRango de Medici\u00f3n de Voltaje: 0-100V DC\\nRango de Medici\u00f3n de Corriente: 0-10A DC\\nPrecisi\u00f3n de Voltaje: \u00b11% (\u00b11 d\u00edgito)\\nPrecisi\u00f3n de Corriente: \u00b11% (\u00b11 d\u00edgito)\\nResoluci\u00f3n de Voltaje: 0.1V\\nResoluci\u00f3n de Corriente: 0.01A\\nFuente de Alimentaci\u00f3n: 4-30V DC (alimentaci\u00f3n externa)\\nConsumo de Energ\u00eda: < 20mA\\nPantalla: LED de 3 d\u00edgitos, doble color (rojo para voltaje y azul para corriente)\\nDimensiones: 48mm x 29mm x 21mm (Largo x Ancho x Alto)\\nConexiones:\\nRojo: Alimentaci\u00f3n positiva (Vcc)\\nNegro: Alimentaci\u00f3n negativa (GND)\\nAmarillo: Medici\u00f3n de voltaje (V)\\nNegro (m\u00e1s grueso): Medici\u00f3n de corriente (A)\\nCaracter\u00edsticas\\nPantalla Dual: Muestra simult\u00e1neamente el voltaje y la corriente con diferentes colores para una f\u00e1cil lectura.\\nAlta Precisi\u00f3n: Medici\u00f3n precisa de voltaje y corriente con una resoluci\u00f3n adecuada para aplicaciones de precisi\u00f3n.\\nF\u00e1cil Instalaci\u00f3n: Dise\u00f1o compacto con cables de conexi\u00f3n est\u00e1ndar y conectores para una f\u00e1cil instalaci\u00f3n en paneles y dispositivos.\\nProtecci\u00f3n: Protecci\u00f3n contra inversi\u00f3n de polaridad para evitar da\u00f1os al dispositivo.\\nAplicaciones\\nFuentes de Alimentaci\u00f3n: Monitoreo de voltaje y corriente en fuentes de alimentaci\u00f3n de laboratorio y proyectos de bricolaje.\\nSistemas de Energ\u00eda Solar: Supervisi\u00f3n del voltaje y la corriente en sistemas de energ\u00eda solar para asegurar el rendimiento y la eficiencia.\\nBater\u00edas y Cargadores: Verificaci\u00f3n del estado de carga y descarga en sistemas de bater\u00edas y cargadores.\\nProyectos Electr\u00f3nicos: Ideal para proyectos de electr\u00f3nica que requieren monitoreo de energ\u00eda, como robots, controladores y dispositivos de prueba.\\nAutomoci\u00f3n: Medici\u00f3n de par\u00e1metros el\u00e9ctricos en veh\u00edculos y sistemas automotrices.\\n\\nInstrucciones de Conexi\u00f3n\\nAlimentaci\u00f3n del Medidor:\\n\\nConecte el cable rojo al positivo de la fuente de alimentaci\u00f3n (Vcc).\\nConecte el cable negro delgado al negativo de la fuente de alimentaci\u00f3n (GND).\\nMedici\u00f3n de Voltaje:\\n\\nConecte el cable amarillo al punto donde desea medir el voltaje.\\nMedici\u00f3n de Corriente:\\n\\nConecte el cable negro grueso en serie con la carga donde desea medir la corriente.\\n\\nNotas\\nSeguridad: Aseg\u00farese de conectar correctamente los cables para evitar da\u00f1os al dispositivo y a los componentes del circuito.\\n\\nCalibraci\u00f3n: El dispositivo viene calibrado de f\u00e1brica, pero se recomienda verificar las mediciones con un mult\u00edmetro de precisi\u00f3n para aplicaciones cr\u00edticas.\\nTemperatura de Operaci\u00f3n: Utilizar dentro del rango de temperatura especificado para garantizar la precisi\u00f3n y la vida \u00fatil del dispositivo.",
         "code": "",
@@ -891,12 +891,12 @@
     {
         "id": 81,
         "name": "Tarjeta expansion micro SD",
-        "price": "150.0",
-        "quantity": "10",
+        "price": 150.0,
+        "quantity": 10,
         "images": [
-            "Imagenes\\81\\81_1.jpg",
-            "Imagenes\\81\\81_2.jpg",
-            "Imagenes\\81\\81_3.jpg"
+            "Imagenes/81/81_1.jpg",
+            "Imagenes/81/81_2.jpg",
+            "Imagenes/81/81_3.jpg"
         ],
         "description": "Descripci\u00f3n General\\nEl m\u00f3dulo de expansi\u00f3n de almacenamiento Micro SD es un componente electr\u00f3nico dise\u00f1ado para facilitar la integraci\u00f3n de tarjetas micro SD en proyectos de microcontroladores y sistemas embebidos. Este m\u00f3dulo permite la lectura y escritura de datos en una tarjeta micro SD, proporcionando una soluci\u00f3n de almacenamiento port\u00e1til y de alta capacidad.\\n\\nEspecificaciones T\u00e9cnicas\\nCompatibilidad de Tarjetas: Micro SD, Micro SDHC\\nInterfaz de Comunicaci\u00f3n: SPI (Serial Peripheral Interface)\\nVoltaje de Operaci\u00f3n: 3.3V / 5V (tolerancia a nivel de se\u00f1al de 5V)\\nCorriente de Operaci\u00f3n: 80mA (t\u00edpico)\\nVelocidad de Transferencia de Datos: Hasta 25 Mbps en modo SPI\\nTemperatura de Operaci\u00f3n: -25\u00b0C a 85\u00b0C\\nDimensiones: 42mm x 24mm\\nCaracter\u00edsticas\\nCompatibilidad Universal: Compatible con una amplia gama de tarjetas micro SD, incluyendo SD y SDHC.\\nInterfaz SPI: Utiliza la interfaz SPI est\u00e1ndar para la comunicaci\u00f3n con microcontroladores como Arduino, ESP8266, ESP32, STM32, y otros.\\nTolerancia de Voltaje: Soporta niveles de se\u00f1al de 3.3V y 5V, lo que lo hace compatible con la mayor\u00eda de los microcontroladores.\\nFactor de Forma Compacto: Dise\u00f1o compacto que facilita la integraci\u00f3n en proyectos con espacio limitado.\\nPinout\\nGND: Tierra\\n3.3V: Alimentaci\u00f3n de 3.3V\\n5V: Alimentaci\u00f3n de 5V\\nCS: Chip Select (Pin de selecci\u00f3n del dispositivo SPI)\\nMOSI: Master Out Slave In (Pin de datos del SPI)\\nMISO: Master In Slave Out (Pin de datos del SPI)\\nSCK: Serial Clock (Pin de reloj del SPI)\\nAplicaciones\\nProyectos de Datos: Ideal para proyectos que requieren almacenamiento de datos, como dataloggers y sistemas de registro de eventos.\\nSistemas de Archivos: Permite la creaci\u00f3n de sistemas de archivos en proyectos de microcontroladores, facilitando el almacenamiento y acceso a archivos de gran tama\u00f1o.\\nMultimedia: Adecuado para proyectos de audio y video que necesitan almacenar y reproducir archivos multimedia.\\nDesarrollo y Prototipado: \u00datil en el desarrollo y prototipado de sistemas embebidos que requieren almacenamiento externo.\\nEjemplo de Conexi\u00f3n con Arduino\\nConexiones F\u00edsicas:\\n\\nGND: Conectar al pin GND del Arduino.\\n3.3V: Conectar al pin 3.3V del Arduino.\\nCS: Conectar al pin 10 del Arduino.\\nMOSI: Conectar al pin 11 del Arduino.\\nMISO: Conectar al pin 12 del Arduino.\\nSCK: Conectar al pin 13 del Arduino.",
         "code": "#include <SPI.h>\\n#include <SD.h>\\n\\nconst int chipSelect = 10;\\n\\nvoid setup() {\\n  Serial.begin(9600);\\n  pinMode(chipSelect, OUTPUT);\\n  if (!SD.begin(chipSelect)) {\\n    Serial.println(\"No se pudo inicializar la tarjeta SD.\");\\n    return;\\n  }\\n  Serial.println(\"Tarjeta SD inicializada.\");\\n  File dataFile = SD.open(\"datalog.txt\", FILE_WRITE);\\n  if (dataFile) {\\n    dataFile.println(\"Datos de ejemplo.\");\\n    dataFile.close();\\n    Serial.println(\"Datos guardados.\");\\n  } else {\\n    Serial.println(\"Error al abrir el archivo.\");\\n  }\\n}\\n\\nvoid loop() {\\n  // C\u00f3digo adicional\\n}",
@@ -908,9 +908,9 @@
         "price": 350.0,
         "quantity": 10,
         "images": [
-            "Imagenes\\87\\87_1.jpg",
-            "Imagenes\\87\\87_2.jpg",
-            "Imagenes\\87\\87_3.jpg"
+            "Imagenes/87/87_1.jpg",
+            "Imagenes/87/87_2.jpg",
+            "Imagenes/87/87_3.jpg"
         ],
         "description": "Modelo: MTS-103\\nTipo de Interruptor: Palanca de 3 pines, 3 posiciones\\nMaterial: Pl\u00e1stico y metal\\nAplicaciones Comunes: Uso en autom\u00f3viles, proyectos electr\u00f3nicos y sistemas el\u00e9ctricos.\\n\\nEspecificaciones T\u00e9cnicas\\nConfiguraci\u00f3n de Pinos: 3 pines\\nPosiciones de Conmutaci\u00f3n: 3 (ON-ON-ON)\\nVoltaje Nominal: 6A/125V AC\\nCorriente Nominal: 6A\\nMaterial de la Carcasa: Pl\u00e1stico de alta resistencia\\nMaterial de los Contactos: Metal\\nCaracter\u00edsticas\\nDurabilidad: Dise\u00f1ado para soportar m\u00faltiples ciclos de encendido y apagado.\\nResistencia al Desgaste: Alta resistencia mec\u00e1nica y el\u00e9ctrica.\\nFacilidad de Uso: Operaci\u00f3n simple mediante una palanca de conmutaci\u00f3n.\\nMontaje: Se monta f\u00e1cilmente en paneles, ideal para personalizaci\u00f3n y proyectos DIY.\\nAplicaciones\\nAutom\u00f3viles: Control de luces, accesorios y otros dispositivos el\u00e9ctricos.\\nProyectos Electr\u00f3nicos: Interruptor general para circuitos, control de dispositivos.\\nSistemas El\u00e9ctricos: Uso en tableros de control y sistemas de conmutaci\u00f3n.\\nBeneficios\\nConfiabilidad: Alta confiabilidad en ambientes exigentes.\\nVersatilidad: Compatible con una amplia variedad de aplicaciones.\\nCosto Efectivo: Soluci\u00f3n econ\u00f3mica para necesidades de conmutaci\u00f3n el\u00e9ctrica.",
         "code": "",
