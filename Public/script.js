@@ -247,7 +247,7 @@ function openProductModal(productId) {
         const productModalCode = document.getElementById('product-modal-code');
 
         productModalImage.src = product.images[0];
-        productModalDescription.innerHTML = `<span class="small-description">Descripción General:</span><br><span class="small-description">${product.description || ''}</span>`;
+        productModalDescription.innerHTML = `<span class="small-description"></span><br><span class="small-description">${product.description || ''}</span>`;
 
         if (product.code) {
             productModalCode.textContent = product.code;
