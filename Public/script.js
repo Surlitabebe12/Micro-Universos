@@ -246,23 +246,22 @@ function openProductModal(productId) {
         const productModalDescription = document.getElementById('product-modal-description');
         const productModalCode = document.getElementById('product-modal-code');
         const modalTitle = document.getElementById('product-modal-title'); // Nuevo elemento para el título
-
+        
         productModalImage.src = product.images[0];
 
         // Use innerHTML to keep text formatting and apply .small-description style class
         const formattedDescription = product.description
-            ? product.description.replace(/\\n/g, '<br>')
+            ? product.description.replace(/\n/g, '<br>')
             : '';
         productModalDescription.innerHTML = formattedDescription 
             ? `<span class="small-description">${formattedDescription}</span>` 
             : '';
 
         if (product.code) {
-            // Asegúrate de que el código esté dentro de un bloque <code> y que se escape adecuadamente
-            productModalCode.innerHTML = `<code>${product.code.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code>`;
-            productModalCode.className = 'code-example'; // Asegúrate de que la clase esté presente
-            hljs.highlightElement(productModalCode.querySelector('code')); // Aplicar el resaltado de sintaxis
+            const formattedCode = product.code.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
+            productModalCode.innerHTML = `<pre><code>${formattedCode}</code></pre>`;
             productModalCode.style.display = 'block';
+            hljs.highlightElement(productModalCode.querySelector('code'));
         } else {
             productModalCode.style.display = 'none';
         }
