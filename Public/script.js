@@ -247,10 +247,12 @@ function openProductModal(productId) {
         const productModalCode = document.getElementById('product-modal-code');
 
         productModalImage.src = product.images[0];
-        productModalDescription.innerHTML = `<span class="small-description"></span><br><span class="small-description">${product.description || ''}</span>`;
+
+        // Utiliza innerHTML para mantener el formato del texto
+        productModalDescription.innerHTML = product.description ? product.description.replace(/\n/g, '<br>') : '';
 
         if (product.code) {
-            productModalCode.textContent = product.code;
+            productModalCode.innerHTML = `<pre>${product.code.replace(/\n/g, '<br>')}</pre>`;
             productModalCode.style.display = 'block';
         } else {
             productModalCode.style.display = 'none';
@@ -259,6 +261,7 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
+
 
 function closeProductModal() {
     const productModal = document.getElementById('product-modal');
