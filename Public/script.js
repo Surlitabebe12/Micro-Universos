@@ -249,12 +249,16 @@ function openProductModal(productId) {
         productModalImage.src = product.images[0];
 
         // Use innerHTML to keep text formatting and apply .small-description style class
-        productModalDescription.innerHTML = product.description 
-            ? `<span class="small-description">${product.description.replace(/\n/g, '<br>')}</span>` 
+        const formattedDescription = product.description
+            ? product.description.replace(/\\n/g, '<br>')
+            : '';
+        productModalDescription.innerHTML = formattedDescription 
+            ? `<span class="small-description">${formattedDescription}</span>` 
             : '';
 
         if (product.code) {
-            productModalCode.innerHTML = `<pre class="small-description">${product.code.replace(/\n/g, '<br>')}</pre>`;
+            const formattedCode = product.code.replace(/\\n/g, '<br>');
+            productModalCode.innerHTML = `<pre class="small-description">${formattedCode}</pre>`;
             productModalCode.style.display = 'block';
         } else {
             productModalCode.style.display = 'none';
@@ -263,6 +267,7 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
+
 
 function closeProductModal() {
     const productModal = document.getElementById('product-modal');
