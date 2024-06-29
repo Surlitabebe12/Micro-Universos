@@ -38,22 +38,6 @@
         "datasheet": false
     },
     {
-        "id": 4,
-        "name": "Placa Expansi\u00f3n I2c 8 Canales ",
-        "price": 180.0,
-        "quantity": 0,
-        "images": [
-            "Imagenes\\4\\4_1.png",
-            "Imagenes\\4\\4_2.png",
-            "Imagenes\\4\\4_3.png",
-            "Imagenes\\4\\4_4.png",
-            "Imagenes\\4\\4_5.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 5,
         "name": "M\u00f3dulo Inal\u00e1mbrico Nodemcu V3 (esp8266) Usb Ch340",
         "price": 320.0,
@@ -63,18 +47,6 @@
             "Imagenes\\5\\5_2.png",
             "Imagenes\\5\\5_3.png",
             "Imagenes\\5\\5_4.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
-        "id": 7,
-        "name": "Diodo Rectificador Schottky Sr5100 (pack X 10)",
-        "price": 180.0,
-        "quantity": 0,
-        "images": [
-            "Imagenes\\7\\7_1.png"
         ],
         "description": "",
         "code": "",
@@ -150,18 +122,6 @@
         "datasheet": false
     },
     {
-        "id": 13,
-        "name": "Malla Desoldadora Para Desoldar Esta\u00f1o 2.0 Mm De Ancho",
-        "price": 180.0,
-        "quantity": 0,
-        "images": [
-            "Imagenes\\13\\13_1.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 14,
         "name": "Disipador De Calor De Aluminio, 25x24x16mm (4 Unidades)",
         "price": 200.0,
@@ -170,18 +130,6 @@
             "Imagenes\\14\\14_1.png",
             "Imagenes\\14\\14_2.png",
             "Imagenes\\14\\14_3.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
-        "id": 15,
-        "name": "Conector De Alimentaci\u00f3n De Cc, Macho-hembra (5 Juegos)",
-        "price": 400.0,
-        "quantity": 0,
-        "images": [
-            "Imagenes\\15\\15_1.png"
         ],
         "description": "",
         "code": "",
@@ -199,19 +147,6 @@
             "Imagenes\\16\\16_4.jpg"
         ],
         "description": "Descripci\u00f3n General\nEl DB3 es un diodo de disparo bilateral, tambi\u00e9n conocido como diodo DIAC, utilizado principalmente en circuitos de control de corriente alterna (CA) y aplicaciones de disparo de triac. Es un componente semiconductor que permite el paso de la corriente en ambas direcciones cuando se alcanza un voltaje de disparo espec\u00edfico, facilitando el control de dispositivos de potencia.\n\nCaracter\u00edsticas T\u00e9cnicas\nTensi\u00f3n de Disparo: 28V a 36V.\nCorriente de Disparo: T\u00edpicamente alrededor de 50\u03bcA.\nCapacidad de Disparo: Permite un disparo fiable y repetible en ambos sentidos de la corriente.\nTemperatura de Funcionamiento: -40\u00b0C a +125\u00b0C.\nEncapsulado: Generalmente en TO-92 o DO-35.\nAplicaciones\nDisparo de Triacs: Usado en aplicaciones donde se requiere el control de fase de triacs, como en atenuadores de luz, controladores de velocidad de motores, y reguladores de calentadores.\nControl de CA: Empleado en circuitos de control de corriente alterna para aplicaciones industriales y dom\u00e9sticas.\nEncendido de Circuitos: Utilizado en circuitos que requieren encendido y apagado controlado de dispositivos de potencia.\nVentajas\nSimplicidad: Facilita el dise\u00f1o de circuitos de control de potencia con un n\u00famero reducido de componentes.\nConfiabilidad: Proporciona un disparo repetible y fiable, mejorando la eficiencia del circuito de control.\nBilateralidad: Capacidad de conducir corriente en ambas direcciones, lo que lo hace adecuado para aplicaciones de CA.\nEjemplo de Uso en un Circuito\nEn un atenuador de luz, el DB3 se utiliza para disparar un triac, controlando as\u00ed la cantidad de energ\u00eda que se suministra a una carga (por ejemplo, una l\u00e1mpara). El circuito t\u00edpico incluye un potenci\u00f3metro para ajustar el punto de disparo del triac y, por lo tanto, el brillo de la l\u00e1mpara.",
-        "code": "",
-        "datasheet": false
-    },
-    {
-        "id": 17,
-        "name": "Kit De 5 Puntas De Hierro Para Soldador",
-        "price": 400.0,
-        "quantity": 0,
-        "images": [
-            "Imagenes\\17\\17_1.png",
-            "Imagenes\\17\\17_2.png"
-        ],
-        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -353,22 +288,6 @@
             "Imagenes\\28\\28_5.jpg"
         ],
         "description": "Caracter\u00edsticas Principales:\n\nTipo de Sensor: Sensor de efecto Hall lineal.\nModelo: 49E.\nRango de Voltaje de Operaci\u00f3n: 3.0V a 6.5V.\nCorriente de Operaci\u00f3n: M\u00e1ximo 10 mA.\nRango de Sensibilidad: Proporcional al campo magn\u00e9tico aplicado.\nSalida: Se\u00f1al de voltaje anal\u00f3gica.\nEspecificaciones T\u00e9cnicas:\n\nSensibilidad: Aproximadamente 1.4 mV/G (milivoltios por Gauss).\nTemperatura de Operaci\u00f3n: -40\u00b0C a +125\u00b0C.\nBanda de Frecuencia: Hasta 23 kHz.\nLinealidad: Alta precisi\u00f3n y estabilidad.\nRespuesta T\u00e9rmica: Compensaci\u00f3n para variaciones de temperatura.",
-        "code": "",
-        "datasheet": false
-    },
-    {
-        "id": 29,
-        "name": "Led Cob YXO 50w, Dual Spectrum",
-        "price": 380.0,
-        "quantity": 0,
-        "images": [
-            "Imagenes\\29\\29_1.png",
-            "Imagenes\\29\\29_2.png",
-            "Imagenes\\29\\29_3.png",
-            "Imagenes\\29\\29_4.png",
-            "Imagenes\\29\\29_5.png"
-        ],
-        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -790,19 +709,6 @@
         "datasheet": false
     },
     {
-        "id": 64,
-        "name": "Placa Mosfet Superior Irf520 Mos (x2)",
-        "price": 300.0,
-        "quantity": 0,
-        "images": [
-            "Imagenes\\64\\64_1.png",
-            "Imagenes\\64\\64_2.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 65,
         "name": "Portafusibles De Tubo De Vidrio, 5x20mm (pack X5)",
         "price": 250.0,
@@ -917,8 +823,8 @@
     {
         "id": 74,
         "name": "M\u00f3dulo Rele temporizado",
-        "price": "390.0",
-        "quantity": "8",
+        "price": 390.0,
+        "quantity": 8,
         "images": [
             "Imagenes\\74\\74_1.jpg",
             "Imagenes\\74\\74_2.jpg"
@@ -928,20 +834,10 @@
         "datasheet": false
     },
     {
-        "id": 75,
-        "name": "Mini medidor de voltaje 0.28\"",
-        "price": "181.8181818181818",
-        "quantity": "0",
-        "images": [],
-        "description": "nan",
-        "code": "nan",
-        "datasheet": false
-    },
-    {
         "id": 76,
         "name": "Optoacoplador PC817C (20 unidades)",
-        "price": "200.0",
-        "quantity": "9",
+        "price": 200.0,
+        "quantity": 9,
         "images": [
             "Imagenes\\76\\76_1.jpg"
         ],
@@ -952,8 +848,8 @@
     {
         "id": 77,
         "name": "Led smd RGB (x20)",
-        "price": "200.0",
-        "quantity": "10",
+        "price": 200.0,
+        "quantity": 10,
         "images": [
             "Imagenes\\77\\77_1.jpg"
         ],
@@ -964,8 +860,8 @@
     {
         "id": 78,
         "name": "H11AA1 (x4 unidades)",
-        "price": "230.0",
-        "quantity": "6",
+        "price": 230.0,
+        "quantity": 6,
         "images": [
             "Imagenes\\78\\78_1.jpg"
         ],
@@ -976,8 +872,8 @@
     {
         "id": 79,
         "name": "MOC3043 (x2)",
-        "price": "150.0",
-        "quantity": "14",
+        "price": 150.0,
+        "quantity": 14,
         "images": [
             "Imagenes\\79\\79_1.jpg"
         ],
@@ -988,8 +884,8 @@
     {
         "id": 80,
         "name": "Voltimetro digital 0-100V 10A",
-        "price": "250.0",
-        "quantity": "15",
+        "price": 250.0,
+        "quantity": 15,
         "images": [
             "Imagenes\\80\\80_1.jpg",
             "Imagenes\\80\\80_2.jpg",
@@ -1002,8 +898,8 @@
     {
         "id": 81,
         "name": "Tarjeta expansion micro SD",
-        "price": "171.0",
-        "quantity": "10",
+        "price": 171.0,
+        "quantity": 10,
         "images": [
             "Imagenes\\81\\81_1.jpg",
             "Imagenes\\81\\81_2.jpg",
@@ -1014,60 +910,10 @@
         "datasheet": false
     },
     {
-        "id": 82,
-        "name": "M\u00f3dulo de transmisi\u00f3n de datos inal\u00e1mbrico Sim900a",
-        "price": 450.0,
-        "quantity": 0,
-        "images": [],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
-        "id": 83,
-        "name": "HC-05 bluetoth",
-        "price": "550.0",
-        "quantity": "0",
-        "images": [],
-        "description": "nan",
-        "code": "nan",
-        "datasheet": false
-    },
-    {
-        "id": 84,
-        "name": "Grabadora Eeprom kit",
-        "price": 990.0,
-        "quantity": 0,
-        "images": [],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
-        "id": 85,
-        "name": "Lampara 200W",
-        "price": "5200.0",
-        "quantity": "0",
-        "images": [],
-        "description": "nan",
-        "code": "nan",
-        "datasheet": false
-    },
-    {
-        "id": 86,
-        "name": "Driver A4988",
-        "price": "200.0",
-        "quantity": "0",
-        "images": [],
-        "description": "nan",
-        "code": "nan",
-        "datasheet": false
-    },
-    {
         "id": 87,
         "name": "Interruptor palanca (x10)",
-        "price": "350.0",
-        "quantity": "10",
+        "price": 350.0,
+        "quantity": 10,
         "images": [
             "Imagenes\\87\\87_1.jpg",
             "Imagenes\\87\\87_2.jpg",
