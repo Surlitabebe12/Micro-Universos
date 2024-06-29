@@ -383,7 +383,7 @@
             border-radius: 5px;
             display: block;
             margin: 0 auto; /* Centrar la imagen horizontalmente */
-}
+        }
         .code-example {
             background-color: #000;
             color: #fff;
@@ -392,6 +392,9 @@
             margin-top: 20px;
             overflow-x: auto;
             display: none; /* Oculto por defecto */
+        }
+        .small-text {
+            font-size: 0.8em;
         }
 
     </style>
@@ -421,7 +424,7 @@
             </ul>
             <p id="empty-cart-message">No hay productos en el carrito.</p>
             <div id="total">Total: $0</div>
-            <p class="sub-header">Cuando tengas el carrito listo presiona "Compartir carrito" asi lo recibo</p>
+            <p class="small-text">(Cuando tengas el carrito listo presiona "Compartir carrito" asi lo recibo)</p>
             <button class="share-cart-btn" onclick="shareCart()">
                 <img src="WhatsApp_similar_logo.png" alt="WhatsApp">
                 Compartir carrito
