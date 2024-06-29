@@ -2,118 +2,116 @@
     {
         "id": 1,
         "name": "Bornera Pcb 2 Pines (x10)",
-        "price": 110,
-        "quantity": 3,
+        "price": 180.0,
+        "quantity": 4,
         "images": [
-            "Imagenes/1/1_1.png"
+            "Imagenes\\1\\1_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 2,
         "name": "Display Led 8 Bit Max7219",
-        "price": 300,
-        "quantity": 10,
+        "price": 300.0,
+        "quantity": 9,
         "images": [
-            "Imagenes/2/2_1.png",
-            "Imagenes/2/2_2.png",
-            "Imagenes/2/2_3.png"
+            "Imagenes\\2\\2_1.png",
+            "Imagenes\\2\\2_2.png",
+            "Imagenes\\2\\2_3.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 3,
         "name": "Pantalla Tft De 1,8 Pulgadas",
-        "price": 430,
-        "quantity": 10,
+        "price": 430.0,
+        "quantity": 6,
         "images": [
-            "Imagenes/3/3_1.png"
+            "Imagenes\\3\\3_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 4,
-        "name": "Placa Expansión I2c 8 Canales",
-        "price": 180,
-        "quantity": 2,
+        "name": "Placa Expansi\u00f3n I2c 8 Canales ",
+        "price": 180.0,
+        "quantity": 0,
         "images": [
-            "Imagenes/4/4_1.png",
-            "Imagenes/4/4_2.png",
-            "Imagenes/4/4_3.png",
-            "Imagenes/4/4_4.png",
-            "Imagenes/4/4_5.png"
+            "Imagenes\\4\\4_1.png",
+            "Imagenes\\4\\4_2.png",
+            "Imagenes\\4\\4_3.png",
+            "Imagenes\\4\\4_4.png",
+            "Imagenes\\4\\4_5.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 5,
-        "name": "Módulo Inalámbrico Nodemcu V3 (esp8266) Usb Ch340",
-        "price": 320,
-        "quantity": 7,
-        "images": [
-            "Imagenes/5/5_1.png",
-            "Imagenes/5/5_2.png",
-            "Imagenes/5/5_3.png"
-        ],
-        "description": "",
-        "code": ""
-    },
-    {
-        "id": 6,
-        "name": "Optoacoplador Pc817c (pack X 10)",
-        "price": 160,
+        "name": "M\u00f3dulo Inal\u00e1mbrico Nodemcu V3 (esp8266) Usb Ch340",
+        "price": 320.0,
         "quantity": 10,
         "images": [
-            "Imagenes/6/6_1.png"
+            "Imagenes\\5\\5_1.png",
+            "Imagenes\\5\\5_2.png",
+            "Imagenes\\5\\5_3.png",
+            "Imagenes\\5\\5_4.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 7,
         "name": "Diodo Rectificador Schottky Sr5100 (pack X 10)",
-        "price": 180,
-        "quantity": 2,
+        "price": 180.0,
+        "quantity": 0,
         "images": [
-            "Imagenes/7/7_1.png"
+            "Imagenes\\7\\7_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 8,
         "name": "Diodo Rectificador 10a 1000v (pack X10)",
-        "price": 180,
-        "quantity": 7,
+        "price": 180.0,
+        "quantity": 1,
         "images": [
-            "Imagenes/8/8_1.png",
-            "Imagenes/8/8_2.png"
+            "Imagenes\\8\\8_1.png",
+            "Imagenes\\8\\8_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 9,
         "name": "Diodo Puente Rectificador Kbpc5010 50a 1000v",
-        "price": 190,
-        "quantity": 1,
+        "price": 170.0,
+        "quantity": 28,
         "images": [
-            "Imagenes/9/9_1.png",
-            "Imagenes/9/9_2.png",
-            "Imagenes/9/9_3.png"
+            "Imagenes\\9\\9_1.png",
+            "Imagenes\\9\\9_2.png",
+            "Imagenes\\9\\9_3.png"
         ],
-        "description": "",
-        "code": ""
+        "description": "Descripci\u00f3n General:\nEl Kbpc5010 es un rectificador de puente de alta potencia y alta corriente, utilizado com\u00fanmente en aplicaciones de conversi\u00f3n de corriente alterna (AC) a corriente continua (DC). Este componente es esencial en fuentes de alimentaci\u00f3n y otros circuitos electr\u00f3nicos que requieren rectificaci\u00f3n eficiente de alto voltaje y alta corriente.\n\nCaracter\u00edsticas Principales:\n\nConfiguraci\u00f3n: Rectificador de puente.\nVoltaje Inverso M\u00e1ximo (VRRM): 1000V.\nCorriente Directa Promedio (IF): 50A.\nCorriente de Pico de Sobrecarga (IFSM): 400A.\nTensi\u00f3n de Conducci\u00f3n Directa (VF): Aproximadamente 1.1V a plena carga.\nEspecificaciones T\u00e9cnicas:\n\nEncapsulado: Encapsulado met\u00e1lico, generalmente con forma cuadrada y terminales en espiga.\nResistencia T\u00e9rmica: Excelente gesti\u00f3n t\u00e9rmica con una baja resistencia t\u00e9rmica entre la uni\u00f3n y el disipador.\nRango de Temperatura de Operaci\u00f3n: -55\u00b0C a 150\u00b0C.\nFactor de Forma: Compacto y robusto, ideal para montajes en superficies disipadoras de calor.",
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 10,
         "name": "Triac Bta41-600b",
-        "price": "150.0",
-        "quantity": "37",
+        "price": 150.0,
+        "quantity": 37,
         "images": [
             "Imagenes\\10\\10_1.png",
             "Imagenes\\10\\10_2.jpg",
@@ -121,713 +119,962 @@
             "Imagenes\\10\\10_4.jpg"
         ],
         "description": "Descripci\u00f3n General\\nEl BTA41-600B es un triac de alta capacidad dise\u00f1ado para aplicaciones de control de potencia en corriente alterna (CA). Es adecuado para el control de cargas inductivas y resistivas, como motores, calefactores y l\u00e1mparas. Este triac puede manejar corrientes elevadas y voltajes significativos, lo que lo convierte en una opci\u00f3n robusta para aplicaciones industriales y dom\u00e9sticas.\\n\\nCaracter\u00edsticas T\u00e9cnicas\\nTensi\u00f3n M\u00e1xima de Bloqueo (VDRM): 600V\\nCorriente M\u00e1xima Sostenida (IT(RMS)): 40A\\nCorriente de Pico en Estado de Encendido (ITSM): 350A (50Hz, t = 20ms)\\nCorriente de Compensaci\u00f3n de Estado de Encendido (IGT): 50mA\\nTemperatura de Funcionamiento (Tj): -40\u00b0C a +125\u00b0C\\nEncapsulado: TO-3P\\n\\nAplicaciones:\\nControl de Motores: Usado en variadores de velocidad para motores el\u00e9ctricos.\\nControl de Calefacci\u00f3n: Empleado en termostatos y sistemas de calefacci\u00f3n.\\nRegulaci\u00f3n de Iluminaci\u00f3n: Utilizado en atenuadores de luz y sistemas de iluminaci\u00f3n controlada.\\nFuentes de Alimentaci\u00f3n: Aplicado en el control de fuentes de alimentaci\u00f3n conmutadas y reguladores de voltaje.\\n\\nVentajas:\\nAlta Capacidad de Corriente: Puede manejar corrientes elevadas, adecuado para aplicaciones industriales.\\nRobustez: Dise\u00f1o robusto que asegura una operaci\u00f3n confiable en condiciones adversas.\\nVersatilidad: Puede controlar cargas inductivas y resistivas eficientemente.\\nEncapsulado Eficiente: El encapsulado TO-3P ofrece una excelente disipaci\u00f3n de calor.\\n\\nPar\u00e1metros El\u00e9ctricos\\nTensi\u00f3n de Encendido (VT): 1.5V (a IT = 60A)\\nResistencia T\u00e9rmica, Uni\u00f3n a Caja (Rth(j-c)): 0.4\u00b0C/W\\nTensi\u00f3n de Disparo en la Puerta (VGT): 2.5V\\nCorriente de Puerta M\u00e1xima (IGT): 50mA\\n\\nEjemplo de Aplicaci\u00f3n\\nEn un controlador de motor, el BTA41-600B puede ser utilizado para regular la velocidad de un motor de CA. El triac se dispara mediante un pulso de puerta controlado por un circuito de fase, permitiendo ajustar el \u00e1ngulo de conducci\u00f3n y, por lo tanto, la potencia entregada al motor.",
-        "code": ""
+        "code": "",
+        "datasheet": true
     },
     {
         "id": 11,
         "name": "Chip Attiny85-20pu",
-        "price": 300,
-        "quantity": 10,
+        "price": 300.0,
+        "quantity": 7,
         "images": [
-            "Imagenes/11/11_1.png",
-            "Imagenes/11/11_2.png",
-            "Imagenes/11/11_3.png"
+            "Imagenes\\11\\11_1.png",
+            "Imagenes\\11\\11_2.png",
+            "Imagenes\\11\\11_3.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 12,
         "name": "Programador Universal Usb Avr Isp (con Adaptador)",
-        "price": 300,
-        "quantity": 10,
+        "price": 300.0,
+        "quantity": 9,
         "images": [
-            "Imagenes/12/12_1.png",
-            "Imagenes/12/12_2.png"
+            "Imagenes\\12\\12_1.png",
+            "Imagenes\\12\\12_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 13,
-        "name": "Malla Desoldadora Para Desoldar Estaño 2.0 Mm De Ancho",
-        "price": 180,
-        "quantity": 1,
+        "name": "Malla Desoldadora Para Desoldar Esta\u00f1o 2.0 Mm De Ancho",
+        "price": 180.0,
+        "quantity": 0,
         "images": [
-            "Imagenes/13/13_1.png"
+            "Imagenes\\13\\13_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 14,
         "name": "Disipador De Calor De Aluminio, 25x24x16mm (4 Unidades)",
-        "price": 200,
+        "price": 200.0,
         "quantity": 3,
         "images": [
-            "Imagenes/14/14_1.png"
+            "Imagenes\\14\\14_1.png",
+            "Imagenes\\14\\14_2.png",
+            "Imagenes\\14\\14_3.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 15,
-        "name": "Conector De Alimentación De Cc, Macho-hembra (5 Juegos)",
-        "price": 400,
-        "quantity": 1,
+        "name": "Conector De Alimentaci\u00f3n De Cc, Macho-hembra (5 Juegos)",
+        "price": 400.0,
+        "quantity": 0,
         "images": [
-            "Imagenes/15/15_1.png"
+            "Imagenes\\15\\15_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 16,
-        "name": "Diodo Db3 Disparador 20 Piezas",
-        "price": 280,
-        "quantity": 7,
+        "name": "Diodo Db3 Disparador 20 Piezas ",
+        "price": 180.0,
+        "quantity": 2,
         "images": [
-            "Imagenes/16/16_1.png",
-            "Imagenes/16/16_2.png"
+            "Imagenes\\16\\16_1.jpg",
+            "Imagenes\\16\\16_2.jpg",
+            "Imagenes\\16\\16_3.jpg",
+            "Imagenes\\16\\16_4.jpg"
         ],
-        "description": "",
-        "code": ""
+        "description": "Descripci\u00f3n General\nEl DB3 es un diodo de disparo bilateral, tambi\u00e9n conocido como diodo DIAC, utilizado principalmente en circuitos de control de corriente alterna (CA) y aplicaciones de disparo de triac. Es un componente semiconductor que permite el paso de la corriente en ambas direcciones cuando se alcanza un voltaje de disparo espec\u00edfico, facilitando el control de dispositivos de potencia.\n\nCaracter\u00edsticas T\u00e9cnicas\nTensi\u00f3n de Disparo: 28V a 36V.\nCorriente de Disparo: T\u00edpicamente alrededor de 50\u03bcA.\nCapacidad de Disparo: Permite un disparo fiable y repetible en ambos sentidos de la corriente.\nTemperatura de Funcionamiento: -40\u00b0C a +125\u00b0C.\nEncapsulado: Generalmente en TO-92 o DO-35.\nAplicaciones\nDisparo de Triacs: Usado en aplicaciones donde se requiere el control de fase de triacs, como en atenuadores de luz, controladores de velocidad de motores, y reguladores de calentadores.\nControl de CA: Empleado en circuitos de control de corriente alterna para aplicaciones industriales y dom\u00e9sticas.\nEncendido de Circuitos: Utilizado en circuitos que requieren encendido y apagado controlado de dispositivos de potencia.\nVentajas\nSimplicidad: Facilita el dise\u00f1o de circuitos de control de potencia con un n\u00famero reducido de componentes.\nConfiabilidad: Proporciona un disparo repetible y fiable, mejorando la eficiencia del circuito de control.\nBilateralidad: Capacidad de conducir corriente en ambas direcciones, lo que lo hace adecuado para aplicaciones de CA.\nEjemplo de Uso en un Circuito\nEn un atenuador de luz, el DB3 se utiliza para disparar un triac, controlando as\u00ed la cantidad de energ\u00eda que se suministra a una carga (por ejemplo, una l\u00e1mpara). El circuito t\u00edpico incluye un potenci\u00f3metro para ajustar el punto de disparo del triac y, por lo tanto, el brillo de la l\u00e1mpara.",
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 17,
         "name": "Kit De 5 Puntas De Hierro Para Soldador",
-        "price": 400,
-        "quantity": 2,
+        "price": 400.0,
+        "quantity": 0,
         "images": [
-            "Imagenes/17/17_1.png",
-            "Imagenes/17/17_2.png"
+            "Imagenes\\17\\17_1.png",
+            "Imagenes\\17\\17_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 18,
         "name": "Kit Micro Pulsadores Con Tapa De 5 Colores, 25 Pcs",
-        "price": 650,
+        "price": 650.0,
         "quantity": 2,
         "images": [
-            "Imagenes/18/18_1.png"
+            "Imagenes\\18\\18_1.png",
+            "Imagenes\\18\\18_2.png",
+            "Imagenes\\18\\18_3.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 19,
-        "name": "Placa Expansión  Esp32. Nuevo Modelo.",
-        "price": 380,
-        "quantity": 10,
+        "name": "Placa Expansi\u00f3n  Esp32. Nuevo Modelo.",
+        "price": 380.0,
+        "quantity": 9,
         "images": [
-            "Imagenes/19/19_1.png"
+            "Imagenes\\19\\19_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 20,
-        "name": "Módulo De Pantalla Led Tm1637 Para Arduino, 7 Segmentos, 4 B",
-        "price": 120,
-        "quantity": 4,
+        "name": "M\u00f3dulo De Pantalla Led Tm1637 Para Arduino, 7 Segmentos, 4 B",
+        "price": 170.0,
+        "quantity": 9,
         "images": [
-            "Imagenes/20/20_1.png"
+            "Imagenes\\20\\20_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 21,
         "name": "Interruptor Mosfet (x2) De Alta Potencia (400w)",
-        "price": 400,
+        "price": 400.0,
         "quantity": 1,
         "images": [
-            "Imagenes/21/21_1.png"
+            "Imagenes\\21\\21_1.png",
+            "Imagenes\\21\\21_2.png",
+            "Imagenes\\21\\21_3.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 22,
-        "name": "Módulo Usb A Ttl Cp2102 Con Cables Dupont",
-        "price": 380,
-        "quantity": 5,
+        "name": "M\u00f3dulo Usb A Ttl Cp2102 Con Cables Dupont",
+        "price": 380.0,
+        "quantity": 19,
         "images": [
-            "Imagenes/22/22_1.png",
-            "Imagenes/22/22_2.png"
+            "Imagenes\\22\\22_1.jpg",
+            "Imagenes\\22\\22_2.png",
+            "Imagenes\\22\\22_3.jpg",
+            "Imagenes\\22\\22_4.png"
         ],
-        "description": "",
-        "code": ""
+        "description": "Cables dupont H-H de 20cm\n\nCaracter\u00edsticas del CP2102\nInterfaz USB 2.0 Full-Speed: Compatible con cualquier puerto USB est\u00e1ndar.\n\nInterfaz UART: Proporciona se\u00f1ales de transmisi\u00f3n y recepci\u00f3n (TX y RX) para la comunicaci\u00f3n serial.\n\nBaud Rate: Soporta una amplia gama de velocidades de transmisi\u00f3n, desde 300 bps hasta 1 Mbps.\nAlimentaci\u00f3n: Puede ser alimentado directamente desde el puerto USB.\n\nControl de flujo: Soporta control de flujo por hardware (RTS/CTS) y por software (XON/XOFF).\n\nDrivers: Compatible con Windows, Mac y Linux, con controladores f\u00e1cilmente disponibles en el sitio web de Silicon Labs.\n\nUsos comunes\nProgramaci\u00f3n de microcontroladores: Muy utilizado para la programaci\u00f3n y depuraci\u00f3n de microcontroladores y otros dispositivos embebidos.\n\nInterfaz serial para dispositivos embebidos: Ideal para agregar una interfaz USB a dispositivos que solo tienen una interfaz serial.\nProyectos de electr\u00f3nica: Utilizado en una variedad de proyectos de electr\u00f3nica y desarrollo de prototipos donde se necesita una interfaz serial confiable.\n\nConexi\u00f3n y uso\nConexi\u00f3n: Conecta el adaptador CP2102 a tu computadora mediante un cable USB. Los pines TX y RX del adaptador se conectan a los pines RX y TX del dispositivo con el que deseas comunicarte, respectivamente. Tambi\u00e9n puedes conectar los pines de control de flujo si tu aplicaci\u00f3n lo requiere.\n\nConfiguraci\u00f3n: Una vez conectado, instala los controladores necesarios desde el sitio web de Silicon Labs. Despu\u00e9s de la instalaci\u00f3n, el adaptador aparecer\u00e1 como un puerto COM en tu sistema operativo, que puedes usar con cualquier software de terminal serial.",
+        "code": "# Codigo .py para comunicarse \n#con dispositivo serie\nimport serial\nimport time\n\n# Configuraci\u00f3n del puerto serie\nport = '/dev/ttyUSB0'  # Cambia esto al puerto adecuado en tu sistema\nbaud_rate = 9600       # Configura la velocidad de transmisi\u00f3n\n\ntry:\n    # Abre la conexi\u00f3n serie\n    ser = serial.Serial(port, baud_rate, timeout=1)\n    print(f\"Conectado al puerto {port} a {baud_rate} baudios.\")\n\n    # Espera a que el dispositivo est\u00e9 listo\n    time.sleep(2)\n\n    # Env\u00eda un comando al dispositivo\n    command = 'AT\\r\\n'\n    ser.write(command.encode())\n    print(f\"Enviado: {command.strip()}\")\n\n    # Lee la respuesta del dispositivo\n    response = ser.read(ser.in_waiting or 1).decode()\n    print(f\"Respuesta: {response}\")\n\n    # Cierra la conexi\u00f3n\n    ser.close()\n    print(\"Conexi\u00f3n cerrada.\")\n\nexcept serial.SerialException as e:\n    print(f\"Error al abrir la conexi\u00f3n: {e}\")",
+        "datasheet": false
     },
     {
         "id": 23,
         "name": "Prensacable Pg11 (5 Unidades)",
-        "price": 200,
+        "price": 200.0,
         "quantity": 1,
         "images": [
-            "Imagenes/23/23_1.png"
+            "Imagenes\\23\\23_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 24,
         "name": "Conversor Serie--bluetooth Jdy-30",
-        "price": 380,
+        "price": 380.0,
         "quantity": 3,
         "images": [
-            "Imagenes/24/24_1.png"
+            "Imagenes\\24\\24_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 25,
         "name": "Diodo Rectificador M7 1n4007 Smd 1a 100 V. (20 Unidades)",
-        "price": 210,
-        "quantity": 3,
+        "price": 210.0,
+        "quantity": 2,
         "images": [
-            "Imagenes/25/25_1.png"
+            "Imagenes\\25\\25_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 26,
-        "name": "Lámpara Led Indoor 200w Reales. Dimerizable. Luz Combinada!(USD)",
-        "price": 1,
-        "quantity": 130,
-        "images": [
-            "Imagenes/26/26_1.png"
-        ],
+        "name": "L\u00e1mpara Led Indoor 200w Reales. Dimerizable. Luz Combinada!",
+        "price": 130.0,
+        "quantity": 1,
+        "images": [],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 27,
         "name": "Caja De Separadores De Nailon Hexagonal, M3 (300 Piezas)",
-        "price": 820,
+        "price": 790.0,
         "quantity": 1,
         "images": [
-            "Imagenes/27/27_1.png"
+            "Imagenes\\27\\27_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 28,
-        "name": "Sensor De Hall 49e (bici Eléctrica) 5 Unidades",
-        "price": 180,
-        "quantity": 22,
+        "name": "Sensor De Hall 49e (bici El\u00e9ctrica) 5 Unidades",
+        "price": 180.0,
+        "quantity": 17,
         "images": [
-            "Imagenes/28/28_1.png"
+            "Imagenes\\28\\28_1.jpg",
+            "Imagenes\\28\\28_2.jpg",
+            "Imagenes\\28\\28_3.jpg",
+            "Imagenes\\28\\28_4.jpg",
+            "Imagenes\\28\\28_5.jpg"
         ],
-        "description": "",
-        "code": ""
+        "description": "Caracter\u00edsticas Principales:\n\nTipo de Sensor: Sensor de efecto Hall lineal.\nModelo: 49E.\nRango de Voltaje de Operaci\u00f3n: 3.0V a 6.5V.\nCorriente de Operaci\u00f3n: M\u00e1ximo 10 mA.\nRango de Sensibilidad: Proporcional al campo magn\u00e9tico aplicado.\nSalida: Se\u00f1al de voltaje anal\u00f3gica.\nEspecificaciones T\u00e9cnicas:\n\nSensibilidad: Aproximadamente 1.4 mV/G (milivoltios por Gauss).\nTemperatura de Operaci\u00f3n: -40\u00b0C a +125\u00b0C.\nBanda de Frecuencia: Hasta 23 kHz.\nLinealidad: Alta precisi\u00f3n y estabilidad.\nRespuesta T\u00e9rmica: Compensaci\u00f3n para variaciones de temperatura.",
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 29,
         "name": "Led Cob YXO 50w, Dual Spectrum",
-        "price": 380,
-        "quantity": 20,
+        "price": 380.0,
+        "quantity": 0,
         "images": [
-            "Imagenes/29/29_1.png"
+            "Imagenes\\29\\29_1.png",
+            "Imagenes\\29\\29_2.png",
+            "Imagenes\\29\\29_3.png",
+            "Imagenes\\29\\29_4.png",
+            "Imagenes\\29\\29_5.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 30,
-        "name": "Esp32 Wifi Con Placa De Expansión Útimo Modelo",
-        "price": 1000,
-        "quantity": 5,
+        "name": "Esp32 Wifi Con Placa De Expansi\u00f3n \u00faltimo Modelo",
+        "price": 990.0,
+        "quantity": 3,
         "images": [
-            "Imagenes/30/30_1.png"
+            "Imagenes\\30\\30_1.jpg",
+            "Imagenes\\30\\30_2.jpg",
+            "Imagenes\\30\\30_3.jpg"
         ],
-        "description": "",
-        "code": ""
+        "description": "Gran Oportunidad para los amantes de la electr\u00f3nica. Con la placa ESP32 de 38 pinos podr\u00e1s hacer cualquier proyecto de microprocesadores sum\u00e1ndole la capacidad integrada de comunicaci\u00f3n WIFI y/o bluetooth. Una joyita que cada vez est\u00e1 siendo m\u00e1s usada por grandes firmas. Junto con la placa viene su SHIELD para olvidarte del protoboard.",
+        "code": "#include <WiFi.h>\n\n// Replace these with your WiFi network settings\nconst char* ssid = \"your_SSID\";\nconst char* password = \"your_PASSWORD\";\n\nvoid setup() {\n  // Start the Serial communication\n  Serial.begin(115200);\n  delay(10);\n\n  // Start connecting to the WiFi network\n  Serial.println();\n  Serial.println(\"Connecting to WiFi...\");\n  WiFi.begin(ssid, password);\n\n  // Wait until the ESP32 is connected to the WiFi network\n  while (WiFi.status() != WL_CONNECTED) {\n    delay(1000);\n    Serial.print(\".\");\n  }\n\n  // Print the ESP32's IP address\n  Serial.println();\n  Serial.println(\"Connected to WiFi network!\");\n  Serial.print(\"IP address: \");\n  Serial.println(WiFi.localIP());\n}\n\nvoid loop() {\n  // Nothing here\n}",
+        "datasheet": false
     },
     {
         "id": 31,
         "name": "Cable Usb A Micro, Alta Calidad, Tipo A. 0.3m",
-        "price": 100,
+        "price": 100.0,
         "quantity": 6,
         "images": [
-            "Imagenes/31/31_1.png"
+            "Imagenes\\31\\31_1.png",
+            "Imagenes\\31\\31_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 32,
-        "name": "Módulo De Fuente De Alimentación Usb",
-        "price": 270,
-        "quantity": 10,
+        "name": "M\u00f3dulo De Fuente De Alimentaci\u00f3n Usb",
+        "price": 270.0,
+        "quantity": 9,
         "images": [
-            "Imagenes/32/32_1.png"
+            "Imagenes\\32\\32_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 33,
-        "name": "Sensor De Distancia Ultrasónico X2 (compatible Arduino)",
-        "price": 280,
-        "quantity": 4,
+        "name": "Sensor De Distancia Ultras\u00f3nico X2 (compatible Arduino)",
+        "price": 280.0,
+        "quantity": 2,
         "images": [
-            "Imagenes/33/33_1.png"
+            "Imagenes\\33\\33_1.png",
+            "Imagenes\\33\\33_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 34,
-        "name": "Caja De Plástico Para Proyecto De Electrónica",
-        "price": 230,
+        "name": "Caja De Pl\u00e1stico Para Proyecto De Electr\u00f3nica",
+        "price": 230.0,
         "quantity": 6,
         "images": [
-            "Imagenes/34/34_1.png"
+            "Imagenes\\34\\34_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 35,
         "name": "Sensor Capacitivo De Humedad Del Suelo",
-        "price": 170,
+        "price": 170.0,
         "quantity": 2,
         "images": [
-            "Imagenes/35/35_1.png"
+            "Imagenes\\35\\35_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 36,
-        "name": "Módulo Relé 5v 1 Canal",
-        "price": 100,
-        "quantity": 7,
+        "name": "Adaptador Para Esp32 38pinos (ver Nota)",
+        "price": 250.0,
+        "quantity": 1,
         "images": [
-            "Imagenes/36/36_1.png"
+            "Imagenes\\36\\36_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 37,
         "name": "Sensor De Luz Lm393 Arduino",
-        "price": 130,
+        "price": 130.0,
         "quantity": 9,
         "images": [
-            "Imagenes/37/37_1.png"
+            "Imagenes\\37\\37_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 38,
-        "name": "Sensor De Humedad Tierra (alta Precisión)",
-        "price": 400,
+        "name": "Sensor De Humedad Tierra (alta Precisi\u00f3n) Arduino",
+        "price": 390.0,
         "quantity": 20,
         "images": [
-            "Imagenes/38/38_1.png",
-            "Imagenes/38/38_2.png",
-            "Imagenes/38/38_3.png"
+            "Imagenes\\38\\38_1.png",
+            "Imagenes\\38\\38_2.png",
+            "Imagenes\\38\\38_3.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 39,
-        "name": "Mini Humidificador Usb-c (placa Electrónica)",
-        "price": 380,
+        "name": "Mini Humidificador Usb-c (placa Electr\u00f3nica, Arduino)",
+        "price": 380.0,
         "quantity": 1,
         "images": [
-            "Imagenes/39/39_1.png"
+            "Imagenes\\39\\39_1.png",
+            "Imagenes\\39\\39_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 40,
         "name": "Pcb Prototipo Pack De 4",
-        "price": 350,
-        "quantity": 3,
+        "price": 350.0,
+        "quantity": 2,
         "images": [
-            "Imagenes/40/40_1.png"
+            "Imagenes\\40\\40_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 41,
         "name": "Kit Surtido De Transistores, Regulador De Voltaje (16 Pcs)",
-        "price": 500,
-        "quantity": 2,
+        "price": 500.0,
+        "quantity": 1,
         "images": [
-            "Imagenes/41/41_1.png"
+            "Imagenes\\41\\41_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 42,
-        "name": "Sensor De Temperatura Y Humedad",
-        "price": 300,
+        "name": "Sensor De Temperatura Y Humedad Arduino",
+        "price": 300.0,
         "quantity": 5,
         "images": [
-            "Imagenes/42/42_1.png"
+            "Imagenes\\42\\42_1.png",
+            "Imagenes\\42\\42_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 43,
         "name": "Dip-switch 4 Posiciones (pack De 5)",
-        "price": 200,
+        "price": 200.0,
         "quantity": 2,
         "images": [
-            "Imagenes/43/43_1.png"
+            "Imagenes\\43\\43_1.png",
+            "Imagenes\\43\\43_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 44,
-        "name": "Led Cob YXO 50w FRIO",
-        "price": 290,
-        "quantity": 11,
+        "name": "Chip Cob YXO 50w FRIO",
+        "price": 360.0,
+        "quantity": 19,
         "images": [
-            "Imagenes/44/44_1.png"
+            "Imagenes\\44\\44_1.png"
         ],
-        "description": "",
-        "code": ""
+        "description": "Descripci\u00f3n General:\nBridgelux es una marca reconocida en la industria de la iluminaci\u00f3n LED, conocida por sus productos de alta calidad y eficiencia. Los LEDs Bridgelux son utilizados en una amplia gama de aplicaciones, desde iluminaci\u00f3n general hasta aplicaciones industriales y comerciales.\n\nChip Original de f\u00e1brica. De los mejores en el mercado, con bornera para no soldar.\n\nEspecificaci\u00f3n:\n\n1. Fuente de luz: DOB\n2 Color:Blanco fr\u00edo 6000K\n3Fosfuro: 660nm (otro proveedor utiliza 620nm, por lo que es barato)\n4 Chip:Bridgelux\n5 potencia: 50w\n6. Voltaje de entrada: 220-265V\n7Tama\u00f1o:75x40x1.6mm\n8. Material de la carcasa: Aluminio\n9. Vida \u00fatil de la fuente:> 50.000 horas\n10 \u00c1ngulo de iluminaci\u00f3n: 120\n\n 6 funciones para proteger el chip led de larga vida \u00fatil.\n\nA1:MOV para protecci\u00f3n contra sobretensiones> 4000V pasado\n\nA2: rectificador de puente de 1000V\n\nR3: control de corriente constante y potencia constante\n\nA4: sensor NTC para protecci\u00f3n contra sobrecalentamiento pcb\n\nA5: regulador de voltaje para la protecci\u00f3n ic vdd\n\nR6: Controlador IC, control de sobretensi\u00f3n y sobrecorriente\n\nA7: puede usar un atenuador led o un atenuador SCR para atenuarlo.\n\nNecesitan sistema de disipaci\u00f3n de calor (disipador por lo menos)",
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 45,
         "name": "Maceta Red Para Hidroponia.",
-        "price": 180,
+        "price": 180.0,
         "quantity": 11,
-        "images": [
-            "Imagenes/45/45_1.png"
-        ],
+        "images": [],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 46,
-        "name": "Placa De Desarrollo Esp-wroom-32 Wifi",
-        "price": 650,
-        "quantity": 4,
+        "name": "ESP32 placa de desarrollo",
+        "price": 630.0,
+        "quantity": 3,
         "images": [
-            "Imagenes/46/46_1.png"
+            "Imagenes\\46\\46_1.png"
         ],
-        "description": "",
-        "code": ""
+        "description": "El ESP-WROOM-32 es un m\u00f3dulo Wi-Fi potente que integra el chip ESP32, ofreciendo una soluci\u00f3n completa para aplicaciones de Wi-Fi y Bluetooth. Aqu\u00ed tienes un resumen t\u00e9cnico de sus caracter\u00edsticas clave:\n\n1. Caracter\u00edsticas Generales\nProcesador: Microprocesador Tensilica LX6 de doble n\u00facleo, capaz de funcionar a 240 MHz.\nMemoria:\n520 KB de SRAM.\n448 KB de ROM para arranque y funciones b\u00e1sicas.\nSoporte para memoria flash y SRAM externa.\nVoltaje de Operaci\u00f3n: 2.2V a 3.6V.\nConsumo de Energ\u00eda:\nModo activo: ~160 mA.\nModo de suspensi\u00f3n del m\u00f3dem: ~10 mA.\nModo de suspensi\u00f3n ligera: ~0.8 mA.\nModo de suspensi\u00f3n profunda: ~0.01 mA.\nRango de Temperatura de Operaci\u00f3n: -40\u00b0C a +85\u00b0C.\n2. Conectividad Inal\u00e1mbrica\nWi-Fi:\n802.11 b/g/n.\nSoporta Wi-Fi Direct (P2P), soft-AP y modo estaci\u00f3n.\nSeguridad: WPA/WPA2/WPA3 personal, WPA/WPA2 enterprise.\nRango de frecuencia: 2.4 GHz a 2.5 GHz.\nVelocidades de datos: Hasta 150 Mbps.\nBluetooth:\nBluetooth de doble modo (Cl\u00e1sico y BLE).\nCompatible con especificaciones Bluetooth v4.2 BR/EDR y BLE.\n3. Perif\u00e9ricos e Interfaces\nGPIO: 34 GPIOs programables.\nADC: 18 canales de ADC de 12 bits SAR.\nDAC: 2 canales de DAC de 8 bits.\nSensor T\u00e1ctil: 10 GPIOs de detecci\u00f3n capacitiva.\nSPI/I2S: 4 interfaces SPI y 2 interfaces I2S para audio.\nUART: 3 interfaces UART.\nI2C: 2 interfaces I2C.\nPWM: Hasta 16 canales PWM.\nSDIO: 2 interfaces SDIO (host y esclavo).\nEthernet: Interfaz MAC con DMA dedicado y soporte IEEE 1588.\nCAN: 1 interfaz CAN.\nIR: Control remoto IR y emisor IR.\n4. Caracter\u00edsticas Adicionales\nSeguridad: Aceleraci\u00f3n por hardware para cifrado (AES, SHA-2, RSA, ECC), arranque seguro y cifrado de flash.\nTemporizadores: Varios temporizadores de prop\u00f3sito general, temporizadores watchdog y RTC.\nSensor de Hall: Sensor de efecto Hall integrado.\nSensor de Temperatura: Sensor de temperatura incorporado.\nRTC: Reloj en tiempo real de bajo consumo con control de reloj.\n5. Aplicaciones\nEl ESP-WROOM-32 es adecuado para una amplia gama de aplicaciones, incluyendo:\n\nDom\u00f3tica y automatizaci\u00f3n del hogar.\nElectr\u00f3nica de consumo.\nRedes de sensores inal\u00e1mbricos.\nSistemas de control industrial.\nDispositivos m\u00e9dicos.\nProductos IoT (Internet de las Cosas).",
+        "code": "#include <WiFi.h>\n\n// Replace these with your WiFi network settings\nconst char* ssid = \"your_SSID\";\nconst char* password = \"your_PASSWORD\";\n\nvoid setup() {\n  // Start the Serial communication\n  Serial.begin(115200);\n  delay(10);\n\n  // Start connecting to the WiFi network\n  Serial.println();\n  Serial.println(\"Connecting to WiFi...\");\n  WiFi.begin(ssid, password);\n\n  // Wait until the ESP32 is connected to the WiFi network\n  while (WiFi.status() != WL_CONNECTED) {\n    delay(1000);\n    Serial.print(\".\");\n  }\n\n  // Print the ESP32's IP address\n  Serial.println();\n  Serial.println(\"Connected to WiFi network!\");\n  Serial.print(\"IP address: \");\n  Serial.println(WiFi.localIP());\n}\n\nvoid loop() {\n  // Nothing here\n}",
+        "datasheet": false
     },
     {
         "id": 47,
-        "name": "Diodos De Recuperación Rápida 10 Piezas Fr607 6a 1000v",
-        "price": 180,
-        "quantity": 5,
+        "name": "Diodos De Recuperaci\u00f3n R\u00e1pida 10 Piezas Fr607 6a 1000v",
+        "price": 180.0,
+        "quantity": 4,
         "images": [
-            "Imagenes/47/47_1.png"
+            "Imagenes\\47\\47_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 48,
-        "name": "Diodo De Recuperación Rápida Fr207 (20 Unidades)",
-        "price": 180,
-        "quantity": 15,
+        "name": "Diodo De Recuperaci\u00f3n R\u00e1pida Fr207 (20 Unidades)",
+        "price": 180.0,
+        "quantity": 14,
         "images": [
-            "Imagenes/48/48_1.png"
+            "Imagenes\\48\\48_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 49,
-        "name": "Potenciómetro Lineal De 3 Pines, 1k",
-        "price": 80,
+        "name": "Potenci\u00f3metro Lineal De 3 Pines, 1k",
+        "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes/49/49_1.png"
+            "Imagenes\\49\\49_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 50,
-        "name": "Potenciómetro Lineal De 3 Pines, 2k",
-        "price": 80,
-        "quantity": 10,
+        "name": "Potenci\u00f3metro Lineal De 3 Pines, 2k",
+        "price": 80.0,
+        "quantity": 9,
         "images": [
-            "Imagenes/50/50_1.png"
+            "Imagenes\\50\\50_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 51,
-        "name": "Potenciómetro Lineal De 3 Pines, 100k",
-        "price": 80,
+        "name": "Potenci\u00f3metro Lineal De 3 Pines, 100k",
+        "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes/51/51_1.png"
+            "Imagenes\\51\\51_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 52,
         "name": "Wemos D1 Mini Pro V3.0 Wifi",
-        "price": 330,
+        "price": 330.0,
         "quantity": 10,
         "images": [
-            "Imagenes/52/52_1.png"
+            "Imagenes\\52\\52_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 53,
         "name": "Ne555 Circuito Integrado (10 Unidades)",
-        "price": 180,
-        "quantity": 9,
+        "price": 180.0,
+        "quantity": 8,
         "images": [
-            "Imagenes/53/53_1.png"
+            "Imagenes\\53\\53_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 54,
         "name": "Puente Rectificador Kbu1510 15a, 1000v",
-        "price": 150,
+        "price": 150.0,
         "quantity": 15,
         "images": [
-            "Imagenes/54/54_1.png"
+            "Imagenes\\54\\54_1.png",
+            "Imagenes\\54\\54_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 55,
-        "name": "Potenciómetro Lineal De 3 Pines, 1m",
-        "price": 80,
+        "name": "Potenci\u00f3metro Lineal De 3 Pines, 1m",
+        "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes/55/55_1.png"
+            "Imagenes\\55\\55_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 56,
-        "name": "Potenciómetro Lineal De 3 Pines, 50k",
-        "price": 80,
+        "name": "Potenci\u00f3metro Lineal De 3 Pines, 50k",
+        "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes/56/56_1.png"
+            "Imagenes\\56\\56_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 57,
-        "name": "Potenciómetro Lineal De 3 Pines, 20k",
-        "price": 80,
+        "name": "Potenci\u00f3metro Lineal De 3 Pines, 20k",
+        "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes/57/57_1.png"
+            "Imagenes\\57\\57_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 58,
         "name": "Transistor 2n2222 (100 Unidades)",
-        "price": 350,
+        "price": 350.0,
         "quantity": 4,
         "images": [
-            "Imagenes/58/58_1.png"
+            "Imagenes\\58\\58_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 59,
-        "name": "Potenciómetro Lineal De 3 Pines, 250k",
-        "price": 80,
+        "name": "Potenci\u00f3metro Lineal De 3 Pines, 250k",
+        "price": 80.0,
         "quantity": 10,
         "images": [
-            "Imagenes/59/59_1.png"
+            "Imagenes\\59\\59_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 60,
         "name": "Triac Bta10-600b (x5 Unidades)",
-        "price": 500,
+        "price": 500.0,
         "quantity": 3,
         "images": [
-            "Imagenes/60/60_1.png"
+            "Imagenes\\60\\60_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 61,
-        "name": "Triac Bta16-600b X 4 Unidades",
-        "price": 450,
+        "name": "Triac Bta16-600b X 4 Unidades                      ",
+        "price": 450.0,
         "quantity": 4,
         "images": [
-            "Imagenes/61/61_1.png"
+            "Imagenes\\61\\61_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 62,
-        "name": "Módulo De Interruptor Mosfet 4 Canales",
-        "price": 380,
+        "name": "M\u00f3dulo De Interruptor Mosfet 4 Canales",
+        "price": 380.0,
         "quantity": 2,
         "images": [
-            "Imagenes/62/62_1.png",
-            "Imagenes/62/62_2.png"
+            "Imagenes\\62\\62_1.png",
+            "Imagenes\\62\\62_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 63,
-        "name": "Led Bridgelux (muy Buenos) 50w, Dimerizable, Blanco Frío",
-        "price": 380,
+        "name": "Led Bridgelux (muy Buenos) 50w, Dimerizable, Blanco Fr\u00edo. ",
+        "price": 380.0,
         "quantity": 20,
         "images": [
-            "Imagenes/63/63_1.png"
+            "Imagenes\\63\\63_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 64,
         "name": "Placa Mosfet Superior Irf520 Mos (x2)",
-        "price": 300,
-        "quantity": 1,
+        "price": 300.0,
+        "quantity": 0,
         "images": [
-            "Imagenes/64/64_1.png",
-            "Imagenes/64/64_2.png"
+            "Imagenes\\64\\64_1.png",
+            "Imagenes\\64\\64_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 65,
         "name": "Portafusibles De Tubo De Vidrio, 5x20mm (pack X5)",
-        "price": 250,
+        "price": 250.0,
         "quantity": 3,
         "images": [
-            "Imagenes/65/65_1.png",
-            "Imagenes/65/65_2.png"
+            "Imagenes\\65\\65_1.png",
+            "Imagenes\\65\\65_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 66,
         "name": "Teclado Membrana 4x5 (arduino U Otros Micros)",
-        "price": 150,
+        "price": 150.0,
         "quantity": 3,
         "images": [
-            "Imagenes/66/66_1.png"
+            "Imagenes\\66\\66_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 67,
-        "name": "Sensor De Corriente De Precisión (arduino)",
-        "price": 280,
+        "name": "Sensor De Corriente De Precisi\u00f3n (arduino)",
+        "price": 280.0,
         "quantity": 2,
         "images": [
-            "Imagenes/67/67_1.png",
-            "Imagenes/67/67_2.png"
+            "Imagenes\\67\\67_1.png",
+            "Imagenes\\67\\67_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 68,
-        "name": "Módulo De Pantalla Lcd Tft De 1,8 (ej Arduino)",
-        "price": 500,
-        "quantity": 8,
+        "name": "M\u00f3dulo De Pantalla Lcd Tft De 1,8 (ej Arduino)",
+        "price": 500.0,
+        "quantity": 6,
         "images": [
-            "Imagenes/68/68_1.png",
-            "Imagenes/68/68_2.png"
+            "Imagenes\\68\\68_1.png",
+            "Imagenes\\68\\68_2.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 69,
-        "name": "Caja De Fusibles De Tubo De Vidrio, Soplado Rápido (100uds)",
-        "price": 800,
-        "quantity": 9,
+        "name": "Caja De Fusibles De Tubo De Vidrio, Soplado R\u00e1pido (100uds) ",
+        "price": 750.0,
+        "quantity": 6,
         "images": [
-            "Imagenes/69/69_1.png"
+            "Imagenes\\69\\69_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 70,
-        "name": "Chip Led. 10w. Blanco Cálido",
-        "price": 100,
-        "quantity": 4,
+        "name": "Chip Led. 10w. Blanco C\u00e1lido",
+        "price": 100.0,
+        "quantity": 2,
         "images": [
-            "Imagenes/70/70_1.png"
+            "Imagenes\\70\\70_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 71,
         "name": "Microcontrolador W806 (placa De Desarrollo)",
-        "price": 450,
+        "price": 450.0,
         "quantity": 2,
         "images": [
-            "Imagenes/71/71_1.png"
+            "Imagenes\\71\\71_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 72,
-        "name": "Sensor De Temperatura Y Humedad De Alta Precisión Aht21",
-        "price": 300,
+        "name": "Sensor De Temperatura Y Humedad De Alta Precisi\u00f3n Aht21",
+        "price": 300.0,
         "quantity": 2,
         "images": [
-            "Imagenes/72/72_1.png"
+            "Imagenes\\72\\72_1.png"
         ],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
     },
     {
         "id": 73,
         "name": "Conversor Dc-dc De Intensidad Y Voltaje Regulables",
-        "price": 260,
-        "quantity": 11,
+        "price": 260.0,
+        "quantity": 17,
         "images": [
-            "Imagenes/73/73_1.png",
-            "Imagenes/73/73_2.png"
+            "Imagenes\\73\\73_1.jpg",
+            "Imagenes\\73\\73_2.jpg"
         ],
+        "description": "Es un regulador STEP DOWN\nCaracter\u00edsticas del m\u00f3dulo:\n \nVoltaje de entrada: 4-38V\n Voltaje de salida: 1,25-36V continuamente ajustable\n Corriente de salida: ajustable, m\u00e1ximo 5A\n Potencia de salida: 75W m\u00e1ximo\n Temperatura de trabajo: -40 a + 85 grados\n Frecuencia de funcionamiento: 180KHz\n Eficiencia de conversi\u00f3n: hasta un 96%\n Protecci\u00f3n contra cortocircuitos: S\u00ed (corriente l\u00edmite 8A)\n Protecci\u00f3n contra sobrecalentamiento: (apaga autom\u00e1ticamente la salida despu\u00e9s de la \n sobrecalentamiento)\n Protecci\u00f3n de polaridad inversa de entrada: ninguna, (si es necesario, introduce la cadena \n en el diodo de alta corriente).\n Instalaci\u00f3n: cuatro tornillos de 3mm\nConexi\u00f3n: terminales o terminales de soldadura, V-IN es la entrada, salida de V-OUT.\nPeso: 19g",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 74,
+        "name": "M\u00f3dulo Rele temporizado",
+        "price": "390.0",
+        "quantity": "8",
+        "images": [
+            "Imagenes\\74\\74_1.jpg",
+            "Imagenes\\74\\74_2.jpg"
+        ],
+        "description": "Descripci\u00f3n General\\nEste m\u00f3dulo de temporizador est\u00e1 dise\u00f1ado para aplicaciones de automatizaci\u00f3n y control, ofreciendo una interfaz f\u00e1cil de usar y m\u00faltiples opciones de configuraci\u00f3n de temporizaci\u00f3n. Cuenta con un rel\u00e9 de 5V, una pantalla LED para mostrar el estado y los tiempos configurados, y varios botones para ajustar los par\u00e1metros.\\n\\nEspecificaciones T\u00e9cnicas\\nTensi\u00f3n de funcionamiento: 6-30V (compatible con micro USB de 5V)\\nRel\u00e9: 5V\\nPantalla: LED de 3 d\u00edgitos para mostrar la configuraci\u00f3n y el estado del temporizador\\nBotones: M\u00faltiples botones para configurar y ajustar los tiempos de temporizaci\u00f3n y el modo de operaci\u00f3n\\n\\nModos de operaci\u00f3n: Varias opciones para diferentes aplicaciones de temporizaci\u00f3n, como retardo de encendido, retardo de apagado, y ciclos repetitivos\\nCapacidad del rel\u00e9: El rel\u00e9 puede manejar cargas de corriente y voltaje adecuados seg\u00fan la especificaci\u00f3n (t\u00edpicamente hasta 10A a 250V AC o 30V DC, pero verifique la hoja de datos espec\u00edfica del rel\u00e9)\\n\\nDimensiones: Compacto y f\u00e1cil de integrar en proyectos de electr\u00f3nica y control\\n\\nIndicadores: Indicadores LED para mostrar el estado del rel\u00e9 (encendido/apagado)\\n\\nFuncionalidades\\nConfiguraci\u00f3n de Temporizaci\u00f3n: Permite configurar los tiempos de retardo de encendido y apagado a trav\u00e9s de los botones integrados y visualizar los ajustes en la pantalla LED.\\nCiclo de Automatizaci\u00f3n: Soporta la configuraci\u00f3n de ciclos autom\u00e1ticos para aplicaciones que requieren repetici\u00f3n constante de encendido y apagado.\\nInterfaz de Usuario: La pantalla LED y los botones permiten una configuraci\u00f3n intuitiva y r\u00e1pida de los par\u00e1metros de temporizaci\u00f3n.\\nProtecci\u00f3n: Incorpora protecci\u00f3n contra sobretensi\u00f3n y sobrecorriente para garantizar un funcionamiento seguro y estable.\\n\\nAplicaciones\\nAutomatizaci\u00f3n del hogar: Control de luces, ventiladores, bombas y otros dispositivos el\u00e9ctricos.\\nProyectos DIY: Ideal para proyectos de bricolaje y prototipos que requieren control de temporizaci\u00f3n.\\nSistemas de riego: Control de temporizaci\u00f3n para sistemas de riego automatizados.\\nElectr\u00f3nica industrial: Aplicaciones en l\u00edneas de producci\u00f3n y control de procesos industriales.\\n\\nConexi\u00f3n y Uso\\nAlimentaci\u00f3n: Conectar la fuente de alimentaci\u00f3n de 6-30V o a trav\u00e9s del puerto micro USB de 5V.\\nCarga del Rel\u00e9: Conectar los dispositivos que se desea controlar al rel\u00e9, asegur\u00e1ndose de que la carga no supere la capacidad del rel\u00e9.\\nConfiguraci\u00f3n: Utilizar los botones para ajustar los tiempos de encendido y apagado deseados, y seleccionar el modo de operaci\u00f3n apropiado.\\nOperaci\u00f3n: Una vez configurado, el m\u00f3dulo controlar\u00e1 el encendido y apagado del rel\u00e9 de acuerdo con los par\u00e1metros establecidos.\\n\\nNotas\\nPrecauci\u00f3n: Asegurarse de que la carga conectada al rel\u00e9 sea adecuada para evitar da\u00f1os al m\u00f3dulo.\\nConfiguraci\u00f3n Avanzada: Consultar la hoja de datos y el manual del usuario para detalles sobre la configuraci\u00f3n avanzada y modos espec\u00edficos de operaci\u00f3n.",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 75,
+        "name": "Mini medidor de voltaje 0.28\"",
+        "price": "181.8181818181818",
+        "quantity": "0",
+        "images": [],
+        "description": "nan",
+        "code": "nan",
+        "datasheet": false
+    },
+    {
+        "id": 76,
+        "name": "Optoacoplador PC817C (20 unidades)",
+        "price": "200.0",
+        "quantity": "9",
+        "images": [
+            "Imagenes\\76\\76_1.jpg"
+        ],
+        "description": "Descripci\u00f3n General\\nEl PC817C es un optoacoplador compuesto por un LED emisor de infrarrojos y un fototransistor en una encapsulaci\u00f3n compacta DIP-4. Este dispositivo proporciona aislamiento el\u00e9ctrico entre la entrada y la salida, permitiendo la transmisi\u00f3n de se\u00f1ales el\u00e9ctricas sin contacto directo.\\n\\nEspecificaciones T\u00e9cnicas\\nEncapsulado: DIP-4\\nTipo de Entrada: LED de infrarrojos\\nTipo de Salida: Fototransistor\\nTensi\u00f3n de Entrada Directa (VF): 1.2V (t\u00edpico) @ 20mA\\nCorriente de Entrada Directa (IF): M\u00e1ximo 50mA\\nTensi\u00f3n de Aislamiento: 5000 Vrms\\nCorriente Colector-Emisor (IC): M\u00e1ximo 50mA\\nTensi\u00f3n Colector-Emisor (VCEO): M\u00e1ximo 80V\\nTemperatura de Operaci\u00f3n: -30\u00b0C a +100\u00b0C\\nGanancia de Transferencia de Corriente (CTR): 50% a 600% @ IF = 5mA, VCE = 5V\\n\\nCaracter\u00edsticas\\nAislamiento El\u00e9ctrico: Proporciona un aislamiento de alta tensi\u00f3n entre los circuitos de entrada y salida.\\nAlta Ganancia de Transferencia: Ofrece una alta relaci\u00f3n de transferencia de corriente, lo que permite la operaci\u00f3n con bajas corrientes de entrada.\\nRespuesta R\u00e1pida: Adecuado para aplicaciones que requieren tiempos de respuesta r\u00e1pidos.\\nEncapsulado Compacto: Facilita la integraci\u00f3n en dise\u00f1os de circuitos impresos (PCBs).\\nAlta Fiabilidad: Dise\u00f1ado para aplicaciones industriales y de consumo que requieren alta fiabilidad y estabilidad a largo plazo.\\n\\nAplicaciones\\nInterfaz de Microcontrolador: Utilizado para aislar microcontroladores de dispositivos de alta tensi\u00f3n.\\nAislamiento de Se\u00f1ales: Ideal para la transmisi\u00f3n de se\u00f1ales entre diferentes niveles de tensi\u00f3n.\\nControl de Rel\u00e9s y Solenoides: Para el control seguro de rel\u00e9s y solenoides en aplicaciones industriales.\\nAislamiento de Datos: En interfaces de comunicaci\u00f3n, especialmente en entornos ruidosos.\\nSistemas de Potencia: Utilizado en fuentes de alimentaci\u00f3n y sistemas de control de potencia.\\n\\nConexi\u00f3n y Uso\\nConexi\u00f3n del LED:\\n\\n\u00c1nodo a trav\u00e9s de una resistencia limitadora de corriente al voltaje de control.\\nC\u00e1todo a tierra.\\nConexi\u00f3n del Fototransistor:\\n\\nColector al voltaje positivo a trav\u00e9s de una resistencia de carga.\\nEmisor a tierra.\\nLa salida se toma a trav\u00e9s de la resistencia de carga.\\nOperaci\u00f3n:\\n\\nCuando se aplica una corriente al LED, el fototransistor se activa permitiendo la conducci\u00f3n entre el colector y el emisor.\\nCuando el LED est\u00e1 apagado, el fototransistor permanece en estado de corte, impidiendo la conducci\u00f3n.\\nNotas\\nPrecauci\u00f3n: Aseg\u00farese de no exceder los par\u00e1metros m\u00e1ximos especificados para evitar da\u00f1os al componente.\\nMontaje: Siga las recomendaciones de montaje para minimizar el ruido el\u00e9ctrico y asegurar el rendimiento \u00f3ptimo del componente.",
+        "code": "",
+        "datasheet": true
+    },
+    {
+        "id": 77,
+        "name": "Led smd RGB (x20)",
+        "price": "200.0",
+        "quantity": "10",
+        "images": [
+            "Imagenes\\77\\77_1.jpg"
+        ],
+        "description": "Descripci\u00f3n General\\nEl LED RGB 1210, tambi\u00e9n conocido como LED SMD 3528, es un diodo emisor de luz que contiene tres diodos (rojo, verde y azul) en un solo paquete. Este LED permite la mezcla de colores para crear una amplia gama de colores, lo que lo hace ideal para aplicaciones de iluminaci\u00f3n decorativa y de se\u00f1alizaci\u00f3n.\\n\\nEspecificaciones T\u00e9cnicas\\nEncapsulado: SMD 1210 (tambi\u00e9n conocido como SMD 3528)\\nDimensiones: 3.5 mm x 2.8 mm x 1.2 mm (Largo x Ancho x Alto)\\nTensi\u00f3n Directa (VF):\\nRojo: 2.0-2.4V\\nVerde: 3.0-3.4V\\nAzul: 3.0-3.4V\\nCorriente Directa (IF): M\u00e1ximo 20mA por color\\nLongitud de Onda (\u03bb):\\nRojo: 620-625 nm\\nVerde: 520-525 nm\\nAzul: 465-470 nm\\nIntensidad Luminosa:\\nRojo: 400-500 mcd\\nVerde: 1000-1500 mcd\\nAzul: 400-600 mcd\\n\u00c1ngulo de Visi\u00f3n: 120 grados\\nTemperatura de Operaci\u00f3n: -40\u00b0C a +85\u00b0C\\nTemperatura de Almacenamiento: -40\u00b0C a +100\u00b0C\\n\\nCaracter\u00edsticas\\nTriple Emisi\u00f3n de Color: Integra tres LEDs (rojo, verde y azul) en un solo encapsulado, permitiendo la creaci\u00f3n de m\u00faltiples colores.\\nAlto Brillo: Alta intensidad luminosa para aplicaciones que requieren visibilidad y atractivo visual.\\n\u00c1ngulo de Visi\u00f3n Amplio: \u00c1ngulo de visi\u00f3n de 120 grados, adecuado para aplicaciones que requieren una dispersi\u00f3n de luz amplia.\\nCompacto y Ligero: Tama\u00f1o peque\u00f1o y perfil bajo, ideal para aplicaciones con restricciones de espacio.\\nMontaje en Superficie: Dise\u00f1ado para montajes SMD, facilitando la integraci\u00f3n en circuitos impresos (PCBs) mediante t\u00e9cnicas de soldadura SMT.\\nAplicaciones\\nIluminaci\u00f3n Decorativa: Usado en tiras LED, paneles de iluminaci\u00f3n y decoraciones de interiores.\\nPantallas LED: Utilizado en pantallas y paneles LED para mostrar im\u00e1genes y videos en color.\\nIndicadores de Estado: Empleado como indicador de estado en dispositivos electr\u00f3nicos y equipos industriales.\\nRetroiluminaci\u00f3n: Usado en dispositivos electr\u00f3nicos como teclados, pantallas LCD y botones retroiluminados.\\nAutomatizaci\u00f3n y Rob\u00f3tica: Para se\u00f1alizaci\u00f3n visual y efectos de iluminaci\u00f3n en proyectos de rob\u00f3tica.\\n\\nConexi\u00f3n y Uso\\nConexi\u00f3n de Pines:\\n\\nEl LED RGB 1210 tiene cuatro pines: uno com\u00fan (\u00e1nodo o c\u00e1todo, seg\u00fan el tipo) y tres pines correspondientes a los colores rojo, verde y azul.\\nVerifique el tipo de conexi\u00f3n (\u00e1nodo com\u00fan o c\u00e1todo com\u00fan) antes de realizar la conexi\u00f3n.\\nControl de Color:\\n\\nPara controlar los colores, se aplica voltaje a los pines correspondientes al color deseado.\\nMediante la combinaci\u00f3n de los tres colores primarios (rojo, verde y azul), se pueden crear m\u00faltiples colores ajustando la intensidad de cada LED.\\nControl de Intensidad:\\n\\nPara variar la intensidad de cada color, se puede usar modulaci\u00f3n por ancho de pulso (PWM).\\nControladores de LED dedicados pueden ser utilizados para gestionar el PWM y facilitar la creaci\u00f3n de efectos de iluminaci\u00f3n.\\n\\nNotas\\nPrecauci\u00f3n: No exceder los valores m\u00e1ximos de corriente y voltaje para evitar da\u00f1os al LED.\\nDisipaci\u00f3n de Calor: Aseg\u00farese de proporcionar una adecuada disipaci\u00f3n de calor en aplicaciones de alta intensidad para mantener el rendimiento y la vida \u00fatil del LED.",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 78,
+        "name": "H11AA1 (x4 unidades)",
+        "price": "230.0",
+        "quantity": "6",
+        "images": [
+            "Imagenes\\78\\78_1.jpg"
+        ],
+        "description": "Descripci\u00f3n General\\nEl H11AA1 es un optoacoplador (optoisolador) que proporciona aislamiento el\u00e9ctrico entre sus entradas y salidas. Este componente es utilizado com\u00fanmente para transferir se\u00f1ales electr\u00f3nicas entre circuitos de diferentes potenciales de voltaje mientras se mantiene el aislamiento el\u00e9ctrico.\\n\\nEspecificaciones T\u00e9cnicas\\nConfiguraci\u00f3n del Encapsulado: DIP-6\\nTipo de Entrada: LED de infrarrojos\\nTipo de Salida: Fototransistor\\nAislamiento: Proporciona un alto grado de aislamiento el\u00e9ctrico entre entrada y salida.\\nTensi\u00f3n de Entrada Directa: Aproximadamente 1.2V\\nCorriente de Entrada Directa: 10mA (t\u00edpico), 50mA (m\u00e1ximo)\\nTensi\u00f3n Colector-Emisor (VCEO): 30V (m\u00e1ximo)\\nCorriente de Salida: 50mA (m\u00e1ximo)\\nGanancia de Corriente: Relaci\u00f3n de transferencia de corriente (CTR) t\u00edpica de 20-50%\\nVelocidad de Respuesta: Tiempos de subida y bajada en el rango de microsegundos\\n\\nCaracter\u00edsticas\\nAislamiento Galv\u00e1nico: Permite la transferencia de se\u00f1ales entre circuitos el\u00e9ctricos aislados, evitando la interferencia de ruidos y la diferencia de potencial.\\nAlta Inmunidad al Ruido: Ideal para aplicaciones que requieren una alta inmunidad al ruido el\u00e9ctrico.\\nCompacto: Encapsulado DIP-6 facilita su integraci\u00f3n en dise\u00f1os de circuitos impresos (PCBs).\\n\\nAplicaciones\\nAislamiento de Se\u00f1al: Separaci\u00f3n de circuitos de control y carga.\\nInterfaz de Comunicaciones: Aislamiento de l\u00edneas de comunicaci\u00f3n en sistemas industriales.\\nControl de Motores: Aislamiento de se\u00f1ales de control en sistemas de control de motores.\\nProtecci\u00f3n de Microcontroladores: Protecci\u00f3n de los microcontroladores contra altas tensiones y corrientes transitorias.\\n\\nConexi\u00f3n y Uso\\nConexi\u00f3n del LED:\\n\\nAnodo a trav\u00e9s de una resistencia limitadora de corriente al voltaje de control.\\nC\u00e1todo a tierra.\\nConexi\u00f3n del Fototransistor:\\n\\nColector al voltaje de operaci\u00f3n del circuito de salida.\\nEmisor a tierra del circuito de salida.\\nResistencia de carga entre el colector y el voltaje de operaci\u00f3n para detectar la se\u00f1al de salida.\\nOperaci\u00f3n:\\n\\nCuando la entrada de control activa el LED, el fototransistor se satura permitiendo la corriente en el circuito de salida.\\nCuando el LED est\u00e1 apagado, el fototransistor est\u00e1 en corte, impidiendo la corriente en el circuito de salida.\\n\\nNotas\\nPrecauci\u00f3n: Aseg\u00farese de no exceder los par\u00e1metros m\u00e1ximos especificados para evitar da\u00f1os al componente.\\nMontaje: Siga las recomendaciones de montaje para minimizar el ruido el\u00e9ctrico y asegurar el rendimiento \u00f3ptimo del componente.",
+        "code": "",
+        "datasheet": true
+    },
+    {
+        "id": 79,
+        "name": "MOC3043 (x2)",
+        "price": "150.0",
+        "quantity": "14",
+        "images": [
+            "Imagenes\\79\\79_1.jpg"
+        ],
+        "description": "Descripci\u00f3n General\\nEl MOC3043 es un optoacoplador con salida de TRIAC dise\u00f1ado para aplicaciones de control de corriente alterna (AC). Este dispositivo proporciona aislamiento el\u00e9ctrico entre la entrada y la salida, lo que permite controlar dispositivos de alta tensi\u00f3n AC con se\u00f1ales de baja tensi\u00f3n DC.\\n\\nEspecificaciones T\u00e9cnicas\\nEncapsulado: DIP-6\\nTipo de Entrada: LED de infrarrojos\\nTipo de Salida: TRIAC\\nTensi\u00f3n de Entrada Directa: Aproximadamente 1.15V\\nCorriente de Entrada Directa: 10mA (t\u00edpico), 60mA (m\u00e1ximo)\\nTensi\u00f3n de Aislamiento: 7500 Vrms\\nCorriente M\u00e1xima de Pico de Entrada: 1A\\nTemperatura de Operaci\u00f3n: -40\u00b0C a +85\u00b0C\\n\\nCaracter\u00edsticas\\nAislamiento El\u00e9ctrico: Proporciona un aislamiento seguro entre los circuitos de control y los de potencia.\\nDetecci\u00f3n de Paso por Cero: Ideal para aplicaciones de control de fase y atenuaci\u00f3n.\\nAlta Inmunidad al Ruido: Excelente rendimiento en entornos con alta interferencia electromagn\u00e9tica (EMI).\\nControl de Cargas AC: Capaz de manejar cargas resistivas e inductivas.\\nEncapsulado Compacto: Facilita su integraci\u00f3n en dise\u00f1os de circuitos impresos (PCBs).\\n\\nAplicaciones\\nControl de Rel\u00e9s de Estado S\u00f3lido (SSR): Para el control eficiente de cargas AC.\\nControl de Luces: Ideal para sistemas de iluminaci\u00f3n controlados electr\u00f3nicamente.\\nControl de Motores: Utilizado en aplicaciones que requieren el control de motores AC.\\nAtenuadores de Luz: Para la regulaci\u00f3n de intensidad de iluminaci\u00f3n.\\nControl de Calentadores: En sistemas que requieren control preciso de temperatura.\\n\\nConexi\u00f3n y Uso\\nConexi\u00f3n del LED:\\n\\nAnodo a trav\u00e9s de una resistencia limitadora de corriente al voltaje de control.\\nC\u00e1todo a tierra.\\nConexi\u00f3n del TRIAC:\\n\\nTerminal MT2 del TRIAC a la l\u00ednea de AC.\\nTerminal MT1 del TRIAC a la carga y la otra l\u00ednea de AC.\\nLa puerta del TRIAC se activa mediante el optoacoplador para encender y apagar la carga.\\nOperaci\u00f3n:\\n\\nCuando la entrada de control activa el LED, el TRIAC en la salida se enciende permitiendo la conducci\u00f3n de corriente AC a trav\u00e9s de la carga.\\nCuando el LED est\u00e1 apagado, el TRIAC se mantiene en estado de corte, impidiendo la conducci\u00f3n de corriente AC.\\n\\nNotas\\nPrecauci\u00f3n: Aseg\u00farese de no exceder los par\u00e1metros m\u00e1ximos especificados para evitar da\u00f1os al componente.\\nMontaje: Siga las recomendaciones de montaje para minimizar el ruido el\u00e9ctrico y asegurar el rendimiento \u00f3ptimo del componente.",
+        "code": "",
+        "datasheet": true
+    },
+    {
+        "id": 80,
+        "name": "Voltimetro digital 0-100V 10A",
+        "price": "250.0",
+        "quantity": "15",
+        "images": [
+            "Imagenes\\80\\80_1.jpg",
+            "Imagenes\\80\\80_2.jpg",
+            "Imagenes\\80\\80_3.jpg"
+        ],
+        "description": "Descripci\u00f3n General\\nEste dispositivo es un medidor digital que puede medir tanto voltaje como corriente continua (DC). Est\u00e1 dise\u00f1ado para monitorear y mostrar simult\u00e1neamente el voltaje y la corriente en sistemas el\u00e9ctricos y electr\u00f3nicos. Es ideal para aplicaciones en fuentes de alimentaci\u00f3n, paneles solares, sistemas de bater\u00edas y proyectos de bricolaje.\\n\\nEspecificaciones T\u00e9cnicas\\nRango de Medici\u00f3n de Voltaje: 0-100V DC\\nRango de Medici\u00f3n de Corriente: 0-10A DC\\nPrecisi\u00f3n de Voltaje: \u00b11% (\u00b11 d\u00edgito)\\nPrecisi\u00f3n de Corriente: \u00b11% (\u00b11 d\u00edgito)\\nResoluci\u00f3n de Voltaje: 0.1V\\nResoluci\u00f3n de Corriente: 0.01A\\nFuente de Alimentaci\u00f3n: 4-30V DC (alimentaci\u00f3n externa)\\nConsumo de Energ\u00eda: < 20mA\\nPantalla: LED de 3 d\u00edgitos, doble color (rojo para voltaje y azul para corriente)\\nDimensiones: 48mm x 29mm x 21mm (Largo x Ancho x Alto)\\nConexiones:\\nRojo: Alimentaci\u00f3n positiva (Vcc)\\nNegro: Alimentaci\u00f3n negativa (GND)\\nAmarillo: Medici\u00f3n de voltaje (V)\\nNegro (m\u00e1s grueso): Medici\u00f3n de corriente (A)\\nCaracter\u00edsticas\\nPantalla Dual: Muestra simult\u00e1neamente el voltaje y la corriente con diferentes colores para una f\u00e1cil lectura.\\nAlta Precisi\u00f3n: Medici\u00f3n precisa de voltaje y corriente con una resoluci\u00f3n adecuada para aplicaciones de precisi\u00f3n.\\nF\u00e1cil Instalaci\u00f3n: Dise\u00f1o compacto con cables de conexi\u00f3n est\u00e1ndar y conectores para una f\u00e1cil instalaci\u00f3n en paneles y dispositivos.\\nProtecci\u00f3n: Protecci\u00f3n contra inversi\u00f3n de polaridad para evitar da\u00f1os al dispositivo.\\nAplicaciones\\nFuentes de Alimentaci\u00f3n: Monitoreo de voltaje y corriente en fuentes de alimentaci\u00f3n de laboratorio y proyectos de bricolaje.\\nSistemas de Energ\u00eda Solar: Supervisi\u00f3n del voltaje y la corriente en sistemas de energ\u00eda solar para asegurar el rendimiento y la eficiencia.\\nBater\u00edas y Cargadores: Verificaci\u00f3n del estado de carga y descarga en sistemas de bater\u00edas y cargadores.\\nProyectos Electr\u00f3nicos: Ideal para proyectos de electr\u00f3nica que requieren monitoreo de energ\u00eda, como robots, controladores y dispositivos de prueba.\\nAutomoci\u00f3n: Medici\u00f3n de par\u00e1metros el\u00e9ctricos en veh\u00edculos y sistemas automotrices.\\n\\nInstrucciones de Conexi\u00f3n\\nAlimentaci\u00f3n del Medidor:\\n\\nConecte el cable rojo al positivo de la fuente de alimentaci\u00f3n (Vcc).\\nConecte el cable negro delgado al negativo de la fuente de alimentaci\u00f3n (GND).\\nMedici\u00f3n de Voltaje:\\n\\nConecte el cable amarillo al punto donde desea medir el voltaje.\\nMedici\u00f3n de Corriente:\\n\\nConecte el cable negro grueso en serie con la carga donde desea medir la corriente.\\n\\nNotas\\nSeguridad: Aseg\u00farese de conectar correctamente los cables para evitar da\u00f1os al dispositivo y a los componentes del circuito.\\n\\nCalibraci\u00f3n: El dispositivo viene calibrado de f\u00e1brica, pero se recomienda verificar las mediciones con un mult\u00edmetro de precisi\u00f3n para aplicaciones cr\u00edticas.\\nTemperatura de Operaci\u00f3n: Utilizar dentro del rango de temperatura especificado para garantizar la precisi\u00f3n y la vida \u00fatil del dispositivo.",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 81,
+        "name": "Tarjeta expansion micro SD",
+        "price": "171.0",
+        "quantity": "10",
+        "images": [
+            "Imagenes\\81\\81_1.jpg",
+            "Imagenes\\81\\81_2.jpg",
+            "Imagenes\\81\\81_3.jpg"
+        ],
+        "description": "Descripci\u00f3n General\\nEl m\u00f3dulo de expansi\u00f3n de almacenamiento Micro SD es un componente electr\u00f3nico dise\u00f1ado para facilitar la integraci\u00f3n de tarjetas micro SD en proyectos de microcontroladores y sistemas embebidos. Este m\u00f3dulo permite la lectura y escritura de datos en una tarjeta micro SD, proporcionando una soluci\u00f3n de almacenamiento port\u00e1til y de alta capacidad.\\n\\nEspecificaciones T\u00e9cnicas\\nCompatibilidad de Tarjetas: Micro SD, Micro SDHC\\nInterfaz de Comunicaci\u00f3n: SPI (Serial Peripheral Interface)\\nVoltaje de Operaci\u00f3n: 3.3V / 5V (tolerancia a nivel de se\u00f1al de 5V)\\nCorriente de Operaci\u00f3n: 80mA (t\u00edpico)\\nVelocidad de Transferencia de Datos: Hasta 25 Mbps en modo SPI\\nTemperatura de Operaci\u00f3n: -25\u00b0C a 85\u00b0C\\nDimensiones: 42mm x 24mm\\nCaracter\u00edsticas\\nCompatibilidad Universal: Compatible con una amplia gama de tarjetas micro SD, incluyendo SD y SDHC.\\nInterfaz SPI: Utiliza la interfaz SPI est\u00e1ndar para la comunicaci\u00f3n con microcontroladores como Arduino, ESP8266, ESP32, STM32, y otros.\\nTolerancia de Voltaje: Soporta niveles de se\u00f1al de 3.3V y 5V, lo que lo hace compatible con la mayor\u00eda de los microcontroladores.\\nFactor de Forma Compacto: Dise\u00f1o compacto que facilita la integraci\u00f3n en proyectos con espacio limitado.\\nPinout\\nGND: Tierra\\n3.3V: Alimentaci\u00f3n de 3.3V\\n5V: Alimentaci\u00f3n de 5V\\nCS: Chip Select (Pin de selecci\u00f3n del dispositivo SPI)\\nMOSI: Master Out Slave In (Pin de datos del SPI)\\nMISO: Master In Slave Out (Pin de datos del SPI)\\nSCK: Serial Clock (Pin de reloj del SPI)\\nAplicaciones\\nProyectos de Datos: Ideal para proyectos que requieren almacenamiento de datos, como dataloggers y sistemas de registro de eventos.\\nSistemas de Archivos: Permite la creaci\u00f3n de sistemas de archivos en proyectos de microcontroladores, facilitando el almacenamiento y acceso a archivos de gran tama\u00f1o.\\nMultimedia: Adecuado para proyectos de audio y video que necesitan almacenar y reproducir archivos multimedia.\\nDesarrollo y Prototipado: \u00datil en el desarrollo y prototipado de sistemas embebidos que requieren almacenamiento externo.\\nEjemplo de Conexi\u00f3n con Arduino\\nConexiones F\u00edsicas:\\n\\nGND: Conectar al pin GND del Arduino.\\n3.3V: Conectar al pin 3.3V del Arduino.\\nCS: Conectar al pin 10 del Arduino.\\nMOSI: Conectar al pin 11 del Arduino.\\nMISO: Conectar al pin 12 del Arduino.\\nSCK: Conectar al pin 13 del Arduino.",
+        "code": "#include <SPI.h>\\n#include <SD.h>\\n\\nconst int chipSelect = 10;\\n\\nvoid setup() {\\n  Serial.begin(9600);\\n  pinMode(chipSelect, OUTPUT);\\n  if (!SD.begin(chipSelect)) {\\n    Serial.println(\"No se pudo inicializar la tarjeta SD.\");\\n    return;\\n  }\\n  Serial.println(\"Tarjeta SD inicializada.\");\\n  File dataFile = SD.open(\"datalog.txt\", FILE_WRITE);\\n  if (dataFile) {\\n    dataFile.println(\"Datos de ejemplo.\");\\n    dataFile.close();\\n    Serial.println(\"Datos guardados.\");\\n  } else {\\n    Serial.println(\"Error al abrir el archivo.\");\\n  }\\n}\\n\\nvoid loop() {\\n  // C\u00f3digo adicional\\n}",
+        "datasheet": false
+    },
+    {
+        "id": 82,
+        "name": "M\u00f3dulo de transmisi\u00f3n de datos inal\u00e1mbrico Sim900a",
+        "price": 450.0,
+        "quantity": 0,
+        "images": [],
         "description": "",
-        "code": ""
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 83,
+        "name": "HC-05 bluetoth",
+        "price": "550.0",
+        "quantity": "0",
+        "images": [],
+        "description": "nan",
+        "code": "nan",
+        "datasheet": false
+    },
+    {
+        "id": 84,
+        "name": "Grabadora Eeprom kit",
+        "price": 990.0,
+        "quantity": 0,
+        "images": [],
+        "description": "",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 85,
+        "name": "Lampara 200W",
+        "price": "5200.0",
+        "quantity": "0",
+        "images": [],
+        "description": "nan",
+        "code": "nan",
+        "datasheet": false
+    },
+    {
+        "id": 86,
+        "name": "Driver A4988",
+        "price": "200.0",
+        "quantity": "0",
+        "images": [],
+        "description": "nan",
+        "code": "nan",
+        "datasheet": false
+    },
+    {
+        "id": 87,
+        "name": "Interruptor palanca (x10)",
+        "price": "350.0",
+        "quantity": "10",
+        "images": [
+            "Imagenes\\87\\87_1.jpg",
+            "Imagenes\\87\\87_2.jpg",
+            "Imagenes\\87\\87_3.jpg"
+        ],
+        "description": "Modelo: MTS-103\\nTipo de Interruptor: Palanca de 3 pines, 3 posiciones\\nMaterial: Pl\u00e1stico y metal\\nAplicaciones Comunes: Uso en autom\u00f3viles, proyectos electr\u00f3nicos y sistemas el\u00e9ctricos.\\n\\nEspecificaciones T\u00e9cnicas\\nConfiguraci\u00f3n de Pinos: 3 pines\\nPosiciones de Conmutaci\u00f3n: 3 (ON-ON-ON)\\nVoltaje Nominal: 6A/125V AC\\nCorriente Nominal: 6A\\nMaterial de la Carcasa: Pl\u00e1stico de alta resistencia\\nMaterial de los Contactos: Metal\\nCaracter\u00edsticas\\nDurabilidad: Dise\u00f1ado para soportar m\u00faltiples ciclos de encendido y apagado.\\nResistencia al Desgaste: Alta resistencia mec\u00e1nica y el\u00e9ctrica.\\nFacilidad de Uso: Operaci\u00f3n simple mediante una palanca de conmutaci\u00f3n.\\nMontaje: Se monta f\u00e1cilmente en paneles, ideal para personalizaci\u00f3n y proyectos DIY.\\nAplicaciones\\nAutom\u00f3viles: Control de luces, accesorios y otros dispositivos el\u00e9ctricos.\\nProyectos Electr\u00f3nicos: Interruptor general para circuitos, control de dispositivos.\\nSistemas El\u00e9ctricos: Uso en tableros de control y sistemas de conmutaci\u00f3n.\\nBeneficios\\nConfiabilidad: Alta confiabilidad en ambientes exigentes.\\nVersatilidad: Compatible con una amplia variedad de aplicaciones.\\nCosto Efectivo: Soluci\u00f3n econ\u00f3mica para necesidades de conmutaci\u00f3n el\u00e9ctrica.",
+        "code": "",
+        "datasheet": false
     }
 ]
