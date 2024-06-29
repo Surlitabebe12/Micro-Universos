@@ -259,8 +259,9 @@ function openProductModal(productId) {
 
         if (product.code) {
             const formattedCode = product.code.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
-            productModalCode.innerHTML = `<pre><code>${formattedCode}</code></pre>`;
+            productModalCode.innerHTML = `<code>${formattedCode}</code>`;
             productModalCode.style.display = 'block';
+            productModalCode.querySelector('code').style.backgroundColor = '#000';
             hljs.highlightElement(productModalCode.querySelector('code'));
         } else {
             productModalCode.style.display = 'none';
@@ -269,6 +270,7 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
+
 
 
 
