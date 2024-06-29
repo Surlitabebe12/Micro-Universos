@@ -7,7 +7,7 @@
         "images": [
             "Imagenes\\1\\1_1.png"
         ],
-        "description": "",
+        "description": "Descripci\u00f3n T\u00e9cnica:\\n\\nTipo de Conector: Bloque terminal de tornillo\\nN\u00famero de Pines: 2\\nPaso de Pines: 5mm\\nMaterial: Pl\u00e1stico resistente con terminales de metal\\nCorriente Nominal: 15A\\nTensi\u00f3n Nominal: 300V\\nTemperatura de Operaci\u00f3n: -40\u00b0C a 105\u00b0C\\nAplicaciones: Conexi\u00f3n segura de cables en proyectos electr\u00f3nicos, especialmente \u00fatil en placas de prototipos y m\u00f3dulos de Arduino.\\n\\nCaracter\u00edsticas Adicionales:\\nF\u00e1cil instalaci\u00f3n y conexi\u00f3n.\\nAlta fiabilidad y durabilidad.\\nCompatible con cables de diferentes calibres.",
         "code": "",
         "datasheet": false
     },
@@ -21,8 +21,8 @@
             "Imagenes\\2\\2_2.png",
             "Imagenes\\2\\2_3.png"
         ],
-        "description": "",
-        "code": "",
+        "description": "Descripci\u00f3n T\u00e9cnica:\\n\\nTipo de Display: 7 segmentos\\nN\u00famero de D\u00edgitos: 4\\nControlador: TM1637\\nVoltaje de Operaci\u00f3n: 3.3V - 5V\\nConsumo de Corriente: 80mA\\nDimensiones: 12.8mm de altura del d\u00edgito\\nInterfaz de Comunicaci\u00f3n: 2 cables (CLK y DIO)\\nCompatibilidad: Compatible con microcontroladores como Arduino, ESP8266, ESP32, y otros.\\nCaracter\u00edsticas Adicionales:\\nF\u00e1cil de conectar y usar.\\nBajo consumo de energ\u00eda.\\nAlta luminosidad y claridad.\\nSoporte para mostrar n\u00fameros y algunos caracteres alfab\u00e9ticos.\\n\\nAplicaciones:\\n\\nIdeal para proyectos donde se necesita mostrar n\u00fameros, como relojes, cron\u00f3metros, medidores, y cualquier aplicaci\u00f3n que requiera visualizaci\u00f3n de datos num\u00e9ricos de manera clara y eficiente.\\n\\nEste ejemplo muestra c\u00f3mo conectar y controlar el display utilizando la biblioteca TM1637 para Arduino.\\n\\nConexiones:\\nCLK (Clock): Pin 2 de Arduino\\nDIO (Data In/Out): Pin 3 de Arduino\\nVCC: 5V de Arduino\\nGND: GND de Arduino",
+        "code": "#include <TM1637Display.h>\\n\\n// Definir los pines de conexi\u00f3n\\n#define CLK 2\\n#define DIO 3\\n\\n// Crear una instancia del objeto display\\nTM1637Display display(CLK, DIO);\\n\\nvoid setup() {\\n  // Inicializar el display\\n  display.setBrightness(0x0f); // Configurar el brillo (0x0f es el m\u00e1s brillante)\\n}\\n\\nvoid loop() {\\n  // Mostrar un n\u00famero en el display\\n  display.showNumberDec(1234); // Mostrar el n\u00famero 1234\\n\\n  delay(2000); // Esperar 2 segundos\\n\\n  // Mostrar cada d\u00edgito individualmente\\n  display.showNumberDecEx(5678, 0b01000000, true); // Mostrar 5678 con un punto decimal en el segundo d\u00edgito\\n\\n  delay(2000); // Esperar 2 segundos\\n\\n  // Mostrar un contador\\n  for (int i = 0; i <= 9999; i++) {\\n    display.showNumberDec(i); // Mostrar el n\u00famero actual del contador\\n    delay(100); // Esperar 100 milisegundos\\n  }\\n\\n  delay(2000); // Esperar 2 segundos\\n}",
         "datasheet": false
     },
     {
@@ -33,8 +33,74 @@
         "images": [
             "Imagenes\\3\\3_1.png"
         ],
-        "description": "",
-        "code": "",
+        "description": "La pantalla TFT LCD de 1.8 pulgadas con una resoluci\u00f3n de 128x160 p\u00edxeles es un m\u00f3dulo compacto y vers\u00e1til utilizado en diversos proyectos de electr\u00f3nica y microcontroladores, incluyendo ESP32. Este tipo de pantalla es ideal para mostrar gr\u00e1ficos, im\u00e1genes y textos en color.\\n\\nCaracter\u00edsticas:\\nTama\u00f1o de pantalla: 1.8 pulgadas\\nResoluci\u00f3n: 128x160 p\u00edxeles\\nTipo de pantalla: TFT LCD\\nInterfaz: SPI (Serial Peripheral Interface)\\nVoltaje de operaci\u00f3n: 3.3V\\nControlador IC: ST7735\\nColores: 65K (16-bit)\\n\u00c1ngulo de visi\u00f3n: Amplio\\nConexiones:\\nVCC: Alimentaci\u00f3n de 3.3V\\nGND: Tierra\\nCS: Chip Select\\nRESET: Reinicio\\nA0 (DC): Data/Command\\nSDA (MOSI): Master Out Slave In\\nSCK: Reloj Serial\\nLED: Luz de fondo\\nC\u00f3digo de Ejemplo para ESP32\\nPara utilizar esta pantalla con ESP32, puedes utilizar la biblioteca Adafruit ST7735 que facilita la programaci\u00f3n y control de la pantalla. A continuaci\u00f3n se presenta un ejemplo b\u00e1sico de c\u00f3mo inicializar la pantalla y mostrar texto y gr\u00e1ficos.\\n\\nConexiones ESP32:\\nVCC: 3.3V\\nGND: GND\\nCS: Pin 5\\nRESET: Pin 4\\nA0 (DC): Pin 2\\nSDA (MOSI): Pin 23\\nSCK: Pin 18\\nLED: 3.3V (opcional para controlar la luz de fondo)",
+        "code": "#include <Adafruit_GFX.h>    // Biblioteca de gr\u00e1ficos de Adafruit\\n#include <Adafruit_ST7735.h> // Biblioteca para el controlador ST7735\\n#include <SPI.h>\\n\\n// Definir pines de conexi\u00f3n\\n#define TFT_CS     5\\n#define TFT_RST    4\\n#define TFT_DC     2\\n\\n// Crear una instancia del objeto ST7735\\nAdafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);\\n\\nvoid setup() {\\n  // Inicializar la pantalla\\n  tft.initR(INITR_BLACKTAB);\\n  tft.setRotation(1); // Opcional: cambiar la orientaci\u00f3n de la pantalla\\n\\n  // Configurar el color del fondo y borrar la pantalla\\n  tft.fillScreen(ST77XX_BLACK);\\n\\n  // Configurar el color del texto y tama\u00f1o de la fuente\\n  tft.setTextColor(ST77XX_WHITE);\\n  tft.setTextSize(2);\\n\\n  // Mostrar un mensaje de bienvenida\\n  tft.setCursor(10, 10);\\n  tft.println(\"Hola Mundo!\");\\n\\n  // Dibujar un rect\u00e1ngulo\\n  tft.drawRect(20, 40, 100, 60, ST77XX_RED);\\n}\\n\\nvoid loop() {\\n  // Ejemplo de animaci\u00f3n simple\\n  for (int i = 0; i < 128; i++) {\\n    tft.fillCircle(i, 80, 10, ST77XX_BLUE);\\n    delay(50);\\n    tft.fillCircle(i, 80, 10, ST77XX_BLACK);\\n  }\\n}",
+        "datasheet": false
+    },
+    {
+        "id": 5,
+        "name": "ESP8266 en placa de desarrollo Micro USB",
+        "price": "330.0",
+        "quantity": "5",
+        "images": [
+            "Imagenes\\5\\5_1.png",
+            "Imagenes\\5\\5_2.png",
+            "Imagenes\\5\\5_3.png",
+            "Imagenes\\5\\5_4.png"
+        ],
+        "description": "Resumen T\u00e9cnico: ESP8266 NodeMCU\\nEl ESP8266 NodeMCU es un m\u00f3dulo WiFi basado en el chip ESP8266 que permite agregar conectividad WiFi a proyectos de electr\u00f3nica. Es ideal para aplicaciones de IoT (Internet of Things) debido a su tama\u00f1o compacto, bajo costo y capacidad de procesamiento.\\n\\nCaracter\u00edsticas:\\nChip: ESP8266\\nProcesador: Tensilica L106 a 80MHz\\nMemoria: 32KB de memoria de instrucci\u00f3n, 80KB de memoria de usuario y 4MB de memoria flash\\nConectividad: WiFi 802.11 b/g/n\\nGPIOs: 11 pines GPIO (General Purpose Input/Output)\\nProtocolos soportados: TCP/IP, HTTP, MQTT, etc.\\nInterfaz: UART, SPI, I2C, PWM, ADC\\nVoltaje de operaci\u00f3n: 3.3V\\nConsumo de energ\u00eda: Modo normal: ~70mA, Modo de bajo consumo: <1mA\\nAplicaciones:\\nAutomatizaci\u00f3n del hogar\\nProyectos de dom\u00f3tica\\nDispositivos conectados a Internet\\nSensores y actuadores remotos\\nPrototipos de IoT\\nC\u00f3digo de Ejemplo para ESP8266 NodeMCU\\nA continuaci\u00f3n se presenta un ejemplo de c\u00f3digo para utilizar el ESP8266 NodeMCU para conectarse a una red WiFi y enviar datos a trav\u00e9s de HTTP. En este ejemplo, se env\u00edan datos simulados de temperatura y humedad a un servidor web cada 10 segundos.",
+        "code": "#include <ESP8266WiFi.h>\\n#include <ESP8266HTTPClient.h>\\n\\n// Configura los datos de tu red WiFi\\nconst char* ssid = \"NOMBRE_DE_TU_RED\";\\nconst char* password = \"CONTRASENA_DE_TU_RED\";\\n\\n// Configura la URL del servidor al que se enviar\u00e1n los datos\\nconst char* serverUrl = \"http://example.com/api/data\";\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n  WiFi.begin(ssid, password);\\n\\n  Serial.print(\"Conectando a \");\\n  Serial.print(ssid);\\n\\n  // Espera hasta que el ESP8266 se conecte a la red WiFi\\n  while (WiFi.status() != WL_CONNECTED) {\\n    delay(500);\\n    Serial.print(\".\");\\n  }\\n\\n  Serial.println(\"\");\\n  Serial.println(\"WiFi conectado.\");\\n  Serial.print(\"Direcci\u00f3n IP: \");\\n  Serial.println(WiFi.localIP());\\n}\\n\\nvoid loop() {\\n  if (WiFi.status() == WL_CONNECTED) {\\n    HTTPClient http;\\n\\n    // Simula datos de temperatura y humedad\\n    float temperature = random(20, 30) + random(0, 99) / 100.0;\\n    float humidity = random(40, 60) + random(0, 99) / 100.0;\\n\\n    // Crea la URL completa con los datos\\n    String url = serverUrl;\\n    url += \"?temperature=\" + String(temperature) + \"&humidity=\" + String(humidity);\\n\\n    http.begin(url);\\n    int httpCode = http.GET();\\n\\n    if (httpCode > 0) {\\n      String payload = http.getString();\\n      Serial.println(\"Datos enviados correctamente\");\\n      Serial.println(\"Respuesta del servidor: \" + payload);\\n    } else {\\n      Serial.println(\"Error al enviar los datos: \" + http.errorToString(httpCode));\\n    }\\n\\n    http.end();\\n  } else {\\n    Serial.println(\"Error de conexi\u00f3n WiFi\");\\n  }\\n\\n  delay(10000); // Espera 10 segundos antes de enviar los datos nuevamente\\n}",
+        "datasheet": false
+    },
+    {
+        "id": 6,
+        "name": "PC817 x 20",
+        "price": "200",
+        "quantity": "9",
+        "images": [
+            "Imagenes\\6\\6_1.png"
+        ],
+        "description": "Resumen T\u00e9cnico: Optoacoplador PC817\\nEl PC817 es un optoacoplador de prop\u00f3sito general que consiste en un LED infrarrojo y un fototransistor en un encapsulado compacto. Es ampliamente utilizado en la separaci\u00f3n de circuitos el\u00e9ctricos para proporcionar aislamiento el\u00e9ctrico y evitar interferencias.\\n\\nCaracter\u00edsticas:\\nTipo: Optoacoplador\\nEncapsulado: DIP-4\\nTensi\u00f3n de aislamiento: 5000 Vrms\\nCorriente del LED: 50 mA (m\u00e1x.)\\nTensi\u00f3n de colector-emisor: 35V (m\u00e1x.)\\nCorriente de colector: 50 mA (m\u00e1x.)\\nTransferencia de corriente (CTR): 50% - 600%\\nRango de temperatura de operaci\u00f3n: -30\u00b0C a 100\u00b0C\\nAplicaciones:\\nAislamiento de se\u00f1ales entre circuitos de diferente potencial\\nProtecci\u00f3n de microcontroladores y circuitos l\u00f3gicos\\nInterfaces de control industrial\\nSistemas de alimentaci\u00f3n conmutada (SMPS)\\nInterrupci\u00f3n de ruidos y se\u00f1ales transitorias\\nC\u00f3digo de Ejemplo para ESP32 utilizando PC817\\nA continuaci\u00f3n, se presenta un ejemplo de c\u00f3mo utilizar el optoacoplador PC817 con un ESP32 para detectar una se\u00f1al de entrada aislada y encender un LED en respuesta.",
+        "code": "#define SIGNAL_PIN 4    // Pin de entrada conectado al fototransistor del PC817\\n#define LED_PIN 2       // Pin de salida conectado a un LED\\n\\nvoid setup() {\\n  pinMode(SIGNAL_PIN, INPUT);\\n  pinMode(LED_PIN, OUTPUT);\\n  Serial.begin(115200);\\n}\\n\\nvoid loop() {\\n  int signal = digitalRead(SIGNAL_PIN);\\n  \\n  if (signal == HIGH) {\\n    digitalWrite(LED_PIN, HIGH);\\n    Serial.println(\"Se\u00f1al detectada: LED encendido\");\\n  } else {\\n    digitalWrite(LED_PIN, LOW);\\n    Serial.println(\"No hay se\u00f1al: LED apagado\");\\n  }\\n\\n  delay(500);\\n}",
+        "datasheet": true
+    },
+    {
+        "id": 7,
+        "name": "Diodo SR5100",
+        "price": "190",
+        "quantity": "3",
+        "images": [
+            "Imagenes\\7\\7_1.png"
+        ],
+        "description": "Resumen T\u00e9cnico: Diodo SR5100\\nEl diodo SR5100 es un diodo Schottky de recuperaci\u00f3n r\u00e1pida, dise\u00f1ado para aplicaciones de rectificaci\u00f3n de corriente continua en fuentes de alimentaci\u00f3n y circuitos de protecci\u00f3n. Este diodo es conocido por su baja ca\u00edda de tensi\u00f3n y alta eficiencia.\\n\\nCaracter\u00edsticas:\\nTipo: Diodo Schottky de recuperaci\u00f3n r\u00e1pida\\nTensi\u00f3n inversa m\u00e1xima (VR): 100V\\nCorriente directa m\u00e1xima (IF): 5A\\nCa\u00edda de tensi\u00f3n directa (VF): 0.85V @ 5A\\nTiempo de recuperaci\u00f3n inversa (trr): 35 ns\\nCapacitancia m\u00e1xima: 200pF\\nRango de temperatura de operaci\u00f3n: -55\u00b0C a 150\u00b0C\\nAplicaciones:\\nFuentes de alimentaci\u00f3n conmutadas\\nConvertidores DC-DC\\nRectificaci\u00f3n de alta frecuencia\\nProtecci\u00f3n contra inversi\u00f3n de polaridad\\nCircuitos de clamping y protecci\u00f3n\\nC\u00f3digo de Ejemplo para ESP32 utilizando Diodo SR5100\\nA continuaci\u00f3n, se presenta un ejemplo de c\u00f3mo utilizar el diodo SR5100 en un circuito de rectificaci\u00f3n con un ESP32 para monitorear el voltaje rectificado.",
+        "code": "#define VOLTAGE_PIN 34  // Pin anal\u00f3gico para medir el voltaje rectificado\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n  pinMode(VOLTAGE_PIN, INPUT);\\n}\\n\\nvoid loop() {\\n  int sensorValue = analogRead(VOLTAGE_PIN);\\n  float voltage = sensorValue * (3.3 / 4095.0) * 2; // Ajuste para el divisor de voltaje\\n  Serial.print(\"Voltaje rectificado: \");\\n  Serial.print(voltage);\\n  Serial.println(\" V\");\\n  delay(1000);\\n}",
+        "datasheet": true
+    },
+    {
+        "id": 8,
+        "name": "Diodo Rectificador 10a 1000v",
+        "price": "190",
+        "quantity": "3",
+        "images": [
+            "Imagenes\\8\\8_1.png",
+            "Imagenes\\8\\8_2.png"
+        ],
+        "description": "Resumen T\u00e9cnico: Diodo Rectificador 10A 1000V\\nEl diodo rectificador de 10A 1000V es un componente semiconductor utilizado principalmente en aplicaciones de rectificaci\u00f3n de corriente alterna a corriente continua. Este tipo de diodo es adecuado para manejar altas corrientes y voltajes elevados, lo que lo hace ideal para fuentes de alimentaci\u00f3n y otros circuitos de potencia.\\n\\nCaracter\u00edsticas:\\nCorriente Directa M\u00e1xima (IF): 10A\\nVoltaje Inverso M\u00e1ximo (VR): 1000V\\nCa\u00edda de Tensi\u00f3n Directa (VF): Aproximadamente 1.1V a 10A\\nTiempo de Recuperaci\u00f3n Inversa (trr): 2\u03bcs\\nCapacitancia: 200pF\\nRango de Temperatura de Operaci\u00f3n: -55\u00b0C a 150\u00b0C\\nAplicaciones:\\nFuentes de alimentaci\u00f3n conmutadas\\nRectificaci\u00f3n en circuitos de alta corriente\\nInversores y convertidores de frecuencia\\nProtecci\u00f3n contra inversi\u00f3n de polaridad\\nAplicaciones industriales de alta potencia\\nC\u00f3digo de Ejemplo para ESP32 utilizando Diodo Rectificador 10A 1000V\\nA continuaci\u00f3n se presenta un ejemplo de c\u00f3mo utilizar el diodo rectificador de 10A 1000V en un circuito de rectificaci\u00f3n con un ESP32 para monitorear el voltaje rectificado.",
+        "code": "#define VOLTAGE_PIN 34  // Pin anal\u00f3gico para medir el voltaje rectificado\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n  pinMode(VOLTAGE_PIN, INPUT);\\n}\\n\\nvoid loop() {\\n  int sensorValue = analogRead(VOLTAGE_PIN);\\n  float voltage = sensorValue * (3.3 / 4095.0) * 2; // Ajuste para el divisor de voltaje\\n  Serial.print(\"Voltaje rectificado: \");\\n  Serial.print(voltage);\\n  Serial.println(\" V\");\\n  delay(1000);\\n}",
+        "datasheet": true
+    },
+    {
+        "id": 9,
+        "name": "KBPC5010",
+        "price": "170",
+        "quantity": "27",
+        "images": [
+            "Imagenes\\9\\9_1.png",
+            "Imagenes\\9\\9_2.png",
+            "Imagenes\\9\\9_3.png"
+        ],
+        "description": "El puente rectificador KBPC5010 es un componente electr\u00f3nico utilizado para convertir corriente alterna (AC) en corriente directa (DC). Es com\u00fanmente utilizado en fuentes de alimentaci\u00f3n y circuitos de rectificaci\u00f3n de alta corriente.\\n\\nCaracter\u00edsticas:\\nModelo: KBPC5010\\nCorriente m\u00e1xima: 50A\\nVoltaje m\u00e1ximo inverso repetitivo (V_RRM): 1000V\\nTipo de montaje: A trav\u00e9s de orificio\\nConfiguraci\u00f3n: Monof\u00e1sico\\nTemperatura de operaci\u00f3n: -55\u00b0C a +150\u00b0C\\nAplicaciones:\\nFuentes de alimentaci\u00f3n\\nEquipos de telecomunicaciones\\nRectificaci\u00f3n de se\u00f1al\\nConvertidores de energ\u00eda\\nElectr\u00f3nica de potencia\\nC\u00f3digo de Ejemplo para ESP32\\nA continuaci\u00f3n se presenta un ejemplo de c\u00f3digo para utilizar un ESP32 en un circuito de rectificaci\u00f3n, controlando un puente rectificador como parte de una fuente de alimentaci\u00f3n. El c\u00f3digo incluye la medici\u00f3n de voltaje y la visualizaci\u00f3n de datos en una pantalla TFT.\\n\\nConexiones ESP32:\\nAIN: Pin GPIO34 (Lectura del voltaje rectificado)\\nPantalla TFT: Mismos pines que en el ejemplo anterior",
+        "code": "#include <Adafruit_GFX.h>    // Biblioteca de gr\u00e1ficos de Adafruit\\n#include <Adafruit_ST7735.h> // Biblioteca para el controlador ST7735\\n#include <SPI.h>\\n\\n// Definir pines de conexi\u00f3n de la pantalla\\n#define TFT_CS     5\\n#define TFT_RST    4\\n#define TFT_DC     2\\n\\n// Crear una instancia del objeto ST7735\\nAdafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n\\n  // Inicializar la pantalla\\n  tft.initR(INITR_BLACKTAB);\\n  tft.setRotation(1); // Opcional: cambiar la orientaci\u00f3n de la pantalla\\n  tft.fillScreen(ST77XX_BLACK);\\n\\n  // Configurar el color del texto y tama\u00f1o de la fuente\\n  tft.setTextColor(ST77XX_WHITE);\\n  tft.setTextSize(2);\\n\\n  // Mostrar un mensaje de inicio\\n  tft.setCursor(10, 10);\\n  tft.println(\"Lectura de Voltaje\");\\n}\\n\\nvoid loop() {\\n  // Leer el voltaje del puente rectificador\\n  int analogValue = analogRead(34); // Leer el pin anal\u00f3gico GPIO34\\n  float voltage = analogValue * (3.3 / 4095.0) * (1000.0 / 100.0); // Ajustar seg\u00fan el divisor de voltaje\\n\\n  // Mostrar el voltaje en la pantalla TFT\\n  tft.fillRect(10, 40, 200, 30, ST77XX_BLACK); // Limpiar \u00e1rea\\n  tft.setCursor(10, 40);\\n  tft.print(\"V: \");\\n  tft.print(voltage);\\n  tft.println(\" V\");\\n\\n  // Enviar el voltaje a trav\u00e9s del puerto serie\\n  Serial.print(\"Voltaje: \");\\n  Serial.print(voltage);\\n  Serial.println(\" V\");\\n\\n  delay(1000); // Esperar 1 segundo antes de la pr\u00f3xima lectura\\n}",
         "datasheet": false
     },
     {
@@ -817,8 +883,8 @@
     {
         "id": 81,
         "name": "Tarjeta expansion micro SD",
-        "price": 171.0,
-        "quantity": 10,
+        "price": "150.0",
+        "quantity": "10",
         "images": [
             "Imagenes\\81\\81_1.jpg",
             "Imagenes\\81\\81_2.jpg",
