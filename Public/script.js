@@ -246,7 +246,7 @@ function openProductModal(productId) {
         const productModalDescription = document.getElementById('product-modal-description');
         const productModalCode = document.getElementById('product-modal-code');
         const modalTitle = document.getElementById('product-modal-title'); // Nuevo elemento para el título
-        
+
         productModalImage.src = product.images[0];
 
         // Use innerHTML to keep text formatting and apply .small-description style class
@@ -258,9 +258,10 @@ function openProductModal(productId) {
             : '';
 
         if (product.code) {
-            productModalCode.textContent = product.code; // Usar textContent para texto plano
+            // Asegúrate de que el código esté dentro de un bloque <code> y que se escape adecuadamente
+            productModalCode.innerHTML = `<code>${product.code.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code>`;
             productModalCode.className = 'code-example'; // Asegúrate de que la clase esté presente
-            hljs.highlightElement(productModalCode); // Aplicar el resaltado de sintaxis
+            hljs.highlightElement(productModalCode.querySelector('code')); // Aplicar el resaltado de sintaxis
             productModalCode.style.display = 'block';
         } else {
             productModalCode.style.display = 'none';
@@ -269,6 +270,7 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
+
 
 
 
