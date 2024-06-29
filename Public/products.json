@@ -112,13 +112,15 @@
     {
         "id": 10,
         "name": "Triac Bta41-600b",
-        "price": 150,
-        "quantity": 40,
+        "price": 150.0,
+        "quantity": 37,
         "images": [
-            "Imagenes/10/10_1.png",
-            "Imagenes/10/10_2.png"
+            "Imagenes\\10\\10_1.png",
+            "Imagenes\\10\\10_2.jpg",
+            "Imagenes\\10\\10_3.jpg",
+            "Imagenes\\10\\10_4.jpg"
         ],
-        "description": "",
+        "description": "Descripci\u00f3n General\nEl BTA41-600B es un triac de alta capacidad dise\u00f1ado para aplicaciones de control de potencia en corriente alterna (CA). Es adecuado para el control de cargas inductivas y resistivas, como motores, calefactores y l\u00e1mparas. Este triac puede manejar corrientes elevadas y voltajes significativos, lo que lo convierte en una opci\u00f3n robusta para aplicaciones industriales y dom\u00e9sticas.\n\nCaracter\u00edsticas T\u00e9cnicas\nTensi\u00f3n M\u00e1xima de Bloqueo (VDRM): 600V\nCorriente M\u00e1xima Sostenida (IT(RMS)): 40A\nCorriente de Pico en Estado de Encendido (ITSM): 350A (50Hz, t = 20ms)\nCorriente de Compensaci\u00f3n de Estado de Encendido (IGT): 50mA\nTemperatura de Funcionamiento (Tj): -40\u00b0C a +125\u00b0C\nEncapsulado: TO-3P\nAplicaciones\nControl de Motores: Usado en variadores de velocidad para motores el\u00e9ctricos.\nControl de Calefacci\u00f3n: Empleado en termostatos y sistemas de calefacci\u00f3n.\nRegulaci\u00f3n de Iluminaci\u00f3n: Utilizado en atenuadores de luz y sistemas de iluminaci\u00f3n controlada.\nFuentes de Alimentaci\u00f3n: Aplicado en el control de fuentes de alimentaci\u00f3n conmutadas y reguladores de voltaje.\nVentajas\nAlta Capacidad de Corriente: Puede manejar corrientes elevadas, adecuado para aplicaciones industriales.\nRobustez: Dise\u00f1o robusto que asegura una operaci\u00f3n confiable en condiciones adversas.\nVersatilidad: Puede controlar cargas inductivas y resistivas eficientemente.\nEncapsulado Eficiente: El encapsulado TO-3P ofrece una excelente disipaci\u00f3n de calor.\nPar\u00e1metros El\u00e9ctricos\nTensi\u00f3n de Encendido (VT): 1.5V (a IT = 60A)\nResistencia T\u00e9rmica, Uni\u00f3n a Caja (Rth(j-c)): 0.4\u00b0C/W\nTensi\u00f3n de Disparo en la Puerta (VGT): 2.5V\nCorriente de Puerta M\u00e1xima (IGT): 50mA\nEjemplo de Aplicaci\u00f3n\nEn un controlador de motor, el BTA41-600B puede ser utilizado para regular la velocidad de un motor de CA. El triac se dispara mediante un pulso de puerta controlado por un circuito de fase, permitiendo ajustar el \u00e1ngulo de conducci\u00f3n y, por lo tanto, la potencia entregada al motor.",
         "code": ""
     },
     {
