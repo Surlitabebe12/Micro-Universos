@@ -258,8 +258,9 @@ function openProductModal(productId) {
             : '';
 
         if (product.code) {
-            const formattedCode = product.code.replace(/\\n/g, '<br>');
-            productModalCode.innerHTML = `<pre class="small-description">${formattedCode}</pre>`;
+            productModalCode.textContent = product.code; // Usar textContent para texto plano
+            productModalCode.className = 'code-example'; // Asegúrate de que la clase esté presente
+            hljs.highlightElement(productModalCode); // Aplicar el resaltado de sintaxis
             productModalCode.style.display = 'block';
         } else {
             productModalCode.style.display = 'none';
@@ -268,6 +269,7 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
+
 
 
 function closeProductModal() {
