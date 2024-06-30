@@ -53,18 +53,6 @@
         "datasheet": false
     },
     {
-        "id": 6,
-        "name": "PC817 x 20",
-        "price": 200.0,
-        "quantity": 9,
-        "images": [
-            "Imagenes/6/6_1.png"
-        ],
-        "description": "Resumen Técnico: Optoacoplador PC817\nEl PC817 es un optoacoplador de propósito general que consiste en un LED infrarrojo y un fototransistor en un encapsulado compacto. Es ampliamente utilizado en la separación de circuitos eléctricos para proporcionar aislamiento eléctrico y evitar interferencias.\n\nCaracterísticas:\nTipo: Optoacoplador\nEncapsulado: DIP-4\nTensión de aislamiento: 5000 Vrms\nCorriente del LED: 50 mA (máx.)\nTensión de colector-emisor: 35V (máx.)\nCorriente de colector: 50 mA (máx.)\nTransferencia de corriente (CTR): 50% - 600%\nRango de temperatura de operación: -30°C a 100°C\nAplicaciones:\nAislamiento de señales entre circuitos de diferente potencial\nProtección de microcontroladores y circuitos lógicos\nInterfaces de control industrial\nSistemas de alimentación conmutada (SMPS)\nInterrupción de ruidos y señales transitorias\nCódigo de Ejemplo para ESP32 utilizando PC817\nA continuación, se presenta un ejemplo de cómo utilizar el optoacoplador PC817 con un ESP32 para detectar una señal de entrada aislada y encender un LED en respuesta.",
-        "code": "#define SIGNAL_PIN 4    // Pin de entrada conectado al fototransistor del PC817\n#define LED_PIN 2       // Pin de salida conectado a un LED\n\nvoid setup() {\n  pinMode(SIGNAL_PIN, INPUT);\n  pinMode(LED_PIN, OUTPUT);\n  Serial.begin(115200);\n}\n\nvoid loop() {\n  int signal = digitalRead(SIGNAL_PIN);\n  \n  if (signal == HIGH) {\n    digitalWrite(LED_PIN, HIGH);\n    Serial.println(\"Señal detectada: LED encendido\");\n  } else {\n    digitalWrite(LED_PIN, LOW);\n    Serial.println(\"No hay señal: LED apagado\");\n  }\n\n  delay(500);\n}",
-        "datasheet": true
-    },
-    {
         "id": 7,
         "name": "Diodo SR5100 x10 (100V 5A)",
         "price": 190.0,
@@ -295,8 +283,8 @@
     {
         "id": 28,
         "name": "Sensor De Hall 49e (bici Eléctrica) 5 Unidades",
-        "price": "180.0",
-        "quantity": "17",
+        "price": 180.0,
+        "quantity": 17,
         "images": [
             "Imagenes/28/28_1.jpg",
             "Imagenes/28/28_2.jpg",
@@ -305,7 +293,7 @@
             "Imagenes/28/28_5.jpg"
         ],
         "description": "El sensor Hall 49E es un dispositivo de efecto Hall que se utiliza para detectar la presencia de un campo magnético. Este sensor es ampliamente utilizado en aplicaciones de detección de velocidad, posición y corriente, así como en conmutadores sin contacto. A continuación se presenta un resumen técnico de sus características y especificaciones:\n\nCaracterísticas Principales\nTipo de Sensor: Sensor de efecto Hall lineal.\nRango de Operación de Campo Magnético: ±900 Gauss.\nSalida: Analógica.\nVoltaje de Operación: 4.5V a 6V.\nCorriente de Operación: 8mA (típica).\nSensibilidad: 1.4 mV/Gauss (típica).\nTemperatura de Operación: -40°C a +85°C.\nEmpaque: TO-92.\nEspecificaciones Eléctricas\nVoltaje de Alimentación (Vcc): 4.5V a 6V.\nCorriente de Consumo: 8mA.\nSalida de Voltaje en Condiciones Normales: Aproximadamente la mitad del voltaje de alimentación (Vcc/2).\nSensibilidad de Salida: Aproximadamente 1.4 mV/Gauss.\nAplicaciones Comunes\nDetección de Velocidad: En aplicaciones como tacómetros y velocímetros.\nDetección de Posición: Para identificar la posición de objetos en movimiento.\nDetección de Corriente: Usado en medidores de corriente sin contacto.\nConmutadores Sin Contacto: Para reemplazar interruptores mecánicos en diversas aplicaciones.\nSistemas de Encendido de Motores: Para detectar la posición del cigüeñal o el árbol de levas.\nVentajas\nAlta Sensibilidad: Permite detectar campos magnéticos muy débiles.\nSalida Lineal: Proporciona una salida analógica proporcional al campo magnético detectado.\nBajo Consumo de Energía: Ideal para aplicaciones de bajo consumo.\nOperación a Baja Tensión: Compatible con la mayoría de los sistemas electrónicos.\nFiabilidad y Durabilidad: Sin partes mecánicas que se desgasten.\nEsquema de Conexión\nEl sensor Hall 49E tiene tres pines:\n\nVcc: Voltaje de alimentación (4.5V a 6V).\nGND: Tierra.\nOUT: Salida analógica.",
-        "code": "nan",
+        "code": "",
         "datasheet": true
     },
     {
@@ -515,7 +503,7 @@
         "images": [
             "Imagenes/46/46_1.png"
         ],
-        "description": "Resumen Técnico del ESP32\nEl ESP32 es un microcontrolador de bajo costo y alta integración, diseñado para aplicaciones de IoT (Internet de las Cosas). Fabricado por Espressif Systems, el ESP32 combina Wi-Fi y Bluetooth en un solo chip, ofreciendo una amplia variedad de características y opciones de conectividad.\n\nCaracterísticas Principales\nMicroprocesador: Tensilica Xtensa LX6 de doble núcleo o único núcleo.\nFrecuencia del Procesador: Hasta 240 MHz.\nMemoria:\nRAM: 520 KB SRAM.\nROM: 448 KB.\nFlash: Varía según el módulo, comúnmente 4MB.\nConectividad:\nWi-Fi: 802.11 b/g/n.\nBluetooth: v4.2 BR/EDR y BLE.\nInterfaz:\nGPIO: Hasta 36 pines.\nADC: 12-bit, hasta 18 canales.\nDAC: 8-bit, 2 canales.\nI2C, I2S, SPI, UART.\nSensores Integrados:\nSensores táctiles capacitivos.\nSensores de temperatura y efecto Hall.\nConsumo de Energía: Modo de bajo consumo (deep sleep) con corriente mínima de 5 µA.\nSeguridad: Criptografía de hardware, acelerador de cifrado AES, HMAC, RSA.\nAplicaciones Comunes\nIoT (Internet de las Cosas): Sensores y actuadores conectados a Internet.\nDomótica: Sistemas de automatización del hogar.\nWearables: Dispositivos portátiles.\nSistemas Embebidos: Controladores en sistemas industriales.\nRedes de Sensores Inalámbricos: Monitoreo ambiental, agrícola, entre otros.\nVentajas\nAlta Integración: Combina Wi-Fi y Bluetooth en un solo chip.\nBajo Consumo de Energía: Ideal para aplicaciones portátiles y de bajo consumo.\nVersatilidad: Amplia gama de interfaces y pines GPIO.\nComunidad y Soporte: Amplia documentación y soporte de la comunidad.\nCódigo de Ejemplo: Conexión a Wi-Fi y Servidor Web\nA continuación, se presenta un código de ejemplo en Arduino IDE para conectar el ESP32 a una red Wi-Fi y configurar un servidor web básico:",
+        "description": "",
         "code": "#include <WiFi.h>\n\n// Configuración del Wi-Fi\nconst char* ssid = \"TU_SSID\";\nconst char* password = \"TU_PASSWORD\";\n\n// Crear una instancia del servidor en el puerto 80\nWiFiServer server(80);\n\nvoid setup() {\n  Serial.begin(115200);\n\n  // Conectar al Wi-Fi\n  Serial.print(\"Conectando a \");\n  Serial.println(ssid);\n  WiFi.begin(ssid, password);\n\n  while (WiFi.status() != WL_CONNECTED) {\n    delay(1000);\n    Serial.print(\".\");\n  }\n  Serial.println(\"\");\n  Serial.println(\"WiFi conectado.\");\n  Serial.println(\"Dirección IP: \");\n  Serial.println(WiFi.localIP());\n\n  // Iniciar el servidor\n  server.begin();\n}\n\nvoid loop() {\n  // Comprobar si hay un cliente\n  WiFiClient client = server.available();\n  if (client) {\n    Serial.println(\"Nuevo Cliente.\");\n    String currentLine = \"\";\n\n    // Mientras el cliente esté conectado\n    while (client.connected()) {\n      if (client.available()) {\n        char c = client.read();\n        Serial.write(c);\n        if (c == '\n') {\n          if (currentLine.length() == 0) {\n            // Enviar respuesta HTTP\n            client.println(\"HTTP/1.1 200 OK\");\n            client.println(\"Content-type:text/html\");\n            client.println();\n\n            // Contenido del servidor web\n            client.println(\"<!DOCTYPE html><html>\");\n            client.println(\"<head><title>ESP32 Web Server</title></head>\");\n            client.println(\"<body><h1>Hola desde ESP32</h1></body>\");\n            client.println(\"</html>\");\n\n            // La respuesta HTTP se ha completado\n            break;\n          } else {\n            currentLine = \"\";\n          }\n        } else if (c != '\\r') {\n          currentLine += c;\n        }\n      }\n    }\n    // Cerrar la conexión\n    client.stop();\n    Serial.println(\"Cliente Desconectado.\");\n  }\n}",
         "datasheet": false
     },
@@ -527,7 +515,7 @@
         "images": [
             "Imagenes/47/47_1.png"
         ],
-        "description": "Wi-Fi:",
+        "description": "",
         "code": "",
         "datasheet": true
     },
@@ -539,7 +527,7 @@
         "images": [
             "Imagenes/48/48_1.png"
         ],
-        "description": "802.11 b/g/n.",
+        "description": "",
         "code": "",
         "datasheet": true
     },
@@ -551,7 +539,7 @@
         "images": [
             "Imagenes/49/49_1.png"
         ],
-        "description": "Soporta Wi-Fi Direct (P2P), soft-AP y modo estación.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -563,7 +551,7 @@
         "images": [
             "Imagenes/50/50_1.png"
         ],
-        "description": "Seguridad: WPA/WPA2/WPA3 personal, WPA/WPA2 enterprise.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -575,7 +563,7 @@
         "images": [
             "Imagenes/51/51_1.png"
         ],
-        "description": "Rango de frecuencia: 2.4 GHz a 2.5 GHz.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -587,7 +575,7 @@
         "images": [
             "Imagenes/52/52_1.png"
         ],
-        "description": "Velocidades de datos: Hasta 150 Mbps.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -599,7 +587,7 @@
         "images": [
             "Imagenes/53/53_1.png"
         ],
-        "description": "Bluetooth:",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -612,7 +600,7 @@
             "Imagenes/54/54_1.png",
             "Imagenes/54/54_2.png"
         ],
-        "description": "Bluetooth de doble modo (Clásico y BLE).",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -624,7 +612,7 @@
         "images": [
             "Imagenes/55/55_1.png"
         ],
-        "description": "Compatible con especificaciones Bluetooth v4.2 BR/EDR y BLE.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -636,7 +624,7 @@
         "images": [
             "Imagenes/56/56_1.png"
         ],
-        "description": "3. Periféricos e Interfaces",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -648,7 +636,7 @@
         "images": [
             "Imagenes/57/57_1.png"
         ],
-        "description": "GPIO: 34 GPIOs programables.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -660,7 +648,7 @@
         "images": [
             "Imagenes/58/58_1.png"
         ],
-        "description": "ADC: 18 canales de ADC de 12 bits SAR.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -672,7 +660,7 @@
         "images": [
             "Imagenes/59/59_1.png"
         ],
-        "description": "DAC: 2 canales de DAC de 8 bits.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -684,7 +672,7 @@
         "images": [
             "Imagenes/60/60_1.png"
         ],
-        "description": "Sensor Táctil: 10 GPIOs de detección capacitiva.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -696,7 +684,7 @@
         "images": [
             "Imagenes/61/61_1.png"
         ],
-        "description": "SPI/I2S: 4 interfaces SPI y 2 interfaces I2S para audio.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -709,7 +697,7 @@
             "Imagenes/62/62_1.png",
             "Imagenes/62/62_2.png"
         ],
-        "description": "UART: 3 interfaces UART.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -722,7 +710,7 @@
             "Imagenes/65/65_1.png",
             "Imagenes/65/65_2.png"
         ],
-        "description": "PWM: Hasta 16 canales PWM.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -734,7 +722,7 @@
         "images": [
             "Imagenes/66/66_1.png"
         ],
-        "description": "SDIO: 2 interfaces SDIO (host y esclavo).",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -747,7 +735,7 @@
             "Imagenes/67/67_1.png",
             "Imagenes/67/67_2.png"
         ],
-        "description": "Ethernet: Interfaz MAC con DMA dedicado y soporte IEEE 1588.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -760,7 +748,7 @@
             "Imagenes/68/68_1.png",
             "Imagenes/68/68_2.png"
         ],
-        "description": "CAN: 1 interfaz CAN.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -772,7 +760,7 @@
         "images": [
             "Imagenes/69/69_1.png"
         ],
-        "description": "IR: Control remoto IR y emisor IR.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -784,7 +772,7 @@
         "images": [
             "Imagenes/71/71_1.png"
         ],
-        "description": "Seguridad: Aceleración por hardware para cifrado (AES, SHA-2, RSA, ECC), arranque seguro y cifrado de flash.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -796,7 +784,7 @@
         "images": [
             "Imagenes/72/72_1.png"
         ],
-        "description": "Temporizadores: Varios temporizadores de propósito general, temporizadores watchdog y RTC.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -809,7 +797,7 @@
             "Imagenes/73/73_1.jpg",
             "Imagenes/73/73_2.jpg"
         ],
-        "description": "Sensor de Hall: Sensor de efecto Hall integrado.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -822,7 +810,7 @@
             "Imagenes/74/74_1.jpg",
             "Imagenes/74/74_2.jpg"
         ],
-        "description": "Sensor de Temperatura: Sensor de temperatura incorporado.",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -834,7 +822,7 @@
         "images": [
             "Imagenes/76/76_1.jpg"
         ],
-        "description": "5. Aplicaciones",
+        "description": "Resumen Técnico del Optoacoplador PC817\nEl PC817 es un optoacoplador de propósito general ampliamente utilizado para proporcionar aislamiento eléctrico entre circuitos de entrada y salida. Este dispositivo emplea un diodo emisor de luz infrarroja (LED) y un fototransistor para transferir señales eléctricas a través de un medio óptico, ofreciendo una excelente protección contra interferencias electromagnéticas.\n\nCaracterísticas Principales\nTipo de Dispositivo: Optoacoplador con salida de fototransistor\nAislamiento: 5000 Vrms entre entrada y salida\nEncapsulado: DIP-4\nNúmero de Canales: 1\nEspecificaciones Eléctricas\nVoltaje Máximo de Entrada (V<sub>F</sub>): 1.2V (típico)\nCorriente de Entrada (I<sub>F</sub>): 20 mA (máximo)\nVoltaje de Salida (V<sub>CEO</sub>): 35V (máximo)\nCorriente de Colector (I<sub>C</sub>): 50 mA (máximo)\nRelación de Transferencia de Corriente (CTR): 50% a 600%\nTemperatura de Operación: -30°C a +100°C\nAplicaciones Comunes\nAislamiento de Señales: En sistemas donde es necesario aislar una señal de control de una señal de potencia.\nInterruptores Electrónicos: Para encender y apagar dispositivos sin conexión directa eléctrica.\nProtección de Circuitos: Evitar el daño de componentes sensibles debido a picos de tensión o ruido eléctrico.\nInterfaz de Microcontroladores: Para aislar microcontroladores y otros circuitos lógicos de altas tensiones.\nVentajas\nAlta Capacidad de Aislamiento: Proporciona un aislamiento eléctrico seguro entre la entrada y la salida.\nBajo Consumo de Corriente: Adecuado para aplicaciones de baja potencia.\nAlta Fiabilidad y Durabilidad: Sin partes mecánicas móviles.\nCompatibilidad con Microcontroladores y Otros Circuitos Lógicos: Puede ser fácilmente integrado en sistemas de control y automatización.\nEsquema de Conexión\nEl PC817 tiene cuatro pines:\n\nAnodo del LED (Pin 1)\nCatodo del LED (Pin 2)\nEmisor del Fototransistor (Pin 3)\nColector del Fototransistor (Pin 4)",
         "code": "",
         "datasheet": true
     },
@@ -846,7 +834,7 @@
         "images": [
             "Imagenes/77/77_1.jpg"
         ],
-        "description": "El ESP-WROOM-32 es adecuado para una amplia gama de aplicaciones, incluyendo:",
+        "description": "",
         "code": "",
         "datasheet": false
     },
@@ -858,7 +846,7 @@
         "images": [
             "Imagenes/78/78_1.jpg"
         ],
-        "description": "",
+        "description": "El H11AA1 es un optoacoplador (o aislamiento óptico) que se utiliza para transferir señales eléctricas mediante luz, proporcionando aislamiento eléctrico entre su entrada y salida. Este dispositivo es ideal para aplicaciones en las que se requiere aislamiento galvánico para proteger los componentes electrónicos sensibles de ruidos eléctricos y picos de tensión.\n\nCaracterísticas Principales\nTipo de Dispositivo: Optoacoplador\nConfiguración de Salida: Fototransistor de silicio\nAislamiento: 5300 Vrms entre entrada y salida\nEncapsulado: DIP-6\nNúmero de Canales: 1\nEspecificaciones Eléctricas\nVoltaje Máximo de Entrada (V<sub>F</sub>): 1.2V (típico)\nCorriente de Entrada (I<sub>F</sub>): 10 mA (típico), 60 mA (máximo)\nVoltaje de Salida (V<sub>CE</sub>): 30V (máximo)\nCorriente de Colector (I<sub>C</sub>): 50 mA (máximo)\nRelación de Transferencia de Corriente (CTR): 20% a 200%\nTiempo de Respuesta:\nTiempo de Encendido (t<sub>on</sub>): 3 µs\nTiempo de Apagado (t<sub>off</sub>): 2.3 µs\nAplicaciones Comunes\nAislamiento de Señales: En sistemas donde es necesario aislar una señal de control de una señal de potencia.\nInterruptores Electrónicos: Para encender y apagar dispositivos sin conexión directa eléctrica.\nProtección de Circuitos: Evitar el daño de componentes sensibles debido a picos de tensión o ruido eléctrico.\nConversión de Señales: Transferencia de señales entre diferentes niveles de tensión.\nVentajas\nAlta Capacidad de Aislamiento: Proporciona un aislamiento eléctrico seguro entre la entrada y la salida.\nBajo Consumo de Corriente: Adecuado para aplicaciones de baja potencia.\nAlta Fiabilidad y Durabilidad: Sin partes mecánicas móviles.\nCompatibilidad con Microcontroladores y Otros Circuitos Lógicos: Puede ser fácilmente integrado en sistemas de control y automatización.\nEsquema de Conexión\nEl H11AA1 tiene seis pines:\n\nAnodo del LED (Pin 1)\nCatodo del LED (Pin 2)\nNo Conectado (Pin 3)\nEmisor del Transistor (Pin 4)\nColector del Transistor (Pin 5)\nBase del Transistor (Pin 6)",
         "code": "",
         "datasheet": true
     },
@@ -870,8 +858,8 @@
         "images": [
             "Imagenes/79/79_1.jpg"
         ],
-        "description": "Domótica y automatización del hogar.",
-        "code": "",
+        "description": "El MOC3043 es un optoacoplador con salida TRIAC diseñado para la conmutación de corriente alterna (AC). Este dispositivo es ideal para aplicaciones que requieren aislamiento galvánico entre los circuitos de control de baja potencia y las cargas de corriente alterna de alta potencia.\n\nCaracterísticas Principales\nTipo de Dispositivo: Optoacoplador con salida TRIAC\nAislamiento: 7500 Vpeak entre entrada y salida\nEncapsulado: DIP-6\nSalida: TRIAC\nNúmero de Canales: 1\nEspecificaciones Eléctricas\nVoltaje Máximo de Entrada (V<sub>F</sub>): 1.2V (típico)\nCorriente de Entrada (I<sub>F</sub>): 10 mA (típico), 15 mA (máximo)\nVoltaje de Salida (V<sub>DRM</sub>): 400V\nCorriente de Pico No Repetitivo (I<sub>TP</sub>): 1A\nVoltaje de Encendido (V<sub>T</sub>): 1.3V (típico)\nCorriente de Encendido (I<sub>T</sub>): 100 mA (típico)\nCorriente de Retención (I<sub>H</sub>): 280 µA (máximo)\nAislamiento: 7500 Vpeak\nAplicaciones Comunes\nControl de Potencia AC: Para encender y apagar cargas de corriente alterna, como motores, luces y calefactores.\nControl de Motores: Para controlar motores de corriente alterna en aplicaciones industriales y de consumo.\nAislamiento de Señales: Proporciona aislamiento galvánico entre circuitos de control y cargas de alta tensión.\nAutomatización del Hogar: En aplicaciones de domótica para controlar luces y otros electrodomésticos.\nVentajas\nAlta Capacidad de Aislamiento: Proporciona un aislamiento eléctrico seguro entre la entrada y la salida.\nConmutación Sincrónica con el Paso por Cero: Reduce el ruido y las interferencias en la conmutación de corriente alterna.\nBajo Consumo de Corriente de Entrada: Adecuado para aplicaciones de bajo consumo.\nAlta Fiabilidad y Durabilidad: Sin partes mecánicas móviles.\nCompatibilidad con Microcontroladores y Otros Circuitos Lógicos: Puede ser fácilmente integrado en sistemas de control y automatización.\nEsquema de Conexión\nEl MOC3043 tiene seis pines:\n\nAnodo del LED (Pin 1)\nCatodo del LED (Pin 2)\nNo Conectado (Pin 3)\nTerminal A2 del TRIAC (Pin 4)\nTerminal A1 del TRIAC (Pin 5)\nNo Conectado (Pin 6)",
+        "code": "int ledPin = 13;    // Pin LED interno del Arduino\nint inputPin = 2;   // Pin conectado al Anodo del LED del MOC3043\nint val = 0;        // Variable para almacenar el valor de entrada\n\nvoid setup() {\n  pinMode(ledPin, OUTPUT);   // Establecer el pin LED como salida\n  pinMode(inputPin, OUTPUT); // Establecer el pin de entrada como salida\n  Serial.begin(9600);        // Iniciar la comunicación serial\n}\n\nvoid loop() {\n  digitalWrite(inputPin, HIGH);  // Encender el LED del MOC3043\n  digitalWrite(ledPin, HIGH);    // Encender el LED del Arduino\n  Serial.println(\"Cargando señal AC\");\n  delay(1000);                   // Mantener la señal por 1 segundo\n\n  digitalWrite(inputPin, LOW);   // Apagar el LED del MOC3043\n  digitalWrite(ledPin, LOW);     // Apagar el LED del Arduino\n  Serial.println(\"Señal AC apagada\");\n  delay(1000);                   // Mantener apagado por 1 segundo\n}",
         "datasheet": true
     },
     {
