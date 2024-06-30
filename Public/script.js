@@ -246,7 +246,7 @@ function openProductModal(productId) {
         const productModalDescription = document.getElementById('product-modal-description');
         const productModalCode = document.getElementById('product-modal-code');
         const modalTitle = document.getElementById('product-modal-title'); // Nuevo elemento para el título
-        
+
         productModalImage.src = product.images[0];
 
         // Use innerHTML to keep text formatting and apply .small-description style class
@@ -258,8 +258,9 @@ function openProductModal(productId) {
             : '';
 
         if (product.code) {
-            const formattedCode = product.code.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/g, '<br>');
-            productModalCode.innerHTML = `<code>${formattedCode}</code>`;
+            // Use <pre> to preserve the formatting of the code
+            const formattedCode = product.code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            productModalCode.innerHTML = `<pre><code>${formattedCode}</code></pre>`;
             productModalCode.style.display = 'block';
             productModalCode.querySelector('code').style.backgroundColor = '#000';
             hljs.highlightElement(productModalCode.querySelector('code'));
@@ -270,6 +271,7 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
+
 
 
 
