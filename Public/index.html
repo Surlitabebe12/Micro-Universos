@@ -1,45 +1,467 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MicroUniversos - Mantenimiento</title>
+    <title>MicroUniversos - Tienda de electrónica</title>
+    <link rel="icon" type="image/png" href="micro.webp">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Source Code Pro', monospace;
             margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
         }
-        .container {
-            text-align: center;
+        header {
+            background-color: #000080;
             padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            color: white;
+            text-align: center;
         }
-        h1 {
-            color: #333;
+        header .sub-header {
+            font-size: 0.9em;
+            margin-top: 5px;
         }
-        p {
-            color: #666;
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 0 10px;
+            margin-bottom: 80px;
+        }
+        .product {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 15px;
+            width: 220px;
+            height: 350px;
+            box-sizing: border-box;
+            overflow: hidden;
+            transition: color 0.2s;
+            position: relative;
+            background-color: white;
+            cursor: pointer;
+        }
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 150px;
+        }
+        .image-container img {
+            width: 85%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.5em;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+        .product-name {
+            margin-top: 10px;
+            font-size: 0.9em;
+            max-height: 3em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            white-space: normal;
+        }
+        .quantity-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .quantity-container input {
+            width: 35px;
+            text-align: center;
+            font-size: 1em;
+        }
+        .quantity-container button {
+            width: 20px;
+            height: 20px;
+            font-size: 0.8em;
+            background-color: #000080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product-quantity {
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: auto;
+            margin-bottom: 5px;
+        }
+        .product-price {
             font-size: 1.2em;
+            font-weight: bold;
+            margin-top: auto;
+            margin-bottom: 10px;
         }
-        .logo {
-            max-width: 100px;
+        .product:hover .product-name,
+        .product:hover .product-price,
+        .product:hover .product-quantity {
+            color: #000080;
+        }
+        #cart-icon {
+            position: fixed;
+            right: 25px;
+            top: 30px;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.3s ease;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #000080;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #cart-icon img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+        #cart-counter {
+            font-size: 1em;
+            color: white;
+            background-color: red;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -8px;
+            right: 2px;
+            transition: transform 0.3s ease;
+        }
+        #cart-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #cart-modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 75%;
+            max-width: 320px;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+        }
+        #cart-modal .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        #cart-modal .close:hover,
+        #cart-modal .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #cart-modal h2 {
+            text-align: center;
+            font-size: 1.2em;
             margin-bottom: 20px;
         }
+        #cart-modal ul {
+            list-style: none;
+            padding: 0;
+        }
+        #cart-modal li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        #cart-modal img {
+            width: 91px;
+            height: 63px;
+            object-fit: contain;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #cart-modal .item-details {
+            flex-grow: 1;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-size: 0.8em;
+        }
+        #cart-modal .item-controls {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 5px;
+            width: 50px;
+        }
+        #total {
+            text-align: right;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            display: block;
+        }
+        .share-cart-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 5px;
+            font-size: 15px;
+            cursor: pointer;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Source Code Pro', monospace;
+            margin-top: 31px;
+            width: 55%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .share-cart-btn img {
+            margin-right: 5px;
+            width: 10px;
+            height: 10px;
+        }
+        .add-to-cart-btn {
+            padding: 5px 10px;
+            margin-top: 14px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #000080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .add-to-cart-btn .cart-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 128, 0, 0.2);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.5s;
+            pointer-events: none;
+        }
+        .add-to-cart-btn.active .cart-animation {
+            transform: scale(4);
+        }
+        footer {
+            background-color: #000080;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        footer img {
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        /* Media queries para responsividad */
+        @media (max-width: 600px) {
+            .product {
+                width: 100%;
+                height: auto;
+                margin: 10px 0;
+            }
+            .image-container {
+                height: auto;
+            }
+            .image-container img {
+                height: auto;
+            }
+            #cart-modal-content {
+                width: 90%;
+                padding: 10px;
+            }
+            #cart-modal img {
+                width: 91px;
+                height: 63px;
+            }
+            .product-name, .product-price {
+                font-size: 0.8em;
+            }
+            .share-cart-btn {
+                font-size: 13px;
+                padding: 2px 5px;
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .share-cart-btn img {
+                width: 8px;
+                height: 8px;
+            }
+        }
+        /* Modal específico para el producto */
+        #product-modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #product-modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 75%;
+            max-width: 600px;
+            border-radius: 15px;
+        }
+        #product-modal .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        #product-modal .close:hover,
+        #product-modal .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #product-modal img {
+            width: 50%; /* Cambia el ancho al 50% */
+            height: auto;
+            object-fit: contain;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto; /* Centrar la imagen horizontalmente */
+        }
+        .code-example pre {
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto; /* Añadir desplazamiento horizontal si es necesario */
+        }
+        .small-text {
+            font-size: 0.8em;
+        }
+        .small-description {
+            font-size: 12px; /* Adjust the size as needed */
+            line-height: 1.5;
+            white-space: pre-wrap; /* Preserve whitespace and line breaks */
+        }
+
+        /* Estilos para el título del producto en el modal */
+        #product-modal-title {
+            font-size: 1.5em; /* Tamaño de letra más pequeño */
+            font-weight: 300; /* Fuente más delicada */
+            color: #333; /* Color del texto */
+            margin-bottom: 10px; /* Espacio debajo del título */
+            font-family: 'Arial', sans-serif; /* Fuente más delicada */
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>MicroUniversos</h1>
-        <p>Estamos realizando mantenimiento en nuestro sitio web. Estaremos de vuelta pronto.</p>
-        <p>Gracias por tu paciencia.</p>
+    <header>
+        <h1>MicroUniversos - Tienda de electrónica</h1>
+        <p class="sub-header">Envios en el dia por cadeteria dentro de Montevideo. Para el interior se despacha por DAC o DePunta.</p>
+    </header>
+    <div class="products-container">
+        <!-- Aquí se agregarán los productos dinámicamente -->
     </div>
+
+    <!-- Icono del carrito -->
+    <div id="cart-icon" onclick="openCartModal()">
+        <img src="carrito_electronico.png" alt="Carrito de Compras">
+        <div id="cart-counter">0</div>
+    </div>
+
+    <!-- Modal para el carrito -->
+    <div id="cart-modal" class="modal">
+        <div id="cart-modal-content">
+            <span class="close" onclick="closeCartModal()">&times;</span>
+            <h2>Lista de compras</h2>
+            <ul>
+                <!-- Aquí se agregarán los productos del carrito dinámicamente -->
+            </ul>
+            <p id="empty-cart-message">No hay productos en el carrito.</p>
+            <div id="total">Total: $0</div>
+            <p class="small-text">(Cuando tengas el carrito listo presiona "Compartir carrito" asi lo recibo)</p>
+            <button class="share-cart-btn" onclick="shareCart()">
+                <img src="WhatsApp_similar_logo.png" alt="WhatsApp">
+                Compartir carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal para el producto -->
+    <div id="product-modal">
+        <div id="product-modal-content">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <h2 id="product-modal-title"></h2> <!-- Título del producto -->
+            <img id="product-modal-image" src="" alt="Imagen del producto">
+            <p id="product-modal-description"></p>
+            <pre id="product-modal-code" class="code-example"></pre>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>Presiona en el logo para abrir una conversación. <img src="WhatsApp_similar_logo.png" alt="WhatsApp" onclick="openWhatsApp()"></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
