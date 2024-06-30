@@ -295,8 +295,8 @@
     {
         "id": 28,
         "name": "Sensor De Hall 49e (bici Eléctrica) 5 Unidades",
-        "price": 180.0,
-        "quantity": 17,
+        "price": "180.0",
+        "quantity": "17",
         "images": [
             "Imagenes/28/28_1.jpg",
             "Imagenes/28/28_2.jpg",
@@ -304,9 +304,9 @@
             "Imagenes/28/28_4.jpg",
             "Imagenes/28/28_5.jpg"
         ],
-        "description": "",
-        "code": "",
-        "datasheet": false
+        "description": "El sensor Hall 49E es un dispositivo de efecto Hall que se utiliza para detectar la presencia de un campo magnético. Este sensor es ampliamente utilizado en aplicaciones de detección de velocidad, posición y corriente, así como en conmutadores sin contacto. A continuación se presenta un resumen técnico de sus características y especificaciones:\n\nCaracterísticas Principales\nTipo de Sensor: Sensor de efecto Hall lineal.\nRango de Operación de Campo Magnético: ±900 Gauss.\nSalida: Analógica.\nVoltaje de Operación: 4.5V a 6V.\nCorriente de Operación: 8mA (típica).\nSensibilidad: 1.4 mV/Gauss (típica).\nTemperatura de Operación: -40°C a +85°C.\nEmpaque: TO-92.\nEspecificaciones Eléctricas\nVoltaje de Alimentación (Vcc): 4.5V a 6V.\nCorriente de Consumo: 8mA.\nSalida de Voltaje en Condiciones Normales: Aproximadamente la mitad del voltaje de alimentación (Vcc/2).\nSensibilidad de Salida: Aproximadamente 1.4 mV/Gauss.\nAplicaciones Comunes\nDetección de Velocidad: En aplicaciones como tacómetros y velocímetros.\nDetección de Posición: Para identificar la posición de objetos en movimiento.\nDetección de Corriente: Usado en medidores de corriente sin contacto.\nConmutadores Sin Contacto: Para reemplazar interruptores mecánicos en diversas aplicaciones.\nSistemas de Encendido de Motores: Para detectar la posición del cigüeñal o el árbol de levas.\nVentajas\nAlta Sensibilidad: Permite detectar campos magnéticos muy débiles.\nSalida Lineal: Proporciona una salida analógica proporcional al campo magnético detectado.\nBajo Consumo de Energía: Ideal para aplicaciones de bajo consumo.\nOperación a Baja Tensión: Compatible con la mayoría de los sistemas electrónicos.\nFiabilidad y Durabilidad: Sin partes mecánicas que se desgasten.\nEsquema de Conexión\nEl sensor Hall 49E tiene tres pines:\n\nVcc: Voltaje de alimentación (4.5V a 6V).\nGND: Tierra.\nOUT: Salida analógica.",
+        "code": "nan",
+        "datasheet": true
     },
     {
         "id": 30,
