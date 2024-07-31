@@ -9,7 +9,7 @@
         ],
         "description": "",
         "code": "Descripción Técnica:\n5.08-301-2P es un conector de bloque terminal de tornillo de 2 pines con un paso de 5mm, comúnmente utilizado en proyectos de electrónica para realizar conexiones seguras y desmontables entre componentes y placas de circuito impreso (PCB).\n\nEspecificaciones Técnicas:\nPaso (Pitch): 5mm\nNúmero de Pines: 2\nTipo de Conexión: Bloque terminal de tornillo\nTensión Máxima: 300V\nCorriente Máxima: 10A\nMaterial del Cuerpo: Poliamida (PA)\nMaterial del Contacto: Cobre con revestimiento de níquel\nTemperatura de Operación: -40°C a 105°C\n\nCaracterísticas:\nFácil Instalación: Los tornillos permiten una conexión firme y fácil de instalar.\nDesmontable: Las conexiones se pueden desmontar y volver a montar fácilmente, ideal para aplicaciones de prototipos y pruebas.\nSeguro: Proporciona una conexión segura y confiable, reduciendo el riesgo de desconexiones accidentales.\n\nAplicaciones:\nProyectos de Electrónica DIY: Ideal para proyectos de hobby y prototipos.\nAutomatización Industrial: Utilizado en conexiones de sensores y actuadores.\nInstrumentación: Conexiones en equipos de medida y control.\nDomótica: Conexiones en sistemas de control y automatización del hogar.",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 2,
@@ -79,7 +79,7 @@
         ],
         "description": "",
         "code": "El BTA4-600B es un triac (Triodo para Corriente Alterna) utilizado en el control de potencia de corriente alterna (CA). Es un componente semiconductor que puede conmutar y controlar corrientes altas, lo que lo hace ideal para aplicaciones como dimmers de luz, controladores de velocidad de motores, y reguladores de calefacción.\n\nEspecificaciones Técnicas:\nVoltaje Máximo de Repetición de Pico Inverso (VDRM): 600V\nCorriente Media (IT(RMS)): 4A\nCorriente de Puerta (IGT): 35mA\nVoltaje de Encendido de Puerta (VGT): 1.3V\nTemperatura de Operación: -40°C a 125°C\nEncapsulado: TO-220AB\nTensión Máxima de Pico No Repetitiva (VDSM): 800V\nCaracterísticas:\nAlta Capacidad de Corriente: Puede manejar corrientes de hasta 4A.\nControl de Puerta Sensible: Requiere una corriente de puerta relativamente baja para activarse.\nEncapsulado TO-220AB: Ofrece buena disipación de calor y facilidad de montaje.\nDurabilidad: Operación fiable en un rango amplio de temperaturas.\nAplicaciones:\nControl de Iluminación: Dimmers para luces incandescentes o de halógeno.\nControl de Motores: Variadores de velocidad para pequeños motores de corriente alterna.\nRegulación de Temperatura: Controladores de calefacción en electrodomésticos.\nConmutación de Carga: En aplicaciones industriales para conmutar cargas resistivas o inductivas.",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 11,
@@ -106,7 +106,7 @@
         ],
         "description": "",
         "code": "El Programador Universal USB AVR ISP es una herramienta esencial para programar microcontroladores AVR de Atmel, como el ATtiny y el ATmega, entre otros. Este dispositivo permite cargar programas en la memoria flash de los microcontroladores a través del protocolo ISP (In-System Programming). A continuación se presenta un resumen técnico y guía de uso para este programador, especialmente con el adaptador.\n\nResumen Técnico del Programador Universal USB AVR ISP\nEspecificaciones Generales:\nCompatibilidad:\n\nCompatible con la mayoría de los microcontroladores AVR, incluyendo ATmega y ATtiny.\nSoporte para chips con interfaces ISP.\nConexión:\n\nInterfaz USB para conexión con la computadora.\nConector ISP de 6 pines y 10 pines para conexión con el microcontrolador.\nProtocolos Soportados:\n\nISP (In-System Programming).\nVelocidad de Programación:\n\nConfigurable a diferentes velocidades para compatibilidad con diversos chips y configuraciones.\nSoporte de Software:\n\nCompatible con herramientas de desarrollo como Atmel Studio y AVRDude.\nDrivers disponibles para Windows, Mac y Linux.\nAlimentación:\n\nAlimentado a través del puerto USB.\nPuede alimentar el microcontrolador durante la programación (5V).\nComponentes Incluidos:\nProgramador USB AVR ISP.\nCables de conexión: Usualmente incluyen cables de 6 y 10 pines.\nAdaptador: Permite la conexión a diferentes tipos de microcontroladores y placas de desarrollo.\nGuía de Uso:\nPaso 1: Instalación de Drivers\nDescargar Drivers:\n\nAsegúrate de descargar los drivers correctos para tu sistema operativo desde el sitio web del fabricante o la fuente del programador.\nInstalar Drivers:\n\nSigue las instrucciones proporcionadas con los drivers para instalarlos correctamente en tu computadora.\nPaso 2: Conexión del Programador\nConectar a la Computadora:\n\nConecta el programador al puerto USB de tu computadora.\nConectar al Microcontrolador:\n\nUtiliza el adaptador y los cables de conexión para conectar el programador a la interfaz ISP del microcontrolador.\nAsegúrate de alinear correctamente los pines de VCC, GND, MISO, MOSI, SCK y RESET.\nPaso 3: Programación del Microcontrolador\nSoftware de Programación:\n\nAbre tu software de programación preferido, como Atmel Studio o AVRDude.\nConfiguración del Software:\n\nConfigura el software para utilizar el programador USB AVR ISP.\nSelecciona el modelo del microcontrolador que estás programando.\nAjusta la velocidad de programación si es necesario.\nCargar el Programa:\n\nCompila el código que deseas cargar en el microcontrolador.\nUtiliza el software de programación para cargar el código compilado en la memoria flash del microcontrolador.\nVerificar la Programación:\n\nDespués de la programación, verifica que el código haya sido cargado correctamente ejecutando alguna prueba o utilizando las herramientas de verificación del software.\nEjemplo de Uso con AVRDude:\nSi estás utilizando AVRDude como herramienta de programación, aquí hay un ejemplo de cómo puedes programar un ATtiny85 con un archivo .hex:\n\nConectar el Programador y el Microcontrolador:\n\nConecta el programador USB AVR ISP a la computadora y al ATtiny85 usando el adaptador adecuado.\nComando AVRDude:\n\nAbre una terminal o línea de comandos en tu computadora.\n\nUtiliza el siguiente comando para programar el ATtiny85:\n\nsh\nCopiar código\navrdude -c usbasp -p t85 -U flash:w:tu_archivo.hex:i\nDonde:\n\n-c usbasp: Especifica el tipo de programador (en este caso, usbasp).\n-p t85: Especifica el tipo de microcontrolador (en este caso, ATtiny85).\n-U flash:w:tu_archivo.hex:i: Especifica la operación de escritura en la memoria flash con el archivo .hex.",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 14,
@@ -120,7 +120,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 16,
@@ -135,7 +135,7 @@
         ],
         "description": "",
         "code": "Descripción General\nEl DB3 es un diodo de disparo bilateral, también conocido como diodo DIAC, utilizado principalmente en circuitos de control de corriente alterna (CA) y aplicaciones de disparo de triac. Es un componente semiconductor que permite el paso de la corriente en ambas direcciones cuando se alcanza un voltaje de disparo específico, facilitando el control de dispositivos de potencia.\n\nCaracterísticas Técnicas\nTensión de Disparo: 28V a 36V.\nCorriente de Disparo: Típicamente alrededor de 50μA.\nCapacidad de Disparo: Permite un disparo fiable y repetible en ambos sentidos de la corriente.\nTemperatura de Funcionamiento: -40°C a +125°C.\nEncapsulado: Generalmente en TO-92 o DO-35.\nAplicaciones\nDisparo de Triacs: Usado en aplicaciones donde se requiere el control de fase de triacs, como en atenuadores de luz, controladores de velocidad de motores, y reguladores de calentadores.\nControl de CA: Empleado en circuitos de control de corriente alterna para aplicaciones industriales y domésticas.\nEncendido de Circuitos: Utilizado en circuitos que requieren encendido y apagado controlado de dispositivos de potencia.\nVentajas\nSimplicidad: Facilita el diseño de circuitos de control de potencia con un número reducido de componentes.\nConfiabilidad: Proporciona un disparo repetible y fiable, mejorando la eficiencia del circuito de control.\nBilateralidad: Capacidad de conducir corriente en ambas direcciones, lo que lo hace adecuado para aplicaciones de CA.\nEjemplo de Uso en un Circuito\nEn un atenuador de luz, el DB3 se utiliza para disparar un triac, controlando así la cantidad de energía que se suministra a una carga (por ejemplo, una lámpara). El circuito típico incluye un potenciómetro para ajustar el punto de disparo del triac y, por lo tanto, el brillo de la lámpara.",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 18,
@@ -232,7 +232,7 @@
         ],
         "description": "",
         "code": "Características Principales:\nModelo: 1N4007 (SMD - M7)\nCorriente Máxima: 1A\nVoltaje Inverso Máximo: 1000V\nCaída de Voltaje Directo: 1.1V a 1A\nTipo de Montaje: Superficie (SMD)\nPaquete: DO-214AC (SMA)\nTemperatura de Operación: -65°C a +175°C\nAplicaciones: Rectificación de corriente, protección contra sobretensiones, aplicaciones de potencia, etc.\nDescripción:\nEl diodo rectificador 1N4007 en encapsulado SMD (M7) es un componente clave en aplicaciones de rectificación de corriente en fuentes de alimentación y otros circuitos electrónicos. Capaz de soportar voltajes inversos de hasta 1000V y corrientes de hasta 1A, este diodo es ideal para una amplia gama de aplicaciones. Su paquete SMD permite un montaje eficiente en placas de circuito impreso de alta densidad.",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 26,
@@ -242,7 +242,7 @@
         "images": [],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 27,
@@ -254,7 +254,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 28,
@@ -269,7 +269,7 @@
         ],
         "description": "",
         "code": "El sensor Hall 49E es un dispositivo de efecto Hall que se utiliza para detectar la presencia de un campo magnético. Este sensor es ampliamente utilizado en aplicaciones de detección de velocidad, posición y corriente, así como en conmutadores sin contacto. A continuación se presenta un resumen técnico de sus características y especificaciones:\n\nCaracterísticas Principales\nTipo de Sensor: Sensor de efecto Hall lineal.\nRango de Operación de Campo Magnético: ±900 Gauss.\nSalida: Analógica.\nVoltaje de Operación: 4.5V a 6V.\nCorriente de Operación: 8mA (típica).\nSensibilidad: 1.4 mV/Gauss (típica).\nTemperatura de Operación: -40°C a +85°C.\nEmpaque: TO-92.\nEspecificaciones Eléctricas\nVoltaje de Alimentación (Vcc): 4.5V a 6V.\nCorriente de Consumo: 8mA.\nSalida de Voltaje en Condiciones Normales: Aproximadamente la mitad del voltaje de alimentación (Vcc/2).\nSensibilidad de Salida: Aproximadamente 1.4 mV/Gauss.\nAplicaciones Comunes\nDetección de Velocidad: En aplicaciones como tacómetros y velocímetros.\nDetección de Posición: Para identificar la posición de objetos en movimiento.\nDetección de Corriente: Usado en medidores de corriente sin contacto.\nConmutadores Sin Contacto: Para reemplazar interruptores mecánicos en diversas aplicaciones.\nSistemas de Encendido de Motores: Para detectar la posición del cigüeñal o el árbol de levas.\nVentajas\nAlta Sensibilidad: Permite detectar campos magnéticos muy débiles.\nSalida Lineal: Proporciona una salida analógica proporcional al campo magnético detectado.\nBajo Consumo de Energía: Ideal para aplicaciones de bajo consumo.\nOperación a Baja Tensión: Compatible con la mayoría de los sistemas electrónicos.\nFiabilidad y Durabilidad: Sin partes mecánicas que se desgasten.\nEsquema de Conexión\nEl sensor Hall 49E tiene tres pines:\n\nVcc: Voltaje de alimentación (4.5V a 6V).\nGND: Tierra.\nOUT: Salida analógica.",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 31,
@@ -282,7 +282,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 32,
@@ -294,7 +294,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 33,
@@ -307,7 +307,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 34,
@@ -319,7 +319,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 35,
@@ -331,7 +331,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 36,
@@ -343,7 +343,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 37,
@@ -355,7 +355,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 38,
@@ -369,7 +369,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 39,
@@ -382,7 +382,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 40,
@@ -394,7 +394,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 41,
@@ -406,7 +406,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 42,
@@ -437,7 +437,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 44,
@@ -449,7 +449,7 @@
         ],
         "description": "",
         "code": "Descripción General:\nBridgelux es una marca reconocida en la industria de la iluminación LED, conocida por sus productos de alta calidad y eficiencia. Los LEDs Bridgelux son utilizados en una amplia gama de aplicaciones, desde iluminación general hasta aplicaciones industriales y comerciales.\n\nChip Original de fábrica. De los mejores en el mercado, con bornera para no soldar.\n\nEspecificación:\n\n1. Fuente de luz: DOB\n2 Color:Blanco frío 6000K\n3Fosfuro: 660nm (otro proveedor utiliza 620nm, por lo que es barato)\n4 Chip:Bridgelux\n5 potencia: 50w\n6. Voltaje de entrada: 220-265V\n7Tamaño:75x40x1.6mm\n8. Material de la carcasa: Aluminio\n9. Vida útil de la fuente:> 50.000 horas\n10 Ángulo de iluminación: 120\n\n 6 funciones para proteger el chip led de larga vida útil.\n\nA1:MOV para protección contra sobretensiones> 4000V pasado\n\nA2: rectificador de puente de 1000V\n\nR3: control de corriente constante y potencia constante\n\nA4: sensor NTC para protección contra sobrecalentamiento pcb\n\nA5: regulador de voltaje para la protección ic vdd\n\nR6: Controlador IC, control de sobretensión y sobrecorriente\n\nA7: puede usar un atenuador led o un atenuador SCR para atenuarlo.\n\nNecesitan sistema de disipación de calor (disipador por lo menos)",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 46,
@@ -473,7 +473,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 48,
@@ -485,7 +485,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 49,
@@ -497,7 +497,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 50,
@@ -509,7 +509,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 51,
@@ -521,7 +521,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 52,
@@ -533,7 +533,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 53,
@@ -545,7 +545,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 54,
@@ -558,7 +558,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 55,
@@ -570,7 +570,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 56,
@@ -582,7 +582,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 57,
@@ -594,7 +594,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 58,
@@ -606,7 +606,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 59,
@@ -618,7 +618,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 60,
@@ -630,7 +630,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 61,
@@ -642,7 +642,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 62,
@@ -655,7 +655,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 65,
@@ -668,7 +668,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 66,
@@ -680,7 +680,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 67,
@@ -693,7 +693,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 68,
@@ -706,7 +706,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 69,
@@ -718,7 +718,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 71,
@@ -730,7 +730,7 @@
         ],
         "description": "",
         "code": "El microcontrolador W806, fabricado por WinnerMicro, es un MCU versátil que se presenta en un paquete QFN-56 (6x6). Es parte de la serie W800 y ofrece una solución robusta para IoT y sistemas embebidos.\n\nEspecificaciones clave:\nFabricante: WinnerMicro\nPaquete: QFN-56 (6x6)\nNúcleo: ARM Cortex-M4\nVelocidad de reloj: Hasta 240 MHz\nMemoria: Memoria flash y SRAM integradas\nInterfaces: Incluye múltiples opciones de E/S, UART, SPI, I2C, entre otras, para una conectividad versátil.\nPara una hoja de datos detallada, puedes consultar el datasheet del W806 de WinnerMicro.\n\nAplicaciones:\nEl microcontrolador W806 es ideal para una variedad de aplicaciones que incluyen:\n\nDispositivos IoT: Con su potente núcleo y amplio conjunto de interfaces, soporta diversas soluciones IoT.\nSistemas embebidos: Adecuado para aplicaciones embebidas que requieren un rendimiento y conectividad fiables.\nEste microcontrolador se destaca por su equilibrio entre rendimiento y eficiencia energética, lo que lo convierte en una opción popular en la industria para desarrollar soluciones tecnológicas avanzadas.",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 72,
@@ -761,7 +761,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 74,
@@ -774,7 +774,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 76,
@@ -786,7 +786,7 @@
         ],
         "description": "",
         "code": "Resumen Técnico del Optoacoplador PC817\nEl PC817 es un optoacoplador de propósito general ampliamente utilizado para proporcionar aislamiento eléctrico entre circuitos de entrada y salida. Este dispositivo emplea un diodo emisor de luz infrarroja (LED) y un fototransistor para transferir señales eléctricas a través de un medio óptico, ofreciendo una excelente protección contra interferencias electromagnéticas.\n\nCaracterísticas Principales\nTipo de Dispositivo: Optoacoplador con salida de fototransistor\nAislamiento: 5000 Vrms entre entrada y salida\nEncapsulado: DIP-4\nNúmero de Canales: 1\nEspecificaciones Eléctricas\nVoltaje Máximo de Entrada (V<sub>F</sub>): 1.2V (típico)\nCorriente de Entrada (I<sub>F</sub>): 20 mA (máximo)\nVoltaje de Salida (V<sub>CEO</sub>): 35V (máximo)\nCorriente de Colector (I<sub>C</sub>): 50 mA (máximo)\nRelación de Transferencia de Corriente (CTR): 50% a 600%\nTemperatura de Operación: -30°C a +100°C\nAplicaciones Comunes\nAislamiento de Señales: En sistemas donde es necesario aislar una señal de control de una señal de potencia.\nInterruptores Electrónicos: Para encender y apagar dispositivos sin conexión directa eléctrica.\nProtección de Circuitos: Evitar el daño de componentes sensibles debido a picos de tensión o ruido eléctrico.\nInterfaz de Microcontroladores: Para aislar microcontroladores y otros circuitos lógicos de altas tensiones.\nVentajas\nAlta Capacidad de Aislamiento: Proporciona un aislamiento eléctrico seguro entre la entrada y la salida.\nBajo Consumo de Corriente: Adecuado para aplicaciones de baja potencia.\nAlta Fiabilidad y Durabilidad: Sin partes mecánicas móviles.\nCompatibilidad con Microcontroladores y Otros Circuitos Lógicos: Puede ser fácilmente integrado en sistemas de control y automatización.\nEsquema de Conexión\nEl PC817 tiene cuatro pines:\n\nAnodo del LED (Pin 1)\nCatodo del LED (Pin 2)\nEmisor del Fototransistor (Pin 3)\nColector del Fototransistor (Pin 4)",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 77,
@@ -798,7 +798,7 @@
         ],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 78,
@@ -810,7 +810,7 @@
         ],
         "description": "",
         "code": "El H11AA1 es un optoacoplador (o aislamiento óptico) que se utiliza para transferir señales eléctricas mediante luz, proporcionando aislamiento eléctrico entre su entrada y salida. Este dispositivo es ideal para aplicaciones en las que se requiere aislamiento galvánico para proteger los componentes electrónicos sensibles de ruidos eléctricos y picos de tensión.\n\nCaracterísticas Principales\nTipo de Dispositivo: Optoacoplador\nConfiguración de Salida: Fototransistor de silicio\nAislamiento: 5300 Vrms entre entrada y salida\nEncapsulado: DIP-6\nNúmero de Canales: 1\nEspecificaciones Eléctricas\nVoltaje Máximo de Entrada (V<sub>F</sub>): 1.2V (típico)\nCorriente de Entrada (I<sub>F</sub>): 10 mA (típico), 60 mA (máximo)\nVoltaje de Salida (V<sub>CE</sub>): 30V (máximo)\nCorriente de Colector (I<sub>C</sub>): 50 mA (máximo)\nRelación de Transferencia de Corriente (CTR): 20% a 200%\nTiempo de Respuesta:\nTiempo de Encendido (t<sub>on</sub>): 3 µs\nTiempo de Apagado (t<sub>off</sub>): 2.3 µs\nAplicaciones Comunes\nAislamiento de Señales: En sistemas donde es necesario aislar una señal de control de una señal de potencia.\nInterruptores Electrónicos: Para encender y apagar dispositivos sin conexión directa eléctrica.\nProtección de Circuitos: Evitar el daño de componentes sensibles debido a picos de tensión o ruido eléctrico.\nConversión de Señales: Transferencia de señales entre diferentes niveles de tensión.\nVentajas\nAlta Capacidad de Aislamiento: Proporciona un aislamiento eléctrico seguro entre la entrada y la salida.\nBajo Consumo de Corriente: Adecuado para aplicaciones de baja potencia.\nAlta Fiabilidad y Durabilidad: Sin partes mecánicas móviles.\nCompatibilidad con Microcontroladores y Otros Circuitos Lógicos: Puede ser fácilmente integrado en sistemas de control y automatización.\nEsquema de Conexión\nEl H11AA1 tiene seis pines:\n\nAnodo del LED (Pin 1)\nCatodo del LED (Pin 2)\nNo Conectado (Pin 3)\nEmisor del Transistor (Pin 4)\nColector del Transistor (Pin 5)\nBase del Transistor (Pin 6)",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 79,
@@ -836,7 +836,7 @@
         ],
         "description": "",
         "code": "Descripción General\nEste dispositivo es un medidor digital que puede medir tanto voltaje como corriente continua (DC). Está diseñado para monitorear y mostrar simultáneamente el voltaje y la corriente en sistemas eléctricos y electrónicos. Es ideal para aplicaciones en fuentes de alimentación, paneles solares, sistemas de baterías y proyectos de bricolaje.\n\nEspecificaciones Técnicas\nRango de Medición de Voltaje: 0-100V DC\nRango de Medición de Corriente: 0-10A DC\nPrecisión de Voltaje: ±1% (±1 dígito)\nPrecisión de Corriente: ±1% (±1 dígito)\nResolución de Voltaje: 0.1V\nResolución de Corriente: 0.01A\nFuente de Alimentación: 4-30V DC (alimentación externa)\nConsumo de Energía: < 20mA\nPantalla: LED de 3 dígitos, doble color (rojo para voltaje y azul para corriente)\nDimensiones: 48mm x 29mm x 21mm (Largo x Ancho x Alto)\nConexiones:\nRojo: Alimentación positiva (Vcc)\nNegro: Alimentación negativa (GND)\nAmarillo: Medición de voltaje (V)\nNegro (más grueso): Medición de corriente (A)\nCaracterísticas\nPantalla Dual: Muestra simultáneamente el voltaje y la corriente con diferentes colores para una fácil lectura.\nAlta Precisión: Medición precisa de voltaje y corriente con una resolución adecuada para aplicaciones de precisión.\nFácil Instalación: Diseño compacto con cables de conexión estándar y conectores para una fácil instalación en paneles y dispositivos.\nProtección: Protección contra inversión de polaridad para evitar daños al dispositivo.\nAplicaciones\nFuentes de Alimentación: Monitoreo de voltaje y corriente en fuentes de alimentación de laboratorio y proyectos de bricolaje.\nSistemas de Energía Solar: Supervisión del voltaje y la corriente en sistemas de energía solar para asegurar el rendimiento y la eficiencia.\nBaterías y Cargadores: Verificación del estado de carga y descarga en sistemas de baterías y cargadores.\nProyectos Electrónicos: Ideal para proyectos de electrónica que requieren monitoreo de energía, como robots, controladores y dispositivos de prueba.\nAutomoción: Medición de parámetros eléctricos en vehículos y sistemas automotrices.\n\nInstrucciones de Conexión\nAlimentación del Medidor:\n\nConecte el cable rojo al positivo de la fuente de alimentación (Vcc).\nConecte el cable negro delgado al negativo de la fuente de alimentación (GND).\nMedición de Voltaje:\n\nConecte el cable amarillo al punto donde desea medir el voltaje.\nMedición de Corriente:\n\nConecte el cable negro grueso en serie con la carga donde desea medir la corriente.\n\nNotas\nSeguridad: Asegúrese de conectar correctamente los cables para evitar daños al dispositivo y a los componentes del circuito.\n\nCalibración: El dispositivo viene calibrado de fábrica, pero se recomienda verificar las mediciones con un multímetro de precisión para aplicaciones críticas.\nTemperatura de Operación: Utilizar dentro del rango de temperatura especificado para garantizar la precisión y la vida útil del dispositivo.",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 81,
@@ -860,7 +860,7 @@
         "images": [],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 85,
@@ -870,7 +870,7 @@
         "images": [],
         "description": "",
         "code": "",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 87,
@@ -884,7 +884,7 @@
         ],
         "description": "",
         "code": "Modelo: MTS-103\nTipo de Interruptor: Palanca de 3 pines, 3 posiciones\nMaterial: Plástico y metal\nAplicaciones Comunes: Uso en automóviles, proyectos electrónicos y sistemas eléctricos.\n\nEspecificaciones Técnicas\nConfiguración de Pinos: 3 pines\nPosiciones de Conmutación: 3 (ON-ON-ON)\nVoltaje Nominal: 6A/125V AC\nCorriente Nominal: 6A\nMaterial de la Carcasa: Plástico de alta resistencia\nMaterial de los Contactos: Metal\nCaracterísticas\nDurabilidad: Diseñado para soportar múltiples ciclos de encendido y apagado.\nResistencia al Desgaste: Alta resistencia mecánica y eléctrica.\nFacilidad de Uso: Operación simple mediante una palanca de conmutación.\nMontaje: Se monta fácilmente en paneles, ideal para personalización y proyectos DIY.\nAplicaciones\nAutomóviles: Control de luces, accesorios y otros dispositivos eléctricos.\nProyectos Electrónicos: Interruptor general para circuitos, control de dispositivos.\nSistemas Eléctricos: Uso en tableros de control y sistemas de conmutación.\nBeneficios\nConfiabilidad: Alta confiabilidad en ambientes exigentes.\nVersatilidad: Compatible con una amplia variedad de aplicaciones.\nCosto Efectivo: Solución económica para necesidades de conmutación eléctrica.",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 88,
@@ -901,7 +901,7 @@
         ],
         "description": "",
         "code": "El XL6009 es un convertidor DC-DC Step-Up (boost converter) de alta eficiencia, ideal para aplicaciones de potencia donde se requiere elevar el voltaje de entrada a un nivel de salida superior. A continuación, se presenta un resumen técnico del XL6009:\n\nCaracterísticas Principales:\nRango de Voltaje de Entrada: 3.0V a 32V.\nRango de Voltaje de Salida: 5V a 35V (ajustable).\nCorriente de Salida: Hasta 2.5A.\nFrecuencia de Conmutación: 400kHz.\nEficiencia: Hasta 94%.\nProtecciones: Protección contra sobrecorriente, protección térmica y protección contra cortocircuitos.\n\nEspecificaciones Técnicas:\nVoltaje de Entrada (Vin): 3.0V - 32V.\nVoltaje de Salida (Vout): 5V - 35V, ajustable mediante potenciómetro.\nCorriente de Salida (Iout): Hasta 2.5A (recomendado mantenerlo por debajo de 2A para una operación continua y segura).\nFrecuencia de Conmutación: 400kHz.\nEficiencia de Conversión: Típicamente 92%, puede llegar hasta 94%.\nTemperatura de Operación: -40°C a +85°C.\nDimensiones del Módulo: 43mm x 21mm x 14mm.\n\nPinout:\nVin: Entrada de voltaje.\nGND: Conexión a tierra.\nVout: Salida de voltaje ajustable.\n\nAplicaciones Comunes:\nAlimentación de circuitos electrónicos a partir de baterías.\nProyectos de energía solar.\nSistemas de alimentación para LEDs de alta potencia.\nEquipos de telecomunicaciones.\nProyectos de robótica y microcontroladores.\nEjemplo de Conexión:\nVin: Conectar al suministro de energía (batería o fuente de alimentación) entre 3V y 32V.\nGND: Conectar al terminal negativo de la fuente de energía y al terminal negativo de la carga.\nVout: Conectar al dispositivo que se desea alimentar, asegurándose de ajustar el potenciómetro para obtener el voltaje de salida deseado (entre 5V y 35V).\n\nAjuste del Voltaje de Salida:\nEl voltaje de salida se puede ajustar utilizando el potenciómetro incorporado en el módulo. Gire el potenciómetro en sentido horario para aumentar el voltaje de salida y en sentido antihorario para disminuirlo.\n\nNotas de Diseño:\nAsegúrese de que el voltaje de entrada sea al menos 3V inferior al voltaje de salida deseado para un rendimiento óptimo.\nSe recomienda añadir un condensador de desacoplamiento cerca de la entrada y la salida del módulo para reducir el ruido y mejorar la estabilidad.\n\nAdvertencias:\nEvite exceder los valores máximos especificados para evitar daños al módulo.\nAl manejar corrientes cercanas al límite máximo (2.5A), asegúrese de proporcionar una buena disipación térmica para evitar el sobrecalentamiento.",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 89,
@@ -917,7 +917,7 @@
         ],
         "description": "",
         "code": "Descripción:\n\nEste pack de cables Dupont de 30 cm es ideal para todos tus proyectos electrónicos, especialmente aquellos que involucren Arduino, Raspberry Pi y otros microcontroladores. Cada pack incluye 30 cables en total, con las siguientes configuraciones:\n\n10 cables Macho-Macho\n10 cables Hembra-Hembra\n10 cables Macho-Hembra\nCaracterísticas:\n\nLongitud: 30 cm cada cable.\nConectores: Macho-Macho, Hembra-Hembra, Macho-Hembra.\nMaterial de Alta Calidad: Los cables están fabricados con materiales de alta calidad, garantizando durabilidad y una conexión segura.\nVersatilidad: Perfectos para prototipos, pruebas y proyectos permanentes. Facilitan la conexión entre diferentes componentes y módulos sin necesidad de soldadura.\nCompatibilidad: Compatible con una amplia gama de dispositivos y placas, incluidos Arduino, Raspberry Pi, Breadboards y otros módulos electrónicos.\nAplicaciones Comunes:\n\nConexión de sensores, módulos y otros dispositivos electrónicos.\nProyectos de robótica.\nPrototipado rápido y desarrollo de circuitos electrónicos.\nProyectos de educación y aprendizaje en electrónica.",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 90,
@@ -994,7 +994,7 @@
         ],
         "description": "",
         "code": "Descripción\nEste módulo regulador de voltaje DC-DC Buck es ideal para proyectos electrónicos que requieren una fuente de alimentación estable. Cuenta con un inductor de moldeado integral, un chip de estabilización de voltaje inteligente con protección automática de apagado a 85 grados, potenciómetro ajustable para un ajuste preciso del voltaje, y capacitancia de onda de alta frecuencia para una mayor eficiencia. Además, incluye protección de conexión inversa, garantizando la seguridad de tus componentes electrónicos. Perfecto para proyectos de Arduino y aplicaciones DIY.\n\nDetalles Técnicos\nVoltaje de Entrada: 4.5V a 28V\nVoltaje de Salida: 0.8V a 20V ajustable\nCorriente de Salida: Hasta 3A\nFrecuencia de Conmutación: 150 kHz\nEficiencia: Hasta 92%\nProtección: Protección contra sobrecorriente, sobretemperatura y cortocircuito\nDimensiones: 22mm x 17mm x 4mm (L x W x H)\nPeso: 3g\nTemperatura de Operación: -40°C a 85°C",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 96,
@@ -1011,7 +1011,7 @@
         ],
         "description": "",
         "code": "Descripción\nEl sensor de luz TEMT6000 está diseñado para detectar la luz ambiental y es ideal para proyectos con Arduino. Este sensor mide la intensidad lumínica en lux, proporcionando una salida analógica que es proporcional a la intensidad de la luz que recibe. Perfecto para aplicaciones como control automático de iluminación, sistemas de monitoreo ambiental, y proyectos de electrónica DIY.\n\nDetalles Técnicos\nRango de Detección: 0 a 1000 Lux\nVoltaje de Operación: 3.3V a 5V\nSalida: Señal analógica\nTiempo de Respuesta: Rápido\nCompatibilidad: Compatible con Arduino y otros microcontroladores\nDimensiones: Compacto y fácil de integrar\nAplicaciones\nControl de iluminación automática\nMonitoreo de luz ambiental\nProyectos de domótica y electrónica DIY",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 97,
@@ -1023,7 +1023,7 @@
         ],
         "description": "",
         "code": "Consumo de energía 50mW a 265VAC\nLímite de corriente pulso a pulso\nProtección contra sobrecarga\nProtección contra sobretensión\nProtección contra sobrecorriente anormal\nSenseFet interno de alto voltaje 700V\nArranque suave incorporado 15ms\nRango de temperatura de -20C a 125C\nMedidas 9 x 6 mm",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 98,
@@ -1039,7 +1039,7 @@
         ],
         "description": "",
         "code": "¡Mejora tu experiencia de audio con nuestro potente amplificador de audio digital TPA3116D2! Este dispositivo compacto y eficiente ofrece hasta 100W de potencia en un solo canal, perfecto para proyectos de sonido de alta fidelidad y sistemas de audio personalizados. Funciona con una alimentación de 12V a 24V, proporcionando una calidad de sonido superior y un rendimiento confiable.\n\nDetalles eléctricos:\n\nVoltaje de entrada: 12V a 24V DC\nCapacitancia: 4x 330uF 35V\nChip amplificador: TPA3116D2\nCorriente de salida: Hasta 8A\nRango de frecuencia: 20Hz - 20kHz\nDistorsión armónica total (THD): Menos del 0.1%",
-        "datasheet": NaN
+        "datasheet": ""
     },
     {
         "id": 99,
@@ -1053,6 +1053,6 @@
         ],
         "description": "",
         "code": "Protege tus baterías de litio con el Módulo BMS 3S 60A, ideal para sistemas de 11.1V y 12.6V. Este módulo ofrece protección contra sobrecarga, sobredescarga, sobrecorriente y cortocircuitos. Equipado con MOSFETs de alta calidad, garantiza un rendimiento seguro y eficiente. Perfecto para aplicaciones de alta demanda como vehículos eléctricos, herramientas eléctricas y más.\n\nCaracterísticas:\n\nConfiguración: 3S (3 celdas en serie)\nCorriente de descarga: 60A\nProtección: Sobrecarga (4.2V por celda), Sobredescarga (2.5-3.0V por celda)\nAplicaciones: Baterías de litio para vehículos eléctricos, herramientas eléctricas, y más.\nDetalles de conexión\nCarga: (+) y (-)\nDescarga: (+) y (-)\nCeldas: 0V, 4.2V, 8.4V, 12.6V",
-        "datasheet": NaN
+        "datasheet": ""
     }
 ]
