@@ -8,13 +8,13 @@ function addToCart(productId, quantity) {
             if (existingProduct.quantity + quantity <= product.quantity) {
                 existingProduct.quantity += quantity;
             } else {
-                alert(`No hay más unidades disponibles para ${product.name}`);
+                alert(No hay más unidades disponibles para ${product.name});
             }
         } else {
             if (quantity <= product.quantity) {
                 cart.push({ id: product.id, name: product.name, price: product.price, quantity: quantity, image: product.images[0] });
             } else {
-                alert(`No hay más unidades disponibles para ${product.name}`);
+                alert(No hay más unidades disponibles para ${product.name});
             }
         }
         updateCart();
@@ -41,7 +41,7 @@ function updateCart() {
         cart.forEach(item => {
             total += item.price * item.quantity;
             itemCount += item.quantity;
-            cartList.innerHTML += `
+            cartList.innerHTML += 
                 <li>
                     <img src="${item.image}" alt="${item.name}">
                     <div class="item-controls">
@@ -50,10 +50,10 @@ function updateCart() {
                         <button onclick="addToCart(${item.id}, 1)">+</button>
                     </div>
                 </li>
-            `;
+            ;
         });
         totalElement.style.display = 'block';
-        totalElement.textContent = `Total: $${total % 1 === 0 ? total : total.toFixed(2)}`;
+        totalElement.textContent = Total: $${total % 1 === 0 ? total : total.toFixed(2)};
     }
 
     cartCounter.textContent = itemCount;
@@ -74,10 +74,10 @@ function removeFromCart(productId) {
 }
 
 function shareCart() {
-    const cartItems = cart.map(item => `${item.name} (Cantidad: ${item.quantity})`).join(', ');
-    const message = `Productos: ${cartItems}`;
+    const cartItems = cart.map(item => ${item.name} (Cantidad: ${item.quantity})).join(', ');
+    const message = Productos: ${cartItems};
     const phoneNumber = '+59897535096';
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const url = https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)};
     window.open(url, '_blank');
 }
 
@@ -86,8 +86,7 @@ function renderProducts(products) {
 
     products.forEach(product => {
         const img = new Image();
-        const imgSrc = product.images[0].toLowerCase(); // Convertir a minúsculas
-        img.src = imgSrc;
+        img.src = product.images[0];
 
         img.onload = () => {
             const productElement = document.createElement('div');
@@ -98,7 +97,7 @@ function renderProducts(products) {
             imageContainer.onclick = () => openProductModal(product.id);
 
             const imgElement = document.createElement('img');
-            imgElement.src = imgSrc; // Usar la ruta en minúsculas
+            imgElement.src = product.images[0];
             imgElement.alt = product.name;
             imgElement.dataset.index = 0;
 
@@ -157,7 +156,7 @@ function renderProducts(products) {
 
             const price = document.createElement('p');
             price.className = 'product-price';
-            price.textContent = `$${product.price % 1 === 0 ? product.price : product.price.toFixed(2)}`;
+            price.textContent = $${product.price % 1 === 0 ? product.price : product.price.toFixed(2)};
 
             const addToCartBtn = document.createElement('button');
             addToCartBtn.className = 'add-to-cart-btn';
@@ -177,11 +176,10 @@ function renderProducts(products) {
         };
 
         img.onerror = () => {
-            console.error(`No se pudo cargar la imagen para el producto ${product.name}`);
+            console.error(No se pudo cargar la imagen para el producto ${product.name});
         };
     });
 }
-
 
 
 function showPreviousImage(productId, imgElement) {
@@ -205,7 +203,7 @@ function showNextImage(productId, imgElement) {
 }
 
 function animateCartButton(productId) {
-    const productElement = document.querySelector(`.product img[src*='${products.find(p => p.id === productId).images[0]}']`).closest('.product');
+    const productElement = document.querySelector(.product img[src*='${products.find(p => p.id === productId).images[0]}']).closest('.product');
     const addToCartBtn = productElement.querySelector('.add-to-cart-btn');
     const cartAnimation = addToCartBtn.querySelector('.cart-animation');
 
@@ -236,7 +234,7 @@ function closeCartModal() {
 
 function openWhatsApp() {
     const phoneNumber = '+59897535096';
-    const url = `https://wa.me/${phoneNumber}`;
+    const url = https://wa.me/${phoneNumber};
     window.open(url, '_blank');
 }
 
