@@ -1,3 +1,4 @@
+const imageBaseUrl = 'https://www.microuniversos.com/Public/';
 const cart = [];
 
 function addToCart(productId, quantity) {
@@ -85,7 +86,6 @@ function shareCart() {
 
 function renderProducts(products) {
     const productsContainer = document.querySelector('.products-container');
-    const imageBaseUrl = 'https://www.microuniversos.com/Public/';
 
     products.forEach(product => {
         const img = new Image();
@@ -193,10 +193,11 @@ function showPreviousImage(productId, imgElement) {
     if (product) {
         let currentIndex = parseInt(imgElement.dataset.index, 10);
         const newIndex = (currentIndex - 1 + product.images.length) % product.images.length;
-        imgElement.src = `https://www.microuniversos.com/Public/${product.images[newIndex]}`;
+        imgElement.src = `${imageBaseUrl}${product.images[newIndex]}`;
         imgElement.dataset.index = newIndex;
     }
 }
+
 
 
 
@@ -205,7 +206,7 @@ function showNextImage(productId, imgElement) {
     if (product) {
         let currentIndex = parseInt(imgElement.dataset.index, 10);
         const newIndex = (currentIndex + 1) % product.images.length;
-        imgElement.src = `https://www.microuniversos.com/Public/${product.images[newIndex]}`;
+        imgElement.src = `${imageBaseUrl}${product.images[newIndex]}`;
         imgElement.dataset.index = newIndex;
     }
 }
@@ -259,7 +260,7 @@ function openProductModal(productId) {
         const productModalDescription = document.getElementById('product-modal-description');
         const productModalCode = document.getElementById('product-modal-code');
 
-        productModalImage.src = `${imageBaseUrl}${product.id}/${product.id}_${product.images[0].toLowerCase()}`;
+        productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
         productModalDescription.textContent = product.description || '';
 
         if (product.code) {
