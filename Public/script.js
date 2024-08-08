@@ -12,7 +12,7 @@ function addToCart(productId, quantity) {
             }
         } else {
             if (quantity <= product.quantity) {
-                cart.push({ id: product.id, name: product.name, price: product.price, quantity: quantity, image: product.images[0] });
+                cart.push({ id: product.id, name: product.name, price: product.price, quantity: quantity, image: product.images[0].toLowerCase() });
             } else {
                 alert(`No hay más unidades disponibles para ${product.name}`);
             }
@@ -22,6 +22,7 @@ function addToCart(productId, quantity) {
         animateCartIcon();
     }
 }
+
 
 function updateCart() {
     const cartList = document.querySelector('#cart-modal ul');
@@ -88,7 +89,7 @@ function renderProducts(products) {
         const img = new Image();
         const imgSrc = product.images[0].toLowerCase(); // Convertir a minúsculas
         img.src = imgSrc;
-
+        
         img.onload = () => {
             const productElement = document.createElement('div');
             productElement.className = 'product';
@@ -182,27 +183,29 @@ function renderProducts(products) {
     });
 }
 
-
+        
 
 function showPreviousImage(productId, imgElement) {
     const product = products.find(p => p.id === productId);
     if (product) {
         let currentIndex = parseInt(imgElement.dataset.index, 10);
         const newIndex = (currentIndex - 1 + product.images.length) % product.images.length;
-        imgElement.src = product.images[newIndex];
+        imgElement.src = product.images[newIndex].toLowerCase(); // Convertir a minúsculas
         imgElement.dataset.index = newIndex;
     }
 }
+
 
 function showNextImage(productId, imgElement) {
     const product = products.find(p => p.id === productId);
     if (product) {
         let currentIndex = parseInt(imgElement.dataset.index, 10);
         const newIndex = (currentIndex + 1) % product.images.length;
-        imgElement.src = product.images[newIndex];
+        imgElement.src = product.images[newIndex].toLowerCase(); // Convertir a minúsculas
         imgElement.dataset.index = newIndex;
     }
 }
+
 
 function animateCartButton(productId) {
     const productElement = document.querySelector(`.product img[src*='${products.find(p => p.id === productId).images[0]}']`).closest('.product');
