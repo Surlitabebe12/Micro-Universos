@@ -56,7 +56,7 @@
         "id": 9,
         "name": "KBPC5010",
         "price": 160.0,
-        "quantity": 14,
+        "quantity": 8,
         "images": [
             "Imagenes/9/9_1.png",
             "Imagenes/9/9_2.png",
@@ -270,6 +270,20 @@
         "description": "",
         "code": "El sensor Hall 49E es un dispositivo de efecto Hall que se utiliza para detectar la presencia de un campo magnético. Este sensor es ampliamente utilizado en aplicaciones de detección de velocidad, posición y corriente, así como en conmutadores sin contacto. A continuación se presenta un resumen técnico de sus características y especificaciones:\n\nCaracterísticas Principales\nTipo de Sensor: Sensor de efecto Hall lineal.\nRango de Operación de Campo Magnético: ±900 Gauss.\nSalida: Analógica.\nVoltaje de Operación: 4.5V a 6V.\nCorriente de Operación: 8mA (típica).\nSensibilidad: 1.4 mV/Gauss (típica).\nTemperatura de Operación: -40°C a +85°C.\nEmpaque: TO-92.\nEspecificaciones Eléctricas\nVoltaje de Alimentación (Vcc): 4.5V a 6V.\nCorriente de Consumo: 8mA.\nSalida de Voltaje en Condiciones Normales: Aproximadamente la mitad del voltaje de alimentación (Vcc/2).\nSensibilidad de Salida: Aproximadamente 1.4 mV/Gauss.\nAplicaciones Comunes\nDetección de Velocidad: En aplicaciones como tacómetros y velocímetros.\nDetección de Posición: Para identificar la posición de objetos en movimiento.\nDetección de Corriente: Usado en medidores de corriente sin contacto.\nConmutadores Sin Contacto: Para reemplazar interruptores mecánicos en diversas aplicaciones.\nSistemas de Encendido de Motores: Para detectar la posición del cigüeñal o el árbol de levas.\nVentajas\nAlta Sensibilidad: Permite detectar campos magnéticos muy débiles.\nSalida Lineal: Proporciona una salida analógica proporcional al campo magnético detectado.\nBajo Consumo de Energía: Ideal para aplicaciones de bajo consumo.\nOperación a Baja Tensión: Compatible con la mayoría de los sistemas electrónicos.\nFiabilidad y Durabilidad: Sin partes mecánicas que se desgasten.\nEsquema de Conexión\nEl sensor Hall 49E tiene tres pines:\n\nVcc: Voltaje de alimentación (4.5V a 6V).\nGND: Tierra.\nOUT: Salida analógica.",
         "datasheet": ""
+    },
+    {
+        "id": 30,
+        "name": "Esp32 Wifi Con Placa De Expansión último Modelo",
+        "price": 890.0,
+        "quantity": 8,
+        "images": [
+            "Imagenes/30/30_1.jpg",
+            "Imagenes/30/30_2.jpg",
+            "Imagenes/30/30_3.jpg"
+        ],
+        "description": "",
+        "code": "Gran Oportunidad para los amantes de la electrónica. Con la placa ESP32 de 38 pinos podrás hacer cualquier proyecto de microprocesadores sumándole la capacidad integrada de comunicación WIFI y/o bluetooth. Una joyita que cada vez está siendo más usada por grandes firmas. Junto con la placa viene su SHIELD para olvidarte del protoboard.",
+        "datasheet": "#include <WiFi.h>\\n\\n// Replace these with your WiFi network settings\\nconst char* ssid = \"your_SSID\";\\nconst char* password = \"your_PASSWORD\";\\n\\nvoid setup() {\\n  // Start the Serial communication\\n  Serial.begin(115200);\\n  delay(10);\\n\\n  // Start connecting to the WiFi network\\n  Serial.println();\\n  Serial.println(\"Connecting to WiFi...\");\\n  WiFi.begin(ssid, password);\\n\\n  // Wait until the ESP32 is connected to the WiFi network\\n  while (WiFi.status() != WL_CONNECTED) {\\n    delay(1000);\\n    Serial.print(\".\");\\n  }\\n\\n  // Print the ESP32's IP address\\n  Serial.println();\\n  Serial.println(\"Connected to WiFi network!\");\\n  Serial.print(\"IP address: \");\\n  Serial.println(WiFi.localIP());\\n}\\n\\nvoid loop() {\\n  // Nothing here\\n}"
     },
     {
         "id": 31,
@@ -767,7 +781,7 @@
         "id": 74,
         "name": "Módulo Rele temporizado",
         "price": 390.0,
-        "quantity": 6,
+        "quantity": 4,
         "images": [
             "Imagenes/74/74_1.jpg",
             "Imagenes/74/74_2.jpg"
@@ -856,7 +870,7 @@
         "id": 84,
         "name": "Grabadora Eeprom kit",
         "price": 990.0,
-        "quantity": 2,
+        "quantity": 1,
         "images": [],
         "description": "",
         "code": "",
@@ -1053,6 +1067,145 @@
         ],
         "description": "",
         "code": "Protege tus baterías de litio con el Módulo BMS 3S 60A, ideal para sistemas de 11.1V y 12.6V. Este módulo ofrece protección contra sobrecarga, sobredescarga, sobrecorriente y cortocircuitos. Equipado con MOSFETs de alta calidad, garantiza un rendimiento seguro y eficiente. Perfecto para aplicaciones de alta demanda como vehículos eléctricos, herramientas eléctricas y más.\n\nCaracterísticas:\n\nConfiguración: 3S (3 celdas en serie)\nCorriente de descarga: 60A\nProtección: Sobrecarga (4.2V por celda), Sobredescarga (2.5-3.0V por celda)\nAplicaciones: Baterías de litio para vehículos eléctricos, herramientas eléctricas, y más.\nDetalles de conexión\nCarga: (+) y (-)\nDescarga: (+) y (-)\nCeldas: 0V, 4.2V, 8.4V, 12.6V",
+        "datasheet": ""
+    },
+    {
+        "id": 100,
+        "name": "Módulo Expansor de I/O I2C PCA9548A 8 Canales HW-617\n\n",
+        "price": 220.0,
+        "quantity": 20,
+        "images": [
+            "Imagenes/100/100_1.jpg",
+            "Imagenes/100/100_2.jpg",
+            "Imagenes/100/100_3.jpg",
+            "Imagenes/100/100_4.jpg",
+            "Imagenes/100/100_5.jpg",
+            "Imagenes/100/100_6.jpg"
+        ],
+        "description": "",
+        "code": "Descripción eléctrica detallada:\nEste módulo expansor de I/O I2C basado en el PCA9548A es ideal para ampliar la cantidad de dispositivos I2C conectados a un microcontrolador. El PCA9548A permite la multiplexación de hasta 8 buses I2C independientes, proporcionando mayor flexibilidad en aplicaciones que requieren conectar múltiples sensores o dispositivos I2C sin conflictos de dirección.\n\nCaracterísticas principales:\n\nVoltaje de funcionamiento: 2.3V a 5.5V\nRango de temperatura de operación: -40°C a 85°C\nInterfaz: I2C\nMultiplexación: 8 canales I2C\nDirecciones I2C configurables: A través de los pines A0, A1 y A2\nConsumo de corriente: < 1mA en operación normal\nDimensiones: 27mm x 16mm\nCompatibilidad: Compatible con sistemas de 3.3V y 5V, ideal para proyectos con Arduino, Raspberry Pi, y otros microcontroladores.\nAplicaciones:\n\nAmpliación de puertos I2C en proyectos de automatización y control.\nIntegración de múltiples sensores en sistemas de adquisición de datos.\nDesarrollo de sistemas embebidos y prototipos con alta demanda de dispositivos I2C.",
+        "datasheet": "#include <Wire.h>\\n\\n// Dirección I2C del PCA9548A\\n#define PCA9548A_ADDRESS 0x70\\n\\nvoid setup() {\\n  Serial.begin(9600);\\n  Wire.begin(); // Iniciar el bus I2C\\n\\n  // Seleccionar el canal 0 del PCA9548A\\n  selectChannel(0);\\n  \\n  // Ejemplo de comunicación I2C con un dispositivo en el canal 0\\n  Wire.beginTransmission(0x40); // Dirección del dispositivo en el canal 0\\n  Wire.write(0x00); // Comando o registro a escribir\\n  Wire.endTransmission();\\n}\\n\\nvoid loop() {\\n  // Ejemplo: Leer datos de un sensor en el canal 0\\n  selectChannel(0);\\n  Wire.requestFrom(0x40, 2); // Solicitar 2 bytes del dispositivo en el canal 0\\n\\n  if (Wire.available() == 2) {\\n    int data = Wire.read() << 8 | Wire.read();\\n    Serial.println(data);\\n  }\\n\\n  delay(1000); // Esperar 1 segundo antes de leer nuevamente\\n}\\n\\n// Función para seleccionar el canal del PCA9548A\\nvoid selectChannel(uint8_t channel) {\\n  if (channel > 7) return; // Verificar que el canal esté en el rango 0-7\\n  Wire.beginTransmission(PCA9548A_ADDRESS);\\n  Wire.write(1 << channel); // Enviar la máscara del canal\\n  Wire.endTransmission();\\n}"
+    },
+    {
+        "id": 101,
+        "name": "Sensor de Efecto Hall 41F (x5)",
+        "price": 170.0,
+        "quantity": 12,
+        "images": [
+            "Imagenes/101/101_1.jpg",
+            "Imagenes/101/101_2.jpg",
+            "Imagenes/101/101_3.jpg",
+            "Imagenes/101/101_4.jpg",
+            "Imagenes/101/101_5.jpg"
+        ],
+        "description": "",
+        "code": "Descripción Detallada Eléctrica\nCaracterísticas Generales:\n\nModelo: 41F\nTipo: Sensor de Efecto Hall\nEncapsulado: TO-92\nConfiguración de Pines:\nPin 1: Vcc (Alimentación)\nPin 2: GND (Tierra)\nPin 3: Salida\nEspecificaciones Eléctricas:\n\nTensión de Alimentación (Vcc): 4.5V a 24V\nCorriente de Alimentación: Máx. 10 mA\nVoltaje de Salida: Niveles TTL\nTemperatura de Funcionamiento: -40°C a 125°C\nSensibilidad: 5 mT (miliTesla)\nFuncionamiento:\nEl sensor de efecto Hall 41F detecta la presencia de un campo magnético perpendicular al sensor. Cuando un campo magnético con una intensidad mínima de 5 mT se acerca al sensor, éste genera una señal de salida digital. La salida es un pulso cuadrado que cambia de estado (de bajo a alto) en presencia del campo magnético y regresa a su estado original cuando el campo desaparece.\n\nAplicaciones:\n\nDetectores de posición\nContadores de velocidad\nSensores de proximidad\nMedidores de flujo\nVentajas:\n\nAlta sensibilidad al campo magnético\nBajo consumo de energía\nSalida digital fácil de integrar con microcontroladores\nAmplio rango de voltaje de operación\nConexiones Típicas:\n\nConectar el pin 1 (Vcc) a la fuente de alimentación (4.5V a 24V).\nConectar el pin 2 (GND) a tierra.\nConectar el pin 3 (Salida) a un pin de entrada digital de un microcontrolador o a un circuito de lectura.",
+        "datasheet": ""
+    },
+    {
+        "id": 102,
+        "name": "Pantalla LED 0.36 pulgadas 3 hilos - Rojo",
+        "price": 130.0,
+        "quantity": 25,
+        "images": [
+            "Imagenes/102/102_1.jpg",
+            "Imagenes/102/102_2.jpg",
+            "Imagenes/102/102_3.jpg",
+            "Imagenes/102/102_4.jpg"
+        ],
+        "description": "",
+        "code": "Descripción detallada eléctrica\nDescripción del producto:\nPresentamos la Pantalla LED de 0.36 pulgadas con conexión de 3 hilos y color rojo, ideal para proyectos electrónicos y aplicaciones de medición. Este módulo de visualización es perfecto para mostrar valores numéricos de voltaje, corriente, temperatura, entre otros, de manera clara y precisa.\n\nCaracterísticas técnicas:\n\nTamaño de la pantalla: 0.36 pulgadas.\nColor del LED: Rojo.\nNúmero de dígitos: 3 dígitos.\nConexión: 3 hilos (positivo, negativo, señal).\nVoltaje de funcionamiento: 3.5V a 30V DC.\nConsumo de corriente: Menos de 20mA.\nPrecisión: ±1% (según el rango de medición y condiciones de operación).\nRango de medición de voltaje: 0 a 99.9V DC.\nRango de medición de corriente: Variable según configuración y resistencias shunt (no incluidas).\nEspecificaciones eléctricas:\n\nConexión de los hilos:\n\nRojo: Conexión al positivo de la fuente de alimentación.\nNegro: Conexión al negativo de la fuente de alimentación (tierra).\nBlanco (señal): Conexión a la señal de entrada a medir (voltaje o corriente).\nConfiguración de voltaje:\n\nPara medir voltaje, conecte el hilo blanco directamente al punto de medición.\nAsegúrese de que el voltaje de medición esté dentro del rango especificado (0-99.9V DC).\nConfiguración de corriente:\n\nPara medir corriente, es necesario usar una resistencia shunt adecuada (no incluida).\nLa señal de corriente se convierte en un voltaje proporcional a través de la resistencia shunt, el cual se mide por el módulo.\nConfigure el sistema para que el voltaje a través de la resistencia shunt no exceda el rango de medición del módulo.\nAplicaciones:\n\nMedición de voltaje en baterías, fuentes de alimentación, y sistemas de energía.\nMonitoreo de corriente en proyectos electrónicos.\nDisplay de valores en sistemas de control y automatización.\nVentajas:\n\nAlta visibilidad gracias a sus dígitos LED rojos.\nFácil instalación y conexión con solo 3 hilos.\nBajo consumo de energía y amplio rango de voltaje de operación.",
+        "datasheet": "// Define the pin for the signal input\\nconst int signalPin = A0;\\n\\n// Variables for storing voltage value\\nfloat voltage = 0.0;\\nint rawValue = 0;\\n\\nvoid setup() {\\n  // Initialize the serial communication\\n  Serial.begin(9600);\\n}\\n\\nvoid loop() {\\n  // Read the raw value from the analog pin\\n  rawValue = analogRead(signalPin);\\n  \\n  // Convert the raw value to voltage (assuming a 5V reference voltage)\\n  voltage = rawValue * (5.0 / 1023.0);\\n  \\n  // Print the voltage to the serial monitor\\n  Serial.print(\"Voltage: \");\\n  Serial.print(voltage);\\n  Serial.println(\" V\");\\n  \\n  // Wait for a while before taking the next reading\\n  delay(1000);\\n}"
+    },
+    {
+        "id": 103,
+        "name": "Pack de 5 Reguladores de Voltaje Ajustables LM317 - Alta Precisión y Fiabilidad",
+        "price": 160.0,
+        "quantity": 30,
+        "images": [
+            "Imagenes/103/103_1.jpg",
+            "Imagenes/103/103_2.jpg",
+            "Imagenes/103/103_3.jpg",
+            "Imagenes/103/103_4.jpg",
+            "Imagenes/103/103_5.jpg",
+            "Imagenes/103/103_6.jpg"
+        ],
+        "description": "",
+        "code": "Este paquete incluye 5 reguladores de voltaje ajustables LM317, ideales para tus proyectos electrónicos que requieren un control preciso del voltaje. El LM317 es un regulador de voltaje lineal que puede proporcionar una corriente de salida de hasta 1.5 A con un rango de voltaje de salida ajustable de 1.25 V a 37 V.\n\nCaracterísticas Técnicas:\nCorriente de Salida: Hasta 1.5 A\nRango de Voltaje de Salida: 1.25 V a 37 V\nProtección Contra Cortocircuitos: Incorporada para proteger tus circuitos\nRegulación de Voltaje de Precisión: Ajustable mediante un divisor de resistencia externo\nTemperatura de Operación: -55°C a +150°C\nCompensación de Térmica: Garantiza estabilidad y precisión en un amplio rango de temperaturas\nAplicaciones:\nFuentes de alimentación ajustables\nRegulación de voltaje para circuitos integrados\nSistemas de carga de baterías\nElectrónica de consumo y equipos industriales\nVentajas del Producto:\nAlta Fiabilidad: Fabricado con estándares de calidad para asegurar un rendimiento óptimo\nVersatilidad: Adecuado para una amplia gama de aplicaciones electrónicas\nProtección y Seguridad: Incluye protección contra sobrecargas y cortocircuitos",
+        "datasheet": ""
+    },
+    {
+        "id": 104,
+        "name": "Pack de 5 Reguladores de Voltaje L7805CV - 5V Estables y Fiables",
+        "price": 150.0,
+        "quantity": 30,
+        "images": [
+            "Imagenes/104/104_1.jpg",
+            "Imagenes/104/104_2.jpg",
+            "Imagenes/104/104_3.jpg",
+            "Imagenes/104/104_4.jpg",
+            "Imagenes/104/104_5.jpg"
+        ],
+        "description": "",
+        "code": "Este paquete incluye 5 reguladores de voltaje lineales L7805CV, perfectos para tus proyectos electrónicos que requieren un suministro de voltaje estable. El L7805CV es un regulador de voltaje fijo que proporciona una salida de 5V con una corriente de salida de hasta 1.5A.\n\nCaracterísticas Técnicas:\nTipo de Regulador: Fijo\nVoltaje de Entrada: 7V a 35V\nVoltaje de Salida: 5V\nCorriente Máxima de Salida: 1.5A\nProtección Contra Cortocircuitos: Incorporada para proteger tus circuitos\nTemperatura de Operación: -40°C a +125°C\nCompensación de Térmica: Garantiza estabilidad y precisión en un amplio rango de temperaturas\nAplicaciones:\nFuentes de alimentación para circuitos integrados\nSistemas de carga de baterías\nElectrónica de consumo y equipos industriales\nVentajas del Producto:\nAlta Fiabilidad: Fabricado con estándares de calidad para asegurar un rendimiento óptimo\nEstabilidad de Voltaje: Proporciona un voltaje constante de 5V, ideal para una amplia gama de aplicaciones\nProtección y Seguridad: Incluye protección contra sobrecargas y cortocircuitos",
+        "datasheet": ""
+    },
+    {
+        "id": 105,
+        "name": "Pack de 10 Sensores Táctiles Capacitivos TTP223 Módulo Rojo",
+        "price": 240.0,
+        "quantity": 10,
+        "images": [
+            "Imagenes/105/105_1.jpg",
+            "Imagenes/105/105_2.jpg",
+            "Imagenes/105/105_3.jpg"
+        ],
+        "description": "",
+        "code": "Descripción Detallada Eléctrica\nCaracterísticas:\n\nModelo: TTP223\nTipo de Sensor: Sensor Táctil Capacitivo\nCantidad: Pack de 10 módulos\nVoltaje de Operación (VCC): 2.0V a 5.5V\nConsumo de Corriente: Baja corriente de reposo < 1.5µA\nSalida: Alta a 5V y baja a 0V\nTiempo de Respuesta: ~220 ms en modo táctil y ~60 ms en modo rápido\nTemperatura de Operación: -30°C a 70°C\nInterfaz: 3 pines (VCC, GND, I/O)\nDimensiones: 11mm x 15mm\nDescripción:\n\nEl TTP223 es un módulo sensor táctil capacitivo que utiliza la tecnología táctil capacitiva para detectar la proximidad y el toque. Este pack de 10 módulos es ideal para proyectos de electrónica que requieren una interfaz táctil simple y efectiva.\n\nConexiones:\n\nVCC: Conectar al voltaje de operación (2.0V - 5.5V)\nGND: Conectar a tierra\nI/O: Pin de salida digital, cambia de estado al detectar un toque\nAplicaciones:\n\nInterruptores táctiles para proyectos DIY\nReemplazo de botones mecánicos en dispositivos electrónicos\nControles táctiles en sistemas embebidos\nProyectos interactivos con Arduino y otras plataformas\nVentajas:\n\nAlta sensibilidad: Detecta toques ligeros con precisión\nBajo consumo de energía: Ideal para dispositivos portátiles y de bajo consumo\nCompacto y fácil de usar: Perfecto para integrarse en proyectos con espacio limitado\nModo de Operación:\nEl TTP223 opera en dos modos, el modo táctil normal y el modo rápido. En el modo táctil normal, el tiempo de respuesta es de aproximadamente 220 ms, adecuado para la mayoría de las aplicaciones táctiles. En el modo rápido, el tiempo de respuesta es de aproximadamente 60 ms, adecuado para aplicaciones que requieren una respuesta inmediata.",
+        "datasheet": "// Define el pin de entrada del sensor táctil\\nconst int touchPin = 2; // Conectar el pin I/O del TTP223 al pin digital 2 del Arduino\\nconst int ledPin = 13;  // Conectar un LED al pin digital 13 del Arduino (opcional)\\n\\nvoid setup() {\\n  // Configura el pin del sensor táctil como entrada\\n  pinMode(touchPin, INPUT);\\n  // Configura el pin del LED como salida\\n  pinMode(ledPin, OUTPUT);\\n  // Inicializa la comunicación serial para el monitoreo\\n  Serial.begin(9600);\\n}\\n\\nvoid loop() {\\n  // Lee el estado del sensor táctil\\n  int touchState = digitalRead(touchPin);\\n\\n  // Si se detecta un toque\\n  if (touchState == HIGH) {\\n    // Enciende el LED\\n    digitalWrite(ledPin, HIGH);\\n    // Imprime un mensaje en el monitor serial\\n    Serial.println(\"Tacto detectado\");\\n  } else {\\n    // Apaga el LED\\n    digitalWrite(ledPin, LOW);\\n  }\\n\\n  // Pequeña demora para evitar lecturas erróneas\\n  delay(50);\\n}"
+    },
+    {
+        "id": 106,
+        "name": "Modulo ADC 16bit ADS1115 con Interfaz I2C y PGA",
+        "price": 270.0,
+        "quantity": 15,
+        "images": [
+            "Imagenes/106/106_1.jpg",
+            "Imagenes/106/106_2.jpg",
+            "Imagenes/106/106_3.jpg"
+        ],
+        "description": "",
+        "code": "Descripción Detallada Eléctrica\nCaracterísticas:\n\nModelo: ADS1115\nTipo de Convertidor: ADC (Analog to Digital Converter) de 16 bits\nInterfaz de Comunicación: I2C\nResolución: 16 bits\nRango de Voltaje de Entrada: 2.0V a 5.5V\nVoltaje de Referencia: Interna (2.048V) o externa\nFrecuencia de Reloj: 860 muestras por segundo (SPS) máx.\nGanancia Programable (PGA): 2/3x a 16x\nCanales de Entrada: 4 canales de entrada individuales o 2 diferenciales\nDirección I2C: Configurable, hasta 4 direcciones posibles\nConsumo de Corriente: Menos de 150µA en modo operativo, menos de 1µA en modo de apagado\nDimensiones: 25mm x 20mm\nConexiones:\n\nVDD: Alimentación (2.0V a 5.5V)\nGND: Tierra\nSCL: Línea de reloj del bus I2C\nSDA: Línea de datos del bus I2C\nADDR: Pin de selección de dirección I2C\nALRT: Pin de alerta\nA0, A1, A2, A3: Entradas analógicas\nDescripción:\n\nEl ADS1115 es un convertidor analógico a digital de 16 bits con interfaz I2C y amplificador de ganancia programable (PGA), ideal para aplicaciones que requieren alta resolución y precisión en la conversión de señales analógicas a digitales. Este módulo es capaz de medir señales analógicas desde cuatro canales individuales o dos diferenciales.\n\nAplicaciones Típicas:\n\nSensores Analógicos: Medición precisa de señales de sensores analógicos como temperatura, presión, luz, etc.\nAdquisición de Datos: Uso en sistemas de adquisición de datos donde se requiere alta resolución.\nInstrumentación: Aplicaciones de instrumentación que necesitan alta precisión y fiabilidad.\nAutomatización Industrial: Control y monitoreo en procesos industriales.\nVentajas:\n\nAlta Precisión: Con una resolución de 16 bits, el ADS1115 proporciona mediciones extremadamente precisas.\nInterfaz I2C: Facilita la comunicación con microcontroladores y otros dispositivos I2C.\nAmplificador de Ganancia Programable: Permite ajustar la ganancia para mejorar la precisión en mediciones de señales de bajo nivel.\nBajo Consumo de Energía: Ideal para aplicaciones alimentadas por baterías gracias a su bajo consumo de corriente.\nModo de Operación:\n\nEl ADS1115 puede configurarse para operar en modo continuo o modo de una sola toma. En modo continuo, realiza conversiones de forma continua a la frecuencia de muestreo seleccionada. En modo de una sola toma, realiza una conversión y luego entra en modo de apagado, reduciendo el consumo de energía.\n\nEste módulo es una excelente opción para proyectos de electrónica que requieren una conversión precisa y confiable de señales analógicas a digitales.",
+        "datasheet": "#include <Wire.h>\\n#include <Adafruit_ADS1015.h>\\n\\n// Crear una instancia del ADS1115\\nAdafruit_ADS1115 ads;\\n\\nvoid setup(void) {\\n  Serial.begin(9600);\\n  Serial.println(\"Inicializando ADS1115...\");\\n\\n  // Inicializar el ADS1115\\n  ads.begin();\\n}\\n\\nvoid loop(void) {\\n  // Leer valores de los cuatro canales\\n  int16_t adc0, adc1, adc2, adc3;\\n\\n  adc0 = ads.readADC_SingleEnded(0);\\n  adc1 = ads.readADC_SingleEnded(1);\\n  adc2 = ads.readADC_SingleEnded(2);\\n  adc3 = ads.readADC_SingleEnded(3);\\n\\n  // Convertir los valores a voltaje\\n  float volts0, volts1, volts2, volts3;\\n  \\n  volts0 = adc0 * 0.1875 / 1000;\\n  volts1 = adc1 * 0.1875 / 1000;\\n  volts2 = adc2 * 0.1875 / 1000;\\n  volts3 = adc3 * 0.1875 / 1000;\\n\\n  // Imprimir los valores leídos en el monitor serie\\n  Serial.print(\"ADC0: \"); Serial.print(adc0); Serial.print(\" | Voltaje0: \"); Serial.print(volts0); Serial.println(\" V\");\\n  Serial.print(\"ADC1: \"); Serial.print(adc1); Serial.print(\" | Voltaje1: \"); Serial.print(volts1); Serial.println(\" V\");\\n  Serial.print(\"ADC2: \"); Serial.print(adc2); Serial.print(\" | Voltaje2: \"); Serial.print(volts2); Serial.println(\" V\");\\n  Serial.print(\"ADC3: \"); Serial.print(adc3); Serial.print(\" | Voltaje3: \"); Serial.print(volts3); Serial.println(\" V\");\\n\\n  Serial.println(\"---------------------------------------------------\");\\n\\n  // Pequeña demora antes de la próxima lectura\\n  delay(1000);\\n}"
+    },
+    {
+        "id": 107,
+        "name": "Módulo Multiplexor 16 Canales CD74HC4067",
+        "price": 180.0,
+        "quantity": 30,
+        "images": [
+            "Imagenes/107/107_1.jpg",
+            "Imagenes/107/107_2.jpg",
+            "Imagenes/107/107_3.jpg",
+            "Imagenes/107/107_4.jpg",
+            "Imagenes/107/107_5.jpg",
+            "Imagenes/107/107_6.jpg"
+        ],
+        "description": "",
+        "code": "Descripción Detallada Eléctrica\nCaracterísticas:\n\nModelo: CD74HC4067\nTipo de Componente: Multiplexor/Desmultiplexor Analógico-Digital de 16 Canales\nVoltaje de Operación (VCC): 2V a 6V\nCorriente de Operación: Máximo 1µA a 6V\nRango de Temperatura de Operación: -55°C a 125°C\nResistencia en Estado ON (Ron): 70 ohmios a 5V\nTiempo de Propagación: 14 ns a 5V\nConfiguración de Pines:\nS0, S1, S2, S3: Pines de selección de canal\nEN: Pin de habilitación (activo en bajo)\nSIG: Pin común para la señal multiplexada\nC0-C15: 16 canales de entrada/salida\nVCC: Voltaje de alimentación\nGND: Tierra\nDimensiones: 35mm x 25mm\nDescripción:\n\nEl CD74HC4067 es un multiplexor/demultiplexor analógico-digital de alta velocidad con 16 canales de entrada/salida que se pueden controlar mediante una interfaz de selección de 4 bits. Este módulo es ideal para expandir las entradas y salidas de tu microcontrolador, permitiendo la conexión de múltiples sensores, interruptores o señales a un solo pin de entrada/salida.\n\nAplicaciones Típicas:\n\nExpansión de Entradas/Salidas: Ideal para proyectos que requieren la conexión de múltiples dispositivos a un solo microcontrolador.\nAdquisición de Datos: Permite la lectura de múltiples sensores analógicos con un solo pin de entrada.\nSelección de Señales: Útil en sistemas de conmutación de señales analógicas y digitales.\nAutomatización: Control de múltiples dispositivos en proyectos de automatización y robótica.\nVentajas:\n\nAlta Velocidad: Tiempo de propagación rápido, adecuado para aplicaciones que requieren cambios rápidos de canal.\nBajo Consumo de Energía: Ideal para proyectos alimentados por batería.\nBaja Resistencia ON: Proporciona una baja pérdida de señal.\nCompatibilidad: Compatible con una amplia gama de microcontroladores.",
+        "datasheet": "#include <Arduino.h>\\n\\n// Definir los pines de selección del canal\\nconst int s0 = 2;\\nconst int s1 = 3;\\nconst int s2 = 4;\\nconst int s3 = 5;\\n\\n// Definir el pin de habilitación (activo en bajo)\\nconst int en = 6;\\n\\n// Definir el pin de señal común\\nconst int sig = A0;\\n\\nvoid setup() {\\n  // Configurar los pines de selección y habilitación como salidas\\n  pinMode(s0, OUTPUT);\\n  pinMode(s1, OUTPUT);\\n  pinMode(s2, OUTPUT);\\n  pinMode(s3, OUTPUT);\\n  pinMode(en, OUTPUT);\\n\\n  // Configurar el pin de señal como entrada\\n  pinMode(sig, INPUT);\\n\\n  // Deshabilitar el multiplexor inicialmente\\n  digitalWrite(en, HIGH);\\n\\n  // Iniciar la comunicación serie para el monitoreo\\n  Serial.begin(9600);\\n}\\n\\nvoid loop() {\\n  // Habilitar el multiplexor\\n  digitalWrite(en, LOW);\\n\\n  // Leer cada uno de los 16 canales\\n  for (int channel = 0; channel < 16; channel++) {\\n    // Seleccionar el canal configurando los pines de selección\\n    digitalWrite(s0, channel & 0x01);\\n    digitalWrite(s1, (channel >> 1) & 0x01);\\n    digitalWrite(s2, (channel >> 2) & 0x01);\\n    digitalWrite(s3, (channel >> 3) & 0x01);\\n\\n    // Leer el valor analógico del canal seleccionado\\n    int value = analogRead(sig);\\n\\n    // Imprimir el canal y el valor leído\\n    Serial.print(\"Canal \");\\n    Serial.print(channel);\\n    Serial.print(\": \");\\n    Serial.println(value);\\n\\n    // Esperar un poco antes de leer el siguiente canal\\n    delay(100);\\n  }\\n\\n  // Deshabilitar el multiplexor para ahorrar energía\\n  digitalWrite(en, HIGH);\\n\\n  // Esperar un segundo antes de la siguiente lectura\\n  delay(1000);\\n}"
+    },
+    {
+        "id": 108,
+        "name": "Transistor MOSFET de Potencia IRFP250N N-Channel 200V 30A",
+        "price": 150.0,
+        "quantity": 15,
+        "images": [
+            "Imagenes/108/108_1.jpg",
+            "Imagenes/108/108_2.jpg"
+        ],
+        "description": "",
+        "code": "Descripción Detallada Eléctrica\nCaracterísticas:\n\nModelo: IRFP250N\nTipo de Transistor: MOSFET de Potencia de Canal N\nVoltaje de Drenaje-Fuente (Vds): 200V\nCorriente de Drenaje (Id): 30A\nVoltaje de Puerta-Umbral (Vgs(th)): 2V - 4V\nResistencia de Encendido (Rds(on)): 0.075 ohmios\nCapacidad de Carga de la Puerta (Qg): 230nC\nDisipación de Potencia (Pd): 200W\nTemperatura de Operación: -55°C a 175°C\nEncapsulado: TO-247\nDescripción:\n\nEl IRFP250N es un transistor MOSFET de potencia de canal N, diseñado para manejar altas corrientes y voltajes, ideal para aplicaciones de conmutación y amplificación de potencia. Este MOSFET es conocido por su baja resistencia de encendido, alta capacidad de manejo de corriente y rápida velocidad de conmutación, lo que lo hace adecuado para diversas aplicaciones electrónicas de alta potencia.\n\nAplicaciones Típicas:\n\nFuentes de Alimentación Conmutadas: Utilizado en fuentes de alimentación conmutadas (SMPS) debido a su alta eficiencia y capacidad de manejo de potencia.\nControl de Motores: Adecuado para aplicaciones de control de motores en sistemas de automatización y robótica.\nAmplificadores de Potencia: Utilizado en amplificadores de audio de alta potencia y otros sistemas de amplificación.\nInversores y Convertidores: Ideal para inversores de energía y convertidores DC-DC.\nProtección de Sobrecorriente: Aplicado en circuitos de protección para evitar daños por sobrecorriente.\nVentajas:\n\nBaja Resistencia de Encendido: Minimiza las pérdidas de conducción, aumentando la eficiencia del circuito.\nAlta Capacidad de Manejo de Corriente: Capaz de manejar hasta 30A, adecuado para aplicaciones de alta corriente.\nRápida Velocidad de Conmutación: Reduce las pérdidas de conmutación, mejorando la eficiencia energética.\nAlta Disipación de Potencia: Puede disipar hasta 200W, proporcionando una mayor fiabilidad en aplicaciones de alta potencia.\nConexiones:\nDrenaje (Drain): Conectar al voltaje de carga\nFuente (Source): Conectar a tierra\nPuerta (Gate): Conectar al controlador de señal",
         "datasheet": ""
     }
 ]
