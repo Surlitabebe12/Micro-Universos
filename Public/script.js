@@ -85,109 +85,106 @@ function shareCart() {
 
 function renderProducts(products) {
     const productsContainer = document.querySelector('.products-container');
-    const imageBaseUrl = 'https://www.microuniversos.com/Public/imagenes/';
+    const imageBaseUrl = 'https://www.microuniversos.com/Public/';
 
     products.forEach(product => {
-        if (product.images && product.images.length > 0) {
-            const img = new Image();
-            const imgSrc = `${imageBaseUrl}${product.id}/${product.id}_${product.images[0].toLowerCase()}`;
-            img.src = imgSrc;
+        const img = new Image();
+        const imgSrc = `${imageBaseUrl}${product.images[0]}`; // Utilizar la primera imagen del array
+        img.src = imgSrc;
 
-            img.onload = () => {
-                const productElement = document.createElement('div');
-                productElement.className = 'product';
+        img.onload = () => {
+            const productElement = document.createElement('div');
+            productElement.className = 'product';
 
-                const imageContainer = document.createElement('div');
-                imageContainer.className = 'image-container';
-                imageContainer.onclick = () => openProductModal(product.id);
+            const imageContainer = document.createElement('div');
+            imageContainer.className = 'image-container';
+            imageContainer.onclick = () => openProductModal(product.id);
 
-                const imgElement = document.createElement('img');
-                imgElement.src = imgSrc;
-                imgElement.alt = product.name;
-                imgElement.dataset.index = 0;
+            const imgElement = document.createElement('img');
+            imgElement.src = imgSrc;
+            imgElement.alt = product.name;
+            imgElement.dataset.index = 0;
 
-                const arrowLeft = document.createElement('button');
-                arrowLeft.className = 'arrow arrow-left';
-                arrowLeft.innerHTML = '&lt;';
-                arrowLeft.onclick = (e) => {
-                    e.stopPropagation();
-                    showPreviousImage(product.id, imgElement);
-                };
-
-                const arrowRight = document.createElement('button');
-                arrowRight.className = 'arrow arrow-right';
-                arrowRight.innerHTML = '&gt;';
-                arrowRight.onclick = (e) => {
-                    e.stopPropagation();
-                    showNextImage(product.id, imgElement);
-                };
-
-                imageContainer.appendChild(imgElement);
-                imageContainer.appendChild(arrowLeft);
-                imageContainer.appendChild(arrowRight);
-
-                const name = document.createElement('p');
-                name.className = 'product-name';
-                name.textContent = product.name;
-
-                const quantityContainer = document.createElement('div');
-                quantityContainer.className = 'quantity-container';
-
-                const quantityInput = document.createElement('input');
-                quantityInput.type = 'number';
-                quantityInput.min = 1;
-                quantityInput.max = product.quantity;
-                quantityInput.value = 1;
-
-                const incrementButton = document.createElement('button');
-                incrementButton.textContent = '+';
-                incrementButton.onclick = () => {
-                    if (quantityInput.value < product.quantity) {
-                        quantityInput.value = parseInt(quantityInput.value) + 1;
-                    }
-                };
-
-                const decrementButton = document.createElement('button');
-                decrementButton.textContent = '-';
-                decrementButton.onclick = () => {
-                    if (quantityInput.value > 1) {
-                        quantityInput.value = parseInt(quantityInput.value) - 1;
-                    }
-                };
-
-                quantityContainer.appendChild(decrementButton);
-                quantityContainer.appendChild(quantityInput);
-                quantityContainer.appendChild(incrementButton);
-
-                const price = document.createElement('p');
-                price.className = 'product-price';
-                price.textContent = `$${product.price % 1 === 0 ? product.price : product.price.toFixed(2)}`;
-
-                const addToCartBtn = document.createElement('button');
-                addToCartBtn.className = 'add-to-cart-btn';
-                addToCartBtn.innerHTML = 'Al carrito<span class="cart-animation"></span>';
-                addToCartBtn.onclick = (e) => {
-                    e.stopPropagation();
-                    addToCart(product.id, parseInt(quantityInput.value));
-                };
-
-                productElement.appendChild(imageContainer);
-                productElement.appendChild(name);
-                productElement.appendChild(price);
-                productElement.appendChild(quantityContainer);
-                productElement.appendChild(addToCartBtn);
-
-                productsContainer.appendChild(productElement);
+            const arrowLeft = document.createElement('button');
+            arrowLeft.className = 'arrow arrow-left';
+            arrowLeft.innerHTML = '&lt;';
+            arrowLeft.onclick = (e) => {
+                e.stopPropagation();
+                showPreviousImage(product.id, imgElement);
             };
 
-            img.onerror = () => {
-                console.error(`No se pudo cargar la imagen para el producto ${product.name}`);
+            const arrowRight = document.createElement('button');
+            arrowRight.className = 'arrow arrow-right';
+            arrowRight.innerHTML = '&gt;';
+            arrowRight.onclick = (e) => {
+                e.stopPropagation();
+                showNextImage(product.id, imgElement);
             };
-        } else {
-            console.warn(`El producto ${product.name} no tiene imágenes definidas.`);
-        }
+
+            imageContainer.appendChild(imgElement);
+            imageContainer.appendChild(arrowLeft);
+            imageContainer.appendChild(arrowRight);
+
+            const name = document.createElement('p');
+            name.className = 'product-name';
+            name.textContent = product.name;
+
+            const quantityContainer = document.createElement('div');
+            quantityContainer.className = 'quantity-container';
+
+            const quantityInput = document.createElement('input');
+            quantityInput.type = 'number';
+            quantityInput.min = 1;
+            quantityInput.max = product.quantity;
+            quantityInput.value = 1;
+
+            const incrementButton = document.createElement('button');
+            incrementButton.textContent = '+';
+            incrementButton.onclick = () => {
+                if (quantityInput.value < product.quantity) {
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                }
+            };
+
+            const decrementButton = document.createElement('button');
+            decrementButton.textContent = '-';
+            decrementButton.onclick = () => {
+                if (quantityInput.value > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                }
+            };
+
+            quantityContainer.appendChild(decrementButton);
+            quantityContainer.appendChild(quantityInput);
+            quantityContainer.appendChild(incrementButton);
+
+            const price = document.createElement('p');
+            price.className = 'product-price';
+            price.textContent = `$${product.price % 1 === 0 ? product.price : product.price.toFixed(2)}`;
+
+            const addToCartBtn = document.createElement('button');
+            addToCartBtn.className = 'add-to-cart-btn';
+            addToCartBtn.innerHTML = 'Al carrito<span class="cart-animation"></span>';
+            addToCartBtn.onclick = (e) => {
+                e.stopPropagation();
+                addToCart(product.id, parseInt(quantityInput.value));
+            };
+
+            productElement.appendChild(imageContainer);
+            productElement.appendChild(name);
+            productElement.appendChild(price);
+            productElement.appendChild(quantityContainer);
+            productElement.appendChild(addToCartBtn);
+
+            productsContainer.appendChild(productElement);
+        };
+
+        img.onerror = () => {
+            console.error(`No se pudo cargar la imagen para el producto ${product.name}`);
+        };
     });
 }
+
 
 
 
@@ -196,10 +193,11 @@ function showPreviousImage(productId, imgElement) {
     if (product) {
         let currentIndex = parseInt(imgElement.dataset.index, 10);
         const newIndex = (currentIndex - 1 + product.images.length) % product.images.length;
-        imgElement.src = `${imageBaseUrl}${product.id}/${product.id}_${product.images[newIndex].toLowerCase()}`;
+        imgElement.src = `https://www.microuniversos.com/Public/${product.images[newIndex]}`;
         imgElement.dataset.index = newIndex;
     }
 }
+
 
 
 function showNextImage(productId, imgElement) {
@@ -207,10 +205,11 @@ function showNextImage(productId, imgElement) {
     if (product) {
         let currentIndex = parseInt(imgElement.dataset.index, 10);
         const newIndex = (currentIndex + 1) % product.images.length;
-        imgElement.src = `${imageBaseUrl}${product.id}/${product.id}_${product.images[newIndex].toLowerCase()}`;
+        imgElement.src = `https://www.microuniversos.com/Public/${product.images[newIndex]}`;
         imgElement.dataset.index = newIndex;
     }
 }
+
 
 
 
