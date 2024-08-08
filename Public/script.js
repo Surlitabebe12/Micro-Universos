@@ -8,13 +8,13 @@ function addToCart(productId, quantity) {
             if (existingProduct.quantity + quantity <= product.quantity) {
                 existingProduct.quantity += quantity;
             } else {
-                alert(No hay más unidades disponibles para ${product.name});
+                alert(`No hay más unidades disponibles para ${product.name}`);
             }
         } else {
             if (quantity <= product.quantity) {
                 cart.push({ id: product.id, name: product.name, price: product.price, quantity: quantity, image: product.images[0] });
             } else {
-                alert(No hay más unidades disponibles para ${product.name});
+                alert(`No hay más unidades disponibles para ${product.name}`);
             }
         }
         updateCart();
@@ -22,6 +22,7 @@ function addToCart(productId, quantity) {
         animateCartIcon();
     }
 }
+
 
 function updateCart() {
     const cartList = document.querySelector('#cart-modal ul');
@@ -41,7 +42,7 @@ function updateCart() {
         cart.forEach(item => {
             total += item.price * item.quantity;
             itemCount += item.quantity;
-            cartList.innerHTML += 
+            cartList.innerHTML += `
                 <li>
                     <img src="${item.image}" alt="${item.name}">
                     <div class="item-controls">
@@ -50,15 +51,16 @@ function updateCart() {
                         <button onclick="addToCart(${item.id}, 1)">+</button>
                     </div>
                 </li>
-            ;
+            `;
         });
         totalElement.style.display = 'block';
-        totalElement.textContent = Total: $${total % 1 === 0 ? total : total.toFixed(2)};
+        totalElement.textContent = `Total: $${total % 1 === 0 ? total : total.toFixed(2)}`;
     }
 
     cartCounter.textContent = itemCount;
     animateCartIcon();
 }
+
 
 
 function removeFromCart(productId) {
