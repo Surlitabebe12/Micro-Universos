@@ -90,7 +90,7 @@ function renderProducts(products) {
     products.forEach(product => {
         if (product.images && product.images.length > 0) {
             const img = new Image();
-            const imgSrc = `${imageBaseUrl}${product.id}/${product.images[0].toLowerCase()}`; // Convertir a minúsculas y construir la ruta
+            const imgSrc = `${imageBaseUrl}${product.id}/${product.id}_${product.images[0].toLowerCase()}`; // Construir la ruta según el ejemplo proporcionado
             img.src = imgSrc;
 
             img.onload = () => {
@@ -102,7 +102,7 @@ function renderProducts(products) {
                 imageContainer.onclick = () => openProductModal(product.id);
 
                 const imgElement = document.createElement('img');
-                imgElement.src = imgSrc; // Usar la ruta en minúsculas
+                imgElement.src = imgSrc;
                 imgElement.alt = product.name;
                 imgElement.dataset.index = 0;
 
@@ -188,6 +188,7 @@ function renderProducts(products) {
         }
     });
 }
+
 
 
         
