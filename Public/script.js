@@ -86,7 +86,8 @@ function renderProducts(products) {
 
     products.forEach(product => {
         const img = new Image();
-        img.src = product.images[0];
+        const imgSrc = product.images[0].toLowerCase(); // Convertir a minúsculas
+        img.src = imgSrc;
 
         img.onload = () => {
             const productElement = document.createElement('div');
@@ -97,7 +98,7 @@ function renderProducts(products) {
             imageContainer.onclick = () => openProductModal(product.id);
 
             const imgElement = document.createElement('img');
-            imgElement.src = product.images[0];
+            imgElement.src = imgSrc; // Usar la ruta en minúsculas
             imgElement.alt = product.name;
             imgElement.dataset.index = 0;
 
@@ -182,6 +183,7 @@ function renderProducts(products) {
 }
 
 
+
 function showPreviousImage(productId, imgElement) {
     const product = products.find(p => p.id === productId);
     if (product) {
@@ -245,37 +247,20 @@ function openProductModal(productId) {
         const productModalImage = document.getElementById('product-modal-image');
         const productModalDescription = document.getElementById('product-modal-description');
         const productModalCode = document.getElementById('product-modal-code');
-        const modalTitle = document.getElementById('product-modal-title'); // Nuevo elemento para el título
 
         productModalImage.src = product.images[0];
-
-        // Use innerHTML to keep text formatting and apply .small-description style class
-        const formattedDescription = product.description
-            ? product.description.replace(/\n/g, '<br>')
-            : '';
-        productModalDescription.innerHTML = formattedDescription 
-            ? `<span class="small-description">${formattedDescription}</span>` 
-            : '';
+        productModalDescription.textContent = product.description || '';
 
         if (product.code) {
-            // Use <pre> to preserve the formatting of the code
-            const formattedCode = product.code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            productModalCode.innerHTML = `<pre><code>${formattedCode}</code></pre>`;
+            productModalCode.textContent = product.code;
             productModalCode.style.display = 'block';
-            productModalCode.querySelector('code').style.backgroundColor = '#000';
-            hljs.highlightElement(productModalCode.querySelector('code'));
         } else {
             productModalCode.style.display = 'none';
         }
-        modalTitle.textContent = product.name; // Establecer el nombre del producto como título
+
         productModal.style.display = 'block';
     }
 }
-
-
-
-
-
 
 function closeProductModal() {
     const productModal = document.getElementById('product-modal');
