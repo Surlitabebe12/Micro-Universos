@@ -1,7 +1,7 @@
 const cart = [];
 
 function addToCart(productId, quantity) {
-    const product = products.find(p => p.id === productId);
+    const product = window.products.find(p => p.id === productId);
     if (product) {
         const existingProduct = cart.find(item => item.id === productId);
         if (existingProduct) {
@@ -73,6 +73,7 @@ function removeFromCart(productId) {
         updateCart();
     }
 }
+
 
 function shareCart() {
     const cartItems = cart.map(item => `${item.name} (Cantidad: ${item.quantity})`).join(', ');
@@ -186,25 +187,27 @@ function renderProducts(products) {
         
 
 function showPreviousImage(productId, imgElement) {
-    const product = products.find(p => p.id === productId);
+    const product = window.products.find(p => p.id === productId);
     if (product) {
         let currentIndex = parseInt(imgElement.dataset.index, 10);
         const newIndex = (currentIndex - 1 + product.images.length) % product.images.length;
-        imgElement.src = product.images[newIndex].toLowerCase(); // Convertir a minúsculas
+        imgElement.src = product.images[newIndex].toLowerCase();
         imgElement.dataset.index = newIndex;
     }
 }
+
 
 
 function showNextImage(productId, imgElement) {
-    const product = products.find(p => p.id === productId);
+    const product = window.products.find(p => p.id === productId);
     if (product) {
         let currentIndex = parseInt(imgElement.dataset.index, 10);
         const newIndex = (currentIndex + 1) % product.images.length;
-        imgElement.src = product.images[newIndex].toLowerCase(); // Convertir a minúsculas
+        imgElement.src = product.images[newIndex].toLowerCase();
         imgElement.dataset.index = newIndex;
     }
 }
+
 
 
 function animateCartButton(productId) {
@@ -244,7 +247,7 @@ function openWhatsApp() {
 }
 
 function openProductModal(productId) {
-    const product = products.find(p => p.id === productId);
+    const product = window.products.find(p => p.id === productId);
     if (product) {
         const productModal = document.getElementById('product-modal');
         const productModalImage = document.getElementById('product-modal-image');
@@ -264,6 +267,7 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
+
 
 function closeProductModal() {
     const productModal = document.getElementById('product-modal');
