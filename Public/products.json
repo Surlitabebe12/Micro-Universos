@@ -1207,5 +1207,117 @@
         "description": "",
         "code": "Descripción Detallada Eléctrica\nCaracterísticas:\n\nModelo: IRFP250N\nTipo de Transistor: MOSFET de Potencia de Canal N\nVoltaje de Drenaje-Fuente (Vds): 200V\nCorriente de Drenaje (Id): 30A\nVoltaje de Puerta-Umbral (Vgs(th)): 2V - 4V\nResistencia de Encendido (Rds(on)): 0.075 ohmios\nCapacidad de Carga de la Puerta (Qg): 230nC\nDisipación de Potencia (Pd): 200W\nTemperatura de Operación: -55°C a 175°C\nEncapsulado: TO-247\nDescripción:\n\nEl IRFP250N es un transistor MOSFET de potencia de canal N, diseñado para manejar altas corrientes y voltajes, ideal para aplicaciones de conmutación y amplificación de potencia. Este MOSFET es conocido por su baja resistencia de encendido, alta capacidad de manejo de corriente y rápida velocidad de conmutación, lo que lo hace adecuado para diversas aplicaciones electrónicas de alta potencia.\n\nAplicaciones Típicas:\n\nFuentes de Alimentación Conmutadas: Utilizado en fuentes de alimentación conmutadas (SMPS) debido a su alta eficiencia y capacidad de manejo de potencia.\nControl de Motores: Adecuado para aplicaciones de control de motores en sistemas de automatización y robótica.\nAmplificadores de Potencia: Utilizado en amplificadores de audio de alta potencia y otros sistemas de amplificación.\nInversores y Convertidores: Ideal para inversores de energía y convertidores DC-DC.\nProtección de Sobrecorriente: Aplicado en circuitos de protección para evitar daños por sobrecorriente.\nVentajas:\n\nBaja Resistencia de Encendido: Minimiza las pérdidas de conducción, aumentando la eficiencia del circuito.\nAlta Capacidad de Manejo de Corriente: Capaz de manejar hasta 30A, adecuado para aplicaciones de alta corriente.\nRápida Velocidad de Conmutación: Reduce las pérdidas de conmutación, mejorando la eficiencia energética.\nAlta Disipación de Potencia: Puede disipar hasta 200W, proporcionando una mayor fiabilidad en aplicaciones de alta potencia.\nConexiones:\nDrenaje (Drain): Conectar al voltaje de carga\nFuente (Source): Conectar a tierra\nPuerta (Gate): Conectar al controlador de señal",
         "datasheet": ""
+    },
+    {
+        "id": 109,
+        "name": "Pack de 100 leds 5mm surtidos",
+        "price": 260.0,
+        "quantity": 20,
+        "images": [
+            "Imagenes/109/109_1.jpg",
+            "Imagenes/109/109_2.jpg",
+            "Imagenes/109/109_3.jpg",
+            "Imagenes/109/109_4.jpg",
+            "Imagenes/109/109_5.jpg",
+            "Imagenes/109/109_6.jpg"
+        ],
+        "description": "",
+        "code": "Parámetro:\nCorriente de funcionamiento: 20 (mA)\n \nVoltaje de trabajo:\nRojo: 1,9 V-2,1 V\nAmarillo: 1,9 V-2,1 V\nVerde: 1,9 V-2,1 V\nAzul: 3,0 V-3,2 V\nBlanco: 3,0 V-3,2 V\n \nMCD:\nRojo: 600-800\nAmarillo: 600-800\nVerde: 600-800\nAzul: 1000-1200\nBlanco: 14000-16000\n \nLongitud de onda:\nRojo: 620-625\nAmarillo: 590-592\nVerde: 567-570\nAzul: 460-465\nBlanco: Color temperatura 8000",
+        "datasheet": ""
+    },
+    {
+        "id": 110,
+        "name": "Sensor de Color TCS34725 RGB con LED Integrado I2C",
+        "price": 440.0,
+        "quantity": 10,
+        "images": [
+            "Imagenes/110/110_1.jpg",
+            "Imagenes/110/110_10.jpg",
+            "Imagenes/110/110_11.jpg",
+            "Imagenes/110/110_12.jpg",
+            "Imagenes/110/110_13.jpg",
+            "Imagenes/110/110_2.jpg",
+            "Imagenes/110/110_3.jpg",
+            "Imagenes/110/110_4.jpg",
+            "Imagenes/110/110_5.jpg",
+            "Imagenes/110/110_6.jpg",
+            "Imagenes/110/110_7.jpg",
+            "Imagenes/110/110_8.jpg",
+            "Imagenes/110/110_9.jpg"
+        ],
+        "description": "",
+        "code": "Descripción eléctrica detallada:\nEl TCS34725 es un sensor de color RGB (rojo, verde y azul) con un filtro IR integrado y un LED blanco incorporado. Este sensor es capaz de detectar la intensidad de la luz en las bandas roja, verde, azul y clara, lo que lo hace ideal para aplicaciones de detección de color y medición de luz ambiental.\n\nEspecificaciones eléctricas:\n\nVoltaje de operación: 3.3V a 5V, lo que lo hace compatible con la mayoría de los microcontroladores como Arduino y Raspberry Pi.\nInterfaz: Utiliza la comunicación I2C para interactuar con un microcontrolador. Los pines SDA y SCL se utilizan para transmitir datos y sincronización, respectivamente.\nPines de conexión:\nVIN: Entrada de voltaje (3.3V a 5V).\nGND: Tierra.\n3V3: Salida de 3.3V (puede ser utilizada para alimentar otros dispositivos).\nSCL: Reloj de la interfaz I2C.\nSDA: Línea de datos de la interfaz I2C.\nINT: Pin de interrupción para señalizar eventos específicos.\nLED: Control de encendido del LED integrado para iluminación del objeto a detectar.\nLED Integrado: Un LED blanco de alta intensidad que se puede controlar a través del pin LED, proporcionando una fuente de luz constante para la detección de colores en condiciones de iluminación variables.\nResolución: El sensor tiene una resolución de 16 bits, lo que permite una detección de colores precisa y detallada.\nFiltro IR: El filtro infrarrojo integrado elimina las interferencias de luz infrarroja, asegurando una medición más precisa de los colores.\nEl TCS34725 es ideal para aplicaciones como reconocimiento de color, calibración de monitores, detección de luz ambiental, y otras aplicaciones que requieran una medición precisa del color y la luz. Además, su fácil integración mediante I2C lo convierte en una opción flexible para diversos proyectos de electrónica.",
+        "datasheet": "#include <Wire.h>\\n#include \"Adafruit_TCS34725.h\"\\n\\n// Inicializa el sensor TCS34725\\nAdafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);\\n\\nvoid setup() {\\n  Serial.begin(9600);\\n  if (tcs.begin()) {\\n    Serial.println(\"TCS34725 sensor found.\");\\n  } else {\\n    Serial.println(\"No TCS34725 sensor found ... check your wiring.\");\\n    while (1); // Halt\\n  }\\n\\n  // Opcional: Apagar el LED\\n  // tcs.setInterrupt(true);\\n}\\n\\nvoid loop() {\\n  uint16_t r, g, b, c;\\n  \\n  // Leer valores de color\\n  tcs.getRawData(&r, &g, &b, &c);\\n\\n  // Imprimir valores de color en el monitor serie\\n  Serial.print(\"Rojo: \"); Serial.print(r, DEC);\\n  Serial.print(\" Verde: \"); Serial.print(g, DEC);\\n  Serial.print(\" Azul: \"); Serial.print(b, DEC);\\n  Serial.print(\" Claro: \"); Serial.println(c, DEC);\\n\\n  // Convertir a valores RGB (con corrección de gamma)\\n  uint32_t sum = r + g + b;\\n  float red, green, blue;\\n  red = r; red /= sum;\\n  green = g; green /= sum;\\n  blue = b; blue /= sum;\\n\\n  red *= 256; green *= 256; blue *= 256;\\n\\n  Serial.print(\"RGB Values (Corrected): \");\\n  Serial.print((int)red); Serial.print(\", \");\\n  Serial.print((int)green); Serial.print(\", \");\\n  Serial.print((int)blue); Serial.println(\" \");\\n\\n  // Pausa para leer los valores\\n  delay(1000);\\n}"
+    },
+    {
+        "id": 111,
+        "name": "Sensor de Temperatura DS18B20 1-Wire con Alta Precisión",
+        "price": 220.0,
+        "quantity": 15,
+        "images": [
+            "Imagenes/111/111_1.jpg",
+            "Imagenes/111/111_2.jpg",
+            "Imagenes/111/111_3.jpg"
+        ],
+        "description": "",
+        "code": "Descripción detallada:\nEl DS18B20 es un sensor digital de temperatura de alta precisión que utiliza el protocolo de comunicación 1-Wire, lo que permite que múltiples sensores se conecten a un solo pin de datos. Este sensor es capaz de medir temperaturas en un rango de -55°C a +125°C con una precisión de ±0.5°C en el rango de -10°C a +85°C. Gracias a su tamaño compacto y facilidad de conexión, es ideal para aplicaciones en sistemas de monitoreo ambiental, control de temperatura en sistemas industriales, y aplicaciones de domótica.\n\nCaracterísticas eléctricas:\n\nVoltaje de operación: 3.0V a 5.5V\nRango de temperatura: -55°C a +125°C\nPrecisión: ±0.5°C en el rango de -10°C a +85°C\nInterfaz: 1-Wire (solo necesita un pin de datos para comunicarse)\nResolución: Ajustable de 9 a 12 bits\nTiempo de respuesta: Conversión de temperatura en 750ms (12 bits)\nProtección de sobrecarga: Interna, con la capacidad de resistir descargas de hasta 1.5 kV\nAplicaciones:\n\nMonitoreo ambiental\nSistemas HVAC\nAplicaciones de domótica\nControl de temperatura en procesos industriales",
+        "datasheet": "#include <OneWire.h>\\n#include <DallasTemperature.h>\\n\\n// Pin donde se conecta el bus 1-Wire\\n#define ONE_WIRE_BUS 2\\n\\n// Configuración del bus 1-Wire\\nOneWire oneWire(ONE_WIRE_BUS);\\n\\n// Comunicación con el sensor DS18B20\\nDallasTemperature sensors(&oneWire);\\n\\nvoid setup() {\\n  Serial.begin(9600);\\n  sensors.begin();\\n}\\n\\nvoid loop() {\\n  sensors.requestTemperatures();\\n  float temperatureC = sensors.getTempCByIndex(0);\\n  \\n  Serial.print(\"Temperatura: \");\\n  Serial.print(temperatureC);\\n  Serial.println(\" °C\");\\n  \\n  delay(1000);\\n}"
+    },
+    {
+        "id": 112,
+        "name": "Módulo Cargador de Batería 134N3P con Micro USB y Salida USB",
+        "price": 90.0,
+        "quantity": 20,
+        "images": [
+            "Imagenes/112/112_1.jpg",
+            "Imagenes/112/112_2.jpg",
+            "Imagenes/112/112_3.jpg",
+            "Imagenes/112/112_4.jpg",
+            "Imagenes/112/112_5.jpg"
+        ],
+        "description": "",
+        "code": "Descripción detallada:\nEl módulo 134N3P es un cargador de batería diseñado para celdas de litio con una interfaz Micro USB para la entrada de carga y un puerto USB estándar para la salida de energía. Este módulo es ideal para aplicaciones en sistemas portátiles, bancos de energía (power banks), y dispositivos electrónicos DIY.\n\nCaracterísticas eléctricas:\n\nEntrada: Micro USB (5V DC)\nSalida: Puerto USB estándar (5V DC, 1A máx.)\nCorriente de carga: Hasta 1A (dependiendo de la batería conectada)\nVoltaje de carga completo: 4.2V (para baterías de litio)\nProtecciones: Protección contra sobrecarga, descarga, sobrecorriente y cortocircuito.\nIndicadores LED: Indicación de carga y carga completa\nAplicaciones:\n\nCargadores de baterías portátiles\nProyectos de energía móvil DIY\nDispositivos electrónicos que requieren una fuente de alimentación USB regulada\nEste módulo 134N3P con entrada Micro USB es perfecto para proyectos que requieren una solución de carga eficiente y segura para baterías de litio, proporcionando una salida regulada para alimentar o recargar dispositivos mediante USB.",
+        "datasheet": ""
+    },
+    {
+        "id": 113,
+        "name": "Pack de 5 Transistores NPN TIP41C 100V 6A",
+        "price": 180.0,
+        "quantity": 20,
+        "images": [
+            "Imagenes/113/113_1.jpg",
+            "Imagenes/113/113_2.jpg"
+        ],
+        "description": "",
+        "code": "Este pack incluye 5 transistores NPN TIP41C de potencia media en encapsulado TO-220. Estos transistores son ampliamente utilizados en aplicaciones de amplificación y conmutación debido a su capacidad de manejar altas corrientes y voltajes. Son ideales para controles de motores, fuentes de alimentación, reguladores de voltaje y otros circuitos de potencia.\n\nCaracterísticas eléctricas:\n\nTipo de transistor: NPN\nVoltaje colector-emisor (Vce): 100V\nCorriente de colector (Ic): 6A\nPotencia máxima (Pd): 65W\nGanancia de corriente continua (hFE): 15 a 75 (depende de Ic)\nVoltaje base-emisor (Vbe): 1.2V (máx)\nEncapsulado: TO-220\nCantidad: 5 unidades\nAplicaciones:\n\nAmplificadores de audio\nCircuitos de conmutación de media potencia\nControladores de motores\nReguladores de voltaje lineales\nEste pack de 5 transistores TIP41C es ideal para proyectos que requieren control de corriente de media a alta potencia, ofreciendo una solución robusta y confiable en un encapsulado de fácil montaje.",
+        "datasheet": ""
+    },
+    {
+        "id": 114,
+        "name": "Transistor IGBT RJH60F5 600V 60A en Encapsulado TO-247",
+        "price": 360.0,
+        "quantity": 10,
+        "images": [
+            "Imagenes/114/114_1.jpg",
+            "Imagenes/114/114_2.jpg"
+        ],
+        "description": "",
+        "code": "Descripción detallada:\nEl RJH60F5 es un transistor IGBT (Insulated Gate Bipolar Transistor) diseñado para manejar altos voltajes y corrientes, ideal para aplicaciones de conmutación de alta potencia como inversores, fuentes de alimentación conmutadas, y controladores de motor. Este transistor combina las ventajas de la rápida conmutación de un MOSFET con la baja caída de voltaje de un transistor bipolar, ofreciendo alta eficiencia y robustez en un encapsulado TO-247.\n\nCaracterísticas eléctricas:\n\nTipo de transistor: IGBT\nVoltaje de colector-emisor (Vce): 600V\nCorriente de colector (Ic): 60A\nPotencia máxima (Pd): 150W\nVoltaje de puerta-emisor (Vge): ±20V\nEncapsulado: TO-247\nAplicaciones:\n\nInversores de potencia\nControladores de motor\nFuentes de alimentación conmutadas\nConvertidores de energía\nEste transistor IGBT RJH60F5 es ideal para proyectos y aplicaciones que requieren un manejo eficiente y confiable de altas corrientes y voltajes, proporcionando una solución robusta y eficiente en un encapsulado de fácil montaje.",
+        "datasheet": ""
+    },
+    {
+        "id": 115,
+        "name": "Pack de 2 Transistores MOSFET IRF640N 200V 18A en Encapsulado TO-220",
+        "price": 160.0,
+        "quantity": 15,
+        "images": [
+            "Imagenes/115/115_1.jpg",
+            "Imagenes/115/115_2.jpg",
+            "Imagenes/115/115_3.jpg",
+            "Imagenes/115/115_4.jpg"
+        ],
+        "description": "",
+        "code": "Este pack incluye 2 transistores MOSFET IRF640N de canal N, diseñados para aplicaciones de conmutación de alta eficiencia. Cada MOSFET ofrece una baja resistencia en estado de encendido (Rds(on)) y es capaz de manejar corrientes de hasta 18A y voltajes de hasta 200V, lo que los convierte en una excelente opción para controladores de motor, fuentes de alimentación conmutadas, y otras aplicaciones de conmutación de alta potencia.\n\nCaracterísticas eléctricas:\n\nTipo de transistor: MOSFET de canal N\nVoltaje de drenaje-fuente (Vds): 200V\nCorriente de drenaje (Id): 18A\nResistencia en estado de encendido (Rds(on)): 0.18 ohmios\nVoltaje de compuerta-umbral (Vgs(th)): 2.0V a 4.0V\nEncapsulado: TO-220\nCantidad: 2 unidades\nAplicaciones:\n\nFuentes de alimentación conmutadas (SMPS)\nControladores de motor\nConvertidores de potencia DC-DC\nAmplificadores de clase D\nEste pack de 2 MOSFETs IRF640N es ideal para proyectos que requieren conmutación rápida y eficiente en aplicaciones de alta potencia, ofreciendo una solución robusta y confiable en un encapsulado TO-220.",
+        "datasheet": ""
     }
 ]
