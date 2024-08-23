@@ -53,6 +53,19 @@
         "datasheet": "#include <ESP8266WiFi.h>\\n#include <ESP8266HTTPClient.h>\\n\\n// Configura los datos de tu red WiFi\\nconst char* ssid = \"NOMBRE_DE_TU_RED\";\\nconst char* password = \"CONTRASENA_DE_TU_RED\";\\n\\n// Configura la URL del servidor al que se enviarán los datos\\nconst char* serverUrl = \"http://example.com/api/data\";\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n  WiFi.begin(ssid, password);\\n\\n  Serial.print(\"Conectando a \");\\n  Serial.print(ssid);\\n\\n  // Espera hasta que el ESP8266 se conecte a la red WiFi\\n  while (WiFi.status() != WL_CONNECTED) {\\n    delay(500);\\n    Serial.print(\".\");\\n  }\\n\\n  Serial.println(\"\");\\n  Serial.println(\"WiFi conectado.\");\\n  Serial.print(\"Dirección IP: \");\\n  Serial.println(WiFi.localIP());\\n}\\n\\nvoid loop() {\\n  if (WiFi.status() == WL_CONNECTED) {\\n    HTTPClient http;\\n\\n    // Simula datos de temperatura y humedad\\n    float temperature = random(20, 30) + random(0, 99) / 100.0;\\n    float humidity = random(40, 60) + random(0, 99) / 100.0;\\n\\n    // Crea la URL completa con los datos\\n    String url = serverUrl;\\n    url += \"?temperature=\" + String(temperature) + \"&humidity=\" + String(humidity);\\n\\n    http.begin(url);\\n    int httpCode = http.GET();\\n\\n    if (httpCode > 0) {\\n      String payload = http.getString();\\n      Serial.println(\"Datos enviados correctamente\");\\n      Serial.println(\"Respuesta del servidor: \" + payload);\\n    } else {\\n      Serial.println(\"Error al enviar los datos: \" + http.errorToString(httpCode));\\n    }\\n\\n    http.end();\\n  } else {\\n    Serial.println(\"Error de conexión WiFi\");\\n  }\\n\\n  delay(10000); // Espera 10 segundos antes de enviar los datos nuevamente\\n}"
     },
     {
+        "id": 8,
+        "name": "Diodo Rectificador 10a 1000v",
+        "price": 190.0,
+        "quantity": 10,
+        "images": [
+            "Imagenes/8/8_1.png",
+            "Imagenes/8/8_2.png"
+        ],
+        "description": "",
+        "code": "Resumen Técnico: Diodo Rectificador 10A 1000V\nEl diodo rectificador de 10A 1000V es un componente semiconductor utilizado principalmente en aplicaciones de rectificación de corriente alterna a corriente continua. Este tipo de diodo es adecuado para manejar altas corrientes y voltajes elevados, lo que lo hace ideal para fuentes de alimentación y otros circuitos de potencia.\n\nCaracterísticas:\nCorriente Directa Máxima (IF): 10A\nVoltaje Inverso Máximo (VR): 1000V\nCaída de Tensión Directa (VF): Aproximadamente 1.1V a 10A\nTiempo de Recuperación Inversa (trr): 2μs\nCapacitancia: 200pF\nRango de Temperatura de Operación: -55°C a 150°C\nAplicaciones:\nFuentes de alimentación conmutadas\nRectificación en circuitos de alta corriente\nInversores y convertidores de frecuencia\nProtección contra inversión de polaridad\nAplicaciones industriales de alta potencia\nCódigo de Ejemplo para ESP32 utilizando Diodo Rectificador 10A 1000V\nA continuación se presenta un ejemplo de cómo utilizar el diodo rectificador de 10A 1000V en un circuito de rectificación con un ESP32 para monitorear el voltaje rectificado.",
+        "datasheet": "#define VOLTAGE_PIN 34  // Pin analógico para medir el voltaje rectificado\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n  pinMode(VOLTAGE_PIN, INPUT);\\n}\\n\\nvoid loop() {\\n  int sensorValue = analogRead(VOLTAGE_PIN);\\n  float voltage = sensorValue * (3.3 / 4095.0) * 2; // Ajuste para el divisor de voltaje\\n  Serial.print(\"Voltaje rectificado: \");\\n  Serial.print(voltage);\\n  Serial.println(\" V\");\\n  delay(1000);\\n}"
+    },
+    {
         "id": 9,
         "name": "KBPC5010",
         "price": 160.0,
@@ -155,7 +168,7 @@
         "id": 19,
         "name": "Placa Expansión  Esp32. Nuevo Modelo.",
         "price": 380.0,
-        "quantity": 9,
+        "quantity": 8,
         "images": [
             "Imagenes/19/19_1.png"
         ],
@@ -184,8 +197,8 @@
     {
         "id": 21,
         "name": "Interruptor Mosfet (x2) De Alta Potencia (400w)",
-        "price": 250.0,
-        "quantity": 1,
+        "price": "250",
+        "quantity": "1",
         "images": [
             "Imagenes/21/21_1.png",
             "Imagenes/21/21_2.png",
@@ -274,8 +287,8 @@
     {
         "id": 30,
         "name": "Esp32 Wifi Con Placa De Expansión último Modelo",
-        "price": 890.0,
-        "quantity": 8,
+        "price": "990",
+        "quantity": "8",
         "images": [
             "Imagenes/30/30_1.jpg",
             "Imagenes/30/30_2.jpg",
@@ -468,13 +481,13 @@
     {
         "id": 46,
         "name": "ESP32 placa de desarrollo",
-        "price": 590.0,
-        "quantity": 3,
+        "price": "650",
+        "quantity": "3",
         "images": [
             "Imagenes/46/46_1.png"
         ],
         "description": "",
-        "code": "",
+        "code": "nan",
         "datasheet": "#include <WiFi.h>\\n\\n// Configuración del Wi-Fi\\nconst char* ssid = \"TU_SSID\";\\nconst char* password = \"TU_PASSWORD\";\\n\\n// Crear una instancia del servidor en el puerto 80\\nWiFiServer server(80);\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n\\n  // Conectar al Wi-Fi\\n  Serial.print(\"Conectando a \");\\n  Serial.println(ssid);\\n  WiFi.begin(ssid, password);\\n\\n  while (WiFi.status() != WL_CONNECTED) {\\n    delay(1000);\\n    Serial.print(\".\");\\n  }\\n  Serial.println(\"\");\\n  Serial.println(\"WiFi conectado.\");\\n  Serial.println(\"Dirección IP: \");\\n  Serial.println(WiFi.localIP());\\n\\n  // Iniciar el servidor\\n  server.begin();\\n}\\n\\nvoid loop() {\\n  // Comprobar si hay un cliente\\n  WiFiClient client = server.available();\\n  if (client) {\\n    Serial.println(\"Nuevo Cliente.\");\\n    String currentLine = \"\";\\n\\n    // Mientras el cliente esté conectado\\n    while (client.connected()) {\\n      if (client.available()) {\\n        char c = client.read();\\n        Serial.write(c);\\n        if (c == '\\n') {\\n          if (currentLine.length() == 0) {\\n            // Enviar respuesta HTTP\\n            client.println(\"HTTP/1.1 200 OK\");\\n            client.println(\"Content-type:text/html\");\\n            client.println();\\n\\n            // Contenido del servidor web\\n            client.println(\"<!DOCTYPE html><html>\");\\n            client.println(\"<head><title>ESP32 Web Server</title></head>\");\\n            client.println(\"<body><h1>Hola desde ESP32</h1></body>\");\\n            client.println(\"</html>\");\\n\\n            // La respuesta HTTP se ha completado\\n            break;\\n          } else {\\n            currentLine = \"\";\\n          }\\n        } else if (c != '\\r') {\\n          currentLine += c;\\n        }\\n      }\\n    }\\n    // Cerrar la conexión\\n    client.stop();\\n    Serial.println(\"Cliente Desconectado.\");\\n  }\\n}"
     },
     {
@@ -921,7 +934,7 @@
         "id": 89,
         "name": "Pack de 30 Cables Dupont de 30 cm - 10M-M, 10H-H, 10M-H",
         "price": 170.0,
-        "quantity": 8,
+        "quantity": 7,
         "images": [
             "Imagenes/89/89_1.jpg",
             "Imagenes/89/89_2.jpg",
@@ -968,7 +981,7 @@
         "id": 92,
         "name": "Módulo de Sensor de Luz Profesional OPT101 - Medición de Luz Ambiental",
         "price": 535.0,
-        "quantity": 5,
+        "quantity": 4,
         "images": [
             "Imagenes/92/92_1.jpg",
             "Imagenes/92/92_2.jpg",
@@ -1267,7 +1280,7 @@
         "id": 112,
         "name": "Módulo Cargador de Batería 134N3P con Micro USB y Salida USB",
         "price": 90.0,
-        "quantity": 20,
+        "quantity": 19,
         "images": [
             "Imagenes/112/112_1.jpg",
             "Imagenes/112/112_2.jpg",
