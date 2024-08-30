@@ -197,8 +197,8 @@
     {
         "id": 21,
         "name": "Interruptor Mosfet (x2) De Alta Potencia (400w)",
-        "price": "250",
-        "quantity": "1",
+        "price": 250.0,
+        "quantity": 1,
         "images": [
             "Imagenes/21/21_1.png",
             "Imagenes/21/21_2.png",
@@ -287,8 +287,8 @@
     {
         "id": 30,
         "name": "Esp32 Wifi Con Placa De Expansión último Modelo",
-        "price": "990",
-        "quantity": "8",
+        "price": 990.0,
+        "quantity": 8,
         "images": [
             "Imagenes/30/30_1.jpg",
             "Imagenes/30/30_2.jpg",
@@ -481,13 +481,13 @@
     {
         "id": 46,
         "name": "ESP32 placa de desarrollo",
-        "price": "650",
-        "quantity": "3",
+        "price": 650.0,
+        "quantity": 3,
         "images": [
             "Imagenes/46/46_1.png"
         ],
         "description": "",
-        "code": "nan",
+        "code": "",
         "datasheet": "#include <WiFi.h>\\n\\n// Configuración del Wi-Fi\\nconst char* ssid = \"TU_SSID\";\\nconst char* password = \"TU_PASSWORD\";\\n\\n// Crear una instancia del servidor en el puerto 80\\nWiFiServer server(80);\\n\\nvoid setup() {\\n  Serial.begin(115200);\\n\\n  // Conectar al Wi-Fi\\n  Serial.print(\"Conectando a \");\\n  Serial.println(ssid);\\n  WiFi.begin(ssid, password);\\n\\n  while (WiFi.status() != WL_CONNECTED) {\\n    delay(1000);\\n    Serial.print(\".\");\\n  }\\n  Serial.println(\"\");\\n  Serial.println(\"WiFi conectado.\");\\n  Serial.println(\"Dirección IP: \");\\n  Serial.println(WiFi.localIP());\\n\\n  // Iniciar el servidor\\n  server.begin();\\n}\\n\\nvoid loop() {\\n  // Comprobar si hay un cliente\\n  WiFiClient client = server.available();\\n  if (client) {\\n    Serial.println(\"Nuevo Cliente.\");\\n    String currentLine = \"\";\\n\\n    // Mientras el cliente esté conectado\\n    while (client.connected()) {\\n      if (client.available()) {\\n        char c = client.read();\\n        Serial.write(c);\\n        if (c == '\\n') {\\n          if (currentLine.length() == 0) {\\n            // Enviar respuesta HTTP\\n            client.println(\"HTTP/1.1 200 OK\");\\n            client.println(\"Content-type:text/html\");\\n            client.println();\\n\\n            // Contenido del servidor web\\n            client.println(\"<!DOCTYPE html><html>\");\\n            client.println(\"<head><title>ESP32 Web Server</title></head>\");\\n            client.println(\"<body><h1>Hola desde ESP32</h1></body>\");\\n            client.println(\"</html>\");\\n\\n            // La respuesta HTTP se ha completado\\n            break;\\n          } else {\\n            currentLine = \"\";\\n          }\\n        } else if (c != '\\r') {\\n          currentLine += c;\\n        }\\n      }\\n    }\\n    // Cerrar la conexión\\n    client.stop();\\n    Serial.println(\"Cliente Desconectado.\");\\n  }\\n}"
     },
     {
@@ -1331,6 +1331,84 @@
         ],
         "description": "",
         "code": "Este pack incluye 2 transistores MOSFET IRF640N de canal N, diseñados para aplicaciones de conmutación de alta eficiencia. Cada MOSFET ofrece una baja resistencia en estado de encendido (Rds(on)) y es capaz de manejar corrientes de hasta 18A y voltajes de hasta 200V, lo que los convierte en una excelente opción para controladores de motor, fuentes de alimentación conmutadas, y otras aplicaciones de conmutación de alta potencia.\n\nCaracterísticas eléctricas:\n\nTipo de transistor: MOSFET de canal N\nVoltaje de drenaje-fuente (Vds): 200V\nCorriente de drenaje (Id): 18A\nResistencia en estado de encendido (Rds(on)): 0.18 ohmios\nVoltaje de compuerta-umbral (Vgs(th)): 2.0V a 4.0V\nEncapsulado: TO-220\nCantidad: 2 unidades\nAplicaciones:\n\nFuentes de alimentación conmutadas (SMPS)\nControladores de motor\nConvertidores de potencia DC-DC\nAmplificadores de clase D\nEste pack de 2 MOSFETs IRF640N es ideal para proyectos que requieren conmutación rápida y eficiente en aplicaciones de alta potencia, ofreciendo una solución robusta y confiable en un encapsulado TO-220.",
+        "datasheet": ""
+    },
+    {
+        "id": 116,
+        "name": "Programador St-link V2 Para Stm32/stm8 (con Cables)",
+        "price": 450.0,
+        "quantity": 4,
+        "images": [
+            "Imagenes/116/116_1.jpg",
+            "Imagenes/116/116_2.jpg",
+            "Imagenes/116/116_3.jpg",
+            "Imagenes/116/116_4.jpg",
+            "Imagenes/116/116_5.jpg"
+        ],
+        "description": "",
+        "code": "Descripción detallada eléctrica:\nEl ST-Link V2 es un programador y depurador de alta velocidad diseñado para microcontroladores STM32 y STM8. Funciona a un voltaje de entrada de 5V proporcionado a través del puerto USB. El dispositivo soporta voltajes de operación de 3.3V y 5V, seleccionables mediante un jumper. Además, incluye señales de entrada/salida como SWIM (Single Wire Interface Module) para STM8 y SWD (Serial Wire Debug) para STM32, con las respectivas líneas de datos y reloj. El ST-Link V2 se comunica con el microcontrolador a través de una interfaz JTAG/SWD, lo que permite la depuración en tiempo real, carga de firmware y monitoreo del estado del sistema.\n\nEl módulo incluye un conector de 10 pines con las siguientes señales:\n\nSWIM: Pin dedicado para la interfaz de programación de los microcontroladores STM8.\nSWDIO y SWCLK: Pines dedicados para la interfaz de depuración serie (SWD) de los microcontroladores STM32.\nGND: Conexión a tierra para garantizar un funcionamiento estable.\n3.3V/5V: Pines de salida para alimentar los circuitos de destino, según la configuración seleccionada.\nEste programador es compatible con diversas herramientas de desarrollo, como ST-Link Utility, Keil, IAR, y la plataforma Arduino, facilitando así la programación y depuración de tus proyectos electrónicos.",
+        "datasheet": ""
+    },
+    {
+        "id": 117,
+        "name": "Generador Pwm De 2 Canales Con Display Digital",
+        "price": 290.0,
+        "quantity": 6,
+        "images": [
+            "Imagenes/117/117_1.jpg",
+            "Imagenes/117/117_2.jpg",
+            "Imagenes/117/117_3.jpg",
+            "Imagenes/117/117_4.jpg"
+        ],
+        "description": "",
+        "code": "Descripción del Producto:\n\nEste generador PWM (Modulación por Ancho de Pulso) de 2 canales es una herramienta versátil y compacta ideal para aplicaciones de control de motores, luces LED, o cualquier dispositivo que requiera señales PWM precisas. Con su pantalla digital clara y fácil de leer, permite ajustar la frecuencia y el ciclo de trabajo de cada canal de forma independiente.\n\nCaracterísticas:\n\nAlimentación: 3.3V a 5.5V a través de micro USB o terminales VIN+ y GND.\nFrecuencia de Salida: Ajustable entre 1Hz y 150KHz, con alta precisión.\nCiclo de Trabajo: Ajustable entre 0% y 100%, permitiendo un control total sobre la potencia entregada a la carga.\nCanales Independientes: Dos canales PWM (PW1 y PW2) con salidas independientes.\nPantalla Digital: Muestra la frecuencia y el ciclo de trabajo actuales, facilitando el ajuste preciso en tiempo real.\nBotones de Control: Cuatro botones táctiles para una fácil navegación y configuración de los parámetros.\nTamaño Compacto: 43.5mm x 28.5mm, ideal para proyectos donde el espacio es limitado.\nAplicaciones:\n\nControl de velocidad de motores de corriente continua.\nRegulación de intensidad de luces LED.\nGeneración de señales para simulación de circuitos.\nControl de dispositivos electrónicos que requieren señales PWM.",
+        "datasheet": ""
+    },
+    {
+        "id": 118,
+        "name": "Programador St-link V2 Para Stm32/stm8 (con Cables)",
+        "price": 450.0,
+        "quantity": 4,
+        "images": [
+            "Imagenes/118/118_1.jpg",
+            "Imagenes/118/118_2.jpg",
+            "Imagenes/118/118_3.jpg",
+            "Imagenes/118/118_4.jpg",
+            "Imagenes/118/118_5.jpg"
+        ],
+        "description": "",
+        "code": "Descripción detallada eléctrica:\nEl ST-Link V2 es un programador y depurador de alta velocidad diseñado para microcontroladores STM32 y STM8. Funciona a un voltaje de entrada de 5V proporcionado a través del puerto USB. El dispositivo soporta voltajes de operación de 3.3V y 5V, seleccionables mediante un jumper. Además, incluye señales de entrada/salida como SWIM (Single Wire Interface Module) para STM8 y SWD (Serial Wire Debug) para STM32, con las respectivas líneas de datos y reloj. El ST-Link V2 se comunica con el microcontrolador a través de una interfaz JTAG/SWD, lo que permite la depuración en tiempo real, carga de firmware y monitoreo del estado del sistema.\n\nEl módulo incluye un conector de 10 pines con las siguientes señales:\n\nSWIM: Pin dedicado para la interfaz de programación de los microcontroladores STM8.\nSWDIO y SWCLK: Pines dedicados para la interfaz de depuración serie (SWD) de los microcontroladores STM32.\nGND: Conexión a tierra para garantizar un funcionamiento estable.\n3.3V/5V: Pines de salida para alimentar los circuitos de destino, según la configuración seleccionada.\nEste programador es compatible con diversas herramientas de desarrollo, como ST-Link Utility, Keil, IAR, y la plataforma Arduino, facilitando así la programación y depuración de tus proyectos electrónicos.",
+        "datasheet": ""
+    },
+    {
+        "id": 119,
+        "name": "Placa BMS 3S 20A Protección para Baterías 18650 12.6V",
+        "price": 180.0,
+        "quantity": 12,
+        "images": [
+            "Imagenes/119/119_1.jpg",
+            "Imagenes/119/119_2.jpg",
+            "Imagenes/119/119_3.jpg",
+            "Imagenes/119/119_4.jpg"
+        ],
+        "description": "",
+        "code": "Este módulo BMS (Sistema de Gestión de Baterías) 3S de 20A está diseñado para la protección de packs de baterías de iones de litio 18650 de 12,6V (tres celdas en serie). Ofrece una gestión completa que incluye protección contra sobrecarga, sobredescarga, sobrecorriente y cortocircuito. Incorpora MOSFET de alta calidad para un control eficiente de la corriente, asegurando que la carga se detenga automáticamente cuando se alcanza el voltaje de corte (4,2V por celda), y reanudando la carga cuando se detecta una caída en el voltaje. Es ideal para aplicaciones en sistemas de respaldo, equipos electrónicos y vehículos eléctricos pequeños, protegiendo las baterías de manera segura y eficiente.",
+        "datasheet": ""
+    },
+    {
+        "id": 120,
+        "name": "Amplificador Audio Digital TPA3110 60W 8-24V",
+        "price": 350.0,
+        "quantity": 10,
+        "images": [
+            "Imagenes/120/120_1.jpg",
+            "Imagenes/120/120_2.jpg",
+            "Imagenes/120/120_3.jpg",
+            "Imagenes/120/120_4.jpg",
+            "Imagenes/120/120_5.jpg"
+        ],
+        "description": "",
+        "code": "Este módulo amplificador de audio digital basado en el chip TPA3110 es ideal para proyectos de sonido DIY, Arduino y sistemas de audio personalizados. Ofrece una salida de hasta 60W en configuración PBTL (Puenteado Mono) y es compatible con altavoces de 4 a 8 ohmios, proporcionando una excelente calidad de sonido con baja distorsión.\n\nEspecificaciones Técnicas:\nChip Amplificador: TPA3110.\nPotencia de Salida: Hasta 60W a 8 ohmios.\nVoltaje de Operación: DC 8V a 24V.\nImpedancia de Altavoz Compatible: 4-8 ohmios.\nRango de Frecuencia: 20Hz - 20kHz.\nEficiencia: Alta eficiencia hasta un 90%, ideal para aplicaciones portátiles y de bajo consumo.\nCaracterísticas:\nProtección Integrada: El módulo incluye protección contra cortocircuito, sobrecalentamiento y sobrecarga, lo que garantiza una operación segura y confiable.\nConfiguración PBTL: Permite una configuración puenteada que maximiza la potencia de salida en una sola salida mono.\nComponentes de Alta Calidad: Capacitores de 330uF/35V y bobinas de filtro que minimizan la interferencia de ruido para una reproducción de sonido limpia.\nCompatibilidad Versátil: Se puede integrar fácilmente con microcontroladores como Arduino, Raspberry Pi y otros sistemas de control, facilitando la creación de proyectos de audio personalizados.",
         "datasheet": ""
     }
 ]
