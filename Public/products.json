@@ -1410,5 +1410,21 @@
         "description": "",
         "code": "Este módulo amplificador de audio digital basado en el chip TPA3110 es ideal para proyectos de sonido DIY, Arduino y sistemas de audio personalizados. Ofrece una salida de hasta 60W en configuración PBTL (Puenteado Mono) y es compatible con altavoces de 4 a 8 ohmios, proporcionando una excelente calidad de sonido con baja distorsión.\n\nEspecificaciones Técnicas:\nChip Amplificador: TPA3110.\nPotencia de Salida: Hasta 60W a 8 ohmios.\nVoltaje de Operación: DC 8V a 24V.\nImpedancia de Altavoz Compatible: 4-8 ohmios.\nRango de Frecuencia: 20Hz - 20kHz.\nEficiencia: Alta eficiencia hasta un 90%, ideal para aplicaciones portátiles y de bajo consumo.\nCaracterísticas:\nProtección Integrada: El módulo incluye protección contra cortocircuito, sobrecalentamiento y sobrecarga, lo que garantiza una operación segura y confiable.\nConfiguración PBTL: Permite una configuración puenteada que maximiza la potencia de salida en una sola salida mono.\nComponentes de Alta Calidad: Capacitores de 330uF/35V y bobinas de filtro que minimizan la interferencia de ruido para una reproducción de sonido limpia.\nCompatibilidad Versátil: Se puede integrar fácilmente con microcontroladores como Arduino, Raspberry Pi y otros sistemas de control, facilitando la creación de proyectos de audio personalizados.",
         "datasheet": ""
+    },
+    {
+        "id": 121,
+        "name": "Puntero laser ajustable 5V 650nm",
+        "price": 70.0,
+        "quantity": 100,
+        "images": [
+            "Imagenes/121/121_1.jpg",
+            "Imagenes/121/121_2.jpg",
+            "Imagenes/121/121_3.jpg",
+            "Imagenes/121/121_4.jpg",
+            "Imagenes/121/121_5.jpg"
+        ],
+        "description": "",
+        "code": "",
+        "datasheet": ""
     }
 ]
