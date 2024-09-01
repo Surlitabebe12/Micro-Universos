@@ -364,14 +364,18 @@ footer img {
     width: 75%;
     max-width: 600px;
     border-radius: 15px;
-    overflow-y: auto; /* Agrega esto para manejar el desbordamiento de contenido */
+    overflow-y: auto; /* Asegura que el contenido dentro del modal no se salga */
     max-height: 80vh; /* Limita la altura máxima del modal para evitar que el contenido se salga */
 }
 
 #product-modal-description {
     word-wrap: break-word; /* Asegura que el texto no se salga del contenedor */
     white-space: pre-wrap; /* Mantiene los saltos de línea y espacios, pero permite el ajuste de línea */
+    max-height: 50vh; /* Limita la altura máxima de la descripción */
+    overflow-y: auto; /* Permite el desplazamiento vertical si el texto es demasiado largo */
+    margin: 10px 0; /* Añade algo de margen para mejorar el espaciado */
 }
+
 #product-modal .close {
     color: #aaa;
     float: right;
