@@ -251,18 +251,44 @@ function openWhatsApp() {
     window.open(url, '_blank');
 }
 
+function openDescriptionWindow() {
+    // Cargar la descripción del producto actual
+    const description = currentProduct.description || 'No hay descripción disponible.'; // Asegúrate de que 'currentProduct' tenga la descripción del producto
+    const newWindow = window.open('', '_blank', 'width=600,height=400');
+
+    // Estilo básico y contenido para la nueva ventana
+    newWindow.document.write(`
+        <html>
+        <head>
+            <title>Descripción del Producto</title>
+            <style>
+                body { font-family: Arial, sans-serif; padding: 20px; }
+                h1 { font-size: 1.5em; margin-bottom: 10px; }
+                p { white-space: pre-wrap; }
+            </style>
+        </head>
+        <body>
+            <h1>Descripción del Producto</h1>
+            <p>${description}</p>
+        </body>
+        </html>
+    `);
+
+    newWindow.document.close();
+}
+
+// Asegúrate de actualizar la lógica de apertura del modal para guardar el producto actual
+let currentProduct = null;
 
 function openProductModal(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
+        currentProduct = product; // Guardar el producto actual
         const productModal = document.getElementById('product-modal');
         const productModalImage = document.getElementById('product-modal-image');
-        const productModalDescription = document.getElementById('product-modal-description');
         const productModalCode = document.getElementById('product-modal-code');
 
         productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
-        productModalDescription.textContent = product.description || '';
-
         if (product.code) {
             productModalCode.textContent = product.code;
             productModalCode.style.display = 'block';
