@@ -364,7 +364,7 @@ footer img {
     width: 75%;
     max-width: 600px;
     border-radius: 15px;
-    overflow: hidden; /* Para evitar desbordamiento del modal principal */
+    overflow: hidden; /* Para evitar que nada se desborde del modal */
     max-height: 80vh; /* Limita la altura total del modal */
     display: flex;
     flex-direction: column;
@@ -372,18 +372,20 @@ footer img {
 }
 
 #product-modal-description-container {
-    overflow-y: auto; /* Añade desplazamiento vertical */
-    max-height: 40vh; /* Limita la altura específica del contenedor del texto */
-    padding-right: 10px; /* Espacio para el scroll */
+    overflow-y: auto; /* Permite el desplazamiento solo en el área del texto */
+    max-height: 35vh; /* Limita la altura específica de la descripción */
+    padding: 10px; /* Espacio dentro del contenedor para evitar tocar los bordes */
+    margin-bottom: 10px; /* Separación del resto del contenido */
     box-sizing: border-box;
-    margin-bottom: 10px; /* Espacio inferior para separación del resto del contenido */
 }
 
 #product-modal-description {
-    word-wrap: break-word; /* Asegura que las palabras largas se ajusten al contenedor */
-    white-space: pre-wrap; /* Mantiene el formato de espacios y saltos de línea */
-    overflow-wrap: break-word; /* Permite el ajuste de palabras largas */
+    white-space: pre-wrap; /* Mantiene el formato del texto */
+    word-wrap: break-word; /* Asegura que las palabras largas se ajusten correctamente */
+    overflow-wrap: break-word; /* Previene que el texto salga del contenedor */
+    max-width: 100%; /* Asegura que el texto no sobrepase el ancho disponible */
 }
+
 
 
 #product-modal .close {
