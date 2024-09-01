@@ -365,15 +365,20 @@ footer img {
     max-width: 600px;
     border-radius: 15px;
     overflow-y: auto; /* Controla el desbordamiento vertical */
-    max-height: 80vh; /* Limita la altura del modal para evitar que se expanda demasiado */
-    box-sizing: border-box; /* Asegura que el padding esté incluido en el tamaño total */
+    max-height: 80vh; /* Limita la altura del modal */
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido esté organizado verticalmente */
+    box-sizing: border-box;
 }
 
 #product-modal-description {
-    word-wrap: break-word; /* Permite que el texto se ajuste dentro del contenedor */
-    white-space: pre-wrap; /* Mantiene los saltos de línea y ajusta el texto según el ancho */
-    overflow-wrap: break-word; /* Adicional para controlar el ajuste de palabras largas */
-    max-width: 100%; /* Limita el ancho del texto al contenedor */
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    overflow: hidden; /* Evita que el contenido se salga */
+    flex-shrink: 1; /* Permite que el contenido se ajuste */
+    margin-bottom: 10px; /* Agrega un pequeño margen inferior */
 }
 
 #product-modal .close {
