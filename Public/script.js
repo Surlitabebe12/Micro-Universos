@@ -276,6 +276,37 @@ function openDescriptionWindow() {
 
     newWindow.document.close();
 }
+let currentProduct = null; // Variable para almacenar el producto actual
+
+function openDescriptionWindow() {
+    // Asegúrate de que currentProduct tenga la descripción cargada
+    if (!currentProduct || !currentProduct.description) {
+        alert("No hay descripción disponible para este producto.");
+        return;
+    }
+
+    // Crear una nueva ventana y cargar la descripción
+    const newWindow = window.open('', '_blank', 'width=600,height=400');
+    newWindow.document.write(`
+        <html>
+        <head>
+            <title>Descripción del Producto</title>
+            <style>
+                body { font-family: Arial, sans-serif; padding: 20px; }
+                h1 { font-size: 1.5em; margin-bottom: 10px; }
+                p { white-space: pre-wrap; }
+            </style>
+        </head>
+        <body>
+            <h1>Descripción del Producto</h1>
+            <p>${currentProduct.description}</p>
+        </body>
+        </html>
+    `);
+    newWindow.document.close();
+}
+
+
 
 // Asegúrate de actualizar la lógica de apertura del modal para guardar el producto actual
 let currentProduct = null;
@@ -289,6 +320,8 @@ function openProductModal(productId) {
         const productModalCode = document.getElementById('product-modal-code');
 
         productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
+
+        // No mostrar la descripción en el modal, se manejará por el enlace
         if (product.code) {
             productModalCode.textContent = product.code;
             productModalCode.style.display = 'block';
@@ -299,6 +332,7 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
+
 
 
 function closeProductModal() {
