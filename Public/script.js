@@ -306,11 +306,6 @@ function openDescriptionWindow() {
     newWindow.document.close();
 }
 
-
-
-// Asegúrate de actualizar la lógica de apertura del modal para guardar el producto actual
-let currentProduct = null;
-
 function openProductModal(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
