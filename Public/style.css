@@ -364,21 +364,19 @@ footer img {
     width: 75%;
     max-width: 600px;
     border-radius: 15px;
-    overflow-y: auto; /* Controla el desbordamiento vertical */
-    max-height: 80vh; /* Limita la altura del modal */
-    display: flex;
-    flex-direction: column; /* Asegura que el contenido esté organizado verticalmente */
+    overflow: hidden; /* Asegura que el contenido no se desborde del modal */
+    max-height: 80vh; /* Limita la altura total del modal */
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
-#product-modal-description {
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    max-width: 100%;
-    overflow: hidden; /* Evita que el contenido se salga */
-    flex-shrink: 1; /* Permite que el contenido se ajuste */
-    margin-bottom: 10px; /* Agrega un pequeño margen inferior */
+#product-modal-description-container {
+    overflow-y: auto; /* Agrega desplazamiento solo para la descripción */
+    max-height: 50vh; /* Ajusta según sea necesario para limitar la altura del texto */
+    padding-right: 10px; /* Añade un poco de espacio para el scroll */
+    margin-bottom: 10px; /* Margen inferior para separación */
+    word-wrap: break-word; /* Permite que el texto se ajuste al contenedor */
 }
 
 #product-modal .close {
