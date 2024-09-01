@@ -380,9 +380,10 @@ footer img {
 
 #product-modal-description-container {
     overflow-y: auto;
-    max-height: 40vh; /* Controla la altura del contenedor de texto */
+    max-height: 40vh; /* Ajusta la altura máxima según tu preferencia */
     padding-right: 10px;
     box-sizing: border-box;
+    word-wrap: break-word;
 }
 
 #product-modal-description {
