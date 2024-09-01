@@ -316,7 +316,14 @@ function openProductModal(productId) {
 
         productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
 
-        // No mostrar la descripción en el modal, se manejará por el enlace
+        // Asegúrate de no mostrar la descripción en el modal
+        const descriptionLinkContainer = document.getElementById('product-modal-description-container');
+        descriptionLinkContainer.innerHTML = `
+            <a href="#" onclick="openDescriptionWindow()" style="color: blue; text-decoration: underline; cursor: pointer;">
+                Ver descripción del producto
+            </a>
+        `;
+
         if (product.code) {
             productModalCode.textContent = product.code;
             productModalCode.style.display = 'block';
@@ -327,6 +334,7 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
+
 
 
 
