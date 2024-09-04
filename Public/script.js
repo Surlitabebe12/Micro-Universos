@@ -251,14 +251,14 @@ function openWhatsApp() {
     window.open(url, '_blank');
 }
 
+let currentProduct = null; // Variable para almacenar el producto actual
+
 function openDescriptionWindow() {
-    // Verifica que el producto actual tenga una descripción disponible.
     if (!currentProduct || !currentProduct.description) {
         alert("No hay descripción disponible para este producto.");
         return;
     }
 
-    // Abre una nueva ventana con la descripción del producto.
     const newWindow = window.open('', '_blank', 'width=600,height=400');
     newWindow.document.write(`
         <html>
@@ -312,12 +312,12 @@ function openDescriptionWindow() {
 function openProductModal(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
+        currentProduct = product; // Establecer el producto actual
         const productModal = document.getElementById('product-modal');
         const productModalImage = document.getElementById('product-modal-image');
 
-        // Mostrar solo la imagen del producto
         productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
-        productModal.style.display = 'block'; // Muestra el modal
+        productModal.style.display = 'block';
     }
 }
 
