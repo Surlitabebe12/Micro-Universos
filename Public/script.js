@@ -98,19 +98,84 @@ function renderProducts(products) {
 
             const imageContainer = document.createElement('div');
             imageContainer.className = 'image-container';
-            
-            // Cambiar onclick para abrir el modal con la imagen y el producto actual
-            imageContainer.onclick = () => openImageModal(imgSrc, product);
+            imageContainer.onclick = () => openProductModal(product.id);
 
             const imgElement = document.createElement('img');
             imgElement.src = imgSrc;
             imgElement.alt = product.name;
             imgElement.dataset.index = 0;
 
-            imageContainer.appendChild(imgElement);
-            productElement.appendChild(imageContainer);
+            const arrowLeft = document.createElement('button');
+            arrowLeft.className = 'arrow arrow-left';
+            arrowLeft.innerHTML = '&lt;';
+            arrowLeft.onclick = (e) => {
+                e.stopPropagation();
+                showPreviousImage(product.id, imgElement);
+            };
 
-            // Se puede agregar el resto de los elementos si se desea
+            const arrowRight = document.createElement('button');
+            arrowRight.className = 'arrow arrow-right';
+            arrowRight.innerHTML = '&gt;';
+            arrowRight.onclick = (e) => {
+                e.stopPropagation();
+                showNextImage(product.id, imgElement);
+            };
+
+            imageContainer.appendChild(imgElement);
+            imageContainer.appendChild(arrowLeft);
+            imageContainer.appendChild(arrowRight);
+
+            const name = document.createElement('p');
+            name.className = 'product-name';
+            name.textContent = product.name;
+
+            const quantityContainer = document.createElement('div');
+            quantityContainer.className = 'quantity-container';
+
+            const quantityInput = document.createElement('input');
+            quantityInput.type = 'number';
+            quantityInput.min = 1;
+            quantityInput.max = product.quantity;
+            quantityInput.value = 1;
+
+            const incrementButton = document.createElement('button');
+            incrementButton.textContent = '+';
+            incrementButton.onclick = () => {
+                if (quantityInput.value < product.quantity) {
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                }
+            };
+
+            const decrementButton = document.createElement('button');
+            decrementButton.textContent = '-';
+            decrementButton.onclick = () => {
+                if (quantityInput.value > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                }
+            };
+
+            quantityContainer.appendChild(decrementButton);
+            quantityContainer.appendChild(quantityInput);
+            quantityContainer.appendChild(incrementButton);
+
+            const price = document.createElement('p');
+            price.className = 'product-price';
+            price.textContent = `$${product.price % 1 === 0 ? product.price : product.price.toFixed(2)}`;
+
+            const addToCartBtn = document.createElement('button');
+            addToCartBtn.className = 'add-to-cart-btn';
+            addToCartBtn.innerHTML = 'Al carrito<span class="cart-animation"></span>';
+            addToCartBtn.onclick = (e) => {
+                e.stopPropagation();
+                addToCart(product.id, parseInt(quantityInput.value));
+            };
+
+            productElement.appendChild(imageContainer);
+            productElement.appendChild(name);
+            productElement.appendChild(price);
+            productElement.appendChild(quantityContainer);
+            productElement.appendChild(addToCartBtn);
+
             productsContainer.appendChild(productElement);
         };
 
@@ -119,6 +184,7 @@ function renderProducts(products) {
         };
     });
 }
+
 
 
 
@@ -131,6 +197,8 @@ function showPreviousImage(productId, imgElement) {
         imgElement.dataset.index = newIndex;
     }
 }
+
+
 
 
 function showNextImage(productId, imgElement) {
@@ -183,7 +251,6 @@ function openWhatsApp() {
     window.open(url, '_blank');
 }
 
-// Función para abrir la ventana con la descripción del producto
 function openDescriptionWindow() {
     // Verifica que el producto actual tenga una descripción disponible.
     if (!currentProduct || !currentProduct.description) {
@@ -211,7 +278,6 @@ function openDescriptionWindow() {
     `);
     newWindow.document.close();
 }
-
 
 let currentProduct = null; // Variable para almacenar el producto actual
 
@@ -255,9 +321,8 @@ function openProductModal(productId) {
     }
 }
 
-// Función para abrir el modal de la imagen y establecer el producto actual
-function openImageModal(imageSrc, product) {
-    currentProduct = product; // Establecer el producto actual
+// Función para abrir el modal de la imagen
+function openImageModal(imageSrc) {
     const modal = document.getElementById('image-modal');
     const modalImage = document.getElementById('modal-product-image');
     modalImage.src = imageSrc;
@@ -269,6 +334,7 @@ function closeImageModal() {
     const modal = document.getElementById('image-modal');
     modal.style.display = 'none';
 }
+
 
 
 function closeProductModal() {
