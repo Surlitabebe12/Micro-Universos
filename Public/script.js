@@ -252,11 +252,14 @@ function openWhatsApp() {
 }
 
 function openDescriptionWindow() {
-    // Cargar la descripción del producto actual
-    const description = currentProduct.description || 'No hay descripción disponible.'; // Asegúrate de que 'currentProduct' tenga la descripción del producto
-    const newWindow = window.open('', '_blank', 'width=600,height=400');
+    // Verifica que el producto actual tenga una descripción disponible.
+    if (!currentProduct || !currentProduct.description) {
+        alert("No hay descripción disponible para este producto.");
+        return;
+    }
 
-    // Estilo básico y contenido para la nueva ventana
+    // Abre una nueva ventana con la descripción del producto.
+    const newWindow = window.open('', '_blank', 'width=600,height=400');
     newWindow.document.write(`
         <html>
         <head>
@@ -269,13 +272,13 @@ function openDescriptionWindow() {
         </head>
         <body>
             <h1>Descripción del Producto</h1>
-            <p>${description}</p>
+            <p>${currentProduct.description}</p>
         </body>
         </html>
     `);
-
     newWindow.document.close();
 }
+
 let currentProduct = null; // Variable para almacenar el producto actual
 
 function openDescriptionWindow() {
@@ -316,13 +319,12 @@ function openProductModal(productId) {
 
         productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
 
-        // Contenedor para el enlace de la descripción
+        // Modificación: Eliminamos cualquier línea que muestre la descripción directamente en el modal.
         const descriptionLinkContainer = document.getElementById('product-modal-description-container');
         descriptionLinkContainer.innerHTML = `
             <a href="#" onclick="openDescriptionWindow()" style="color: blue; text-decoration: underline; cursor: pointer;">
                 Ver descripción del producto
             </a>
-            <!-- <p id="product-modal-description">${currentProduct.description}</p> --> <!-- Esta línea ha sido comentada para que no se muestre la descripción -->
         `;
 
         if (product.code) {
@@ -335,8 +337,6 @@ function openProductModal(productId) {
         productModal.style.display = 'block';
     }
 }
-
-
 
 
 function closeProductModal() {
