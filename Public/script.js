@@ -341,6 +341,45 @@ function openDescriptionWindow(productId) {
     }
 }
 
+function openCodeWindow(productId) {
+    // Busca el producto correspondiente por su ID
+    const product = products.find(p => p.id === productId);
+
+    if (product && product.code) {
+        // Crear una nueva ventana y cargar el código de ejemplo
+        const newWindow = window.open('', '_blank', 'width=600,height=400');
+        newWindow.document.write(`
+            <html>
+            <head>
+                <title>Código de Ejemplo</title>
+                <style>
+                    body { font-family: Arial, sans-serif; padding: 20px; }
+                    h1 { font-size: 1.5em; margin-bottom: 10px; }
+                    pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; white-space: pre-wrap; }
+                    .exit-button {
+                        color: blue;
+                        text-decoration: underline;
+                        cursor: pointer;
+                        display: block;
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Código de Ejemplo</h1>
+                <pre>${product.code}</pre>
+                <a href="#" class="exit-button" onclick="window.close(); return false;">Salir</a>
+            </body>
+            </html>
+        `);
+        newWindow.document.close();
+    } else {
+        alert("No hay código de ejemplo disponible para este producto.");
+    }
+}
+
+
 
 function openProductModal(productId) {
     const product = products.find(p => p.id === productId);
@@ -349,6 +388,7 @@ function openProductModal(productId) {
         const productModal = document.getElementById('product-modal');
         const productModalImage = document.getElementById('product-modal-image');
         const productInfoLink = document.getElementById('product-info-link');
+        const productCodeLink = document.getElementById('product-code-link');
 
         // Verificar que la imagen exista y esté definida
         if (product.images && product.images.length > 0) {
@@ -358,12 +398,14 @@ function openProductModal(productId) {
             productModalImage.src = `${imageBaseUrl}default-image.png`;
         }
 
-        // Actualizar el enlace para abrir la descripción del producto
+        // Actualizar los enlaces para abrir la descripción y el código del producto
         productInfoLink.setAttribute('onclick', `openDescriptionWindow(${product.id})`);
-        
+        productCodeLink.setAttribute('onclick', `openCodeWindow(${product.id})`);
+
         productModal.style.display = 'block'; // Muestra el modal
     }
 }
+
 
 
 // Función para abrir el modal de la imagen
