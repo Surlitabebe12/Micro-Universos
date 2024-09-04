@@ -316,12 +316,13 @@ function openProductModal(productId) {
 
         productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
 
-        // Asegúrate de no mostrar la descripción en el modal
+        // Contenedor para el enlace de la descripción
         const descriptionLinkContainer = document.getElementById('product-modal-description-container');
         descriptionLinkContainer.innerHTML = `
             <a href="#" onclick="openDescriptionWindow()" style="color: blue; text-decoration: underline; cursor: pointer;">
                 Ver descripción del producto
             </a>
+            <!-- <p id="product-modal-description">${currentProduct.description}</p> --> <!-- Esta línea ha sido comentada para que no se muestre la descripción -->
         `;
 
         if (product.code) {
