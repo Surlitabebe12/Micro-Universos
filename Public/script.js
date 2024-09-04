@@ -253,31 +253,36 @@ function openWhatsApp() {
 
 let currentProduct = null; // Variable para almacenar el producto actual
 
-function openDescriptionWindow() {
-    if (!currentProduct || !currentProduct.description) {
+function openDescriptionWindow(productId) {
+    // Busca el producto correspondiente por su ID
+    const product = products.find(p => p.id === productId);
+    
+    if (product && product.description) {
+        // Crear una nueva ventana y cargar la descripción
+        const newWindow = window.open('', '_blank', 'width=600,height=400');
+        newWindow.document.write(`
+            <html>
+            <head>
+                <title>Descripción del Producto</title>
+                <style>
+                    body { font-family: Arial, sans-serif; padding: 20px; }
+                    h1 { font-size: 1.5em; margin-bottom: 10px; }
+                    p { white-space: pre-wrap; }
+                </style>
+            </head>
+            <body>
+                <h1>Descripción del Producto</h1>
+                <p>${product.description}</p>
+            </body>
+            </html>
+        `);
+        newWindow.document.close();
+    } else {
         alert("No hay descripción disponible para este producto.");
-        return;
     }
-
-    const newWindow = window.open('', '_blank', 'width=600,height=400');
-    newWindow.document.write(`
-        <html>
-        <head>
-            <title>Descripción del Producto</title>
-            <style>
-                body { font-family: Arial, sans-serif; padding: 20px; }
-                h1 { font-size: 1.5em; margin-bottom: 10px; }
-                p { white-space: pre-wrap; }
-            </style>
-        </head>
-        <body>
-            <h1>Descripción del Producto</h1>
-            <p>${currentProduct.description}</p>
-        </body>
-        </html>
-    `);
-    newWindow.document.close();
 }
+
+
 
 
 function openDescriptionWindow() {
@@ -314,11 +319,18 @@ function openProductModal(productId) {
         currentProduct = product; // Establecer el producto actual
         const productModal = document.getElementById('product-modal');
         const productModalImage = document.getElementById('product-modal-image');
+        const productInfoLink = document.getElementById('product-info-link');
 
+        // Actualizar la imagen del modal
         productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
-        productModal.style.display = 'block';
+        
+        // Actualizar el enlace para abrir la descripción del producto
+        productInfoLink.setAttribute('onclick', `openDescriptionWindow(${productId})`);
+        
+        productModal.style.display = 'block'; // Muestra el modal
     }
 }
+
 
 // Función para abrir el modal de la imagen
 function openImageModal(imageSrc) {
