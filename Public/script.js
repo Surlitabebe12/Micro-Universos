@@ -284,7 +284,6 @@ function openDescriptionWindow(productId) {
 
 
 
-
 function openDescriptionWindow() {
     // Asegúrate de que currentProduct tenga la descripción cargada
     if (!currentProduct || !currentProduct.description) {
@@ -325,11 +324,12 @@ function openProductModal(productId) {
         productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
         
         // Actualizar el enlace para abrir la descripción del producto
-        productInfoLink.setAttribute('onclick', `openDescriptionWindow(${productId})`);
+        productInfoLink.setAttribute('onclick', `openDescriptionWindow(${product.id})`);
         
         productModal.style.display = 'block'; // Muestra el modal
     }
 }
+
 
 
 // Función para abrir el modal de la imagen
