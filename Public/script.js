@@ -347,17 +347,20 @@ function openCodeWindow(productId) {
 
     if (product && product.code) {
         // Crear una nueva ventana y cargar el código de ejemplo
-        const newWindow = window.open('', '_blank', 'width=600,height=400');
-        newWindow.document.write(`
+        const newWindow = window.open('', '_blank', 'width=800,height=600');
+        const htmlContent = `
             <html>
             <head>
                 <title>Código de Ejemplo</title>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
                 <style>
-                    body { font-family: Arial, sans-serif; padding: 20px; }
-                    h1 { font-size: 1.5em; margin-bottom: 10px; }
-                    pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; white-space: pre-wrap; }
+                    body { font-family: Arial, sans-serif; padding: 20px; background-color: #2e2e2e; color: #f8f8f2; }
+                    h1 { font-size: 1.5em; margin-bottom: 10px; color: #f8f8f2; }
+                    pre { background-color: #1e1e1e; padding: 15px; border-radius: 5px; overflow-x: auto; }
+                    code { font-size: 14px; }
                     .exit-button {
-                        color: blue;
+                        color: #66d9ef;
                         text-decoration: underline;
                         cursor: pointer;
                         display: block;
@@ -368,11 +371,16 @@ function openCodeWindow(productId) {
             </head>
             <body>
                 <h1>Código de Ejemplo</h1>
-                <pre>${product.code}</pre>
+                <pre><code class="language-javascript">${product.code}</code></pre>
                 <a href="#" class="exit-button" onclick="window.close(); return false;">Salir</a>
+                <script>hljs.highlightAll();</script>
             </body>
             </html>
-        `);
+        `;
+
+        // Escribir el contenido HTML y cerrar el documento para que se renderice correctamente
+        newWindow.document.open();
+        newWindow.document.write(htmlContent);
         newWindow.document.close();
     } else {
         alert("No hay código de ejemplo disponible para este producto.");
