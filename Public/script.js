@@ -99,8 +99,8 @@ function renderProducts(products) {
             const imageContainer = document.createElement('div');
             imageContainer.className = 'image-container';
             
-            // Cambiar onclick para abrir el modal con la imagen
-            imageContainer.onclick = () => openImageModal(imgSrc);
+            // Cambiar onclick para abrir el modal con la imagen y el producto actual
+            imageContainer.onclick = () => openImageModal(imgSrc, product);
 
             const imgElement = document.createElement('img');
             imgElement.src = imgSrc;
@@ -119,6 +119,7 @@ function renderProducts(products) {
         };
     });
 }
+
 
 
 function showPreviousImage(productId, imgElement) {
@@ -182,6 +183,7 @@ function openWhatsApp() {
     window.open(url, '_blank');
 }
 
+// Función para abrir la ventana con la descripción del producto
 function openDescriptionWindow() {
     // Verifica que el producto actual tenga una descripción disponible.
     if (!currentProduct || !currentProduct.description) {
@@ -209,6 +211,7 @@ function openDescriptionWindow() {
     `);
     newWindow.document.close();
 }
+
 
 let currentProduct = null; // Variable para almacenar el producto actual
 
@@ -252,8 +255,9 @@ function openProductModal(productId) {
     }
 }
 
-// Función para abrir el modal de la imagen
-function openImageModal(imageSrc) {
+// Función para abrir el modal de la imagen y establecer el producto actual
+function openImageModal(imageSrc, product) {
+    currentProduct = product; // Establecer el producto actual
     const modal = document.getElementById('image-modal');
     const modalImage = document.getElementById('modal-product-image');
     modalImage.src = imageSrc;
