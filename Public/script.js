@@ -284,7 +284,7 @@ function openDescriptionWindow(productId) {
             <body>
                 <h1>Descripción del Producto</h1>
                 <p>${descriptionContent}</p>
-                <span class="exit-button" onclick="window.close()">Salir</span>
+                <a href="#" class="exit-button" onclick="window.close(); return false;">Salir</a>
             </body>
             </html>
         `);
@@ -293,6 +293,7 @@ function openDescriptionWindow(productId) {
         alert("No hay descripción disponible para este producto.");
     }
 }
+
 
 
 function openDescriptionWindow() {
