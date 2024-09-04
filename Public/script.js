@@ -319,13 +319,20 @@ function openProductModal(productId) {
 
         productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
 
-        // Modificación: Eliminamos cualquier línea que muestre la descripción directamente en el modal.
+        // Asegúrate de que solo se muestre el enlace y no la descripción del producto
         const descriptionLinkContainer = document.getElementById('product-modal-description-container');
         descriptionLinkContainer.innerHTML = `
             <a href="#" onclick="openDescriptionWindow()" style="color: blue; text-decoration: underline; cursor: pointer;">
                 Ver descripción del producto
             </a>
         `;
+
+        // Elimina cualquier contenido de texto que esté relacionado con la descripción en el modal
+        const productModalDescription = document.getElementById('product-modal-description');
+        if (productModalDescription) {
+            productModalDescription.style.display = 'none'; // Asegúrate de que no se muestre
+            productModalDescription.textContent = ''; // Limpia el contenido, por si acaso
+        }
 
         if (product.code) {
             productModalCode.textContent = product.code;
