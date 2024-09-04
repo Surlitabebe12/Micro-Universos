@@ -335,6 +335,10 @@ function closeImageModal() {
     modal.style.display = 'none';
 }
 
+// Función para abrir una ventana vacía
+function openEmptyWindow() {
+    window.open('', '_blank', 'width=600,height=400'); // Abre una ventana vacía con dimensiones especificadas
+}
 
 
 function closeProductModal() {
