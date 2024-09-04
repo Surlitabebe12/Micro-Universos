@@ -350,16 +350,20 @@ function openProductModal(productId) {
         const productModalImage = document.getElementById('product-modal-image');
         const productInfoLink = document.getElementById('product-info-link');
 
-        // Actualizar la imagen del modal
-        productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
-        
+        // Verificar que la imagen exista y esté definida
+        if (product.images && product.images.length > 0) {
+            productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
+        } else {
+            // Si no hay imagen, usar una imagen predeterminada
+            productModalImage.src = `${imageBaseUrl}default-image.png`;
+        }
+
         // Actualizar el enlace para abrir la descripción del producto
         productInfoLink.setAttribute('onclick', `openDescriptionWindow(${product.id})`);
         
         productModal.style.display = 'block'; // Muestra el modal
     }
 }
-
 
 
 // Función para abrir el modal de la imagen
