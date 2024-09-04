@@ -312,38 +312,15 @@ function openDescriptionWindow() {
 function openProductModal(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
-        currentProduct = product; // Guardar el producto actual
         const productModal = document.getElementById('product-modal');
         const productModalImage = document.getElementById('product-modal-image');
-        const productModalCode = document.getElementById('product-modal-code');
 
+        // Mostrar solo la imagen del producto
         productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
-
-        // Asegúrate de que solo se muestre el enlace y no la descripción del producto
-        const descriptionLinkContainer = document.getElementById('product-modal-description-container');
-        descriptionLinkContainer.innerHTML = `
-            <a href="#" onclick="openDescriptionWindow()" style="color: blue; text-decoration: underline; cursor: pointer;">
-                Ver descripción del producto
-            </a>
-        `;
-
-        // Elimina cualquier contenido de texto que esté relacionado con la descripción en el modal
-        const productModalDescription = document.getElementById('product-modal-description');
-        if (productModalDescription) {
-            productModalDescription.style.display = 'none'; // Asegúrate de que no se muestre
-            productModalDescription.textContent = ''; // Limpia el contenido, por si acaso
-        }
-
-        if (product.code) {
-            productModalCode.textContent = product.code;
-            productModalCode.style.display = 'block';
-        } else {
-            productModalCode.style.display = 'none';
-        }
-
-        productModal.style.display = 'block';
+        productModal.style.display = 'block'; // Muestra el modal
     }
 }
+
 
 
 function closeProductModal() {
