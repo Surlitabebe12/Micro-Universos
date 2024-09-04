@@ -256,9 +256,12 @@ let currentProduct = null; // Variable para almacenar el producto actual
 function openDescriptionWindow(productId) {
     // Busca el producto correspondiente por su ID
     const product = products.find(p => p.id === productId);
-    
-    if (product && product.description) {
-        // Crear una nueva ventana y cargar la descripción
+
+    // Verifica si el producto tiene descripción o utiliza el campo 'code'
+    const descriptionContent = product.description.trim() || product.code.trim();
+
+    if (descriptionContent) {
+        // Crear una nueva ventana y cargar la descripción o el código
         const newWindow = window.open('', '_blank', 'width=600,height=400');
         newWindow.document.write(`
             <html>
@@ -268,11 +271,20 @@ function openDescriptionWindow(productId) {
                     body { font-family: Arial, sans-serif; padding: 20px; }
                     h1 { font-size: 1.5em; margin-bottom: 10px; }
                     p { white-space: pre-wrap; }
+                    .exit-button {
+                        color: blue;
+                        text-decoration: underline;
+                        cursor: pointer;
+                        display: block;
+                        margin-top: 20px;
+                        text-align: center;
+                    }
                 </style>
             </head>
             <body>
                 <h1>Descripción del Producto</h1>
-                <p>${product.description}</p>
+                <p>${descriptionContent}</p>
+                <span class="exit-button" onclick="window.close()">Salir</span>
             </body>
             </html>
         `);
@@ -281,7 +293,6 @@ function openDescriptionWindow(productId) {
         alert("No hay descripción disponible para este producto.");
     }
 }
-
 
 
 function openDescriptionWindow() {
