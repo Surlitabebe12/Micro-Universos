@@ -279,7 +279,6 @@ function openDescriptionWindow() {
     newWindow.document.close();
 }
 
-let currentProduct = null; // Variable para almacenar el producto actual
 
 function openDescriptionWindow() {
     // Asegúrate de que currentProduct tenga la descripción cargada
