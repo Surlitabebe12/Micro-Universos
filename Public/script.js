@@ -279,6 +279,7 @@ function openDescriptionWindow() {
     newWindow.document.close();
 }
 
+
 let currentProduct = null; // Variable para almacenar el producto actual
 
 function openDescriptionWindow() {
@@ -319,7 +320,7 @@ function openProductModal(productId) {
 
         productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
 
-        // Modificación: Eliminamos cualquier línea que muestre la descripción directamente en el modal.
+        // Muestra solo el enlace sin la descripción visible en el modal
         const descriptionLinkContainer = document.getElementById('product-modal-description-container');
         descriptionLinkContainer.innerHTML = `
             <a href="#" onclick="openDescriptionWindow()" style="color: blue; text-decoration: underline; cursor: pointer;">
