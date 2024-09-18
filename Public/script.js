@@ -98,31 +98,92 @@ function renderProducts(products) {
 
             const imageContainer = document.createElement('div');
             imageContainer.className = 'image-container';
-            imageContainer.onclick = () => openProductModal(product.id); // Clic en la imagen abre el modal
+            imageContainer.onclick = () => openProductModal(product.id);
 
             const imgElement = document.createElement('img');
             imgElement.src = imgSrc;
             imgElement.alt = product.name;
             imgElement.dataset.index = 0;
 
+            const arrowLeft = document.createElement('button');
+            arrowLeft.className = 'arrow arrow-left';
+            arrowLeft.innerHTML = '&lt;';
+            arrowLeft.onclick = (e) => {
+                e.stopPropagation();
+                showPreviousImage(product.id, imgElement);
+            };
+
+            const arrowRight = document.createElement('button');
+            arrowRight.className = 'arrow arrow-right';
+            arrowRight.innerHTML = '&gt;';
+            arrowRight.onclick = (e) => {
+                e.stopPropagation();
+                showNextImage(product.id, imgElement);
+            };
+
             imageContainer.appendChild(imgElement);
+            imageContainer.appendChild(arrowLeft);
+            imageContainer.appendChild(arrowRight);
 
             const name = document.createElement('p');
             name.className = 'product-name';
             name.textContent = product.name;
-            name.onclick = () => openProductModal(product.id); // Clic en el nombre abre el modal
 
-            // Agregar los demás elementos como precio, cantidad, etc.
-            // ...
+            const quantityContainer = document.createElement('div');
+            quantityContainer.className = 'quantity-container';
+
+            const quantityInput = document.createElement('input');
+            quantityInput.type = 'number';
+            quantityInput.min = 1;
+            quantityInput.max = product.quantity;
+            quantityInput.value = 1;
+
+            const incrementButton = document.createElement('button');
+            incrementButton.textContent = '+';
+            incrementButton.onclick = () => {
+                if (quantityInput.value < product.quantity) {
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                }
+            };
+
+            const decrementButton = document.createElement('button');
+            decrementButton.textContent = '-';
+            decrementButton.onclick = () => {
+                if (quantityInput.value > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                }
+            };
+
+            quantityContainer.appendChild(decrementButton);
+            quantityContainer.appendChild(quantityInput);
+            quantityContainer.appendChild(incrementButton);
+
+            const price = document.createElement('p');
+            price.className = 'product-price';
+            price.textContent = `$${product.price % 1 === 0 ? product.price : product.price.toFixed(2)}`;
+
+            const addToCartBtn = document.createElement('button');
+            addToCartBtn.className = 'add-to-cart-btn';
+            addToCartBtn.innerHTML = 'Al carrito<span class="cart-animation"></span>';
+            addToCartBtn.onclick = (e) => {
+                e.stopPropagation();
+                addToCart(product.id, parseInt(quantityInput.value));
+            };
 
             productElement.appendChild(imageContainer);
             productElement.appendChild(name);
-            // Agrega los otros elementos (precio, cantidad, etc.) aquí
+            productElement.appendChild(price);
+            productElement.appendChild(quantityContainer);
+            productElement.appendChild(addToCartBtn);
+
             productsContainer.appendChild(productElement);
+        };
+
+        img.onerror = () => {
+            console.error(`No se pudo cargar la imagen para el producto ${product.name}`);
         };
     });
 }
-
 
 
 
@@ -336,10 +397,6 @@ function openProductModal(productId) {
         const productModalImage = document.getElementById('product-modal-image');
         const productInfoLink = document.getElementById('product-info-link');
         const productCodeLink = document.getElementById('product-code-link');
-        const productModalTitle = document.getElementById('product-modal-title'); // Agrega el título
-
-        // Mostrar el nombre del producto en el título del modal
-        productModalTitle.textContent = product.name;
 
         // Verificar que la imagen exista y esté definida
         if (product.images && product.images.length > 0) {
@@ -353,10 +410,9 @@ function openProductModal(productId) {
         productInfoLink.setAttribute('onclick', `openDescriptionWindow(${product.id})`);
         productCodeLink.setAttribute('onclick', `openCodeWindow(${product.id})`);
 
-        productModal.style.display = 'block'; // Mostrar el modal
+        productModal.style.display = 'block'; // Muestra el modal
     }
 }
-
 
 
 
