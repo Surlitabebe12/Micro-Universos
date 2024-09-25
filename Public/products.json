@@ -41,7 +41,7 @@
         "id": 5,
         "name": "ESP8266 en placa de desarrollo Micro USB",
         "price": 330,
-        "quantity": 5,
+        "quantity": 12,
         "images": [
             "Imagenes/5/5_1.png",
             "Imagenes/5/5_2.png",
@@ -56,7 +56,7 @@
         "id": 8,
         "name": "Diodo Rectificador 10a 1000v",
         "price": 190,
-        "quantity": 10,
+        "quantity": 9,
         "images": [
             "Imagenes/8/8_1.png",
             "Imagenes/8/8_2.png"
@@ -83,7 +83,7 @@
         "id": 10,
         "name": "Triac BTA41-600b",
         "price": 150,
-        "quantity": 30,
+        "quantity": 49,
         "images": [
             "Imagenes/10/10_1.png",
             "Imagenes/10/10_2.jpg",
@@ -139,7 +139,7 @@
         "id": 16,
         "name": "Diodo Db3 Disparador 20 Piezas ",
         "price": 150,
-        "quantity": 2,
+        "quantity": 10,
         "images": [
             "Imagenes/16/16_1.jpg",
             "Imagenes/16/16_2.jpg",
@@ -494,7 +494,7 @@
         "id": 47,
         "name": "Diodo Fr607 x10 (1000V 6A)",
         "price": 190,
-        "quantity": 2,
+        "quantity": 13,
         "images": [
             "Imagenes/47/47_1.png"
         ],
@@ -506,7 +506,7 @@
         "id": 48,
         "name": "Diodo Fr207 x20 (1000V 2A)",
         "price": 80,
-        "quantity": 14,
+        "quantity": 3,
         "images": [
             "Imagenes/48/48_1.png"
         ],
@@ -650,7 +650,7 @@
         "id": 61,
         "name": "Triac Bta16-600b X 4 Unidades                      ",
         "price": 320,
-        "quantity": 3,
+        "quantity": 21,
         "images": [
             "Imagenes/61/61_1.png"
         ],
@@ -1105,7 +1105,7 @@
         "id": 103,
         "name": "Pack de 5 Reguladores de Voltaje Ajustables LM317 - Alta Precisión y Fiabilidad",
         "price": 160,
-        "quantity": 30,
+        "quantity": 25,
         "images": [
             "Imagenes/103/103_1.jpg",
             "Imagenes/103/103_2.jpg",
@@ -1267,7 +1267,7 @@
         "id": 113,
         "name": "Pack de 5 Transistores NPN TIP41C 100V 6A",
         "price": 180,
-        "quantity": 20,
+        "quantity": 12,
         "images": [
             "Imagenes/113/113_1.jpg",
             "Imagenes/113/113_2.jpg"
@@ -1280,7 +1280,7 @@
         "id": 114,
         "name": "Transistor IGBT RJH60F5 600V 60A en Encapsulado TO-247",
         "price": 360,
-        "quantity": 10,
+        "quantity": 24,
         "images": [
             "Imagenes/114/114_1.jpg",
             "Imagenes/114/114_2.jpg"
@@ -1293,7 +1293,7 @@
         "id": 115,
         "name": "Pack de 2 Transistores MOSFET IRF640N 200V 18A en Encapsulado TO-220",
         "price": 160,
-        "quantity": 15,
+        "quantity": 12,
         "images": [
             "Imagenes/115/115_1.jpg",
             "Imagenes/115/115_2.jpg",
@@ -1504,7 +1504,7 @@
         "id": 137,
         "name": "Amplificador audio TDA2030A  paquete x4",
         "price": 250,
-        "quantity": 7,
+        "quantity": 10,
         "images": [
             "Imagenes/137/137_1.jpg",
             "Imagenes/137/137_2.jpg",
@@ -1527,6 +1527,26 @@
         ],
         "description": "Este módulo OLED de 0,91 pulgadas ofrece una resolución de 128x32 píxeles y utiliza una interfaz de comunicación I2C, lo que lo hace ideal para proyectos de Arduino y otras plataformas de microcontroladores. La pantalla OLED es eficiente en términos de energía, ofreciendo alta claridad en sus colores blanco o azul.\n\nResolución: 128x32 píxeles.\nTamaño de pantalla: 0,91 pulgadas.\nInterfaz de comunicación: I2C (IIC), soporta hasta 2 direcciones.\nVoltaje de alimentación: 3.3V ~ 5V.\nConsumo de corriente: Menos de 20 mA durante operación normal.\nColores: Blanco o azul (dependiendo del modelo).\nÁngulo de visión: Aproximadamente 160 grados.\nTipo de pantalla: OLED (diodo orgánico de emisión de luz), que no requiere retroiluminación, ahorrando energía.\nCompatibilidad: Compatible con Arduino, ESP32, Raspberry Pi y otros microcontroladores.\nTemperatura de funcionamiento: -40°C a +80°C.",
         "code": "#include <Wire.h>\n#include <U8g2lib.h>\n\n// Inicializa la pantalla OLED 128x32 con I2C\nU8G2_SSD1306_128X32_UNIVISION_F_SW_I2C u8g2(U8G2_R0, /* clock=*/ A5, /* data=*/ A4, /* reset=*/ U8X8_PIN_NONE); \n\nvoid setup() {\n  u8g2.begin();  // Inicia la pantalla\n}\n\nvoid loop() {\n  u8g2.clearBuffer();  // Limpia la pantalla\n  u8g2.setFont(u8g2_font_ncenB08_tr);  // Establece la fuente\n  u8g2.drawStr(0, 10, \"Hola Mundo!\");  // Muestra el texto en la pantalla\n  u8g2.sendBuffer();  // Envía el buffer a la pantalla\n  delay(1000);  // Espera 1 segundo\n}",
+        "datasheet": false
+    },
+    {
+        "id": 141,
+        "name": "BTA12-600b (5 unidades)",
+        "price": 350,
+        "quantity": 15,
+        "images": [],
+        "description": "",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 143,
+        "name": "KBU1510 puente rectificador",
+        "price": 100,
+        "quantity": 7,
+        "images": [],
+        "description": "",
+        "code": "",
         "datasheet": false
     }
 ]
