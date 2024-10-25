@@ -521,13 +521,13 @@
     {
         "id": 48,
         "name": "Diodo Fr207 x20 (1000V 2A)",
-        "price": "200",
-        "quantity": "3",
+        "price": "80",
+        "quantity": 3,
         "images": [
             "Imagenes/48/48_1.png"
         ],
-        "description": "nan",
-        "code": "nan",
+        "description": "",
+        "code": "",
         "datasheet": true
     },
     {
@@ -1575,6 +1575,72 @@
         "quantity": 7,
         "images": [],
         "description": "",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 147,
+        "name": "Kit de Inicio ESP32 con Sensores y Prototipos",
+        "price": "1900",
+        "quantity": 4,
+        "images": [
+            "Imagenes/147/147_1.jpg",
+            "Imagenes/147/147_2.jpg",
+            "Imagenes/147/147_3.jpg"
+        ],
+        "description": "Kit de Inicio ESP32 con Sensores y Prototipos\n\nDescubre el mundo de la electrónica y la programación con este completo Kit de Inicio ESP32, ideal para principiantes y aficionados avanzados. Diseñado para facilitar el aprendizaje y la creación de proyectos innovadores, este kit incluye una amplia variedad de componentes esenciales, desde sensores hasta módulos de comunicación y displays, todo lo que necesitas para experimentar con el potente microcontrolador ESP32.\n\n¿Qué incluye este kit?\nESP32 WiFi + Bluetooth: Placa principal de desarrollo con un microcontrolador versátil y conectividad dual.\nPlaca Protoboard: Prototipado rápido sin soldaduras, ideal para ensamblar circuitos de prueba.\nConectores Jumper: Cables de conexión macho-macho para facilitar la interconexión de módulos.\nSensores Integrados:\nSensor PIR de Movimiento: Detecta la presencia de personas o animales mediante infrarrojos.\nSensor DHT11: Mide temperatura y humedad ambiental con alta precisión.\nSensor de Sonido: Captura cambios en el nivel de sonido, perfecto para proyectos interactivos.\nSensor de Obstáculos Infrarrojo: Detecta objetos y evita colisiones.\nPantalla OLED: Display de 0.96” para mostrar información en tiempo real, como datos de sensores o gráficos simples.\nMódulo de Relé: Controla dispositivos de mayor potencia, como luces o motores.\nPotenciómetro Ajustable: Permite variar la resistencia en los circuitos, ideal para calibraciones.\nConjunto de LED Multicolor: LEDs de diferentes colores para indicaciones visuales en tus proyectos.\nBotones de Prueba: Pulsadores para activar o desactivar funciones en los prototipos.\nZumbador Activo y Pasivo: Emite señales sonoras para notificaciones o alertas en los proyectos.\nResistencias Variadas: Conjunto de resistencias para el armado de diferentes tipos de circuitos.\nCable USB: Para conectar y programar el ESP32 desde tu computadora o laptop.\n¿Por qué elegir este kit?\nEste kit es perfecto para crear proyectos de automatización, IoT, domótica, medición ambiental y más. Incluye todo lo necesario para comenzar a aprender de manera práctica y divertida, con múltiples componentes que te permitirán realizar proyectos paso a paso.\n\nYa sea para mejorar tus habilidades en la programación de microcontroladores o para implementar tus propias ideas de automatización, este Kit de Inicio ESP32 con Sensores y Prototipos te ofrece un sinfín de posibilidades. ¡Empieza a crear hoy mismo!",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 149,
+        "name": "RP2040 Zero de Raspberry Pi: La Mini Placa Ideal para Proyectos IoT",
+        "price": "380",
+        "quantity": 20,
+        "images": [
+            "Imagenes/149/149_1.jpg",
+            "Imagenes/149/149_2.jpg",
+            "Imagenes/149/149_3.jpg"
+        ],
+        "description": "RP2040 Zero de Raspberry Pi: La Mini Placa Potente para Proyectos IoT y Maker\n\nExplora todo tu potencial como maker con el RP2040 Zero, la última innovación de Raspberry Pi en un formato ultracompacto. Basada en el reconocido microcontrolador RP2040, esta placa es perfecta para proyectos de automatización, robótica, dispositivos portátiles y más. Diseñada para aquellos que buscan una solución potente y flexible en un tamaño reducido, el RP2040 Zero ofrece todo lo necesario para desarrollar aplicaciones IoT y prototipos avanzados sin comprometer el rendimiento.\n\nCaracterísticas destacadas:\nMicrocontrolador RP2040 de doble núcleo con frecuencia de hasta 133 MHz.\n2 MB de memoria flash para almacenar programas complejos.\n264 KB de SRAM, ideal para ejecutar múltiples procesos simultáneos.\n30 pines GPIO, incluyendo 3 entradas analógicas para una mayor conectividad.\nCompatible con MicroPython y C/C++, facilitando el desarrollo y la programación.\nFormato compacto: mide solo 22 x 18 mm, ideal para proyectos con limitaciones de espacio.\nConexión USB Tipo-C para una fácil programación y alimentación.",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 151,
+        "name": "Pantalla LCD 1.44'' SPI 128x128 TFT Color",
+        "price": "390",
+        "quantity": 15,
+        "images": [
+            "Imagenes/151/151_1.jpg",
+            "Imagenes/151/151_2.jpg",
+            "Imagenes/151/151_3.jpg"
+        ],
+        "description": "La pantalla LCD TFT de 1.44 pulgadas con interfaz SPI ofrece una resolución de 128x128 píxeles y colores vivos, ideal para proyectos de Arduino, Raspberry Pi y otros microcontroladores. Esta pantalla compacta es perfecta para aplicaciones de visualización de texto, gráficos y datos en tiempo real.\n\nEspecificaciones eléctricas:\nVoltaje de funcionamiento: 3.3 V o 5 V (compatibilidad con 5V mediante un regulador integrado).\nInterfaz de comunicación: SPI (Serial Peripheral Interface).\nResolución: 128 x 128 píxeles.\nTipo de pantalla: TFT LCD a color.\nControlador: ST7735 (compatible con bibliotecas gráficas populares).\nConsumo de corriente: 20-40 mA (dependiendo del brillo y el uso).\nTamaño:\nLargo: 43.5 mm\nAncho: 30 mm\nPines de conexión: VCC, GND, SCK, SDA, A0, RESET, CS, LED.\nVCC: Alimentación positiva.\nGND: Tierra.\nSCK: Señal de reloj SPI.\nSDA: Datos SPI.\nA0: Registro de dirección/selección de datos.\nRESET: Pin de reinicio.\nCS: Chip Select, para seleccionar la pantalla.\nLED: Control de retroiluminación de la pantalla.",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 153,
+        "name": "Sensor ENS160+ AHT21: Calidad de Aire + Temp/Hum",
+        "price": "690",
+        "quantity": "10",
+        "images": [
+            "Imagenes/153/153_1.jpg",
+            "Imagenes/153/153_2.jpg",
+            "Imagenes/153/153_3.jpg"
+        ],
+        "description": "El módulo ENS160+ AHT21 que ves en la imagen combina dos sensores para ofrecer un monitoreo detallado de la calidad del aire, temperatura y humedad. A continuación, te comparto sus detalles eléctricos:\n\n1. Alimentación:\nVoltaje de operación: 3.3V - 5V\nConsumo de corriente:\nENS160: aproximadamente 30 mA en operación activa.\nAHT21: aproximadamente 0.5 mA en medición, 0.01 mA en modo standby.\n2. Interfaces de comunicación:\nI2C (Inter-Integrated Circuit):\nPines: SDA (datos) y SCL (reloj).\nVelocidad: soporta hasta 400 kHz.\nDirecciones I2C:\nENS160: configurables, típicamente 0x53 u 0x52.\nAHT2x: 0x38.\nSPI (Serial Peripheral Interface) [opcional en ENS160]:\nPines: MISO, MOSI, SCK, CS.\n3. Características de los sensores:\nENS160 (Sensor de calidad de aire):\nMonitoreo de compuestos orgánicos volátiles (COVs) y dióxido de carbono equivalente (eCO₂).\nModos de operación: normal, bajo consumo y reposo.\nSensibilidad ajustable para diversas aplicaciones.\nAHT21 (Sensor de temperatura y humedad):\nRango de temperatura: -40°C a 85°C, precisión de ±0.3°C.\nRango de humedad: 0% a 100% RH, precisión de ±2% RH.\n4. Configuración de pines:\nVin: Entrada de alimentación (3.3V o 5V).\nGND: Tierra (referencia).\nSCL: Línea de reloj para I2C.\nSDA: Línea de datos para I2C.\nCS: Chip Select para SPI (cuando se usa).\nINT: Pin de interrupción para notificaciones.\n5. Compatibilidad:\nCompatible con microcontroladores como Arduino, ESP32, Raspberry Pi, etc.\nPuede integrarse fácilmente en sistemas IoT para monitoreo de aire en tiempo real.",
+        "code": "#include <Wire.h>\n#include <Adafruit_AHTX0.h>\n#include <Adafruit_ENS160.h>\n\n// Instancia del sensor AHT2x\nAdafruit_AHTX0 aht;\n// Instancia del sensor ENS160\nAdafruit_ENS160 ens160;\n\nvoid setup() {\n  // Iniciar la comunicación serie\n  Serial.begin(115200);\n\n  // Iniciar la comunicación I2C\n  // Conexión I2C:\n  // Vin del módulo ENS160+AHT2x --> 3.3V del ESP32\n  // GND del módulo ENS160+AHT2x --> GND del ESP32\n  // SDA del módulo ENS160+AHT2x --> GPIO 21 del ESP32 (SDA)\n  // SCL del módulo ENS160+AHT2x --> GPIO 22 del ESP32 (SCL)\n  Wire.begin(21, 22);\n\n  // Inicializar el sensor AHT2x\n  if (!aht.begin()) {\n    Serial.println(\"No se pudo encontrar el sensor AHT2x. Verifique la conexión.\");\n    while (1);\n  } else {\n    Serial.println(\"Sensor AHT2x iniciado correctamente.\");\n  }\n\n  // Inicializar el sensor ENS160\n  if (!ens160.begin()) {\n    Serial.println(\"No se pudo encontrar el sensor ENS160. Verifique la conexión.\");\n    while (1);\n  } else {\n    Serial.println(\"Sensor ENS160 iniciado correctamente.\");\n  }\n}\n\nvoid loop() {\n  // Leer la temperatura y humedad del sensor AHT2x\n  sensors_event_t humidity, temp;\n  aht.getEvent(&humidity, &temp);\n  Serial.print(\"Temperatura: \");\n  Serial.print(temp.temperature);\n  Serial.println(\" °C\");\n  Serial.print(\"Humedad: \");\n  Serial.print(humidity.relative_humidity);\n  Serial.println(\" %\");\n\n  // Leer la calidad del aire del ENS160\n  ens160.setRHumidity((uint16_t)humidity.relative_humidity * 100); // Ajustar la humedad\n  ens160.setTemperature((int16_t)temp.temperature * 100); // Ajustar la temperatura\n\n  // Esperar a que el ENS160 esté listo para la lectura\n  delay(500); \n\n  // Mostrar datos del ENS160\n  Serial.print(\"TVOC (COV totales): \");\n  Serial.print(ens160.TVOC); \n  Serial.println(\" ppb\");\n\n  Serial.print(\"eCO2 (CO2 equivalente): \");\n  Serial.print(ens160.eCO2); \n  Serial.println(\" ppm\");\n\n  // Pausa de 2 segundos antes de la siguiente lectura\n  delay(2000);\n}",
+        "datasheet": false
+    },
+    {
+        "id": 155,
+        "name": "Pack 2x IRFP264N MOSFETs: Potencia Máxima y Eficiencia",
+        "price": "350",
+        "quantity": "25",
+        "images": [],
+        "description": "especificaciones del IRFP264N:\nTipo: MOSFET de potencia, N-Channel\nVoltaje de drenaje-fuente (VDS): 250V\nCorriente de drenaje (ID): 47A (a 25°C)\nResistencia de encendido (RDS(on)): 0.075 ohmios (típico, a VGS = 10V)\nVoltaje de compuerta (VGS): ±20V (máximo)\nDisipación de potencia (PD): 300W (máximo)\nCapacidad de carga de compuerta (Ciss): 7300 pF\nEncapsulado: TO-247\nTemperatura de operación: -55°C a +175°C\nTiempo de conmutación:\nTiempo de encendido (ton): 38 ns (típico)\nTiempo de apagado (toff): 83 ns (típico)\nConfiguración de pines:\nDrenaje (Drain): Pin central y parte metálica del encapsulado\nFuente (Source): Pin derecho\nCompuerta (Gate): Pin izquierdo",
         "code": "",
         "datasheet": false
     }
