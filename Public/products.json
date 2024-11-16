@@ -1656,5 +1656,65 @@
         "description": "Este módulo ESP32 C3 es una placa de desarrollo compacta y de bajo consumo, ideal para proyectos de IoT, automatización y electrónica. Incluye un puerto USB-C para una fácil programación y alimentación, dos botones (RESET y BOOT), y una serie de pines GPIO expuestos para conexión a sensores y periféricos. Basado en el chip ESP32-C3, ofrece conectividad WiFi y Bluetooth 5.0, soportando tanto BLE como Classic Bluetooth.\n\nEspecificaciones Eléctricas:\n\nVoltaje de entrada: 5V a través de USB-C.\nConsumo en modo inactivo: <10 μA en modo deep-sleep.\nPines GPIO disponibles: 21 pines con funciones múltiples (PWM, ADC, UART, I2C).\nConectividad: WiFi 2.4 GHz y Bluetooth 5.0.",
         "code": "#include <WiFi.h>\n#include <HTTPClient.h>\n#include <DHT.h>\n\n// Configuración del sensor DHT\n#define DHTPIN 4      // Pin GPIO al que está conectado el DHT\n#define DHTTYPE DHT22 // Modelo del sensor (DHT11 o DHT22)\nDHT dht(DHTPIN, DHTTYPE);\n\n// Configuración de WiFi\nconst char* ssid = \"TU_SSID\";\nconst char* password = \"TU_PASSWORD\";\n\n// URL del servidor donde se enviarán los datos\nconst char* serverName = \"http://tu-servidor.com/recibir_datos\";\n\nvoid setup() {\n  Serial.begin(115200);\n\n  // Inicia el sensor DHT\n  dht.begin();\n\n  // Conexión a WiFi\n  Serial.print(\"Conectando a WiFi...\");\n  WiFi.begin(ssid, password);\n  while (WiFi.status() != WL_CONNECTED) {\n    delay(500);\n    Serial.print(\".\");\n  }\n  Serial.println(\"\nConectado a la red WiFi\");\n}\n\nvoid loop() {\n  if (WiFi.status() == WL_CONNECTED) {\n    HTTPClient http;\n\n    // Leer temperatura y humedad\n    float temperature = dht.readTemperature();\n    float humidity = dht.readHumidity();\n\n    // Verificar que la lectura es válida\n    if (isnan(temperature) || isnan(humidity)) {\n      Serial.println(\"Error al leer del sensor DHT!\");\n      return;\n    }\n\n    // Preparar la URL con los datos\n    String serverPath = serverName + String(\"?temp=\") + String(temperature) + \"&hum=\" + String(humidity);\n\n    // Iniciar conexión HTTP\n    http.begin(serverPath.c_str());\n\n    // Enviar solicitud GET\n    int httpResponseCode = http.GET();\n\n    // Procesar la respuesta del servidor\n    if (httpResponseCode > 0) {\n      String response = http.getString();\n      Serial.print(\"Código de respuesta: \");\n      Serial.println(httpResponseCode);\n      Serial.print(\"Respuesta del servidor: \");\n      Serial.println(response);\n    } else {\n      Serial.print(\"Error en la solicitud: \");\n      Serial.println(httpResponseCode);\n    }\n\n    // Cerrar conexión HTTP\n    http.end();\n  } else {\n    Serial.println(\"Desconectado de la red WiFi, intentando reconectar...\");\n    WiFi.reconnect();\n  }\n\n  // Esperar 10 segundos antes de la próxima lectura\n  delay(10000);\n}",
         "datasheet": false
+    },
+    {
+        "id": 159,
+        "name": "Módulo Cargador 18650 Tipo-C 5V 3A para 2 Pilas",
+        "price": 450,
+        "quantity": 10,
+        "images": [
+            "Imagenes/159/159_1.jpg",
+            "Imagenes/159/159_2.jpg",
+            "Imagenes/159/159_3.jpg"
+        ],
+        "description": "Este módulo de carga rápida está diseñado para alojar y cargar dos baterías de litio 18650 en paralelo, proporcionando una salida estable de 5V. Con una entrada tipo C y una corriente de salida de hasta 3A, es ideal para alimentar dispositivos portátiles y otros proyectos electrónicos que requieren una fuente de energía confiable y de alta eficiencia. La configuración de dos pilas permite una mayor capacidad de almacenamiento de energía, ofreciendo una solución compacta y práctica para proyectos portátiles.\n\nEspecificaciones eléctricas:\n\nEntrada: Puerto USB tipo C\nSalida: 5V estable\nCorriente de salida: Hasta 3A\nCompatibilidad de batería: Litio 18650 (2 pilas)\nProtecciones: Contra sobrecarga, cortocircuito y sobrecalentamiento",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 161,
+        "name": "Adaptador USB a RS485 Serial, Comunicación Estable",
+        "price": 290,
+        "quantity": 10,
+        "images": [
+            "Imagenes/161/161_1.jpg",
+            "Imagenes/161/161_2.jpg",
+            "Imagenes/161/161_3.jpg",
+            "Imagenes/161/161_4.jpg",
+            "Imagenes/161/161_5.jpg"
+        ],
+        "description": "Este adaptador USB a RS485 permite la conversión directa entre un puerto USB de una computadora y un bus RS485. Es una solución ideal para proyectos de control industrial y comunicación de larga distancia. La conexión se realiza fácilmente a través del puerto USB y ofrece una comunicación confiable y estable en entornos industriales.\n\nEspecificaciones eléctricas:\n\nEntrada: USB (5V) desde la computadora o dispositivo host\nSalida: RS485, con terminal de tornillo para conexión de cables\nVoltaje de operación: Alimentado por USB (5V)\nChipset: Típicamente basado en CH340 o similar (verificar en la especificación específica del fabricante)\nProtección: Contra interferencias eléctricas y electrostáticas",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 163,
+        "name": "Reloj DS3231 RTC con EEPROM AT24C32 para Arduino y ESP32",
+        "price": 210,
+        "quantity": 30,
+        "images": [
+            "Imagenes/163/163_1.jpg",
+            "Imagenes/163/163_2.jpg",
+            "Imagenes/163/163_3.jpg",
+            "Imagenes/163/163_4.jpg",
+            "Imagenes/163/163_5.jpg"
+        ],
+        "description": "El módulo DS3231 es un reloj de tiempo real (RTC) de alta precisión con compensación de temperatura, que mantiene la hora y fecha exacta bajo diversas condiciones de temperatura. Funciona mediante comunicación I2C y proporciona salidas para segundos y alarma programable. Incluye una memoria EEPROM AT24C32 de 32Kbits (4KB) también compatible con I2C, que permite almacenar configuraciones y datos. Requiere una pila CR2032 para mantener la hora cuando no está conectado a la alimentación. Sus pines VCC y GND alimentan el módulo, mientras que los pines SDA y SCL se conectan al microcontrolador.",
+        "code": "#include <Wire.h>\n#include <RTClib.h>\n\nRTC_DS3231 rtc;\n\nvoid setup() {\n  Serial.begin(115200);\n  Wire.begin();  // Inicia I2C para ESP32 (usa SDA y SCL estándar de ESP32)\n  \n  if (!rtc.begin()) {\n    Serial.println(\"No se pudo encontrar el DS3231.\");\n    while (1);\n  }\n\n  if (rtc.lostPower()) {\n    Serial.println(\"El reloj no está ajustado, estableciendo fecha y hora.\");\n    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));  // Ajusta al tiempo de compilación\n  }\n}\n\nvoid loop() {\n  DateTime now = rtc.now();\n  \n  Serial.print(\"Fecha: \");\n  Serial.print(now.year(), DEC);\n  Serial.print('/');\n  Serial.print(now.month(), DEC);\n  Serial.print('/');\n  Serial.print(now.day(), DEC);\n  Serial.print(\" Hora: \");\n  Serial.print(now.hour(), DEC);\n  Serial.print(':');\n  Serial.print(now.minute(), DEC);\n  Serial.print(':');\n  Serial.print(now.second(), DEC);\n  Serial.println();\n\n  delay(1000);  // Espera 1 segundo antes de actualizar\n}",
+        "datasheet": false
+    },
+    {
+        "id": 165,
+        "name": "Placa PCB FR4 7x10cm Cobre Un Lado",
+        "price": 180,
+        "quantity": 20,
+        "images": [
+            "Imagenes/165/165_1.jpg",
+            "Imagenes/165/165_2.jpg",
+            "Imagenes/165/165_3.jpg"
+        ],
+        "description": "Placa de circuito impreso FR4 de 7x10 cm con laminado de cobre de un solo lado, ideal para proyectos DIY y prototipos. Fabricada en material FR4 de alta calidad, permite realizar conexiones y circuitos personalizados con facilidad. Perfecta para diseñadores electrónicos y entusiastas del bricolaje en electrónica.",
+        "code": "",
+        "datasheet": false
     }
 ]
