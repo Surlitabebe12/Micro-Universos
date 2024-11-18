@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Bornera Pcb 2 Pines (x10)",
-        "price": 190,
+        "price": "190",
         "quantity": 2,
         "images": [
             "Imagenes/1/1_1.png"
@@ -14,7 +14,7 @@
     {
         "id": 2,
         "name": "Display Led 8 Bit Max7219",
-        "price": 280,
+        "price": "280",
         "quantity": 7,
         "images": [
             "Imagenes/2/2_1.png",
@@ -26,21 +26,9 @@
         "datasheet": false
     },
     {
-        "id": 3,
-        "name": "Pantalla Tft De 1,8 Pulgadas",
-        "price": 430,
-        "quantity": 1,
-        "images": [
-            "Imagenes/3/3_1.png"
-        ],
-        "description": "La pantalla TFT LCD de 1.8 pulgadas con una resolución de 128x160 píxeles es un módulo compacto y versátil utilizado en diversos proyectos de electrónica y microcontroladores, incluyendo ESP32. Este tipo de pantalla es ideal para mostrar gráficos, imágenes y textos en color.\n\nCaracterísticas:\nTamaño de pantalla: 1.8 pulgadas\nResolución: 128x160 píxeles\nTipo de pantalla: TFT LCD\nInterfaz: SPI (Serial Peripheral Interface)\nVoltaje de operación: 3.3V\nControlador IC: ST7735\nColores: 65K (16-bit)\nÁngulo de visión: Amplio\nConexiones:\nVCC: Alimentación de 3.3V\nGND: Tierra\nCS: Chip Select\nRESET: Reinicio\nA0 (DC): Data/Command\nSDA (MOSI): Master Out Slave In\nSCK: Reloj Serial\nLED: Luz de fondo\nCódigo de Ejemplo para ESP32\nPara utilizar esta pantalla con ESP32, puedes utilizar la biblioteca Adafruit ST7735 que facilita la programación y control de la pantalla. A continuación se presenta un ejemplo básico de cómo inicializar la pantalla y mostrar texto y gráficos.\n\nConexiones ESP32:\nVCC: 3.3V\nGND: GND\nCS: Pin 5\nRESET: Pin 4\nA0 (DC): Pin 2\nSDA (MOSI): Pin 23\nSCK: Pin 18\nLED: 3.3V (opcional para controlar la luz de fondo)",
-        "code": "#include <Adafruit_GFX.h>    // Biblioteca de gráficos de Adafruit\n#include <Adafruit_ST7735.h> // Biblioteca para el controlador ST7735\n#include <SPI.h>\n\n// Definir pines de conexión\n#define TFT_CS     5\n#define TFT_RST    4\n#define TFT_DC     2\n\n// Crear una instancia del objeto ST7735\nAdafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);\n\nvoid setup() {\n  // Inicializar la pantalla\n  tft.initR(INITR_BLACKTAB);\n  tft.setRotation(1); // Opcional: cambiar la orientación de la pantalla\n\n  // Configurar el color del fondo y borrar la pantalla\n  tft.fillScreen(ST77XX_BLACK);\n\n  // Configurar el color del texto y tamaño de la fuente\n  tft.setTextColor(ST77XX_WHITE);\n  tft.setTextSize(2);\n\n  // Mostrar un mensaje de bienvenida\n  tft.setCursor(10, 10);\n  tft.println(\"Hola Mundo!\");\n\n  // Dibujar un rectángulo\n  tft.drawRect(20, 40, 100, 60, ST77XX_RED);\n}\n\nvoid loop() {\n  // Ejemplo de animación simple\n  for (int i = 0; i < 128; i++) {\n    tft.fillCircle(i, 80, 10, ST77XX_BLUE);\n    delay(50);\n    tft.fillCircle(i, 80, 10, ST77XX_BLACK);\n  }\n}",
-        "datasheet": false
-    },
-    {
         "id": 5,
         "name": "ESP8266 en placa de desarrollo Micro USB",
-        "price": 330,
+        "price": "330",
         "quantity": 12,
         "images": [
             "Imagenes/5/5_1.png",
@@ -55,7 +43,7 @@
     {
         "id": 8,
         "name": "Diodo Rectificador 10a 1000v",
-        "price": 190,
+        "price": "190",
         "quantity": 9,
         "images": [
             "Imagenes/8/8_1.png",
@@ -68,7 +56,7 @@
     {
         "id": 9,
         "name": "KBPC5010",
-        "price": 170,
+        "price": "170",
         "quantity": 8,
         "images": [
             "Imagenes/9/9_1.png",
@@ -82,7 +70,7 @@
     {
         "id": 10,
         "name": "Triac BTA41-600b",
-        "price": 150,
+        "price": "150",
         "quantity": 49,
         "images": [
             "Imagenes/10/10_1.png",
@@ -97,7 +85,7 @@
     {
         "id": 11,
         "name": "Chip Attiny85-20pu",
-        "price": 350,
+        "price": "350",
         "quantity": 7,
         "images": [
             "Imagenes/11/11_1.png",
@@ -111,7 +99,7 @@
     {
         "id": 12,
         "name": "Programador Universal Usb Avr Isp (con Adaptador)",
-        "price": 350,
+        "price": "350",
         "quantity": 9,
         "images": [
             "Imagenes/12/12_1.png",
@@ -124,7 +112,7 @@
     {
         "id": 14,
         "name": "Disipador De Calor De Aluminio, 25x24x16mm (4 Unidades)",
-        "price": 220,
+        "price": "220",
         "quantity": 3,
         "images": [
             "Imagenes/14/14_1.png",
@@ -138,7 +126,7 @@
     {
         "id": 16,
         "name": "Diodo Db3 Disparador 20 Piezas ",
-        "price": 150,
+        "price": "150",
         "quantity": 10,
         "images": [
             "Imagenes/16/16_1.jpg",
@@ -151,23 +139,9 @@
         "datasheet": true
     },
     {
-        "id": 18,
-        "name": "Kit Micro Pulsadores Con Tapa De 5 Colores, 25 Pcs",
-        "price": 800,
-        "quantity": 2,
-        "images": [
-            "Imagenes/18/18_1.png",
-            "Imagenes/18/18_2.png",
-            "Imagenes/18/18_3.png"
-        ],
-        "description": "Resumen Técnico\nMicrointerruptor de 5 colores, 12x12x7,3 MM, Tapa Táctil, Pulsador Momentáneo (25 unidades)\n\nDescripción:\nEste kit incluye 25 microinterruptores táctiles de colores variados, diseñados para ser utilizados en una amplia gama de aplicaciones electrónicas. Los interruptores son momentáneos, lo que significa que solo están activos mientras se presionan. Son ideales para proyectos de prototipos, dispositivos de control y cualquier aplicación que requiera un pulsador de acción momentánea.\n\nEspecificaciones Técnicas:\nDimensiones:\n\nTamaño: 12x12x7,3 mm\nTapa: Incluye tapas de colores variados para fácil identificación.\nColores Disponibles:\n\nRojo, Azul, Amarillo, Negro, Blanco.\nCaracterísticas Eléctricas:\n\nTipo: Momentáneo (NO, normalmente abierto)\nVoltaje Máximo: 12V\nCorriente Máxima: 50mA\nMateriales:\n\nCarcasa: Plástico duradero\nContactos: Metal de alta conductividad\nUsos Comunes:\nPrototipos: Creación de interfaces de usuario para prototipos de dispositivos electrónicos.\nControl: Uso en paneles de control, cajas de proyectos y dispositivos de control remoto.\nEducación: Proyectos educativos y demostraciones en laboratorios de electrónica.\nVentajas:\nVersatilidad: Adecuado para una amplia gama de aplicaciones y tipos de proyectos.\nFacilidad de Uso: Fácil de instalar y utilizar, ideal para principiantes y profesionales.\nVariedad: Incluye múltiples opciones de colores para satisfacer diversas necesidades.\nCódigo de Ejemplo (ESP32):\nPara demostrar la aplicación de los microinterruptores en un proyecto de ESP32, aquí hay un simple ejemplo de código que utiliza un microinterruptor para encender y apagar un LED:",
-        "code": "// Configuración de pines\nconst int ledPin = 2; // El pin GPIO donde está conectado el LED\nconst int buttonPin = 4; // El pin GPIO donde está conectado el microinterruptor\n\nvoid setup() {\n  // Inicializar el pin del LED como salida\n  pinMode(ledPin, OUTPUT);\n  // Inicializar el pin del microinterruptor como entrada\n  pinMode(buttonPin, INPUT_PULLUP);\n}\n\nvoid loop() {\n  // Leer el estado del microinterruptor\n  int buttonState = digitalRead(buttonPin);\n\n  // Si el microinterruptor está presionado, encender el LED\n  if (buttonState == LOW) {\n    digitalWrite(ledPin, HIGH);\n  } else {\n    // Si el microinterruptor no está presionado, apagar el LED\n    digitalWrite(ledPin, LOW);\n  }\n}",
-        "datasheet": false
-    },
-    {
         "id": 19,
         "name": "Placa Expansión  Esp32. Nuevo Modelo.",
-        "price": 380,
+        "price": "380",
         "quantity": 8,
         "images": [
             "Imagenes/19/19_1.png"
@@ -179,7 +153,7 @@
     {
         "id": 20,
         "name": "Módulo De Pantalla Led Tm1637 Para Arduino, 7 Segmentos, 4 B",
-        "price": 160,
+        "price": "160",
         "quantity": 5,
         "images": [
             "Imagenes/20/20_1.png",
@@ -197,7 +171,7 @@
     {
         "id": 21,
         "name": "Interruptor Mosfet (x2) De Alta Potencia (400w)",
-        "price": 250,
+        "price": "250",
         "quantity": 1,
         "images": [
             "Imagenes/21/21_1.png",
@@ -211,7 +185,7 @@
     {
         "id": 22,
         "name": "Módulo Usb A Ttl Cp2102 Con Cables Dupont",
-        "price": 380,
+        "price": "380",
         "quantity": 17,
         "images": [
             "Imagenes/22/22_1.jpg",
@@ -226,7 +200,7 @@
     {
         "id": 24,
         "name": "Conversor Serie--bluetooth Jdy-30",
-        "price": 450,
+        "price": "450",
         "quantity": 3,
         "images": [
             "Imagenes/24/24_1.png"
@@ -238,7 +212,7 @@
     {
         "id": 25,
         "name": "Diodo Rectificador M7 1n4007 Smd 1a 100 V. (20 Unidades)",
-        "price": 120,
+        "price": "120",
         "quantity": 2,
         "images": [
             "Imagenes/25/25_1.png"
@@ -250,7 +224,7 @@
     {
         "id": 26,
         "name": "Lámpara Led Indoor 200w Reales. Dimerizable. Luz Combinada!",
-        "price": 5200,
+        "price": "5200",
         "quantity": 1,
         "images": [],
         "description": "",
@@ -258,21 +232,9 @@
         "datasheet": false
     },
     {
-        "id": 27,
-        "name": "Caja De Separadores De Nailon Hexagonal, M3 (300 Piezas)",
-        "price": 850,
-        "quantity": 1,
-        "images": [
-            "Imagenes/27/27_1.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 28,
         "name": "Sensor De Hall 49e (bici Eléctrica) 5 Unidades",
-        "price": 160,
+        "price": "160",
         "quantity": 15,
         "images": [
             "Imagenes/28/28_1.jpg",
@@ -287,7 +249,7 @@
     {
         "id": 29,
         "name": "Led Cob YXO 50w, Dual Spectrum",
-        "price": 380,
+        "price": "380",
         "quantity": 47,
         "images": [
             "Imagenes/29/29_1.png",
@@ -303,7 +265,7 @@
     {
         "id": 30,
         "name": "Esp32 Wifi Con Placa De Expansión último Modelo",
-        "price": 990,
+        "price": "990",
         "quantity": 8,
         "images": [
             "Imagenes/30/30_1.jpg",
@@ -317,7 +279,7 @@
     {
         "id": 31,
         "name": "Cable Usb A Micro, Alta Calidad, Tipo A. 0.3m",
-        "price": 130,
+        "price": "130",
         "quantity": 6,
         "images": [
             "Imagenes/31/31_1.png",
@@ -330,7 +292,7 @@
     {
         "id": 32,
         "name": "Módulo De Fuente De Alimentación Usb",
-        "price": 270,
+        "price": "270",
         "quantity": 9,
         "images": [
             "Imagenes/32/32_1.png"
@@ -342,7 +304,7 @@
     {
         "id": 33,
         "name": "Sensor De Distancia Ultrasónico X2 (compatible Arduino)",
-        "price": 280,
+        "price": "280",
         "quantity": 2,
         "images": [
             "Imagenes/33/33_1.png",
@@ -353,21 +315,9 @@
         "datasheet": false
     },
     {
-        "id": 34,
-        "name": "Caja De Plástico Para Proyecto De Electrónica",
-        "price": 250,
-        "quantity": 4,
-        "images": [
-            "Imagenes/34/34_1.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 35,
         "name": "Sensor Capacitivo De Humedad Del Suelo",
-        "price": 180,
+        "price": "180",
         "quantity": 2,
         "images": [
             "Imagenes/35/35_1.png"
@@ -379,7 +329,7 @@
     {
         "id": 36,
         "name": "Adaptador Para Esp32 38pinos (ver Nota)",
-        "price": 350,
+        "price": "350",
         "quantity": 1,
         "images": [
             "Imagenes/36/36_1.png"
@@ -391,7 +341,7 @@
     {
         "id": 37,
         "name": "Sensor De Luz Lm393 Arduino",
-        "price": 130,
+        "price": "130",
         "quantity": 9,
         "images": [
             "Imagenes/37/37_1.png"
@@ -403,7 +353,7 @@
     {
         "id": 38,
         "name": "Sensor De Humedad Tierra (alta Precisión) Arduino",
-        "price": 420,
+        "price": "420",
         "quantity": 20,
         "images": [
             "Imagenes/38/38_1.png",
@@ -415,22 +365,9 @@
         "datasheet": false
     },
     {
-        "id": 39,
-        "name": "Mini Humidificador Usb-c (placa Electrónica, Arduino)",
-        "price": 380,
-        "quantity": 1,
-        "images": [
-            "Imagenes/39/39_1.png",
-            "Imagenes/39/39_2.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 40,
         "name": "Pcb Prototipo Pack De 4",
-        "price": 350,
+        "price": "350",
         "quantity": 2,
         "images": [
             "Imagenes/40/40_1.png"
@@ -442,7 +379,7 @@
     {
         "id": 41,
         "name": "Kit Surtido De Transistores, Regulador De Voltaje (16 Pcs)",
-        "price": 500,
+        "price": "500",
         "quantity": 1,
         "images": [
             "Imagenes/41/41_1.png"
@@ -454,7 +391,7 @@
     {
         "id": 42,
         "name": "Sensor De Temperatura Y Humedad Arduino",
-        "price": 270,
+        "price": "270",
         "quantity": 5,
         "images": [
             "Imagenes/42/42_1.png",
@@ -472,7 +409,7 @@
     {
         "id": 43,
         "name": "Dip-switch 4 Posiciones (pack De 5)",
-        "price": 350,
+        "price": "350",
         "quantity": 1,
         "images": [
             "Imagenes/43/43_1.png",
@@ -485,7 +422,7 @@
     {
         "id": 44,
         "name": "Chip Cob YXO 50w FRIO",
-        "price": 360,
+        "price": "360",
         "quantity": 19,
         "images": [
             "Imagenes/44/44_1.png"
@@ -497,7 +434,7 @@
     {
         "id": 46,
         "name": "ESP32 placa de desarrollo",
-        "price": 650,
+        "price": "650",
         "quantity": 3,
         "images": [
             "Imagenes/46/46_1.png"
@@ -509,7 +446,7 @@
     {
         "id": 47,
         "name": "Diodo Fr607 x10 (1000V 6A)",
-        "price": 190,
+        "price": "190",
         "quantity": 13,
         "images": [
             "Imagenes/47/47_1.png"
@@ -521,7 +458,7 @@
     {
         "id": 48,
         "name": "Diodo Fr207 x20 (1000V 2A)",
-        "price": 80,
+        "price": "80",
         "quantity": 3,
         "images": [
             "Imagenes/48/48_1.png"
@@ -533,7 +470,7 @@
     {
         "id": 49,
         "name": "Potenciómetro Lineal De 3 Pines, 1k",
-        "price": 80,
+        "price": "80",
         "quantity": 10,
         "images": [
             "Imagenes/49/49_1.png"
@@ -545,7 +482,7 @@
     {
         "id": 50,
         "name": "Potenciómetro Lineal De 3 Pines, 2k",
-        "price": 80,
+        "price": "80",
         "quantity": 9,
         "images": [
             "Imagenes/50/50_1.png"
@@ -557,7 +494,7 @@
     {
         "id": 51,
         "name": "Potenciómetro Lineal De 3 Pines, 100k",
-        "price": 80,
+        "price": "80",
         "quantity": 10,
         "images": [
             "Imagenes/51/51_1.png"
@@ -569,7 +506,7 @@
     {
         "id": 52,
         "name": "Wemos D1 Mini Pro V3.0 Wifi",
-        "price": 330,
+        "price": "330",
         "quantity": 10,
         "images": [
             "Imagenes/52/52_1.png"
@@ -581,7 +518,7 @@
     {
         "id": 53,
         "name": "Ne555 Circuito Integrado (10 Unidades)",
-        "price": 180,
+        "price": "180",
         "quantity": 4,
         "images": [
             "Imagenes/53/53_1.png"
@@ -593,7 +530,7 @@
     {
         "id": 55,
         "name": "Potenciómetro Lineal De 3 Pines, 1m",
-        "price": 80,
+        "price": "80",
         "quantity": 10,
         "images": [
             "Imagenes/55/55_1.png"
@@ -605,7 +542,7 @@
     {
         "id": 56,
         "name": "Potenciómetro Lineal De 3 Pines, 50k",
-        "price": 80,
+        "price": "80",
         "quantity": 10,
         "images": [
             "Imagenes/56/56_1.png"
@@ -617,7 +554,7 @@
     {
         "id": 57,
         "name": "Potenciómetro Lineal De 3 Pines, 20k",
-        "price": 80,
+        "price": "80",
         "quantity": 10,
         "images": [
             "Imagenes/57/57_1.png"
@@ -629,7 +566,7 @@
     {
         "id": 58,
         "name": "Transistor 2n2222 (100 Unidades)",
-        "price": 350,
+        "price": "350",
         "quantity": 4,
         "images": [
             "Imagenes/58/58_1.png"
@@ -641,7 +578,7 @@
     {
         "id": 59,
         "name": "Potenciómetro Lineal De 3 Pines, 250k",
-        "price": 80,
+        "price": "80",
         "quantity": 9,
         "images": [
             "Imagenes/59/59_1.png"
@@ -653,7 +590,7 @@
     {
         "id": 60,
         "name": "Triac Bta10-600b (x5 Unidades)",
-        "price": 500,
+        "price": "500",
         "quantity": 3,
         "images": [
             "Imagenes/60/60_1.png"
@@ -665,7 +602,7 @@
     {
         "id": 61,
         "name": "Triac Bta16-600b X 4 Unidades                      ",
-        "price": 320,
+        "price": "320",
         "quantity": 20,
         "images": [
             "Imagenes/61/61_1.png"
@@ -675,35 +612,9 @@
         "datasheet": false
     },
     {
-        "id": 62,
-        "name": "Módulo De Interruptor Mosfet 4 Canales",
-        "price": 380,
-        "quantity": 2,
-        "images": [
-            "Imagenes/62/62_1.png",
-            "Imagenes/62/62_2.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
-        "id": 64,
-        "name": "Placa Mosfet Superior Irf520 Mos (x2)",
-        "price": 300,
-        "quantity": 9,
-        "images": [
-            "Imagenes/64/64_1.png",
-            "Imagenes/64/64_2.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 65,
         "name": "Portafusibles De Tubo De Vidrio, 5x20mm (pack X5)",
-        "price": 250,
+        "price": "250",
         "quantity": 3,
         "images": [
             "Imagenes/65/65_1.png",
@@ -716,7 +627,7 @@
     {
         "id": 66,
         "name": "Teclado Membrana 4x5 (arduino U Otros Micros)",
-        "price": 150,
+        "price": "150",
         "quantity": 2,
         "images": [
             "Imagenes/66/66_1.png"
@@ -728,7 +639,7 @@
     {
         "id": 67,
         "name": "Sensor De Corriente De Precisión (arduino)",
-        "price": 280,
+        "price": "280",
         "quantity": 2,
         "images": [
             "Imagenes/67/67_1.png",
@@ -739,22 +650,9 @@
         "datasheet": false
     },
     {
-        "id": 68,
-        "name": "Módulo De Pantalla Lcd Tft De 1,8 (ej Arduino)",
-        "price": 500,
-        "quantity": 6,
-        "images": [
-            "Imagenes/68/68_1.png",
-            "Imagenes/68/68_2.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 69,
         "name": "Caja De Fusibles De Tubo De Vidrio, Soplado Rápido (100uds) ",
-        "price": 750,
+        "price": "750",
         "quantity": 5,
         "images": [
             "Imagenes/69/69_1.png"
@@ -766,7 +664,7 @@
     {
         "id": 71,
         "name": "Microcontrolador W806 (placa De Desarrollo)",
-        "price": 690,
+        "price": "690",
         "quantity": 2,
         "images": [
             "Imagenes/71/71_1.png"
@@ -778,7 +676,7 @@
     {
         "id": 72,
         "name": "Sensor De Temperatura Y Humedad De Alta Precisión Aht21",
-        "price": 270,
+        "price": "270",
         "quantity": 4,
         "images": [
             "Imagenes/72/72_1.png",
@@ -795,7 +693,7 @@
     {
         "id": 73,
         "name": "Conversor Dc-dc De Intensidad Y Voltaje Regulables",
-        "price": 260,
+        "price": "260",
         "quantity": 15,
         "images": [
             "Imagenes/73/73_1.jpg",
@@ -809,7 +707,7 @@
     {
         "id": 74,
         "name": "Módulo Rele temporizado",
-        "price": 390,
+        "price": "390",
         "quantity": 4,
         "images": [
             "Imagenes/74/74_1.jpg",
@@ -822,7 +720,7 @@
     {
         "id": 76,
         "name": "Optoacoplador PC817C (20 unidades)",
-        "price": 200,
+        "price": "200",
         "quantity": 9,
         "images": [
             "Imagenes/76/76_1.jpg"
@@ -834,7 +732,7 @@
     {
         "id": 77,
         "name": "Led smd RGB (x20)",
-        "price": 150,
+        "price": "150",
         "quantity": 10,
         "images": [
             "Imagenes/77/77_1.jpg"
@@ -846,7 +744,7 @@
     {
         "id": 78,
         "name": "H11AA1 (x4 unidades)",
-        "price": 230,
+        "price": "230",
         "quantity": 6,
         "images": [
             "Imagenes/78/78_1.jpg"
@@ -858,7 +756,7 @@
     {
         "id": 79,
         "name": "MOC3043 (x2)",
-        "price": 150,
+        "price": "150",
         "quantity": 14,
         "images": [
             "Imagenes/79/79_1.jpg"
@@ -870,7 +768,7 @@
     {
         "id": 80,
         "name": "Voltimetro digital 0-100V 10A",
-        "price": 250,
+        "price": "250",
         "quantity": 15,
         "images": [
             "Imagenes/80/80_1.jpg",
@@ -884,7 +782,7 @@
     {
         "id": 81,
         "name": "Tarjeta expansion micro SD",
-        "price": 150,
+        "price": "150",
         "quantity": 10,
         "images": [
             "Imagenes/81/81_1.jpg",
@@ -898,7 +796,7 @@
     {
         "id": 84,
         "name": "Grabadora Eeprom kit",
-        "price": 990,
+        "price": "990",
         "quantity": 1,
         "images": [],
         "description": "",
@@ -908,7 +806,7 @@
     {
         "id": 85,
         "name": "Lampara 200W",
-        "price": 5200,
+        "price": "5200",
         "quantity": 2,
         "images": [],
         "description": "",
@@ -918,7 +816,7 @@
     {
         "id": 87,
         "name": "Interruptor palanca (x10)",
-        "price": 350,
+        "price": "350",
         "quantity": 9,
         "images": [
             "Imagenes/87/87_1.jpg",
@@ -932,7 +830,7 @@
     {
         "id": 88,
         "name": "Módulo De Refuerzo De Dc-dc Xl6009",
-        "price": 300,
+        "price": "300",
         "quantity": 2,
         "images": [
             "Imagenes/88/88_1.png",
@@ -949,7 +847,7 @@
     {
         "id": 89,
         "name": "Pack de 30 Cables Dupont de 30 cm - 10M-M, 10H-H, 10M-H",
-        "price": 170,
+        "price": "170",
         "quantity": 7,
         "images": [
             "Imagenes/89/89_1.jpg",
@@ -965,7 +863,7 @@
     {
         "id": 90,
         "name": "Módulo Sensor de Luz Ambiental Digital TSL2584TSV con Comunicación I2C",
-        "price": 530,
+        "price": "530",
         "quantity": 4,
         "images": [
             "Imagenes/90/90_1.jpg",
@@ -979,7 +877,7 @@
     {
         "id": 91,
         "name": "Módulo Sensor de Temperatura y Humedad AHT20 I2C",
-        "price": 250,
+        "price": "250",
         "quantity": 4,
         "images": [
             "Imagenes/91/91_1.jpg",
@@ -994,26 +892,9 @@
         "datasheet": false
     },
     {
-        "id": 92,
-        "name": "Módulo de Sensor de Luz Profesional OPT101 - Medición de Luz Ambiental",
-        "price": 535,
-        "quantity": 4,
-        "images": [
-            "Imagenes/92/92_1.jpg",
-            "Imagenes/92/92_2.jpg",
-            "Imagenes/92/92_3.jpg",
-            "Imagenes/92/92_4.jpg",
-            "Imagenes/92/92_5.jpg",
-            "Imagenes/92/92_6.jpg"
-        ],
-        "description": "Descripción:\n\nEl módulo sensor de luz profesional OPT101 es una solución completa para la medición de la intensidad de luz ambiental. Diseñado para trabajar con placas Arduino y otros microcontroladores, este sensor ofrece alta precisión y facilidad de uso gracias a su salida analógica directa. Ideal para aplicaciones en las que se requiere medir la intensidad de luz de forma precisa, como en sistemas de iluminación automática, monitoreo ambiental y proyectos de domótica.\n\nCaracterísticas Técnicas:\n\nSensor: OPT101\nTipo de Salida: Analógica\nRango de Voltaje de Operación: 2.7V a 36V\nConsumo de Corriente: 120 µA\nRango de Medición de Luz: 0.01 µW/cm² a 1000 µW/cm²\nSensibilidad: 0.45 V/(µW/cm²) a 650 nm\nTiempo de Respuesta: 10 µs\nDimensiones: Compacto y fácil de integrar en aplicaciones electrónicas\nBeneficios:\n\nAlta Precisión: Ofrece mediciones precisas de la intensidad de luz con una alta sensibilidad, ideal para aplicaciones que requieren un monitoreo detallado de la iluminación.\nSalida Analógica: Proporciona una señal de salida fácil de leer por cualquier microcontrolador con un convertidor ADC, simplificando el proceso de integración.\nAmplio Rango de Operación: Funciona con una amplia gama de voltajes de operación, lo que lo hace versátil para diferentes proyectos electrónicos.\nBajo Consumo de Energía: Ideal para aplicaciones portátiles y de bajo consumo energético.\nAplicaciones Comunes:\nSistemas de iluminación automática\nMonitoreo ambiental\nProyectos de domótica\nControl de luz en cámaras y dispositivos móviles\nEstaciones meteorológicas",
-        "code": "const int sensorPin = A0; // Pin al que está conectado el sensor OPT101\n\nvoid setup() {\n  Serial.begin(9600); // Iniciar la comunicación serial\n}\n\nvoid loop() {\n  int sensorValue = analogRead(sensorPin); // Leer el valor analógico del sensor\n  float voltage = sensorValue * (5.0 / 1023.0); // Convertir el valor a voltaje\n\n  // Calcular la intensidad de luz en µW/cm²\n  float lightIntensity = voltage / 0.45; // Sensibilidad del sensor OPT101 es 0.45 V/(µW/cm²)\n\n  Serial.print(\"Intensidad de luz: \");\n  Serial.print(lightIntensity);\n  Serial.println(\" µW/cm²\");\n\n  delay(1000); // Esperar 1 segundo antes de la siguiente lectura\n}",
-        "datasheet": false
-    },
-    {
         "id": 94,
         "name": "Módulo de Pantalla OLED I2C 0.96 pulgadas 128x64 SSD1306 para Arduino",
-        "price": 320,
+        "price": "320",
         "quantity": 4,
         "images": [
             "Imagenes/94/94_1.jpg"
@@ -1025,7 +906,7 @@
     {
         "id": 95,
         "name": "Mini Módulo regulador de Voltaje DC-DC Buck con Protección",
-        "price": 130,
+        "price": "130",
         "quantity": 10,
         "images": [
             "Imagenes/95/95_1.jpg",
@@ -1042,7 +923,7 @@
     {
         "id": 96,
         "name": "Sensor de Luz TEMT6000 Lux para Arduino",
-        "price": 200,
+        "price": "200",
         "quantity": 2,
         "images": [
             "Imagenes/96/96_1.jpg",
@@ -1059,7 +940,7 @@
     {
         "id": 97,
         "name": "L137MRI",
-        "price": 180,
+        "price": "180",
         "quantity": 10,
         "images": [
             "Imagenes/97/97_2.png"
@@ -1071,7 +952,7 @@
     {
         "id": 99,
         "name": "Módulo Bms 3s 60a Balanceado Para Baterías De Litio",
-        "price": 480,
+        "price": "480",
         "quantity": 15,
         "images": [
             "Imagenes/99/99_1.jpg",
@@ -1085,7 +966,7 @@
     {
         "id": 100,
         "name": "Módulo Expansor de I/O I2C PCA9548A 8 Canales HW-617\n\n",
-        "price": 220,
+        "price": "220",
         "quantity": 20,
         "images": [
             "Imagenes/100/100_1.jpg",
@@ -1102,7 +983,7 @@
     {
         "id": 101,
         "name": "Sensor de Efecto Hall 41F (x5)",
-        "price": 170,
+        "price": "170",
         "quantity": 12,
         "images": [
             "Imagenes/101/101_1.jpg",
@@ -1118,7 +999,7 @@
     {
         "id": 102,
         "name": "Pantalla LED 0.36 pulgadas 3 hilos - Rojo",
-        "price": 130,
+        "price": "130",
         "quantity": 25,
         "images": [
             "Imagenes/102/102_1.jpg",
@@ -1133,7 +1014,7 @@
     {
         "id": 103,
         "name": "Pack de 5 Reguladores de Voltaje Ajustables LM317 - Alta Precisión y Fiabilidad",
-        "price": 160,
+        "price": "160",
         "quantity": 25,
         "images": [
             "Imagenes/103/103_1.jpg",
@@ -1150,7 +1031,7 @@
     {
         "id": 104,
         "name": "Pack de 5 Reguladores de Voltaje L7805CV - 5V Estables y Fiables",
-        "price": 150,
+        "price": "150",
         "quantity": 30,
         "images": [
             "Imagenes/104/104_1.jpg",
@@ -1166,7 +1047,7 @@
     {
         "id": 105,
         "name": "Pack de 10 Sensores Táctiles Capacitivos TTP223 Módulo Rojo",
-        "price": 240,
+        "price": "240",
         "quantity": 10,
         "images": [
             "Imagenes/105/105_1.jpg",
@@ -1180,7 +1061,7 @@
     {
         "id": 106,
         "name": "Modulo ADC 16bit ADS1115 con Interfaz I2C y PGA",
-        "price": 270,
+        "price": "270",
         "quantity": 15,
         "images": [
             "Imagenes/106/106_1.jpg",
@@ -1194,7 +1075,7 @@
     {
         "id": 107,
         "name": "Módulo Multiplexor 16 Canales CD74HC4067",
-        "price": 180,
+        "price": "180",
         "quantity": 30,
         "images": [
             "Imagenes/107/107_1.jpg",
@@ -1211,7 +1092,7 @@
     {
         "id": 108,
         "name": "Transistor MOSFET de Potencia IRFP250N N-Channel 200V 30A",
-        "price": 150,
+        "price": "150",
         "quantity": 15,
         "images": [
             "Imagenes/108/108_1.jpg",
@@ -1224,7 +1105,7 @@
     {
         "id": 109,
         "name": "Pack de 100 leds 5mm surtidos",
-        "price": 260,
+        "price": "260",
         "quantity": 19,
         "images": [
             "Imagenes/109/109_1.jpg",
@@ -1241,7 +1122,7 @@
     {
         "id": 110,
         "name": "Sensor de Color TCS34725 RGB con LED Integrado I2C",
-        "price": 440,
+        "price": "440",
         "quantity": 10,
         "images": [
             "Imagenes/110/110_1.jpg",
@@ -1263,23 +1144,9 @@
         "datasheet": false
     },
     {
-        "id": 111,
-        "name": "Sensor de Temperatura DS18B20 1-Wire con Alta Precisión",
-        "price": 220,
-        "quantity": 15,
-        "images": [
-            "Imagenes/111/111_1.jpg",
-            "Imagenes/111/111_2.jpg",
-            "Imagenes/111/111_3.jpg"
-        ],
-        "description": "Descripción detallada:\nEl DS18B20 es un sensor digital de temperatura de alta precisión que utiliza el protocolo de comunicación 1-Wire, lo que permite que múltiples sensores se conecten a un solo pin de datos. Este sensor es capaz de medir temperaturas en un rango de -55°C a +125°C con una precisión de ±0.5°C en el rango de -10°C a +85°C. Gracias a su tamaño compacto y facilidad de conexión, es ideal para aplicaciones en sistemas de monitoreo ambiental, control de temperatura en sistemas industriales, y aplicaciones de domótica.\n\nCaracterísticas eléctricas:\n\nVoltaje de operación: 3.0V a 5.5V\nRango de temperatura: -55°C a +125°C\nPrecisión: ±0.5°C en el rango de -10°C a +85°C\nInterfaz: 1-Wire (solo necesita un pin de datos para comunicarse)\nResolución: Ajustable de 9 a 12 bits\nTiempo de respuesta: Conversión de temperatura en 750ms (12 bits)\nProtección de sobrecarga: Interna, con la capacidad de resistir descargas de hasta 1.5 kV\nAplicaciones:\n\nMonitoreo ambiental\nSistemas HVAC\nAplicaciones de domótica\nControl de temperatura en procesos industriales",
-        "code": "#include <OneWire.h>\n#include <DallasTemperature.h>\n\n// Pin donde se conecta el bus 1-Wire\n#define ONE_WIRE_BUS 2\n\n// Configuración del bus 1-Wire\nOneWire oneWire(ONE_WIRE_BUS);\n\n// Comunicación con el sensor DS18B20\nDallasTemperature sensors(&oneWire);\n\nvoid setup() {\n  Serial.begin(9600);\n  sensors.begin();\n}\n\nvoid loop() {\n  sensors.requestTemperatures();\n  float temperatureC = sensors.getTempCByIndex(0);\n  \n  Serial.print(\"Temperatura: \");\n  Serial.print(temperatureC);\n  Serial.println(\" °C\");\n  \n  delay(1000);\n}",
-        "datasheet": false
-    },
-    {
         "id": 112,
         "name": "Módulo Cargador de Batería 134N3P con Micro USB y Salida USB",
-        "price": 90,
+        "price": "90",
         "quantity": 19,
         "images": [
             "Imagenes/112/112_1.jpg",
@@ -1295,7 +1162,7 @@
     {
         "id": 113,
         "name": "Pack de 5 Transistores NPN TIP41C 100V 6A",
-        "price": 180,
+        "price": "180",
         "quantity": 12,
         "images": [
             "Imagenes/113/113_1.jpg",
@@ -1308,7 +1175,7 @@
     {
         "id": 114,
         "name": "Transistor IGBT RJH60F5 600V 60A en Encapsulado TO-247",
-        "price": 360,
+        "price": "360",
         "quantity": 24,
         "images": [
             "Imagenes/114/114_1.jpg",
@@ -1321,7 +1188,7 @@
     {
         "id": 115,
         "name": "Pack de 2 Transistores MOSFET IRF640N 200V 18A en Encapsulado TO-220",
-        "price": 160,
+        "price": "160",
         "quantity": 12,
         "images": [
             "Imagenes/115/115_1.jpg",
@@ -1336,7 +1203,7 @@
     {
         "id": 116,
         "name": "Programador St-link V2 Para Stm32/stm8 (con Cables)",
-        "price": 380,
+        "price": "380",
         "quantity": 4,
         "images": [
             "Imagenes/116/116_1.jpg",
@@ -1352,7 +1219,7 @@
     {
         "id": 117,
         "name": "Generador Pwm De 2 Canales Con Display Digital",
-        "price": 290,
+        "price": "290",
         "quantity": 6,
         "images": [
             "Imagenes/117/117_1.jpg",
@@ -1367,7 +1234,7 @@
     {
         "id": 119,
         "name": "Placa BMS 3S 20A Protección para Baterías 18650 12.6V",
-        "price": 180,
+        "price": "180",
         "quantity": 12,
         "images": [
             "Imagenes/119/119_1.jpg",
@@ -1382,7 +1249,7 @@
     {
         "id": 120,
         "name": "Amplificador Audio Digital TPA3110 60W 8-24V",
-        "price": 350,
+        "price": "350",
         "quantity": 10,
         "images": [
             "Imagenes/120/120_1.jpg",
@@ -1398,7 +1265,7 @@
     {
         "id": 121,
         "name": "Puntero laser ajustable 5V 650nm",
-        "price": 70,
+        "price": "70",
         "quantity": 100,
         "images": [
             "Imagenes/121/121_1.jpg",
@@ -1414,7 +1281,7 @@
     {
         "id": 122,
         "name": "Placa Matriz De Puntos Led 8 x 8, Max721 (con Cables)",
-        "price": 290,
+        "price": "290",
         "quantity": 15,
         "images": [
             "Imagenes/122/122_1.jpg"
@@ -1426,7 +1293,7 @@
     {
         "id": 123,
         "name": "Placa Amplificador Digital Mono 100w Rms - Tpa3116d2 24vdc",
-        "price": 690,
+        "price": "690",
         "quantity": 10,
         "images": [
             "Imagenes/123/123_1.jpg",
@@ -1442,7 +1309,7 @@
     {
         "id": 125,
         "name": "Microcontrolador Pic16f628a Dip-18 8 Bits",
-        "price": 350,
+        "price": "350",
         "quantity": 20,
         "images": [
             "Imagenes/125/125_1.jpg",
@@ -1456,7 +1323,7 @@
     {
         "id": 127,
         "name": "Generador de Onda Sinusoidal, Cuadrada y Triangular AD9833",
-        "price": 480,
+        "price": "480",
         "quantity": 2,
         "images": [
             "Imagenes/127/127_1.jpg",
@@ -1471,7 +1338,7 @@
     {
         "id": 129,
         "name": "Pro Mini ATmega168 5V/16MHz: Microcontrolador Compacto",
-        "price": 350,
+        "price": "350",
         "quantity": 3,
         "images": [
             "Imagenes/129/129_1.jpg",
@@ -1484,7 +1351,7 @@
     {
         "id": 131,
         "name": "Módulo CAN Bus MCP2515 con TJA1050 para SPI",
-        "price": 290,
+        "price": "290",
         "quantity": 5,
         "images": [
             "Imagenes/131/131_1.jpg",
@@ -1497,26 +1364,9 @@
         "datasheet": false
     },
     {
-        "id": 133,
-        "name": "Amplificador de Audio Digital Mono 60W DC 12-24V Alta Potencia",
-        "price": 360,
-        "quantity": 4,
-        "images": [
-            "Imagenes/133/133_1.jpg",
-            "Imagenes/133/133_2.jpg",
-            "Imagenes/133/133_3.jpg",
-            "Imagenes/133/133_4.jpg",
-            "Imagenes/133/133_5.jpg",
-            "Imagenes/133/133_6.jpg"
-        ],
-        "description": "Descripción detallada eléctrica:\n\nEste módulo amplificador de audio digital mono de 60W es una solución potente y eficiente para proyectos de audio que requieren una alta calidad de sonido y rendimiento a bajo consumo energético. Compatible con voltajes de entrada de DC 12V a 24V, es ideal para aplicaciones de amplificación en sistemas de audio portátiles, bocinas activas y proyectos DIY.\n\nEl amplificador se basa en el chip TPA3118, el cual ofrece alta eficiencia y excelente capacidad de disipación de calor gracias a su diseño de baja pérdida y su sistema de control térmico avanzado. Incorpora capacitadores electrolíticos de 330µF/25V y bobinas de 100µH, que proporcionan una alta capacidad de almacenamiento de energía, garantizando una entrega de potencia limpia y estable. El rango de frecuencia de salida abarca desde 20Hz hasta 20kHz, lo que permite una reproducción precisa en todo el espectro audible.\n\nEspecificaciones técnicas:\n\nVoltaje de entrada: DC 12V-24V\nPotencia de salida: 60W (máx.)\nChip: TPA3118\nEficiencia: 90%\nRango de frecuencia: 20Hz – 20kHz\nDimensiones: 40mm x 50mm\nConexiones de salida: Mono (para una bocina)",
-        "code": "// Definir el pin del potenciómetro\nint potPin = A0; \nint audioPin = 9; // Pin de salida de audio PWM\n\nvoid setup() {\n  pinMode(audioPin, OUTPUT); // Pin de salida de audio como salida\n}\n\nvoid loop() {\n  int potValue = analogRead(potPin); // Leer el valor del potenciómetro\n  int audioValue = map(potValue, 0, 1023, 0, 255); // Mapear el valor para PWM\n  analogWrite(audioPin, audioValue); // Enviar señal PWM al amplificador\n  delay(10); // Esperar para evitar ruido en la señal\n}",
-        "datasheet": false
-    },
-    {
         "id": 135,
         "name": "Generador de señal XR2206, salida sinusoidal/triangular/cuadrada",
-        "price": 690,
+        "price": "690",
         "quantity": 10,
         "images": [
             "Imagenes/135/135_1.jpg",
@@ -1532,7 +1382,7 @@
     {
         "id": 137,
         "name": "Amplificador audio TDA2030A  paquete x4",
-        "price": 250,
+        "price": "250",
         "quantity": 10,
         "images": [
             "Imagenes/137/137_1.jpg",
@@ -1549,7 +1399,7 @@
     {
         "id": 139,
         "name": "Pantalla OLED 0,91\" 128x32 I2C Blanco/Azul para Arduino",
-        "price": 260,
+        "price": "260",
         "quantity": 20,
         "images": [
             "Imagenes/139/139_1.jpg"
@@ -1561,7 +1411,7 @@
     {
         "id": 141,
         "name": "BTA12-600b (5 unidades)",
-        "price": 350,
+        "price": "350",
         "quantity": 15,
         "images": [],
         "description": "",
@@ -1571,7 +1421,7 @@
     {
         "id": 143,
         "name": "KBU1510 puente rectificador",
-        "price": 100,
+        "price": "100",
         "quantity": 7,
         "images": [],
         "description": "",
@@ -1581,7 +1431,7 @@
     {
         "id": 147,
         "name": "Kit de Inicio ESP32 con Sensores y Prototipos",
-        "price": 1900,
+        "price": "1900",
         "quantity": 4,
         "images": [
             "Imagenes/147/147_1.jpg",
@@ -1595,7 +1445,7 @@
     {
         "id": 149,
         "name": "RP2040 Zero de Raspberry Pi: La Mini Placa Ideal para Proyectos IoT",
-        "price": 380,
+        "price": "380",
         "quantity": 20,
         "images": [
             "Imagenes/149/149_1.jpg",
@@ -1609,7 +1459,7 @@
     {
         "id": 151,
         "name": "Pantalla LCD 1.44'' SPI 128x128 TFT Color",
-        "price": 390,
+        "price": "390",
         "quantity": 15,
         "images": [
             "Imagenes/151/151_1.jpg",
@@ -1623,7 +1473,7 @@
     {
         "id": 153,
         "name": "Sensor ENS160+ AHT21: Calidad de Aire + Temp/Hum",
-        "price": 690,
+        "price": "690",
         "quantity": 10,
         "images": [
             "Imagenes/153/153_1.jpg",
@@ -1637,7 +1487,7 @@
     {
         "id": 155,
         "name": "Pack 2x IRFP264N MOSFETs: Potencia Máxima y Eficiencia",
-        "price": 350,
+        "price": "350",
         "quantity": 25,
         "images": [],
         "description": "especificaciones del IRFP264N:\nTipo: MOSFET de potencia, N-Channel\nVoltaje de drenaje-fuente (VDS): 250V\nCorriente de drenaje (ID): 47A (a 25°C)\nResistencia de encendido (RDS(on)): 0.075 ohmios (típico, a VGS = 10V)\nVoltaje de compuerta (VGS): ±20V (máximo)\nDisipación de potencia (PD): 300W (máximo)\nCapacidad de carga de compuerta (Ciss): 7300 pF\nEncapsulado: TO-247\nTemperatura de operación: -55°C a +175°C\nTiempo de conmutación:\nTiempo de encendido (ton): 38 ns (típico)\nTiempo de apagado (toff): 83 ns (típico)\nConfiguración de pines:\nDrenaje (Drain): Pin central y parte metálica del encapsulado\nFuente (Source): Pin derecho\nCompuerta (Gate): Pin izquierdo",
@@ -1647,7 +1497,7 @@
     {
         "id": 157,
         "name": "Microcontrolador ESP32 C3 Mini Board con USB-C y WiFi/Bluetooth",
-        "price": 450,
+        "price": "450",
         "quantity": 20,
         "images": [
             "Imagenes/157/157_1.jpg",
@@ -1660,7 +1510,7 @@
     {
         "id": 159,
         "name": "Módulo Cargador 18650 Tipo-C 5V 3A para 2 Pilas",
-        "price": 450,
+        "price": "450",
         "quantity": 10,
         "images": [
             "Imagenes/159/159_1.jpg",
@@ -1674,7 +1524,7 @@
     {
         "id": 161,
         "name": "Adaptador USB a RS485 Serial, Comunicación Estable",
-        "price": 290,
+        "price": "290",
         "quantity": 10,
         "images": [
             "Imagenes/161/161_1.jpg",
@@ -1690,7 +1540,7 @@
     {
         "id": 163,
         "name": "Reloj DS3231 RTC con EEPROM AT24C32 para Arduino y ESP32",
-        "price": 210,
+        "price": "210",
         "quantity": 30,
         "images": [
             "Imagenes/163/163_1.jpg",
@@ -1706,7 +1556,7 @@
     {
         "id": 165,
         "name": "Placa PCB FR4 7x10cm Cobre Un Lado",
-        "price": 180,
+        "price": "180",
         "quantity": 20,
         "images": [
             "Imagenes/165/165_1.jpg",
@@ -1715,6 +1565,21 @@
         ],
         "description": "Placa de circuito impreso FR4 de 7x10 cm con laminado de cobre de un solo lado, ideal para proyectos DIY y prototipos. Fabricada en material FR4 de alta calidad, permite realizar conexiones y circuitos personalizados con facilidad. Perfecta para diseñadores electrónicos y entusiastas del bricolaje en electrónica.",
         "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 167,
+        "name": "Generador PWM Dual con Pantalla LCD",
+        "price": "340",
+        "quantity": 10,
+        "images": [
+            "Imagenes/167/167_1.jpg",
+            "Imagenes/167/167_2.jpg",
+            "Imagenes/167/167_3.jpg",
+            "Imagenes/167/167_4.jpg"
+        ],
+        "description": "El módulo XY-LPWM es un generador de señal PWM compacto y de alta precisión, diseñado para controlar dispositivos electrónicos como motores, LED y circuitos de modulación.\nCaracterísticas técnicas:\n\nAlimentación: 3.3V–30V DC (entrada Micro USB o terminales de tornillo).\nFrecuencia de salida: 1Hz–150kHz.\nResolución:\n1Hz para frecuencias de 1–999Hz.\n0.1kHz para frecuencias de 1.0–99.9kHz.\n1kHz para frecuencias de 100kHz–150kHz.\nDuty cycle (ciclo de trabajo): 0% a 100%, ajustable en incrementos de 1%.\nCorriente de salida: <30mA.\nAmplitud de señal: 5Vp-p (ajustable mediante el potenciómetro).\nInterfaz de control: Botones físicos y comunicación serial (9600bps).\nDimensiones: Compacto, fácil de integrar en cualquier proyecto.",
+        "code": "#include <HardwareSerial.h>\n\nHardwareSerial mySerial(1); // UART1 en ESP32 (pines configurables)\n\nvoid setup() {\n  Serial.begin(115200); // Monitor serial\n  mySerial.begin(9600, SERIAL_8N1, 16, 17); // UART1: RX=16, TX=17\n\n  // Configuración inicial del PWM\n  setPWMFrequency(1, 1000);  // PWM1: 1 kHz\n  setPWMDutyCycle(1, 50);    // PWM1: 50% duty cycle\n  setPWMFrequency(2, 2000);  // PWM2: 2 kHz\n  setPWMDutyCycle(2, 75);    // PWM2: 75% duty cycle\n}\n\nvoid loop() {\n  // Aquí puedes agregar lógica para ajustar parámetros dinámicamente\n}\n\n// Función para configurar frecuencia de PWM\nvoid setPWMFrequency(uint8_t channel, float frequency) {\n  String command = \"S\" + String(channel) + \"F\" + String(frequency, 1) + \"T\";\n  sendCommand(command);\n}\n\n// Función para configurar ciclo de trabajo (duty cycle)\nvoid setPWMDutyCycle(uint8_t channel, uint8_t dutyCycle) {\n  String command = \"S\" + String(channel) + \"D\" + String(dutyCycle) + \"T\";\n  sendCommand(command);\n}\n\n// Función para enviar comandos al módulo\nvoid sendCommand(String command) {\n  mySerial.print(command);   // Enviar comando\n  delay(50);                 // Esperar respuesta\n  while (mySerial.available()) {\n    String response = mySerial.readString();\n    Serial.println(\"Respuesta: \" + response); // Mostrar respuesta\n  }\n}",
         "datasheet": false
     }
 ]
