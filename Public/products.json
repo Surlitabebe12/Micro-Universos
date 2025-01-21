@@ -1,21 +1,9 @@
 [
     {
-        "id": 1,
-        "name": "Bornera Pcb 2 Pines (x10)",
-        "price": "190",
-        "quantity": 2,
-        "images": [
-            "Imagenes/1/1_1.png"
-        ],
-        "description": "Descripción Técnica:\n5.08-301-2P es un conector de bloque terminal de tornillo de 2 pines con un paso de 5mm, comúnmente utilizado en proyectos de electrónica para realizar conexiones seguras y desmontables entre componentes y placas de circuito impreso (PCB).\n\nEspecificaciones Técnicas:\nPaso (Pitch): 5mm\nNúmero de Pines: 2\nTipo de Conexión: Bloque terminal de tornillo\nTensión Máxima: 300V\nCorriente Máxima: 10A\nMaterial del Cuerpo: Poliamida (PA)\nMaterial del Contacto: Cobre con revestimiento de níquel\nTemperatura de Operación: -40°C a 105°C\n\nCaracterísticas:\nFácil Instalación: Los tornillos permiten una conexión firme y fácil de instalar.\nDesmontable: Las conexiones se pueden desmontar y volver a montar fácilmente, ideal para aplicaciones de prototipos y pruebas.\nSeguro: Proporciona una conexión segura y confiable, reduciendo el riesgo de desconexiones accidentales.\n\nAplicaciones:\nProyectos de Electrónica DIY: Ideal para proyectos de hobby y prototipos.\nAutomatización Industrial: Utilizado en conexiones de sensores y actuadores.\nInstrumentación: Conexiones en equipos de medida y control.\nDomótica: Conexiones en sistemas de control y automatización del hogar.",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 2,
         "name": "Display Led 8 Bit Max7219",
-        "price": "280",
-        "quantity": 7,
+        "price": "288",
+        "quantity": "6",
         "images": [
             "Imagenes/2/2_1.png",
             "Imagenes/2/2_2.png",
@@ -26,10 +14,38 @@
         "datasheet": false
     },
     {
+        "id": 3,
+        "name": "Pantalla Tft De 1,8 Pulgadas",
+        "price": "520",
+        "quantity": 12,
+        "images": [
+            "Imagenes/3/3_1.png"
+        ],
+        "description": "La pantalla TFT LCD de 1.8 pulgadas con una resolución de 128x160 píxeles es un módulo compacto y versátil utilizado en diversos proyectos de electrónica y microcontroladores, incluyendo ESP32. Este tipo de pantalla es ideal para mostrar gráficos, imágenes y textos en color.\n\nCaracterísticas:\nTamaño de pantalla: 1.8 pulgadas\nResolución: 128x160 píxeles\nTipo de pantalla: TFT LCD\nInterfaz: SPI (Serial Peripheral Interface)\nVoltaje de operación: 3.3V\nControlador IC: ST7735\nColores: 65K (16-bit)\nÁngulo de visión: Amplio\nConexiones:\nVCC: Alimentación de 3.3V\nGND: Tierra\nCS: Chip Select\nRESET: Reinicio\nA0 (DC): Data/Command\nSDA (MOSI): Master Out Slave In\nSCK: Reloj Serial\nLED: Luz de fondo\nCódigo de Ejemplo para ESP32\nPara utilizar esta pantalla con ESP32, puedes utilizar la biblioteca Adafruit ST7735 que facilita la programación y control de la pantalla. A continuación se presenta un ejemplo básico de cómo inicializar la pantalla y mostrar texto y gráficos.\n\nConexiones ESP32:\nVCC: 3.3V\nGND: GND\nCS: Pin 5\nRESET: Pin 4\nA0 (DC): Pin 2\nSDA (MOSI): Pin 23\nSCK: Pin 18\nLED: 3.3V (opcional para controlar la luz de fondo)",
+        "code": "#include <Adafruit_GFX.h>    // Biblioteca de gráficos de Adafruit\n#include <Adafruit_ST7735.h> // Biblioteca para el controlador ST7735\n#include <SPI.h>\n\n// Definir pines de conexión\n#define TFT_CS     5\n#define TFT_RST    4\n#define TFT_DC     2\n\n// Crear una instancia del objeto ST7735\nAdafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);\n\nvoid setup() {\n  // Inicializar la pantalla\n  tft.initR(INITR_BLACKTAB);\n  tft.setRotation(1); // Opcional: cambiar la orientación de la pantalla\n\n  // Configurar el color del fondo y borrar la pantalla\n  tft.fillScreen(ST77XX_BLACK);\n\n  // Configurar el color del texto y tamaño de la fuente\n  tft.setTextColor(ST77XX_WHITE);\n  tft.setTextSize(2);\n\n  // Mostrar un mensaje de bienvenida\n  tft.setCursor(10, 10);\n  tft.println(\"Hola Mundo!\");\n\n  // Dibujar un rectángulo\n  tft.drawRect(20, 40, 100, 60, ST77XX_RED);\n}\n\nvoid loop() {\n  // Ejemplo de animación simple\n  for (int i = 0; i < 128; i++) {\n    tft.fillCircle(i, 80, 10, ST77XX_BLUE);\n    delay(50);\n    tft.fillCircle(i, 80, 10, ST77XX_BLACK);\n  }\n}",
+        "datasheet": false
+    },
+    {
+        "id": 4,
+        "name": "Placa Expansión I2c 8 Canales ",
+        "price": "280",
+        "quantity": 10,
+        "images": [
+            "Imagenes/4/4_1.png",
+            "Imagenes/4/4_2.png",
+            "Imagenes/4/4_3.png",
+            "Imagenes/4/4_4.png",
+            "Imagenes/4/4_5.png"
+        ],
+        "description": "",
+        "code": "",
+        "datasheet": false
+    },
+    {
         "id": 5,
         "name": "ESP8266 en placa de desarrollo Micro USB",
-        "price": "330",
-        "quantity": 12,
+        "price": "390",
+        "quantity": 30,
         "images": [
             "Imagenes/5/5_1.png",
             "Imagenes/5/5_2.png",
@@ -43,8 +59,8 @@
     {
         "id": 8,
         "name": "Diodo Rectificador 10a 1000v",
-        "price": "190",
-        "quantity": 9,
+        "price": "160",
+        "quantity": 1,
         "images": [
             "Imagenes/8/8_1.png",
             "Imagenes/8/8_2.png"
@@ -56,8 +72,8 @@
     {
         "id": 9,
         "name": "KBPC5010",
-        "price": "170",
-        "quantity": 8,
+        "price": "160",
+        "quantity": 10,
         "images": [
             "Imagenes/9/9_1.png",
             "Imagenes/9/9_2.png",
@@ -70,8 +86,8 @@
     {
         "id": 10,
         "name": "Triac BTA41-600b",
-        "price": "150",
-        "quantity": 49,
+        "price": "170",
+        "quantity": 48,
         "images": [
             "Imagenes/10/10_1.png",
             "Imagenes/10/10_2.jpg",
@@ -85,8 +101,8 @@
     {
         "id": 11,
         "name": "Chip Attiny85-20pu",
-        "price": "350",
-        "quantity": 7,
+        "price": "400",
+        "quantity": 4,
         "images": [
             "Imagenes/11/11_1.png",
             "Imagenes/11/11_2.png",
@@ -99,7 +115,7 @@
     {
         "id": 12,
         "name": "Programador Universal Usb Avr Isp (con Adaptador)",
-        "price": "350",
+        "price": "360",
         "quantity": 9,
         "images": [
             "Imagenes/12/12_1.png",
@@ -141,7 +157,7 @@
     {
         "id": 19,
         "name": "Placa Expansión  Esp32. Nuevo Modelo.",
-        "price": "380",
+        "price": "480",
         "quantity": 8,
         "images": [
             "Imagenes/19/19_1.png"
@@ -212,8 +228,8 @@
     {
         "id": 25,
         "name": "Diodo Rectificador M7 1n4007 Smd 1a 100 V. (20 Unidades)",
-        "price": "120",
-        "quantity": 2,
+        "price": "150",
+        "quantity": 1,
         "images": [
             "Imagenes/25/25_1.png"
         ],
@@ -234,7 +250,7 @@
     {
         "id": 28,
         "name": "Sensor De Hall 49e (bici Eléctrica) 5 Unidades",
-        "price": "160",
+        "price": "180",
         "quantity": 15,
         "images": [
             "Imagenes/28/28_1.jpg",
@@ -250,7 +266,7 @@
         "id": 29,
         "name": "Led Cob YXO 50w, Dual Spectrum",
         "price": "380",
-        "quantity": 47,
+        "quantity": 46,
         "images": [
             "Imagenes/29/29_1.png",
             "Imagenes/29/29_2.png",
@@ -265,7 +281,7 @@
     {
         "id": 30,
         "name": "Esp32 Wifi Con Placa De Expansión último Modelo",
-        "price": "990",
+        "price": "1080",
         "quantity": 8,
         "images": [
             "Imagenes/30/30_1.jpg",
@@ -292,8 +308,8 @@
     {
         "id": 32,
         "name": "Módulo De Fuente De Alimentación Usb",
-        "price": "270",
-        "quantity": 9,
+        "price": "290",
+        "quantity": 8,
         "images": [
             "Imagenes/32/32_1.png"
         ],
@@ -315,21 +331,9 @@
         "datasheet": false
     },
     {
-        "id": 36,
-        "name": "Adaptador Para Esp32 38pinos (ver Nota)",
-        "price": "350",
-        "quantity": 1,
-        "images": [
-            "Imagenes/36/36_1.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 38,
         "name": "Sensor De Humedad Tierra (alta Precisión) Arduino",
-        "price": "420",
+        "price": "480",
         "quantity": 20,
         "images": [
             "Imagenes/38/38_1.png",
@@ -344,7 +348,7 @@
         "id": 39,
         "name": "Mini Humidificador Usb-c (placa Electrónica, Arduino)",
         "price": "260",
-        "quantity": 10,
+        "quantity": 9,
         "images": [
             "Imagenes/39/39_1.png",
             "Imagenes/39/39_2.png"
@@ -354,21 +358,9 @@
         "datasheet": false
     },
     {
-        "id": 41,
-        "name": "Kit Surtido De Transistores, Regulador De Voltaje (16 Pcs)",
-        "price": "500",
-        "quantity": 1,
-        "images": [
-            "Imagenes/41/41_1.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
         "id": 42,
         "name": "Sensor De Temperatura Y Humedad Arduino",
-        "price": "270",
+        "price": "330",
         "quantity": 5,
         "images": [
             "Imagenes/42/42_1.png",
@@ -399,7 +391,7 @@
     {
         "id": 44,
         "name": "Chip Cob YXO 50w FRIO",
-        "price": "360",
+        "price": "380",
         "quantity": 19,
         "images": [
             "Imagenes/44/44_1.png"
@@ -411,7 +403,7 @@
     {
         "id": 46,
         "name": "ESP32 placa de desarrollo",
-        "price": "650",
+        "price": "670",
         "quantity": 3,
         "images": [
             "Imagenes/46/46_1.png"
@@ -423,7 +415,7 @@
     {
         "id": 47,
         "name": "Diodo Fr607 x10 (1000V 6A)",
-        "price": "190",
+        "price": "230",
         "quantity": 13,
         "images": [
             "Imagenes/47/47_1.png"
@@ -436,12 +428,12 @@
         "id": 48,
         "name": "Diodo Fr207 x20 (1000V 2A)",
         "price": "180",
-        "quantity": "3",
+        "quantity": 2,
         "images": [
             "Imagenes/48/48_1.png"
         ],
-        "description": "nan",
-        "code": "nan",
+        "description": "",
+        "code": "",
         "datasheet": true
     },
     {
@@ -460,7 +452,7 @@
         "id": 50,
         "name": "Potenciómetro Lineal De 3 Pines, 2k",
         "price": "80",
-        "quantity": 9,
+        "quantity": 8,
         "images": [
             "Imagenes/50/50_1.png"
         ],
@@ -472,7 +464,7 @@
         "id": 51,
         "name": "Potenciómetro Lineal De 3 Pines, 100k",
         "price": "80",
-        "quantity": 10,
+        "quantity": 9,
         "images": [
             "Imagenes/51/51_1.png"
         ],
@@ -483,8 +475,8 @@
     {
         "id": 52,
         "name": "Wemos D1 Mini Pro V3.0 Wifi",
-        "price": "330",
-        "quantity": 10,
+        "price": "350",
+        "quantity": 19,
         "images": [
             "Imagenes/52/52_1.png"
         ],
@@ -495,7 +487,7 @@
     {
         "id": 53,
         "name": "Ne555 Circuito Integrado (10 Unidades)",
-        "price": "180",
+        "price": "162",
         "quantity": 4,
         "images": [
             "Imagenes/53/53_1.png"
@@ -543,7 +535,7 @@
     {
         "id": 58,
         "name": "Transistor 2n2222 (100 Unidades)",
-        "price": "350",
+        "price": "520",
         "quantity": 4,
         "images": [
             "Imagenes/58/58_1.png"
@@ -556,7 +548,7 @@
         "id": 59,
         "name": "Potenciómetro Lineal De 3 Pines, 250k",
         "price": "80",
-        "quantity": 9,
+        "quantity": 7,
         "images": [
             "Imagenes/59/59_1.png"
         ],
@@ -580,9 +572,22 @@
         "id": 61,
         "name": "Triac Bta16-600b X 4 Unidades                      ",
         "price": "320",
-        "quantity": 20,
+        "quantity": 19,
         "images": [
             "Imagenes/61/61_1.png"
+        ],
+        "description": "",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 64,
+        "name": "Placa Mosfet Superior Irf520 Mos (x2)",
+        "price": "300",
+        "quantity": 48,
+        "images": [
+            "Imagenes/64/64_1.png",
+            "Imagenes/64/64_2.png"
         ],
         "description": "",
         "code": "",
@@ -617,7 +622,7 @@
         "id": 67,
         "name": "Sensor De Corriente De Precisión (arduino)",
         "price": "280",
-        "quantity": 2,
+        "quantity": 1,
         "images": [
             "Imagenes/67/67_1.png",
             "Imagenes/67/67_2.png"
@@ -653,7 +658,7 @@
     {
         "id": 72,
         "name": "Sensor De Temperatura Y Humedad De Alta Precisión Aht21",
-        "price": "270",
+        "price": "310",
         "quantity": 4,
         "images": [
             "Imagenes/72/72_1.png",
@@ -684,7 +689,7 @@
     {
         "id": 74,
         "name": "Módulo Rele temporizado",
-        "price": "390",
+        "price": "330",
         "quantity": 4,
         "images": [
             "Imagenes/74/74_1.jpg",
@@ -695,15 +700,25 @@
         "datasheet": false
     },
     {
+        "id": 75,
+        "name": "Mini medidor de voltaje 0.28\"",
+        "price": "180",
+        "quantity": 9,
+        "images": [],
+        "description": "",
+        "code": "",
+        "datasheet": false
+    },
+    {
         "id": 76,
         "name": "Optoacoplador PC817C (20 unidades)",
-        "price": "200",
-        "quantity": 9,
+        "price": "360",
+        "quantity": "9",
         "images": [
             "Imagenes/76/76_1.jpg"
         ],
         "description": "Resumen Técnico del Optoacoplador PC817\nEl PC817 es un optoacoplador de propósito general ampliamente utilizado para proporcionar aislamiento eléctrico entre circuitos de entrada y salida. Este dispositivo emplea un diodo emisor de luz infrarroja (LED) y un fototransistor para transferir señales eléctricas a través de un medio óptico, ofreciendo una excelente protección contra interferencias electromagnéticas.\n\nCaracterísticas Principales\nTipo de Dispositivo: Optoacoplador con salida de fototransistor\nAislamiento: 5000 Vrms entre entrada y salida\nEncapsulado: DIP-4\nNúmero de Canales: 1\nEspecificaciones Eléctricas\nVoltaje Máximo de Entrada (V<sub>F</sub>): 1.2V (típico)\nCorriente de Entrada (I<sub>F</sub>): 20 mA (máximo)\nVoltaje de Salida (V<sub>CEO</sub>): 35V (máximo)\nCorriente de Colector (I<sub>C</sub>): 50 mA (máximo)\nRelación de Transferencia de Corriente (CTR): 50% a 600%\nTemperatura de Operación: -30°C a +100°C\nAplicaciones Comunes\nAislamiento de Señales: En sistemas donde es necesario aislar una señal de control de una señal de potencia.\nInterruptores Electrónicos: Para encender y apagar dispositivos sin conexión directa eléctrica.\nProtección de Circuitos: Evitar el daño de componentes sensibles debido a picos de tensión o ruido eléctrico.\nInterfaz de Microcontroladores: Para aislar microcontroladores y otros circuitos lógicos de altas tensiones.\nVentajas\nAlta Capacidad de Aislamiento: Proporciona un aislamiento eléctrico seguro entre la entrada y la salida.\nBajo Consumo de Corriente: Adecuado para aplicaciones de baja potencia.\nAlta Fiabilidad y Durabilidad: Sin partes mecánicas móviles.\nCompatibilidad con Microcontroladores y Otros Circuitos Lógicos: Puede ser fácilmente integrado en sistemas de control y automatización.\nEsquema de Conexión\nEl PC817 tiene cuatro pines:\n\nAnodo del LED (Pin 1)\nCatodo del LED (Pin 2)\nEmisor del Fototransistor (Pin 3)\nColector del Fototransistor (Pin 4)",
-        "code": "",
+        "code": "nan",
         "datasheet": true
     },
     {
@@ -745,7 +760,7 @@
     {
         "id": 80,
         "name": "Voltimetro digital 0-100V 10A",
-        "price": "250",
+        "price": "275",
         "quantity": 15,
         "images": [
             "Imagenes/80/80_1.jpg",
@@ -759,7 +774,7 @@
     {
         "id": 81,
         "name": "Tarjeta expansion micro SD",
-        "price": "150",
+        "price": "210",
         "quantity": 10,
         "images": [
             "Imagenes/81/81_1.jpg",
@@ -771,9 +786,19 @@
         "datasheet": false
     },
     {
+        "id": 82,
+        "name": "Módulo de transmisión de datos inalámbrico Sim900a",
+        "price": "450",
+        "quantity": 3,
+        "images": [],
+        "description": "",
+        "code": "",
+        "datasheet": false
+    },
+    {
         "id": 84,
         "name": "Grabadora Eeprom kit",
-        "price": "990",
+        "price": "1200",
         "quantity": 1,
         "images": [],
         "description": "",
@@ -793,7 +818,7 @@
     {
         "id": 87,
         "name": "Interruptor palanca (x10)",
-        "price": "350",
+        "price": "450",
         "quantity": 9,
         "images": [
             "Imagenes/87/87_1.jpg",
@@ -807,8 +832,8 @@
     {
         "id": 88,
         "name": "Módulo De Refuerzo De Dc-dc Xl6009",
-        "price": "300",
-        "quantity": 2,
+        "price": "250",
+        "quantity": 48,
         "images": [
             "Imagenes/88/88_1.png",
             "Imagenes/88/88_2.jpg",
@@ -854,7 +879,7 @@
     {
         "id": 91,
         "name": "Módulo Sensor de Temperatura y Humedad AHT20 I2C",
-        "price": "250",
+        "price": "270",
         "quantity": 4,
         "images": [
             "Imagenes/91/91_1.jpg",
@@ -871,7 +896,7 @@
     {
         "id": 94,
         "name": "Módulo de Pantalla OLED I2C 0.96 pulgadas 128x64 SSD1306 para Arduino",
-        "price": "320",
+        "price": "288",
         "quantity": 4,
         "images": [
             "Imagenes/94/94_1.jpg"
@@ -883,8 +908,8 @@
     {
         "id": 95,
         "name": "Mini Módulo regulador de Voltaje DC-DC Buck con Protección",
-        "price": "130",
-        "quantity": 10,
+        "price": "120",
+        "quantity": 18,
         "images": [
             "Imagenes/95/95_1.jpg",
             "Imagenes/95/95_2.jpg",
@@ -900,8 +925,8 @@
     {
         "id": 96,
         "name": "Sensor de Luz TEMT6000 Lux para Arduino",
-        "price": "200",
-        "quantity": 2,
+        "price": "280",
+        "quantity": "2",
         "images": [
             "Imagenes/96/96_1.jpg",
             "Imagenes/96/96_2.jpg",
@@ -911,13 +936,13 @@
             "Imagenes/96/96_6.jpg"
         ],
         "description": "Descripción\nEl sensor de luz TEMT6000 está diseñado para detectar la luz ambiental y es ideal para proyectos con Arduino. Este sensor mide la intensidad lumínica en lux, proporcionando una salida analógica que es proporcional a la intensidad de la luz que recibe. Perfecto para aplicaciones como control automático de iluminación, sistemas de monitoreo ambiental, y proyectos de electrónica DIY.\n\nDetalles Técnicos\nRango de Detección: 0 a 1000 Lux\nVoltaje de Operación: 3.3V a 5V\nSalida: Señal analógica\nTiempo de Respuesta: Rápido\nCompatibilidad: Compatible con Arduino y otros microcontroladores\nDimensiones: Compacto y fácil de integrar\nAplicaciones\nControl de iluminación automática\nMonitoreo de luz ambiental\nProyectos de domótica y electrónica DIY",
-        "code": "",
+        "code": "nan",
         "datasheet": false
     },
     {
         "id": 97,
         "name": "L137MRI",
-        "price": "180",
+        "price": "210",
         "quantity": 10,
         "images": [
             "Imagenes/97/97_2.png"
@@ -929,15 +954,15 @@
     {
         "id": 99,
         "name": "Módulo Bms 3s 60a Balanceado Para Baterías De Litio",
-        "price": "480",
-        "quantity": 15,
+        "price": "450",
+        "quantity": "15",
         "images": [
             "Imagenes/99/99_1.jpg",
             "Imagenes/99/99_2.jpg",
             "Imagenes/99/99_3.jpg"
         ],
         "description": "Protege tus baterías de litio con el Módulo BMS 3S 60A, ideal para sistemas de 11.1V y 12.6V. Este módulo ofrece protección contra sobrecarga, sobredescarga, sobrecorriente y cortocircuitos. Equipado con MOSFETs de alta calidad, garantiza un rendimiento seguro y eficiente. Perfecto para aplicaciones de alta demanda como vehículos eléctricos, herramientas eléctricas y más.\n\nCaracterísticas:\n\nConfiguración: 3S (3 celdas en serie)\nCorriente de descarga: 60A\nProtección: Sobrecarga (4.2V por celda), Sobredescarga (2.5-3.0V por celda)\nAplicaciones: Baterías de litio para vehículos eléctricos, herramientas eléctricas, y más.\nDetalles de conexión\nCarga: (+) y (-)\nDescarga: (+) y (-)\nCeldas: 0V, 4.2V, 8.4V, 12.6V",
-        "code": "",
+        "code": "nan",
         "datasheet": false
     },
     {
@@ -976,7 +1001,7 @@
     {
         "id": 102,
         "name": "Pantalla LED 0.36 pulgadas 3 hilos - Rojo",
-        "price": "130",
+        "price": "150",
         "quantity": 25,
         "images": [
             "Imagenes/102/102_1.jpg",
@@ -1024,7 +1049,7 @@
     {
         "id": 105,
         "name": "Pack de 10 Sensores Táctiles Capacitivos TTP223 Módulo Rojo",
-        "price": "250",
+        "price": "350",
         "quantity": 5,
         "images": [
             "Imagenes/105/105_1.jpg",
@@ -1038,7 +1063,7 @@
     {
         "id": 106,
         "name": "Modulo ADC 16bit ADS1115 con Interfaz I2C y PGA",
-        "price": "270",
+        "price": "350",
         "quantity": 15,
         "images": [
             "Imagenes/106/106_1.jpg",
@@ -1100,7 +1125,7 @@
         "id": 110,
         "name": "Sensor de Color TCS34725 RGB con LED Integrado I2C",
         "price": "440",
-        "quantity": 10,
+        "quantity": "10",
         "images": [
             "Imagenes/110/110_1.jpg",
             "Imagenes/110/110_10.jpg",
@@ -1124,7 +1149,7 @@
         "id": 112,
         "name": "Módulo Cargador de Batería 134N3P con Micro USB y Salida USB",
         "price": "90",
-        "quantity": 19,
+        "quantity": 100,
         "images": [
             "Imagenes/112/112_1.jpg",
             "Imagenes/112/112_2.jpg",
@@ -1140,7 +1165,7 @@
         "id": 113,
         "name": "Pack de 5 Transistores NPN TIP41C 100V 6A",
         "price": "180",
-        "quantity": 12,
+        "quantity": 11,
         "images": [
             "Imagenes/113/113_1.jpg",
             "Imagenes/113/113_2.jpg"
@@ -1180,7 +1205,7 @@
     {
         "id": 116,
         "name": "Programador St-link V2 Para Stm32/stm8 (con Cables)",
-        "price": "380",
+        "price": "382",
         "quantity": 4,
         "images": [
             "Imagenes/116/116_1.jpg",
@@ -1196,7 +1221,7 @@
     {
         "id": 117,
         "name": "Generador Pwm De 2 Canales Con Display Digital",
-        "price": "290",
+        "price": "250",
         "quantity": 6,
         "images": [
             "Imagenes/117/117_1.jpg",
@@ -1211,8 +1236,8 @@
     {
         "id": 119,
         "name": "Placa BMS 3S 20A Protección para Baterías 18650 12.6V",
-        "price": "180",
-        "quantity": 12,
+        "price": "190",
+        "quantity": 20,
         "images": [
             "Imagenes/119/119_1.jpg",
             "Imagenes/119/119_2.jpg",
@@ -1227,7 +1252,7 @@
         "id": 120,
         "name": "Amplificador Audio Digital TPA3110 60W 8-24V",
         "price": "350",
-        "quantity": 10,
+        "quantity": 9,
         "images": [
             "Imagenes/120/120_1.jpg",
             "Imagenes/120/120_2.jpg",
@@ -1287,7 +1312,7 @@
         "id": 125,
         "name": "Microcontrolador Pic16f628a Dip-18 8 Bits",
         "price": "350",
-        "quantity": 20,
+        "quantity": 14,
         "images": [
             "Imagenes/125/125_1.jpg",
             "Imagenes/125/125_2.jpg",
@@ -1300,8 +1325,8 @@
     {
         "id": 127,
         "name": "Generador de Onda Sinusoidal, Cuadrada y Triangular AD9833",
-        "price": "480",
-        "quantity": 2,
+        "price": "560",
+        "quantity": "10",
         "images": [
             "Imagenes/127/127_1.jpg",
             "Imagenes/127/127_2.jpg",
@@ -1359,8 +1384,8 @@
     {
         "id": 137,
         "name": "Amplificador audio TDA2030A  paquete x4",
-        "price": "250",
-        "quantity": 10,
+        "price": "280",
+        "quantity": "10",
         "images": [
             "Imagenes/137/137_1.jpg",
             "Imagenes/137/137_2.jpg",
@@ -1377,7 +1402,7 @@
         "id": 139,
         "name": "Pantalla OLED 0,91\" 128x32 I2C Blanco/Azul para Arduino",
         "price": "260",
-        "quantity": 20,
+        "quantity": 18,
         "images": [
             "Imagenes/139/139_1.jpg"
         ],
@@ -1408,7 +1433,7 @@
     {
         "id": 147,
         "name": "Kit de Inicio ESP32 con Sensores y Prototipos",
-        "price": "1900",
+        "price": "2600",
         "quantity": 4,
         "images": [
             "Imagenes/147/147_1.jpg",
@@ -1437,7 +1462,7 @@
         "id": 151,
         "name": "Pantalla LCD 1.44'' SPI 128x128 TFT Color",
         "price": "390",
-        "quantity": 15,
+        "quantity": 19,
         "images": [
             "Imagenes/151/151_1.jpg",
             "Imagenes/151/151_2.jpg",
@@ -1450,7 +1475,7 @@
     {
         "id": 153,
         "name": "Sensor ENS160+ AHT21: Calidad de Aire + Temp/Hum",
-        "price": "690",
+        "price": "750",
         "quantity": 10,
         "images": [
             "Imagenes/153/153_1.jpg",
@@ -1475,7 +1500,7 @@
         "id": 157,
         "name": "Microcontrolador ESP32 C3 Mini Board con USB-C y WiFi/Bluetooth",
         "price": "450",
-        "quantity": 20,
+        "quantity": 16,
         "images": [
             "Imagenes/157/157_1.jpg",
             "Imagenes/157/157_2.jpg"
@@ -1502,7 +1527,7 @@
         "id": 161,
         "name": "Adaptador USB a RS485 Serial, Comunicación Estable",
         "price": "290",
-        "quantity": 10,
+        "quantity": 9,
         "images": [
             "Imagenes/161/161_1.jpg",
             "Imagenes/161/161_2.jpg",
@@ -1518,7 +1543,7 @@
         "id": 163,
         "name": "Reloj DS3231 RTC con EEPROM AT24C32 para Arduino y ESP32",
         "price": "210",
-        "quantity": 30,
+        "quantity": 27,
         "images": [
             "Imagenes/163/163_1.jpg",
             "Imagenes/163/163_2.jpg",
@@ -1548,7 +1573,7 @@
         "id": 167,
         "name": "Generador PWM Dual con Pantalla LCD",
         "price": "340",
-        "quantity": 10,
+        "quantity": 5,
         "images": [
             "Imagenes/167/167_1.jpg",
             "Imagenes/167/167_2.jpg",
@@ -1576,7 +1601,7 @@
         "id": 171,
         "name": "Controlador De Temperatura W1209 Con Pantalla Led Y Relé",
         "price": "290",
-        "quantity": 30,
+        "quantity": 29,
         "images": [
             "Imagenes/171/171_1.jpg",
             "Imagenes/171/171_2.jpg",
@@ -1590,14 +1615,14 @@
     {
         "id": 173,
         "name": "Programador CH341A",
-        "price": "550",
-        "quantity": 10,
+        "price": "620",
+        "quantity": "9",
         "images": [
             "Imagenes/173/173_1.jpg",
             "Imagenes/173/173_2.jpg"
         ],
         "description": "Programador CH341A (USB): Este es el dispositivo principal que se conecta a través de un puerto USB. Sirve para la lectura y escritura de chips EEPROM y Flash, frecuentemente usado en la reparación de BIOS o actualización de firmware. En la parte superior se observa un zócalo ZIF (Zero Insertion Force) donde se colocan los chips para su programación.\n\nAdaptador SOP8-DIP8: Este adaptador es útil para convertir un chip con encapsulado SOP8 a un formato DIP8, permitiendo conectar chips con ese encapsulado de forma más sencilla al programador.\n\nPines de conexión: También se incluyen dos tiras de pines macho que pueden usarse para ensamblar conexiones a otros adaptadores o dispositivos.",
-        "code": "",
+        "code": "nan",
         "datasheet": false
     },
     {
@@ -1618,7 +1643,7 @@
         "id": 177,
         "name": "Sensor DHT22 AM2302 Temp/Hum para Arduino y ESP32",
         "price": "265",
-        "quantity": 20,
+        "quantity": 30,
         "images": [
             "Imagenes/177/177_1.jpg",
             "Imagenes/177/177_2.jpg",
@@ -1659,26 +1684,12 @@
         "id": 183,
         "name": "Pack 5 Módulos Cargador TP4056 USB-C 5V 1A con Protección",
         "price": "290",
-        "quantity": 20,
+        "quantity": 19,
         "images": [
             "Imagenes/183/183_1.png",
             "Imagenes/183/183_2.jpeg"
         ],
         "description": "Descripción detallada del producto:\nEste pack incluye 5 módulos TP4056 para carga de baterías de litio 18650 con entrada USB-C. Cada módulo está equipado con funciones de carga y protección integradas, proporcionando un sistema confiable y eficiente para la gestión de baterías de iones de litio.\n\nCaracterísticas técnicas:\nChip principal: TP4056\nEntrada de alimentación: 4.5V a 5.5V (USB-C o terminales IN+ y IN-)\nCorriente de carga: 1A (máximo, ajustable según configuración).\nVoltaje de carga completo: 4.2V ± 1%\nProtección integrada:\nContra sobrecarga (detiene la carga al alcanzar 4.2V).\nContra descarga excesiva (desconexión al caer por debajo de 2.5V).\nContra cortocircuitos y sobrecorriente.\nIndicadores LED:\nRojo: Cargando.\nAzul: Carga completa.\nConexión de batería: Terminales B+ y B- compatibles con baterías 18650.\nVentajas:\nEntrada USB-C: Conector moderno y fácil de usar.\nAlta seguridad: Protección contra fallos comunes en baterías de litio.\nTamaño compacto: Ideal para proyectos DIY y sistemas portátiles.\nVersatilidad: Compatible con baterías de litio recargables 18650 y otras similares.",
-        "code": "",
-        "datasheet": false
-    },
-    {
-        "id": 185,
-        "name": "Módulo Decodificador Bluetooth MP3 USB/TF con Control",
-        "price": "450",
-        "quantity": 12,
-        "images": [
-            "Imagenes/185/185_1.jpeg",
-            "Imagenes/185/185_2.jpeg",
-            "Imagenes/185/185_3.jpeg"
-        ],
-        "description": "El módulo decodificador de audio Bluetooth es una solución versátil para sistemas de sonido. Compatible con múltiples entradas y formatos de audio, este módulo es perfecto para proyectos de bricolaje, sistemas de audio en automóviles o altavoces personalizados. Incluye un control remoto para un manejo sencillo y cómodo.\n\nCaracterísticas técnicas:\nEntradas de audio:\nBluetooth: Reproduce música de forma inalámbrica desde cualquier dispositivo con Bluetooth.\nUSB: Admite memorias USB para reproducción de archivos MP3/WMA.\nTF: Compatible con tarjetas TF/microSD para reproducción de música.\nAUX: Entrada de audio analógica para conectar dispositivos externos.\nFormatos soportados: MP3, WMA.\nAlimentación: Compatible con 5V y 12V.\nFunciones adicionales:\nRadio FM incorporada.\nEcualizador ajustable (EQ).\nReproducción, pausa, avance, retroceso y control de volumen.\nPantalla LED: Indicadores de estado y reproducción.\nControl remoto: Incluye funciones para manejar todas las entradas y controles del módulo.\nDimensiones:\nDiseño compacto para fácil integración en proyectos de audio.\nAplicaciones:\nSistemas de sonido DIY.\nAltavoces portátiles.\nInstalación en automóviles o sistemas de entretenimiento casero.",
         "code": "",
         "datasheet": false
     },
@@ -1693,6 +1704,107 @@
             "Imagenes/187/187_3.jpeg"
         ],
         "description": "El módulo amplificador digital TPA3110 es una solución compacta y eficiente para proyectos de audio estéreo. Con una potencia de salida de 15W por canal (30W total), este módulo es ideal para sistemas de altavoces DIY y aplicaciones de diseño electrónico.\n\nCaracterísticas técnicas:\nChip principal: TPA3110\nPotencia de salida: 15W por canal a 8Ω (30W total)\nImpedancia de altavoz: 4Ω a 8Ω\nVoltaje de operación: DC 8V a 18V (recomendado: 12V)\nFrecuencia de trabajo: 20Hz a 20kHz\nEficiencia: Hasta 90%, ideal para sistemas de bajo consumo.\nProtección integrada: Contra cortocircuitos, sobrecalentamiento y sobrecarga.\nConfiguración de canales: Estéreo doble canal.\nVentajas:\nTamaño compacto: Facilita la integración en proyectos electrónicos DIY.\nAlta eficiencia: Minimiza el calor generado y mejora la duración de las fuentes de alimentación.\nFácil instalación: Terminales claramente marcados para entrada de alimentación, entrada de señal y salida a altavoces.\nAplicaciones:\nSistemas de altavoces DIY.\nSistemas de sonido portátiles.\nPrototipos de audio y proyectos de diseño electrónico.",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 189,
+        "name": "Pack x2 Pcb prototipo",
+        "price": "150",
+        "quantity": 10,
+        "images": [],
+        "description": "",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 193,
+        "name": "Dht11 con cables y led",
+        "price": "180",
+        "quantity": 30,
+        "images": [],
+        "description": "",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 195,
+        "name": "Módulo Decodificador Bluetooth Mp3 Usb/tf Con Control",
+        "price": "540",
+        "quantity": 5,
+        "images": [
+            "Imagenes/195/195_1.jpeg",
+            "Imagenes/195/195_2.jpeg",
+            "Imagenes/195/195_3.jpeg"
+        ],
+        "description": "El módulo decodificador de audio Bluetooth es una solución versátil para sistemas de sonido. Compatible con múltiples entradas y formatos de audio, este módulo es perfecto para proyectos de bricolaje, sistemas de audio en automóviles o altavoces personalizados. Incluye un control remoto para un manejo sencillo y cómodo.\n\nCaracterísticas técnicas:\nEntradas de audio:\nBluetooth: Reproduce música de forma inalámbrica desde cualquier dispositivo con Bluetooth.\nUSB: Admite memorias USB para reproducción de archivos MP3/WMA.\nTF: Compatible con tarjetas TF/microSD para reproducción de música.\nAUX: Entrada de audio analógica para conectar dispositivos externos.\nFormatos soportados: MP3, WMA.\nAlimentación: Compatible con 5V y 12V.\nFunciones adicionales:\nRadio FM incorporada.\nEcualizador ajustable (EQ).\nReproducción, pausa, avance, retroceso y control de volumen.\nPantalla LED: Indicadores de estado y reproducción.\nControl remoto: Incluye funciones para manejar todas las entradas y controles del módulo.\nDimensiones:\nDiseño compacto para fácil integración en proyectos de audio.\nAplicaciones:\nSistemas de sonido DIY.\nAltavoces portátiles.\nInstalación en automóviles o sistemas de entretenimiento casero.",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 197,
+        "name": "5 juegos de conenctores banana (M-H)",
+        "price": "540",
+        "quantity": 18,
+        "images": [
+            "Imagenes/197/197_1.jpeg",
+            "Imagenes/197/197_2.jpeg",
+            "Imagenes/197/197_3.jpeg",
+            "Imagenes/197/197_4.jpeg"
+        ],
+        "description": "Tipo de enchufe Mache | Banana Split Origin | Calidad del material: Fabricados con materiales duraderos, estos enchufes Banana aseguran conexiones duraderas.\nCompatibilidad versátil: El Tipo de enchufe Banana J072 de 4mm es compatible con una amplia gama de modelos y proyectos de bricolaje.\nFacilitación de uso: los conectores macho y hembra están diseñados para una fácil inserción, simplificando su proceso de bricolaje.\nCodificación de color: Disponible en rojo o negro, estos enchufes de plátano ofrecen la codificación de color clara para la identificación fácil.\nConjunto completo: Cada conjunto incluye un conector macho y uno hembra, proporcionando una solución completa para sus necesidades.",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 199,
+        "name": "Indicador de nivel de Bateria 1-8s Litio",
+        "price": "250",
+        "quantity": "10",
+        "images": [
+            "Imagenes/199/199_1.jpeg",
+            "Imagenes/199/199_2.jpeg",
+            "Imagenes/199/199_3.jpeg"
+        ],
+        "description": "Descripción eléctrica detallada:\nEste módulo es un indicador de nivel de batería diseñado para monitorizar baterías de litio de 1S a 8S (3.7V a 29.6V). El dispositivo cuenta con un display LED que muestra gráficamente el nivel de carga de la batería mediante un icono de batería con segmentos que se iluminan en función del voltaje detectado.\n\nEspecificaciones eléctricas:\n\nVoltaje de operación: Soporta baterías de 1S a 8S (3.7V a 29.6V).\nRango de voltaje: Cada celda (S) debe tener un voltaje mínimo de 3.3V y máximo de 4.2V.\nConsumo de corriente: El consumo en estado de reposo es muy bajo, lo que permite que el módulo permanezca conectado sin agotar significativamente la batería.\nIndicador LED: El display está compuesto por segmentos que representan el estado de carga en diferentes niveles. Cuando la batería está completamente cargada, todos los segmentos estarán iluminados, y a medida que la carga disminuye, los segmentos se apagarán secuencialmente.\nConexión: El módulo se conecta directamente a los terminales positivos y negativos de la batería. El terminal positivo está marcado con un símbolo \"+\" y el negativo con un \"-\".\nProtección: El módulo incluye protección contra conexiones inversas, evitando daños en el dispositivo en caso de una mala conexión de la batería.\nEste indicador es ideal para integrarlo en proyectos que utilizan baterías de litio, proporcionando una lectura visual rápida y precisa del estado de carga de la batería. Es ampliamente utilizado en drones, automóviles eléctricos, y otros dispositivos portátiles donde el monitoreo del nivel de batería es crucial para el rendimiento y seguridad del equipo.",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 201,
+        "name": "Kit de módulo transmisor y receptor de RF de 433 Mhz",
+        "price": "290",
+        "quantity": "10",
+        "images": [
+            "Imagenes/201/201_1.jpeg"
+        ],
+        "description": "Receptor\n-Modelo: MX-05V\n-Voltaje: DC5V\n-Corriente: 4MA\n-Frecuencia: 433,92 MHZ\n-Sensibilidad:-105DB\n-Tamaño: 30*14*7mm\n\nTransmisor:\n-Modelo: MX-FS-03V\n-Distancia del transmisor: 20-200 metros (influyó en el voltaje)\n-Voltaje: 3,5-12V\n-Tamaño: 19*19mm\n-Modo de trabajo: AM\n-Velocidad del transmisor: 4KB/S\n-Potencia del transmisor: 10mW\n-Frecuencia: 433M\n-Arreglo de pines: izquierda-derecha (DATA;VCC;GND)\n\nAplicaciones:\n-Control remoto, módulo receptor, alarma de coche, puerta enrollable, ventana, LED de control remoto, amplificador, etc.",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 203,
+        "name": "Pack x 5 mini rele de potencia 5V",
+        "price": "490",
+        "quantity": "5",
+        "images": [
+            "Imagenes/203/203_1.jpeg",
+            "Imagenes/203/203_2.jpeg"
+        ],
+        "description": "Lote de 5 unidades. 15x12x14mm\nRelé SRA-05VDC-CL. Este tipo de relé es comúnmente utilizado para aplicaciones que requieren la conmutación de altas corrientes tanto en circuitos de corriente continua (DC) como en corriente alterna (AC). A continuación, te proporciono más información relevante sobre este tipo de relé, en particular sobre su capacidad de manejo de voltajes y corrientes.\n\nEspecificaciones del Relé SRA-05VDC-CL\nVoltaje de bobina: 5V DC\nCorriente de contacto:\n20A a 14V DC\n20A a 125V AC\nConfiguración de contactos: SPST-NO (Single Pole Single Throw - Normally Open)\nResistencia de contacto: Típicamente 100 mohm\nTiempo de operación: 10 ms máximo\nTiempo de liberación: 5 ms máximo\nResistencia de aislamiento: 100 Mohm mínimo a 500V DC\nVoltaje de resistencia dieléctrica:\nEntre bobina y contactos: 1500V AC por 1 minuto\nEntre contactos abiertos: 1000V AC por 1 minuto",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 205,
+        "name": "Kit 12 unidades potenciometros",
+        "price": "300",
+        "quantity": "10",
+        "images": [
+            "Imagenes/205/205_1.jpeg",
+            "Imagenes/205/205_2.jpeg"
+        ],
+        "description": "",
         "code": "",
         "datasheet": false
     }
