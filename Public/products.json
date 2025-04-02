@@ -1,5 +1,17 @@
 [
     {
+        "id": 1,
+        "name": "Bornera Pcb 2 Pines (10 unidades)",
+        "price": "220",
+        "quantity": 9,
+        "images": [
+            "Imagenes/1/1_1.png"
+        ],
+        "description": "Descripción Técnica:\n5.08-301-2P es un conector de bloque terminal de tornillo de 2 pines con un paso de 5mm, comúnmente utilizado en proyectos de electrónica para realizar conexiones seguras y desmontables entre componentes y placas de circuito impreso (PCB).\n\nEspecificaciones Técnicas:\nPaso (Pitch): 5mm\nNúmero de Pines: 2\nTipo de Conexión: Bloque terminal de tornillo\nTensión Máxima: 300V\nCorriente Máxima: 10A\nMaterial del Cuerpo: Poliamida (PA)\nMaterial del Contacto: Cobre con revestimiento de níquel\nTemperatura de Operación: -40°C a 105°C\n\nCaracterísticas:\nFácil Instalación: Los tornillos permiten una conexión firme y fácil de instalar.\nDesmontable: Las conexiones se pueden desmontar y volver a montar fácilmente, ideal para aplicaciones de prototipos y pruebas.\nSeguro: Proporciona una conexión segura y confiable, reduciendo el riesgo de desconexiones accidentales.\n\nAplicaciones:\nProyectos de Electrónica DIY: Ideal para proyectos de hobby y prototipos.\nAutomatización Industrial: Utilizado en conexiones de sensores y actuadores.\nInstrumentación: Conexiones en equipos de medida y control.\nDomótica: Conexiones en sistemas de control y automatización del hogar.",
+        "code": "",
+        "datasheet": false
+    },
+    {
         "id": 2,
         "name": "Display Led 8 Bit Max7219",
         "price": "288",
@@ -116,7 +128,7 @@
         "id": 14,
         "name": "Disipador De Calor De Aluminio, 25x24x16mm (4 Unidades)",
         "price": "220",
-        "quantity": 3,
+        "quantity": 2,
         "images": [
             "Imagenes/14/14_1.png",
             "Imagenes/14/14_2.png",
@@ -264,7 +276,7 @@
         "id": 28,
         "name": "Sensor De Hall 49e (bici Eléctrica) 5 Unidades",
         "price": "180",
-        "quantity": 9,
+        "quantity": 8,
         "images": [
             "Imagenes/28/28_1.jpg",
             "Imagenes/28/28_2.jpg",
@@ -295,7 +307,7 @@
         "id": 30,
         "name": "Esp32 Wifi Con Placa De Expansión último Modelo",
         "price": "990",
-        "quantity": 3,
+        "quantity": 2,
         "images": [
             "Imagenes/30/30_1.jpg",
             "Imagenes/30/30_2.jpg",
@@ -416,8 +428,8 @@
     {
         "id": 46,
         "name": "ESP32 placa de desarrollo",
-        "price": "625",
-        "quantity": 8,
+        "price": "608",
+        "quantity": 3,
         "images": [
             "Imagenes/46/46_1.png"
         ],
@@ -492,18 +504,6 @@
         "quantity": 18,
         "images": [
             "Imagenes/52/52_1.png"
-        ],
-        "description": "",
-        "code": "",
-        "datasheet": false
-    },
-    {
-        "id": 53,
-        "name": "Ne555 Circuito Integrado (10 Unidades)",
-        "price": "180",
-        "quantity": 1,
-        "images": [
-            "Imagenes/53/53_1.png"
         ],
         "description": "",
         "code": "",
@@ -892,7 +892,7 @@
         "id": 89,
         "name": "Pack de 30 Cables Dupont de 30 cm - 10M-M, 10H-H, 10M-H",
         "price": "170",
-        "quantity": 7,
+        "quantity": 6,
         "images": [
             "Imagenes/89/89_1.jpg",
             "Imagenes/89/89_2.jpg",
@@ -939,7 +939,7 @@
         "id": 95,
         "name": "Mini Módulo regulador de Voltaje DC-DC Buck con Protección",
         "price": "110",
-        "quantity": "7",
+        "quantity": 6,
         "images": [
             "Imagenes/95/95_1.jpg",
             "Imagenes/95/95_2.jpg",
@@ -984,8 +984,8 @@
     {
         "id": 99,
         "name": "Módulo Bms 3s 60a Balanceado Para Baterías De Litio",
-        "price": "450",
-        "quantity": 15,
+        "price": "570",
+        "quantity": 14,
         "images": [
             "Imagenes/99/99_1.jpg",
             "Imagenes/99/99_2.jpg",
@@ -1047,7 +1047,7 @@
         "id": 103,
         "name": "Pack de 5 Reguladores de Voltaje Ajustables LM317 - Alta Precisión y Fiabilidad",
         "price": "160",
-        "quantity": 23,
+        "quantity": 22,
         "images": [
             "Imagenes/103/103_1.jpg",
             "Imagenes/103/103_2.jpg",
@@ -1179,7 +1179,7 @@
         "id": 112,
         "name": "Módulo Cargador de Batería 134N3P con Micro USB y Salida USB",
         "price": "90",
-        "quantity": "93",
+        "quantity": 93,
         "images": [
             "Imagenes/112/112_1.jpg",
             "Imagenes/112/112_2.jpg",
@@ -1310,7 +1310,7 @@
         "id": 123,
         "name": "Placa Amplificador Digital Mono 100w Rms - Tpa3116d2 24vdc",
         "price": "690",
-        "quantity": 7,
+        "quantity": 6,
         "images": [
             "Imagenes/123/123_1.jpg",
             "Imagenes/123/123_2.jpg",
@@ -1461,8 +1461,8 @@
     {
         "id": 149,
         "name": "RP2040 Zero de Raspberry Pi: La Mini Placa Ideal para Proyectos IoT",
-        "price": "380",
-        "quantity": 14,
+        "price": "360",
+        "quantity": 10,
         "images": [
             "Imagenes/149/149_1.jpg",
             "Imagenes/149/149_2.jpg",
@@ -1490,7 +1490,7 @@
         "id": 153,
         "name": "Sensor ENS160+ AHT21: Calidad de Aire + Temp/Hum",
         "price": "690",
-        "quantity": 9,
+        "quantity": 8,
         "images": [
             "Imagenes/153/153_1.jpg",
             "Imagenes/153/153_2.jpg",
@@ -1508,19 +1508,6 @@
         "images": [],
         "description": "especificaciones del IRFP264N:\nTipo: MOSFET de potencia, N-Channel\nVoltaje de drenaje-fuente (VDS): 250V\nCorriente de drenaje (ID): 47A (a 25°C)\nResistencia de encendido (RDS(on)): 0.075 ohmios (típico, a VGS = 10V)\nVoltaje de compuerta (VGS): ±20V (máximo)\nDisipación de potencia (PD): 300W (máximo)\nCapacidad de carga de compuerta (Ciss): 7300 pF\nEncapsulado: TO-247\nTemperatura de operación: -55°C a +175°C\nTiempo de conmutación:\nTiempo de encendido (ton): 38 ns (típico)\nTiempo de apagado (toff): 83 ns (típico)\nConfiguración de pines:\nDrenaje (Drain): Pin central y parte metálica del encapsulado\nFuente (Source): Pin derecho\nCompuerta (Gate): Pin izquierdo",
         "code": "",
-        "datasheet": false
-    },
-    {
-        "id": 157,
-        "name": "Microcontrolador ESP32 C3 Mini Board con USB-C y WiFi/Bluetooth",
-        "price": "320",
-        "quantity": 1,
-        "images": [
-            "Imagenes/157/157_1.jpg",
-            "Imagenes/157/157_2.jpg"
-        ],
-        "description": "Este módulo ESP32 C3 es una placa de desarrollo compacta y de bajo consumo, ideal para proyectos de IoT, automatización y electrónica. Incluye un puerto USB-C para una fácil programación y alimentación, dos botones (RESET y BOOT), y una serie de pines GPIO expuestos para conexión a sensores y periféricos. Basado en el chip ESP32-C3, ofrece conectividad WiFi y Bluetooth 5.0, soportando tanto BLE como Classic Bluetooth.\n\nEspecificaciones Eléctricas:\n\nVoltaje de entrada: 5V a través de USB-C.\nConsumo en modo inactivo: <10 μA en modo deep-sleep.\nPines GPIO disponibles: 21 pines con funciones múltiples (PWM, ADC, UART, I2C).\nConectividad: WiFi 2.4 GHz y Bluetooth 5.0.",
-        "code": "#include <WiFi.h>\n#include <HTTPClient.h>\n#include <DHT.h>\n\n// Configuración del sensor DHT\n#define DHTPIN 4      // Pin GPIO al que está conectado el DHT\n#define DHTTYPE DHT22 // Modelo del sensor (DHT11 o DHT22)\nDHT dht(DHTPIN, DHTTYPE);\n\n// Configuración de WiFi\nconst char* ssid = \"TU_SSID\";\nconst char* password = \"TU_PASSWORD\";\n\n// URL del servidor donde se enviarán los datos\nconst char* serverName = \"http://tu-servidor.com/recibir_datos\";\n\nvoid setup() {\n  Serial.begin(115200);\n\n  // Inicia el sensor DHT\n  dht.begin();\n\n  // Conexión a WiFi\n  Serial.print(\"Conectando a WiFi...\");\n  WiFi.begin(ssid, password);\n  while (WiFi.status() != WL_CONNECTED) {\n    delay(500);\n    Serial.print(\".\");\n  }\n  Serial.println(\"\nConectado a la red WiFi\");\n}\n\nvoid loop() {\n  if (WiFi.status() == WL_CONNECTED) {\n    HTTPClient http;\n\n    // Leer temperatura y humedad\n    float temperature = dht.readTemperature();\n    float humidity = dht.readHumidity();\n\n    // Verificar que la lectura es válida\n    if (isnan(temperature) || isnan(humidity)) {\n      Serial.println(\"Error al leer del sensor DHT!\");\n      return;\n    }\n\n    // Preparar la URL con los datos\n    String serverPath = serverName + String(\"?temp=\") + String(temperature) + \"&hum=\" + String(humidity);\n\n    // Iniciar conexión HTTP\n    http.begin(serverPath.c_str());\n\n    // Enviar solicitud GET\n    int httpResponseCode = http.GET();\n\n    // Procesar la respuesta del servidor\n    if (httpResponseCode > 0) {\n      String response = http.getString();\n      Serial.print(\"Código de respuesta: \");\n      Serial.println(httpResponseCode);\n      Serial.print(\"Respuesta del servidor: \");\n      Serial.println(response);\n    } else {\n      Serial.print(\"Error en la solicitud: \");\n      Serial.println(httpResponseCode);\n    }\n\n    // Cerrar conexión HTTP\n    http.end();\n  } else {\n    Serial.println(\"Desconectado de la red WiFi, intentando reconectar...\");\n    WiFi.reconnect();\n  }\n\n  // Esperar 10 segundos antes de la próxima lectura\n  delay(10000);\n}",
         "datasheet": false
     },
     {
@@ -1587,7 +1574,7 @@
         "id": 167,
         "name": "Generador PWM Dual con Pantalla LCD",
         "price": "340",
-        "quantity": 5,
+        "quantity": 4,
         "images": [
             "Imagenes/167/167_1.jpg",
             "Imagenes/167/167_2.jpg",
@@ -1643,7 +1630,7 @@
         "id": 175,
         "name": "módulo inalámbrico LoRa XL1278",
         "price": "560",
-        "quantity": 9,
+        "quantity": 7,
         "images": [
             "Imagenes/175/175_1.jpg",
             "Imagenes/175/175_2.jpg",
@@ -1711,7 +1698,7 @@
         "id": 187,
         "name": "Módulo Amplificador TPA3110 2x15W Estéreo DC 12V",
         "price": "280",
-        "quantity": 20,
+        "quantity": 18,
         "images": [
             "Imagenes/187/187_1.jpeg",
             "Imagenes/187/187_2.jpeg",
@@ -1735,7 +1722,7 @@
         "id": 193,
         "name": "Dht11 con cables y led",
         "price": "180",
-        "quantity": 28,
+        "quantity": 27,
         "images": [],
         "description": "",
         "code": "",
@@ -1744,7 +1731,7 @@
     {
         "id": 195,
         "name": "Módulo Decodificador Bluetooth Mp3 Usb/tf Con Control",
-        "price": "540",
+        "price": "420",
         "quantity": 5,
         "images": [
             "Imagenes/195/195_1.jpeg",
@@ -1813,7 +1800,7 @@
         "id": 205,
         "name": "Kit 12 unidades potenciometros",
         "price": "300",
-        "quantity": 10,
+        "quantity": 9,
         "images": [
             "Imagenes/205/205_1.jpeg",
             "Imagenes/205/205_2.jpeg"
@@ -1869,7 +1856,7 @@
         "id": 213,
         "name": "(120pcs) Kit surtido de condensadores electroliticos",
         "price": "400",
-        "quantity": "6",
+        "quantity": 5,
         "images": [
             "Imagenes/213/213_1.jpeg",
             "Imagenes/213/213_2.jpeg"
@@ -1984,13 +1971,68 @@
         "id": 233,
         "name": "Reductor DC-DC Ajustable LM2596 3-40V a 1,5-35V",
         "price": "180",
-        "quantity": "30",
+        "quantity": 30,
         "images": [
             "Imagenes/233/233_1.jpeg",
             "Imagenes/233/233_2.jpeg",
             "Imagenes/233/233_3.jpeg"
         ],
         "description": "Este módulo reductor DC-DC se basa en el chip regulador LM2596 y permite convertir voltajes de entrada de 3 a 40 V en una salida ajustable entre 1,5 y 35 V. Cuenta con un potenciómetro para regular el voltaje de forma precisa y ofrece una alta eficiencia de hasta el 92%. Es ideal para alimentar proyectos de electrónica, placas de desarrollo (Arduino, ESP32, Raspberry Pi), tiras LED, sistemas de carga de baterías y otros dispositivos que requieran una fuente estable.\n\nAdemás, incorpora protecciones contra sobrecorriente y sobrecalentamiento, lo que garantiza un funcionamiento seguro y confiable. Sus terminales de tornillo facilitan la conexión y el ajuste del voltaje de salida, convirtiéndolo en una solución versátil para aplicaciones de alimentación y prototipado en el ámbito de la robótica, domótica y proyectos DIY.",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 235,
+        "name": "IGBT 60n60 transistor",
+        "price": "350",
+        "quantity": "20",
+        "images": [
+            "Imagenes/235/235_1.png",
+            "Imagenes/235/235_2.png",
+            "Imagenes/235/235_3.png"
+        ],
+        "description": "Descripción eléctrica:\n\nTipo: IGBT de potencia\n\nTensión Colector-Emisor (V_CE): 600 V\n\nCorriente Colector (I_C): 60 A\n\nVoltaje de puerta: Umbral ≈5 V, con conducción recomendada hasta 15 V\n\nConmutación: Alta velocidad y eficiencia en aplicaciones de potencia\n\nAplicaciones típicas: Inversores, convertidores y control de motores",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 237,
+        "name": "Kit Generador de Onda NE555 6-12V (Seno/Triángulo/Cuadrada)",
+        "price": "310",
+        "quantity": "10",
+        "images": [
+            "Imagenes/237/237_1.jpeg",
+            "Imagenes/237/237_2.jpeg",
+            "Imagenes/237/237_3.jpeg",
+            "Imagenes/237/237_4.jpeg",
+            "Imagenes/237/237_5.jpeg",
+            "Imagenes/237/237_6.jpeg"
+        ],
+        "description": "Descripción eléctrica:\n\nAlimentación: 6–12 V DC\n\nFormas de onda generadas: Seno, Triángulo y Cuadrada\n\nBase de tiempo: NE555, con posibilidad de ajuste de frecuencia mediante potenciómetro\n\nSelección de salida: Conector/puente para escoger la forma de onda\n\nAplicaciones: Ideal para prácticas de laboratorio, proyectos de electrónica y experimentación en generación de señales",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 239,
+        "name": "IC HT8693SP Generador de Audio",
+        "price": "250",
+        "quantity": "20",
+        "images": [
+            "Imagenes/239/239_1.jpeg"
+        ],
+        "description": "Descripción eléctrica:\n\nTipo: Circuito integrado generador de sonidos/melodías\n\nVoltaje de alimentación: Aprox. 2.4 V – 5.5 V\n\nFunción principal: Generación de tonos y efectos de audio\n\nAplicaciones: Juguetes electrónicos, sistemas de aviso, proyectos de sonido básico",
+        "code": "",
+        "datasheet": false
+    },
+    {
+        "id": 241,
+        "name": "Pack x2 transistor TIP36C PNP 100V/5A TO-220",
+        "price": "350",
+        "quantity": "10",
+        "images": [
+            "Imagenes/241/241_1.jpeg"
+        ],
+        "description": "Transistor de potencia TIP36C, tipo PNP en encapsulado TO-220, con una tensión colector-emisor de aproximadamente 100 V, corriente máxima de colector de 5 A y disipación de potencia de hasta 65 W. Ideal para aplicaciones en conmutación y amplificación de potencia.",
         "code": "",
         "datasheet": false
     }
