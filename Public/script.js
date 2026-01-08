@@ -2,6 +2,8 @@ const imageBaseUrl = 'https://www.microuniversos.com/Public/';
 const cart = [];
 let allProducts = [];
 let renderVersion = 0;
+const visitNamespace = 'microuniversos-uy';
+const visitKey = 'site';
 
 function addToCart(productId, quantity) {
     const product = products.find(p => p.id === productId);
@@ -466,6 +468,7 @@ document.addEventListener('keydown', (event) => {
 
 // Fetch products from products.json and render them
 document.addEventListener('DOMContentLoaded', () => {
+    trackVisit();
     fetch('products.json')
         .then(response => response.json())
         .then(data => {
@@ -487,6 +490,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     renderProducts(filtered);
                 });
             }
+
+            maybeShowVisitStats();
         })
         .catch(error => console.error('Error al cargar los productos:', error));
 });
@@ -498,4 +503,37 @@ function normalizeText(text) {
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '')
         .trim();
+}
+
+function trackVisit() {
+    fetch(`https://api.countapi.xyz/hit/${visitNamespace}/${visitKey}`)
+        .catch(() => {});
+}
+
+function maybeShowVisitStats() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('stats') !== '1') {
+        return;
+    }
+    fetch(`https://api.countapi.xyz/get/${visitNamespace}/${visitKey}`)
+        .then(response => response.json())
+        .then(data => {
+            if (!data || typeof data.value !== 'number') {
+                return;
+            }
+            const badge = document.createElement('div');
+            badge.style.position = 'fixed';
+            badge.style.right = '16px';
+            badge.style.bottom = '16px';
+            badge.style.padding = '8px 12px';
+            badge.style.background = '#000080';
+            badge.style.color = '#fff';
+            badge.style.borderRadius = '12px';
+            badge.style.fontFamily = 'Source Code Pro, monospace';
+            badge.style.fontSize = '12px';
+            badge.style.zIndex = '9999';
+            badge.textContent = `Visitas: ${data.value}`;
+            document.body.appendChild(badge);
+        })
+        .catch(() => {});
 }
