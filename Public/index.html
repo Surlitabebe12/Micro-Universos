@@ -135,10 +135,15 @@
             color: #000080;
             text-align: left;
         }
-        .best-sellers-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
+        .best-sellers-carousel {
+            position: relative;
+            overflow: hidden;
+        }
+        .best-sellers-track {
+            display: flex;
             gap: 12px;
+            transition: transform 0.6s ease;
+            will-change: transform;
         }
         .best-seller-card {
             background: white;
@@ -150,6 +155,8 @@
             gap: 8px;
             cursor: pointer;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            min-width: 220px;
+            flex: 0 0 220px;
         }
         .best-seller-card:hover {
             transform: translateY(-2px);
@@ -492,11 +499,12 @@
             .product-price {
                 font-size: 1em;
             }
-            .best-sellers-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
             .best-seller-card img {
                 height: 120px;
+            }
+            .best-seller-card {
+                min-width: 160px;
+                flex-basis: 160px;
             }
             #cart-modal-content {
                 width: 90%;
@@ -621,7 +629,9 @@
     </section>
     <section class="best-sellers">
         <h2>Más vendidos</h2>
-        <div class="best-sellers-grid" id="best-sellers-grid"></div>
+        <div class="best-sellers-carousel">
+            <div class="best-sellers-track" id="best-sellers-track"></div>
+        </div>
     </section>
     <div class="products-container">
         <!-- Aquí se agregarán los productos dinámicamente -->
@@ -668,12 +678,12 @@
 
 
     <footer>
-        <p>Presiona en el logo para abrir una conversación. <img src="WhatsApp_similar_logo.png" alt="WhatsApp" onclick="openWhatsApp()"></p>
+        <p>Presiona el botón de WhatsApp para abrir una conversación.</p>
     </footer>
     <div id="wa-float" onclick="openWhatsApp()">
         <img src="WhatsApp_similar_logo.png" alt="WhatsApp">
     </div>
 
-    <script src="script.js?v=20260108f"></script>
+    <script src="script.js?v=20260108g"></script>
 </body>
 </html>

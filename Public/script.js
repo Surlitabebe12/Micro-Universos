@@ -202,36 +202,80 @@ function renderProducts(products) {
     });
 }
 
+let bestSellersTimer = null;
+
 function renderBestSellers(products) {
-    const grid = document.getElementById('best-sellers-grid');
-    if (!grid) {
+    const track = document.getElementById('best-sellers-track');
+    if (!track) {
         return;
     }
-    grid.innerHTML = '';
-    const list = products.slice(0, 4);
+    if (bestSellersTimer) {
+        clearInterval(bestSellersTimer);
+        bestSellersTimer = null;
+    }
+    track.innerHTML = '';
+
+    const list = products.slice(0, 8);
+    if (list.length === 0) {
+        return;
+    }
+
     list.forEach(product => {
-        const card = document.createElement('div');
-        card.className = 'best-seller-card';
-        card.onclick = () => openProductModal(product.id);
-
-        const img = document.createElement('img');
-        img.src = `${imageBaseUrl}${product.images[0]}`;
-        img.alt = product.name;
-
-        const title = document.createElement('div');
-        title.className = 'best-seller-title';
-        title.textContent = product.name;
-
-        const price = document.createElement('div');
-        price.className = 'best-seller-price';
-        const priceValue = parseFloat(product.price);
-        price.textContent = `$${priceValue % 1 === 0 ? priceValue : priceValue.toFixed(2)}`;
-
-        card.appendChild(img);
-        card.appendChild(title);
-        card.appendChild(price);
-        grid.appendChild(card);
+        track.appendChild(createBestSellerCard(product));
     });
+    list.forEach(product => {
+        track.appendChild(createBestSellerCard(product));
+    });
+
+    startBestSellersCarousel(track, list.length);
+}
+
+function createBestSellerCard(product) {
+    const card = document.createElement('div');
+    card.className = 'best-seller-card';
+    card.onclick = () => openProductModal(product.id);
+
+    const img = document.createElement('img');
+    img.src = `${imageBaseUrl}${product.images[0]}`;
+    img.alt = product.name;
+
+    const title = document.createElement('div');
+    title.className = 'best-seller-title';
+    title.textContent = product.name;
+
+    const price = document.createElement('div');
+    price.className = 'best-seller-price';
+    const priceValue = parseFloat(product.price);
+    price.textContent = `$${priceValue % 1 === 0 ? priceValue : priceValue.toFixed(2)}`;
+
+    card.appendChild(img);
+    card.appendChild(title);
+    card.appendChild(price);
+    return card;
+}
+
+function startBestSellersCarousel(track, itemCount) {
+    const card = track.querySelector('.best-seller-card');
+    if (!card) {
+        return;
+    }
+    const gap = 12;
+    const cardWidth = card.getBoundingClientRect().width + gap;
+    let index = 0;
+
+    bestSellersTimer = setInterval(() => {
+        index += 1;
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+        if (index >= itemCount) {
+            setTimeout(() => {
+                track.style.transition = 'none';
+                track.style.transform = 'translateX(0)';
+                index = 0;
+                void track.offsetWidth;
+                track.style.transition = 'transform 0.6s ease';
+            }, 650);
+        }
+    }, 2800);
 }
 
 
