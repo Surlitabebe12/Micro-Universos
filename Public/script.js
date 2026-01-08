@@ -659,7 +659,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } else {
                 toggleHomeSections(false);
-            }            const searchInput = document.getElementById('product-search');
+            }
+
+            const searchInput = document.getElementById('product-search');
             if (searchInput) {
                 searchInput.addEventListener('input', () => {
                     const query = normalizeText(searchInput.value);
@@ -673,14 +675,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     renderProducts(filtered);
                 });
             }
-                });
-            }
-
         })
         .catch(error => console.error('Error al cargar los productos:', error));
 });
 
 function normalizeText(text) {
+    return (text || '')
+        .toString()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .trim();
+}
 
 function enableWhatsAppDrag() {
     const bubble = document.getElementById('wa-float');
@@ -726,13 +732,6 @@ function enableWhatsAppDrag() {
         dragging = false;
         bubble.releasePointerCapture(event.pointerId);
     });
-}
-    return (text || '')
-        .toString()
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .trim();
 }
 
 function trackVisit() {
