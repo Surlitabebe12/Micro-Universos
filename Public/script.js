@@ -115,7 +115,7 @@ function renderProducts(products) {
 
             const imageContainer = document.createElement('div');
             imageContainer.className = 'image-container';
-            imageContainer.onclick = () => openProductModal(product.id);
+            imageContainer.onclick = () => openProductPage(product.id);
 
             const imgElement = document.createElement('img');
             imgElement.src = imgSrc;
@@ -233,7 +233,7 @@ function renderBestSellers(products) {
 function createBestSellerCard(product) {
     const card = document.createElement('div');
     card.className = 'best-seller-card';
-    card.onclick = () => openProductModal(product.id);
+    card.onclick = () => openProductPage(product.id);
 
     const img = document.createElement('img');
     img.src = `${imageBaseUrl}${product.images[0]}`;
@@ -482,79 +482,109 @@ function openCodeWindow(productId) {
 
 
 
-function openProductModal(productId) {
-    const product = products.find(p => p.id === productId);
-    if (product) {
-        currentProduct = product; // Establecer el producto actual
-        const productModal = document.getElementById('product-modal');
-        const productModalImage = document.getElementById('product-modal-image');
-        const productModalThumbs = document.getElementById('product-modal-thumbs');
-        const productModalTitle = document.getElementById('product-modal-title');
-        const productModalPrice = document.getElementById('product-modal-price');
-        const productModalStock = document.getElementById('product-modal-stock');
-        const productModalDesc = document.getElementById('product-modal-desc');
-        const productModalQty = document.getElementById('product-modal-qty');
-        const productModalAdd = document.getElementById('product-modal-add');
-        const productCodeLink = document.getElementById('product-code-link');
-
-        // Verificar que la imagen exista y esté definida
-        if (product.images && product.images.length > 0) {
-            productModalImage.src = `${imageBaseUrl}${product.images[0]}`;
-        } else {
-            // Si no hay imagen, usar una imagen predeterminada
-            productModalImage.src = `${imageBaseUrl}default-image.png`;
-        }
-
-        if (productModalThumbs) {
-            productModalThumbs.innerHTML = '';
-            (product.images || []).forEach((imgSrc, index) => {
-                const thumb = document.createElement('img');
-                thumb.src = `${imageBaseUrl}${imgSrc}`;
-                thumb.alt = `${product.name} ${index + 1}`;
-                thumb.onclick = () => {
-                    productModalImage.src = `${imageBaseUrl}${imgSrc}`;
-                };
-                productModalThumbs.appendChild(thumb);
-            });
-        }
-
-        if (productModalTitle) {
-            productModalTitle.textContent = product.name;
-        }
-        if (productModalPrice) {
-            const priceValue = parseFloat(product.price);
-            productModalPrice.textContent = `$${priceValue % 1 === 0 ? priceValue : priceValue.toFixed(2)}`;
-        }
-        if (productModalStock) {
-            productModalStock.textContent = `Stock: ${product.quantity}`;
-        }
-        if (productModalDesc) {
-            productModalDesc.textContent = product.description || 'Sin descripción.';
-        }
-        if (productModalQty) {
-            productModalQty.value = 1;
-            productModalQty.max = product.quantity;
-        }
-        if (productModalAdd) {
-            productModalAdd.onclick = () => {
-                const qty = parseInt(productModalQty.value, 10) || 1;
-                addToCart(product.id, qty);
-            };
-        }
-
-        if (productCodeLink) {
-            if (product.code && product.code.trim()) {
-                productCodeLink.style.display = 'inline-flex';
-                productCodeLink.setAttribute('onclick', `openCodeWindow(${product.id})`);
-            } else {
-                productCodeLink.style.display = 'none';
-            }
-        }
-
-        productModal.style.display = 'block'; // Muestra el modal
-    }
+function openProductPage(productId) {
+    const params = new URLSearchParams(window.location.search);
+    params.set('product', productId);
+    const url = `${window.location.pathname}?${params.toString()}`;
+    window.location.href = url;
 }
 
+function renderProductPage(product) {
+    currentProduct = product;
+    const productPage = document.getElementById('product-page');
+    const productPageImage = document.getElementById('product-page-image');
+    const productPageThumbs = document.getElementById('product-page-thumbs');
+    const productPageTitle = document.getElementById('product-page-title');
+    const productPagePrice = document.getElementById('product-page-price');
+    const productPageStock = document.getElementById('product-page-stock');
+    const productPageDesc = document.getElementById('product-page-desc');
+    const productPageQty = document.getElementById('product-page-qty');
+    const productPageAdd = document.getElementById('product-page-add');
+    const productPageCode = document.getElementById('product-page-code');
+
+    if (product.images && product.images.length > 0) {
+        productPageImage.src = `${imageBaseUrl}${product.images[0]}`;
+    } else {
+        productPageImage.src = `${imageBaseUrl}default-image.png`;
+    }
+
+    if (productPageThumbs) {
+        productPageThumbs.innerHTML = '';
+        (product.images || []).forEach((imgSrc, index) => {
+            const thumb = document.createElement('img');
+            thumb.src = `${imageBaseUrl}${imgSrc}`;
+            thumb.alt = `${product.name} ${index + 1}`;
+            thumb.onclick = () => {
+                productPageImage.src = `${imageBaseUrl}${imgSrc}`;
+            };
+            productPageThumbs.appendChild(thumb);
+        });
+    }
+
+    if (productPageTitle) {
+        productPageTitle.textContent = product.name;
+    }
+    if (productPagePrice) {
+        const priceValue = parseFloat(product.price);
+        productPagePrice.textContent = `$${priceValue % 1 === 0 ? priceValue : priceValue.toFixed(2)}`;
+    }
+    if (productPageStock) {
+        productPageStock.textContent = `Stock: ${product.quantity}`;
+    }
+    if (productPageDesc) {
+        productPageDesc.textContent = product.description || 'Sin descripci?n.';
+    }
+    if (productPageQty) {
+        productPageQty.value = 1;
+        productPageQty.max = product.quantity;
+    }
+    if (productPageAdd) {
+        productPageAdd.onclick = () => {
+            const qty = parseInt(productPageQty.value, 10) || 1;
+            addToCart(product.id, qty);
+        };
+    }
+    if (productPageCode) {
+        if (product.code && product.code.trim()) {
+            productPageCode.style.display = 'inline-flex';
+            productPageCode.setAttribute('onclick', `openCodeWindow(${product.id})`);
+        } else {
+            productPageCode.style.display = 'none';
+        }
+    }
+
+    if (productPage) {
+        productPage.classList.add('active');
+    }
+    toggleHomeSections(true);
+}
+
+function closeProductPage() {
+    const params = new URLSearchParams(window.location.search);
+    if (!params.has('product')) {
+        return;
+    }
+    params.delete('product');
+    const url = params.toString() ? `${window.location.pathname}?${params.toString()}` : window.location.pathname;
+    window.location.href = url;
+}
+
+function toggleHomeSections(hidden) {
+    const homeSections = document.getElementById('home-sections');
+    const productsContainer = document.querySelector('.products-container');
+    const bestSellers = document.querySelector('.best-sellers');
+    const trustBanner = document.querySelector('.trust-banner');
+    const promoSection = document.querySelector('.promo-section');
+
+    [homeSections, productsContainer, bestSellers, trustBanner, promoSection].forEach((el) => {
+        if (!el) return;
+        if (hidden) {
+            el.classList.add('hide-on-product');
+        } else {
+            el.classList.remove('hide-on-product');
+        }
+    });
+}
 
 
 // Función para abrir el modal de la imagen
@@ -577,17 +607,11 @@ function openEmptyWindow() {
 }
 
 
-function closeProductModal() {
-    const productModal = document.getElementById('product-modal');
-    productModal.style.display = 'none';
-}
-
-
 // Añadir evento para cerrar el carrito con la tecla Escape
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
         closeCartModal();
-        closeProductModal();
+        closeProductPage();
     }
 });
 
@@ -603,6 +627,17 @@ document.addEventListener('DOMContentLoaded', () => {
             allProducts = data;
             renderProducts(allProducts);
             renderBestSellers(allProducts);
+
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('product');
+            if (productId) {
+                const product = allProducts.find(p => `${p.id}` === productId);
+                if (product) {
+                    renderProductPage(product);
+                }
+            } else {
+                toggleHomeSections(false);
+            }
 
             const searchInput = document.getElementById('product-search');
             if (searchInput) {
