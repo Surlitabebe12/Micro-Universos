@@ -495,7 +495,6 @@ function openProductModal(productId) {
         const productModalDesc = document.getElementById('product-modal-desc');
         const productModalQty = document.getElementById('product-modal-qty');
         const productModalAdd = document.getElementById('product-modal-add');
-        const productInfoLink = document.getElementById('product-info-link');
         const productCodeLink = document.getElementById('product-code-link');
 
         // Verificar que la imagen exista y esté definida
@@ -543,9 +542,14 @@ function openProductModal(productId) {
             };
         }
 
-        // Actualizar los enlaces para abrir la descripción y el código del producto
-        productInfoLink.setAttribute('onclick', `openDescriptionWindow(${product.id})`);
-        productCodeLink.setAttribute('onclick', `openCodeWindow(${product.id})`);
+        if (productCodeLink) {
+            if (product.code && product.code.trim()) {
+                productCodeLink.style.display = 'inline-flex';
+                productCodeLink.setAttribute('onclick', `openCodeWindow(${product.id})`);
+            } else {
+                productCodeLink.style.display = 'none';
+            }
+        }
 
         productModal.style.display = 'block'; // Muestra el modal
     }

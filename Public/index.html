@@ -663,6 +663,25 @@
             border-radius: 8px;
             cursor: pointer;
         }
+        .product-code-link {
+            margin-top: 12px;
+        }
+        .product-code-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #eef0f6;
+            color: #000080;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .product-code-link a::before {
+            content: '</>';
+            font-size: 0.85em;
+        }
         @media (max-width: 700px) {
             #product-modal-content {
                 width: 92%;
@@ -767,9 +786,8 @@
                         <button id="product-modal-add">Agregar al carrito</button>
                     </div>
                     <div class="desc" id="product-modal-desc"></div>
-                    <div style="margin-top: 10px;">
-                        <a href="#" id="product-info-link" style="color: blue; text-decoration: underline; display: block; margin-bottom: 8px;">Ver información del producto</a>
-                        <a href="#" id="product-code-link" style="color: blue; text-decoration: underline; display: block;">Código de ejemplo</a>
+                    <div class="product-code-link">
+                        <a href="#" id="product-code-link">Código de ejemplo</a>
                     </div>
                 </div>
             </div>
@@ -784,6 +802,6 @@
         <img src="WhatsApp_similar_logo.png" alt="WhatsApp">
     </div>
 
-    <script src="script.js?v=20260108h"></script>
+    <script src="script.js?v=20260108i"></script>
 </body>
 </html>
