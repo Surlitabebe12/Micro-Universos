@@ -1,5 +1,7 @@
 const imageBaseUrl = 'https://www.microuniversos.com/Public/';
 const cart = [];
+let allProducts = [];
+let renderVersion = 0;
 
 function addToCart(productId, quantity) {
     const product = products.find(p => p.id === productId);
@@ -86,6 +88,15 @@ function shareCart() {
 
 function renderProducts(products) {
     const productsContainer = document.querySelector('.products-container');
+    const currentVersion = ++renderVersion;
+    productsContainer.innerHTML = '';
+
+    if (!products || products.length === 0) {
+        const empty = document.createElement('p');
+        empty.textContent = 'No se encontraron productos.';
+        productsContainer.appendChild(empty);
+        return;
+    }
 
     products.forEach(product => {
         const img = new Image();
@@ -93,6 +104,9 @@ function renderProducts(products) {
         img.src = imgSrc;
 
         img.onload = () => {
+            if (currentVersion !== renderVersion) {
+                return;
+            }
             const productElement = document.createElement('div');
             productElement.className = 'product';
 
@@ -456,7 +470,32 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             window.products = data; // Save products globally
-            renderProducts(data);
+            allProducts = data;
+            renderProducts(allProducts);
+
+            const searchInput = document.getElementById('product-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', () => {
+                    const query = normalizeText(searchInput.value);
+                    if (!query) {
+                        renderProducts(allProducts);
+                        return;
+                    }
+                    const filtered = allProducts.filter(product =>
+                        normalizeText(product.name).includes(query)
+                    );
+                    renderProducts(filtered);
+                });
+            }
         })
         .catch(error => console.error('Error al cargar los productos:', error));
 });
+
+function normalizeText(text) {
+    return (text || '')
+        .toString()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .trim();
+}
