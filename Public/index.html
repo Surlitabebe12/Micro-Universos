@@ -560,12 +560,11 @@
             cursor: pointer;
         }
         #product-modal img {
-            width: 50%; /* Cambia el ancho al 50% */
-            height: auto;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
-            border-radius: 5px;
+            border-radius: 10px;
             display: block;
-            margin: 0 auto; /* Centrar la imagen horizontalmente */
         }
         .code-example pre {
             background-color: #000; /* Fondo negro */
@@ -590,6 +589,91 @@
             color: #333; /* Color del texto */
             margin-bottom: 10px; /* Espacio debajo del título */
             font-family: 'Arial', sans-serif; /* Fuente más delicada */
+        }
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 18px;
+        }
+        .product-gallery {
+            background: #f5f6fa;
+            border-radius: 12px;
+            padding: 10px;
+            position: relative;
+        }
+        .product-gallery-main {
+            width: 100%;
+            height: 280px;
+        }
+        .product-gallery-thumbs {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+        .product-gallery-thumbs img {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #d7dbe2;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .product-info h3 {
+            margin: 0 0 6px 0;
+            color: #000080;
+        }
+        .product-info .price {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #000080;
+            margin: 6px 0 10px;
+        }
+        .product-info .stock {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .product-info .desc {
+            font-size: 0.9em;
+            color: #222;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            max-height: 180px;
+            overflow: auto;
+            border-top: 1px solid #e5e7ee;
+            padding-top: 10px;
+        }
+        .product-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .product-actions input {
+            width: 60px;
+            text-align: center;
+            padding: 6px;
+        }
+        .product-actions button {
+            padding: 8px 12px;
+            background: #000080;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        @media (max-width: 700px) {
+            #product-modal-content {
+                width: 92%;
+                max-width: 92%;
+            }
+            .product-detail {
+                grid-template-columns: 1fr;
+            }
+            .product-gallery-main {
+                height: 220px;
+            }
         }
 
     </style>
@@ -667,11 +751,27 @@
     <div id="product-modal">
         <div id="product-modal-content">
             <span class="close" onclick="closeProductModal()">&times;</span>
-            <img id="product-modal-image" src="" alt="Imagen del producto">
-            <!-- Contenedor de los enlaces -->
-            <div style="margin-top: 10px; text-align: left; padding-left: 10px;">
-                <a href="#" id="product-info-link" style="color: blue; text-decoration: underline; display: block; margin-bottom: 10px;">Ver información del producto</a>
-                <a href="#" id="product-code-link" style="color: blue; text-decoration: underline; display: block;">Código de ejemplo</a>
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <div class="product-gallery-main">
+                        <img id="product-modal-image" src="" alt="Imagen del producto">
+                    </div>
+                    <div class="product-gallery-thumbs" id="product-modal-thumbs"></div>
+                </div>
+                <div class="product-info">
+                    <h3 id="product-modal-title"></h3>
+                    <div class="price" id="product-modal-price"></div>
+                    <div class="stock" id="product-modal-stock"></div>
+                    <div class="product-actions">
+                        <input id="product-modal-qty" type="number" min="1" value="1">
+                        <button id="product-modal-add">Agregar al carrito</button>
+                    </div>
+                    <div class="desc" id="product-modal-desc"></div>
+                    <div style="margin-top: 10px;">
+                        <a href="#" id="product-info-link" style="color: blue; text-decoration: underline; display: block; margin-bottom: 8px;">Ver información del producto</a>
+                        <a href="#" id="product-code-link" style="color: blue; text-decoration: underline; display: block;">Código de ejemplo</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -684,6 +784,6 @@
         <img src="WhatsApp_similar_logo.png" alt="WhatsApp">
     </div>
 
-    <script src="script.js?v=20260108g"></script>
+    <script src="script.js?v=20260108h"></script>
 </body>
 </html>

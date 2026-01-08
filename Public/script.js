@@ -488,6 +488,13 @@ function openProductModal(productId) {
         currentProduct = product; // Establecer el producto actual
         const productModal = document.getElementById('product-modal');
         const productModalImage = document.getElementById('product-modal-image');
+        const productModalThumbs = document.getElementById('product-modal-thumbs');
+        const productModalTitle = document.getElementById('product-modal-title');
+        const productModalPrice = document.getElementById('product-modal-price');
+        const productModalStock = document.getElementById('product-modal-stock');
+        const productModalDesc = document.getElementById('product-modal-desc');
+        const productModalQty = document.getElementById('product-modal-qty');
+        const productModalAdd = document.getElementById('product-modal-add');
         const productInfoLink = document.getElementById('product-info-link');
         const productCodeLink = document.getElementById('product-code-link');
 
@@ -497,6 +504,43 @@ function openProductModal(productId) {
         } else {
             // Si no hay imagen, usar una imagen predeterminada
             productModalImage.src = `${imageBaseUrl}default-image.png`;
+        }
+
+        if (productModalThumbs) {
+            productModalThumbs.innerHTML = '';
+            (product.images || []).forEach((imgSrc, index) => {
+                const thumb = document.createElement('img');
+                thumb.src = `${imageBaseUrl}${imgSrc}`;
+                thumb.alt = `${product.name} ${index + 1}`;
+                thumb.onclick = () => {
+                    productModalImage.src = `${imageBaseUrl}${imgSrc}`;
+                };
+                productModalThumbs.appendChild(thumb);
+            });
+        }
+
+        if (productModalTitle) {
+            productModalTitle.textContent = product.name;
+        }
+        if (productModalPrice) {
+            const priceValue = parseFloat(product.price);
+            productModalPrice.textContent = `$${priceValue % 1 === 0 ? priceValue : priceValue.toFixed(2)}`;
+        }
+        if (productModalStock) {
+            productModalStock.textContent = `Stock: ${product.quantity}`;
+        }
+        if (productModalDesc) {
+            productModalDesc.textContent = product.description || 'Sin descripción.';
+        }
+        if (productModalQty) {
+            productModalQty.value = 1;
+            productModalQty.max = product.quantity;
+        }
+        if (productModalAdd) {
+            productModalAdd.onclick = () => {
+                const qty = parseInt(productModalQty.value, 10) || 1;
+                addToCart(product.id, qty);
+            };
         }
 
         // Actualizar los enlaces para abrir la descripción y el código del producto
