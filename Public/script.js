@@ -659,18 +659,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } else {
                 toggleHomeSections(false);
-            }
-
-            const searchInput = document.getElementById('product-search');
-            const searchBtn = document.getElementById('search-btn');
-            if (searchInput && searchBtn) {
-                searchBtn.addEventListener('click', () => {
-                    applySearch(searchInput.value);
-                });
-                searchInput.addEventListener('keydown', (event) => {
-                    if (event.key === 'Enter') {
-                        applySearch(searchInput.value);
+            }            const searchInput = document.getElementById('product-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', () => {
+                    const query = normalizeText(searchInput.value);
+                    if (!query) {
+                        renderProducts(allProducts);
+                        return;
                     }
+                    const filtered = allProducts.filter(product =>
+                        normalizeText(product.name).includes(query)
+                    );
+                    renderProducts(filtered);
+                });
+            }
                 });
             }
 
@@ -679,37 +681,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function normalizeText(text) {
-
-function applySearch(rawQuery) {
-    const query = normalizeText(rawQuery);
-    if (!query) {
-        renderProducts(allProducts);
-        toggleSearchSections(false);
-        return;
-    }
-    const filtered = allProducts.filter(product =>
-        normalizeText(product.name).includes(query)
-    );
-    renderProducts(filtered);
-    toggleSearchSections(true);
-}
-
-function toggleSearchSections(hidden) {
-    const sections = [
-        document.querySelector('.promo-section'),
-        document.querySelector('.trust-banner'),
-        document.querySelector('.best-sellers'),
-        document.querySelector('.courses-banner')
-    ];
-    sections.forEach((section) => {
-        if (!section) return;
-        if (hidden) {
-            section.classList.add('hide-on-product');
-        } else {
-            section.classList.remove('hide-on-product');
-        }
-    });
-}
 
 function enableWhatsAppDrag() {
     const bubble = document.getElementById('wa-float');
