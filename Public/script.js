@@ -669,9 +669,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         renderProducts(allProducts);
                         return;
                     }
-                    const filtered = allProducts.filter(product =>
-                        normalizeText(product.name).includes(query)
-                    );
+                    const tokens = query.split(/\s+/).filter(Boolean);
+                    const filtered = allProducts.filter(product => {
+                        const name = normalizeText(product.name);
+                        return tokens.some(token => name.includes(token));
+                    });
                     renderProducts(filtered);
                 });
             }
