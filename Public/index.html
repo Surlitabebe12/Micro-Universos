@@ -22,6 +22,7 @@
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
+            overflow-x: hidden;
         }
         header {
             background-color: #000080;
@@ -705,6 +706,8 @@
             border: 1px solid #d7dbe2;
             padding: 18px;
             box-shadow: 0 12px 22px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            box-sizing: border-box;
         }
         .product-page-back {
             background: #eef0f6;
@@ -729,6 +732,21 @@
             }
             .product-gallery-main {
                 height: 220px;
+            }
+            .product-page {
+                margin: 12px auto 80px;
+                padding: 0 10px;
+            }
+            .product-page-inner {
+                padding: 14px;
+            }
+            .product-gallery,
+            .product-info {
+                width: 100%;
+            }
+            .product-gallery-thumbs img {
+                width: 52px;
+                height: 52px;
             }
         }
 
@@ -839,6 +857,6 @@
         <img src="WhatsApp_similar_logo.png" alt="WhatsApp">
     </div>
 
-    <script src="script.js?v=20260108q"></script>
+    <script src="script.js?v=20260108r"></script>
 </body>
 </html>
