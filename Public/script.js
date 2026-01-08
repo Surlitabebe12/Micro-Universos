@@ -202,6 +202,38 @@ function renderProducts(products) {
     });
 }
 
+function renderBestSellers(products) {
+    const grid = document.getElementById('best-sellers-grid');
+    if (!grid) {
+        return;
+    }
+    grid.innerHTML = '';
+    const list = products.slice(0, 4);
+    list.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'best-seller-card';
+        card.onclick = () => openProductModal(product.id);
+
+        const img = document.createElement('img');
+        img.src = `${imageBaseUrl}${product.images[0]}`;
+        img.alt = product.name;
+
+        const title = document.createElement('div');
+        title.className = 'best-seller-title';
+        title.textContent = product.name;
+
+        const price = document.createElement('div');
+        price.className = 'best-seller-price';
+        const priceValue = parseFloat(product.price);
+        price.textContent = `$${priceValue % 1 === 0 ? priceValue : priceValue.toFixed(2)}`;
+
+        card.appendChild(img);
+        card.appendChild(title);
+        card.appendChild(price);
+        grid.appendChild(card);
+    });
+}
+
 
 
 
@@ -478,6 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.products = data; // Save products globally
             allProducts = data;
             renderProducts(allProducts);
+            renderBestSellers(allProducts);
 
             const searchInput = document.getElementById('product-search');
             if (searchInput) {
