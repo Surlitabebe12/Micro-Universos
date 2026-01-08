@@ -4,6 +4,10 @@ let allProducts = [];
 let renderVersion = 0;
 const visitNamespace = 'microuniversos-uy';
 const visitKey = 'site';
+const countApiEndpoints = [
+    (path) => `https://countapi.xyz/${path}`,
+    (path) => `https://api.countapi.xyz/${path}`
+];
 
 function addToCart(productId, quantity) {
     const product = products.find(p => p.id === productId);
@@ -506,8 +510,7 @@ function normalizeText(text) {
 }
 
 function trackVisit() {
-    fetch(`https://api.countapi.xyz/hit/${visitNamespace}/${visitKey}`)
-        .catch(() => {});
+    countApiFetch(`hit/${visitNamespace}/${visitKey}`, () => {}, () => {});
 }
 
 function maybeShowVisitStats() {
@@ -528,15 +531,33 @@ function maybeShowVisitStats() {
     badge.style.zIndex = '9999';
     badge.textContent = 'Visitas: ...';
     document.body.appendChild(badge);
-    fetch(`https://api.countapi.xyz/get/${visitNamespace}/${visitKey}`)
-        .then(response => response.json())
-        .then(data => {
+    countApiFetch(
+        `get/${visitNamespace}/${visitKey}`,
+        (data) => {
             if (!data || typeof data.value !== 'number') {
+                badge.textContent = 'Visitas: error';
                 return;
             }
             badge.textContent = `Visitas: ${data.value}`;
-        })
-        .catch(() => {
+        },
+        () => {
             badge.textContent = 'Visitas: error';
-        });
+        }
+    );
+}
+
+function countApiFetch(path, onSuccess, onError) {
+    let index = 0;
+    const tryNext = () => {
+        if (index >= countApiEndpoints.length) {
+            onError();
+            return;
+        }
+        const url = countApiEndpoints[index++](path);
+        fetch(url, { cache: 'no-store' })
+            .then(response => response.json())
+            .then(data => onSuccess(data))
+            .catch(() => tryNext());
+    };
+    tryNext();
 }
