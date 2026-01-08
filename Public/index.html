@@ -372,16 +372,31 @@
 
         /* Media queries para responsividad */
         @media (max-width: 600px) {
+            .products-container {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+                margin-top: 14px;
+                padding: 0 12px;
+            }
             .product {
-                width: 100%;
-                height: auto;
-                margin: 10px 0;
+                width: auto;
+                height: 300px;
+                margin: 0;
+                padding: 6px;
             }
             .image-container {
-                height: auto;
+                height: 120px;
             }
             .image-container img {
-                height: auto;
+                width: 90%;
+                height: 100%;
+            }
+            .product-name {
+                font-size: 0.85em;
+            }
+            .product-price {
+                font-size: 1em;
             }
             #cart-modal-content {
                 width: 90%;
@@ -390,9 +405,6 @@
             #cart-modal img {
                 width: 91px;
                 height: 63px;
-            }
-            .product-name, .product-price {
-                font-size: 0.8em;
             }
             .share-cart-btn {
                 font-size: 13px;
