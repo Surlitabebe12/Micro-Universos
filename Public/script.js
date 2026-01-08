@@ -215,7 +215,7 @@ function renderBestSellers(products) {
     }
     track.innerHTML = '';
 
-    const list = products.slice(0, 8);
+    const list = pickBestSellers(products, 8);
     if (list.length === 0) {
         return;
     }
@@ -252,6 +252,27 @@ function createBestSellerCard(product) {
     card.appendChild(title);
     card.appendChild(price);
     return card;
+}
+
+function pickBestSellers(products, count) {
+    const items = [...products];
+    const seed = Math.floor(Date.now() / (5 * 24 * 60 * 60 * 1000));
+    seededShuffle(items, seed);
+    return items.slice(0, Math.min(count, items.length));
+}
+
+function seededShuffle(array, seed) {
+    let state = seed % 2147483647;
+    if (state <= 0) state += 2147483646;
+    const rand = () => {
+        state = (state * 16807) % 2147483647;
+        return (state - 1) / 2147483646;
+    };
+
+    for (let i = array.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(rand() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
 }
 
 function startBestSellersCarousel(track, itemCount) {
