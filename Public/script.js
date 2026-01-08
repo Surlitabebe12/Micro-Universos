@@ -2,12 +2,8 @@ const imageBaseUrl = 'https://www.microuniversos.com/Public/';
 const cart = [];
 let allProducts = [];
 let renderVersion = 0;
-const visitNamespace = 'microuniversos-uy';
-const visitKey = 'site';
-const countApiEndpoints = [
-    (path) => `https://countapi.xyz/${path}`,
-    (path) => `https://api.countapi.xyz/${path}`
-];
+const visitBadgeBase = 'https://api.visitorbadge.io/api/visitors';
+const visitPath = 'microuniversos.com';
 
 function addToCart(productId, quantity) {
     const product = products.find(p => p.id === productId);
@@ -510,7 +506,14 @@ function normalizeText(text) {
 }
 
 function trackVisit() {
-    countApiFetch(`hit/${visitNamespace}/${visitKey}`, () => {}, () => {});
+    const img = new Image();
+    img.src = `${visitBadgeBase}?path=${encodeURIComponent(visitPath)}`;
+    img.style.width = '1px';
+    img.style.height = '1px';
+    img.style.position = 'absolute';
+    img.style.left = '-9999px';
+    img.style.top = '-9999px';
+    document.body.appendChild(img);
 }
 
 function maybeShowVisitStats() {
@@ -518,46 +521,14 @@ function maybeShowVisitStats() {
     if (params.get('stats') !== '1') {
         return;
     }
-    const badge = document.createElement('div');
+    const badge = document.createElement('img');
+    badge.src = `${visitBadgeBase}?path=${encodeURIComponent(visitPath)}&label=Visitas&countColor=%23000080&labelColor=%231a1a1a`;
+    badge.alt = 'Visitas';
     badge.style.position = 'fixed';
     badge.style.right = '16px';
     badge.style.bottom = '16px';
-    badge.style.padding = '8px 12px';
-    badge.style.background = '#000080';
-    badge.style.color = '#fff';
-    badge.style.borderRadius = '12px';
-    badge.style.fontFamily = 'Source Code Pro, monospace';
-    badge.style.fontSize = '12px';
     badge.style.zIndex = '9999';
-    badge.textContent = 'Visitas: ...';
+    badge.style.borderRadius = '10px';
+    badge.style.boxShadow = '0 6px 16px rgba(0, 0, 0, 0.15)';
     document.body.appendChild(badge);
-    countApiFetch(
-        `get/${visitNamespace}/${visitKey}`,
-        (data) => {
-            if (!data || typeof data.value !== 'number') {
-                badge.textContent = 'Visitas: error';
-                return;
-            }
-            badge.textContent = `Visitas: ${data.value}`;
-        },
-        () => {
-            badge.textContent = 'Visitas: error';
-        }
-    );
-}
-
-function countApiFetch(path, onSuccess, onError) {
-    let index = 0;
-    const tryNext = () => {
-        if (index >= countApiEndpoints.length) {
-            onError();
-            return;
-        }
-        const url = countApiEndpoints[index++](path);
-        fetch(url, { cache: 'no-store' })
-            .then(response => response.json())
-            .then(data => onSuccess(data))
-            .catch(() => tryNext());
-    };
-    tryNext();
 }
