@@ -449,9 +449,9 @@ function openCodeWindow(productId) {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
                 <style>
                     body { font-family: Arial, sans-serif; padding: 20px; background-color: #2e2e2e; color: #f8f8f2; }
-                    h1 { font-size: 1.5em; margin-bottom: 10px; color: #f8f8f2; }
-                    pre { background-color: #1e1e1e; padding: 15px; border-radius: 5px; overflow-x: auto; }
-                    code { font-size: 14px; }
+                    h1 { font-size: 1.6em; margin-bottom: 12px; color: #f8f8f2; }
+                    pre { background-color: #1e1e1e; padding: 18px; border-radius: 8px; overflow-x: auto; }
+                    code { font-size: 16px; line-height: 1.5; }
                     .exit-button {
                         color: #66d9ef;
                         text-decoration: underline;
