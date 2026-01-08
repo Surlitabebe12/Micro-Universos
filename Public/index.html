@@ -35,8 +35,14 @@
             display: flex;
             justify-content: center;
         }
-        .search-bar input {
+        .search-bar .search-wrap {
             width: min(520px, 90%);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .search-bar input {
+            flex: 1;
             padding: 10px 14px;
             border-radius: 999px;
             border: 1px solid rgba(255, 255, 255, 0.35);
@@ -47,6 +53,17 @@
         }
         .search-bar input::placeholder {
             color: rgba(255, 255, 255, 0.7);
+        }
+        .search-bar button {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: none;
+            background: #ffffff;
+            color: #000080;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
         }
         header .sub-header {
             font-size: 0.9em;
@@ -231,6 +248,7 @@
             color: white;
             font-weight: bold;
             font-size: 0.9em;
+            touch-action: none;
         }
         #wa-float img {
             width: 28px;
@@ -810,7 +828,10 @@
         <h1>MicroUniversos - Tienda de electrónica</h1>
         <p class="sub-header">Envios en el dia por cadeteria dentro de Montevideo. Para el interior se despacha por DAC o DePunta.</p>
         <div class="search-bar">
-            <input id="product-search" type="search" placeholder="Buscar productos por nombre..." autocomplete="off">
+            <div class="search-wrap">
+                <input id="product-search" type="search" placeholder="Buscar productos por nombre..." autocomplete="off">
+                <button id="search-btn" aria-label="Buscar">🔍</button>
+            </div>
         </div>
     </header>
     <section class="promo-section" id="home-sections">
@@ -920,6 +941,6 @@
         <span>Iniciar conversación</span>
     </div>
 
-    <script src="script.js?v=20260108y"></script>
+    <script src="script.js?v=20260108aa"></script>
 </body>
 </html>

@@ -641,6 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleVisitOptOut();
     trackVisit();
     maybeShowVisitStats();
+    enableWhatsAppDrag();
     fetch('products.json')
         .then(response => response.json())
         .then(data => {
@@ -661,17 +662,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const searchInput = document.getElementById('product-search');
-            if (searchInput) {
-                searchInput.addEventListener('input', () => {
-                    const query = normalizeText(searchInput.value);
-                    if (!query) {
-                        renderProducts(allProducts);
-                        return;
+            const searchBtn = document.getElementById('search-btn');
+            if (searchInput && searchBtn) {
+                searchBtn.addEventListener('click', () => {
+                    applySearch(searchInput.value);
+                });
+                searchInput.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter') {
+                        applySearch(searchInput.value);
                     }
-                    const filtered = allProducts.filter(product =>
-                        normalizeText(product.name).includes(query)
-                    );
-                    renderProducts(filtered);
                 });
             }
 
@@ -680,6 +679,83 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function normalizeText(text) {
+
+function applySearch(rawQuery) {
+    const query = normalizeText(rawQuery);
+    if (!query) {
+        renderProducts(allProducts);
+        toggleSearchSections(false);
+        return;
+    }
+    const filtered = allProducts.filter(product =>
+        normalizeText(product.name).includes(query)
+    );
+    renderProducts(filtered);
+    toggleSearchSections(true);
+}
+
+function toggleSearchSections(hidden) {
+    const sections = [
+        document.querySelector('.promo-section'),
+        document.querySelector('.trust-banner'),
+        document.querySelector('.best-sellers'),
+        document.querySelector('.courses-banner')
+    ];
+    sections.forEach((section) => {
+        if (!section) return;
+        if (hidden) {
+            section.classList.add('hide-on-product');
+        } else {
+            section.classList.remove('hide-on-product');
+        }
+    });
+}
+
+function enableWhatsAppDrag() {
+    const bubble = document.getElementById('wa-float');
+    if (!bubble) {
+        return;
+    }
+    let dragging = false;
+    let startX = 0;
+    let startY = 0;
+    let origX = 0;
+    let origY = 0;
+
+    const onMove = (clientX, clientY) => {
+        if (!dragging) return;
+        const dx = clientX - startX;
+        const dy = clientY - startY;
+        bubble.style.right = 'auto';
+        bubble.style.bottom = 'auto';
+        bubble.style.left = `${origX + dx}px`;
+        bubble.style.top = `${origY + dy}px`;
+    };
+
+    bubble.addEventListener('pointerdown', (event) => {
+        dragging = true;
+        bubble.setPointerCapture(event.pointerId);
+        const rect = bubble.getBoundingClientRect();
+        startX = event.clientX;
+        startY = event.clientY;
+        origX = rect.left;
+        origY = rect.top;
+    });
+
+    bubble.addEventListener('pointermove', (event) => {
+        onMove(event.clientX, event.clientY);
+    });
+
+    bubble.addEventListener('pointerup', (event) => {
+        dragging = false;
+        bubble.releasePointerCapture(event.pointerId);
+    });
+
+    bubble.addEventListener('pointercancel', (event) => {
+        dragging = false;
+        bubble.releasePointerCapture(event.pointerId);
+    });
+}
     return (text || '')
         .toString()
         .toLowerCase()
