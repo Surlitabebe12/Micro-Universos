@@ -469,6 +469,7 @@ document.addEventListener('keydown', (event) => {
 // Fetch products from products.json and render them
 document.addEventListener('DOMContentLoaded', () => {
     trackVisit();
+    maybeShowVisitStats();
     fetch('products.json')
         .then(response => response.json())
         .then(data => {
@@ -491,7 +492,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            maybeShowVisitStats();
         })
         .catch(error => console.error('Error al cargar los productos:', error));
 });
@@ -515,25 +515,28 @@ function maybeShowVisitStats() {
     if (params.get('stats') !== '1') {
         return;
     }
+    const badge = document.createElement('div');
+    badge.style.position = 'fixed';
+    badge.style.right = '16px';
+    badge.style.bottom = '16px';
+    badge.style.padding = '8px 12px';
+    badge.style.background = '#000080';
+    badge.style.color = '#fff';
+    badge.style.borderRadius = '12px';
+    badge.style.fontFamily = 'Source Code Pro, monospace';
+    badge.style.fontSize = '12px';
+    badge.style.zIndex = '9999';
+    badge.textContent = 'Visitas: ...';
+    document.body.appendChild(badge);
     fetch(`https://api.countapi.xyz/get/${visitNamespace}/${visitKey}`)
         .then(response => response.json())
         .then(data => {
             if (!data || typeof data.value !== 'number') {
                 return;
             }
-            const badge = document.createElement('div');
-            badge.style.position = 'fixed';
-            badge.style.right = '16px';
-            badge.style.bottom = '16px';
-            badge.style.padding = '8px 12px';
-            badge.style.background = '#000080';
-            badge.style.color = '#fff';
-            badge.style.borderRadius = '12px';
-            badge.style.fontFamily = 'Source Code Pro, monospace';
-            badge.style.fontSize = '12px';
-            badge.style.zIndex = '9999';
             badge.textContent = `Visitas: ${data.value}`;
-            document.body.appendChild(badge);
         })
-        .catch(() => {});
+        .catch(() => {
+            badge.textContent = 'Visitas: error';
+        });
 }
