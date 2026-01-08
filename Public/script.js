@@ -4,6 +4,7 @@ let allProducts = [];
 let renderVersion = 0;
 const visitBadgeBase = 'https://api.visitorbadge.io/api/visitors';
 const visitPath = 'microuniversos.com';
+const visitOptOutKey = 'mu_nohit';
 
 function addToCart(productId, quantity) {
     const product = products.find(p => p.id === productId);
@@ -468,6 +469,7 @@ document.addEventListener('keydown', (event) => {
 
 // Fetch products from products.json and render them
 document.addEventListener('DOMContentLoaded', () => {
+    handleVisitOptOut();
     trackVisit();
     maybeShowVisitStats();
     fetch('products.json')
@@ -506,6 +508,9 @@ function normalizeText(text) {
 }
 
 function trackVisit() {
+    if (!shouldTrackVisit()) {
+        return;
+    }
     const img = new Image();
     img.src = `${visitBadgeBase}?path=${encodeURIComponent(visitPath)}`;
     img.style.width = '1px';
@@ -531,4 +536,18 @@ function maybeShowVisitStats() {
     badge.style.borderRadius = '10px';
     badge.style.boxShadow = '0 6px 16px rgba(0, 0, 0, 0.15)';
     document.body.appendChild(badge);
+}
+
+function shouldTrackVisit() {
+    return localStorage.getItem(visitOptOutKey) !== '1';
+}
+
+function handleVisitOptOut() {
+    const params = new URLSearchParams(window.location.search);
+    const nohit = params.get('nohit');
+    if (nohit === '1') {
+        localStorage.setItem(visitOptOutKey, '1');
+    } else if (nohit === '0') {
+        localStorage.removeItem(visitOptOutKey);
+    }
 }
